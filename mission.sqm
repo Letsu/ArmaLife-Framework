@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=67;
+		nextID=68;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={12590.012,60.677292,72.387947};
-		dir[]={-0.31869712,-0.94077599,0.11677127};
-		up[]={-0.88332665,0.33906493,0.32365};
-		aside[]={0.34407076,-1.2926757e-006,0.9390583};
+		pos[]={12580.068,33.094547,74.694962};
+		dir[]={-0.36512095,-0.89141095,-0.26848805};
+		up[]={-0.71818328,0.45311254,-0.52810872};
+		aside[]={-0.59241807,-5.6883437e-008,0.80563813};
 	};
 };
 binarizationWanted=0;
@@ -27,13 +27,14 @@ addons[]=
 {
 	"A3_Structures_F_Naval_Piers",
 	"A3_Characters_F",
+	"A3_Weapons_F",
 	"A3_Ui_F"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=3;
+		items=4;
 		class Item0
 		{
 			className="A3_Structures_F";
@@ -50,6 +51,13 @@ class AddonsMetaData
 		};
 		class Item2
 		{
+			className="A3_Weapons_F";
+			name="Arma 3 Alpha - Weapons and Accessories";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item3
+		{
 			className="A3_Ui_F";
 			name="Arma 3 - User Interface";
 			author="Bohemia Interactive";
@@ -64,7 +72,6 @@ class ScenarioData
 	disabledAI=1;
 	joinUnassigned=0;
 	respawn=3;
-	respawnDelay=5;
 	class Header
 	{
 		gameType="RPG";
@@ -250,11 +257,29 @@ class Mission
 						position[]={12570.64,2.269696,77.302002};
 					};
 					side="Independent";
-					flags=3;
+					flags=1;
 					class Attributes
 					{
 						description="Malden Armed Forces";
 						isPlayer=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="U_I_CombatUniform";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="MiniGrenade";
+										count=4;
+										ammoLeft=1;
+									};
+								};
+							};
+						};
 					};
 					id=36;
 					type="I_Survivor_F";
@@ -310,7 +335,7 @@ class Mission
 						position[]={12571.276,2.2724349,75.948006};
 					};
 					side="Independent";
-					flags=5;
+					flags=7;
 					class Attributes
 					{
 						description="Malden Armed Forces";
@@ -554,7 +579,7 @@ class Mission
 			{
 			};
 			id=35;
-			atlOffset=81.652;
+			atlOffset=0.00022125244;
 		};
 		class Item7
 		{
