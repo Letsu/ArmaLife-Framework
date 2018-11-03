@@ -1,4 +1,4 @@
 private["_respawnPos"];
 
-_respawnPos = getMarkerPos "respawn_west";
-respawn_west setMarkerPos [_respawnPos select 0, _respawnPos select 1, 90];
+_respawnPos = getMarkerPos "respawn";
+"respawn" setMarkerPos [_respawnPos select 0, _respawnPos select 1, 90];
