@@ -1,0 +1,36 @@
+//Debug Configurations
+enableDebugConsole = 2; // Need to set to 1!!!!!""
+//enableDebugConsole[] = { "76561198XXXXXXXXX", "76561198YYYYYYYYY", }; <---- Importent!
+//Include Coonfig Files
+
+#include "dialogHandler.cpp"
+
+class CfgFunctions {
+    #include "functions.cpp"
+};
+
+
+//Channel Configurations
+disableChannels[] = {
+	{ 0, true, true }, // Global
+	{ 1, true, false }, // Side
+	{ 2, true, true }, // Command
+	{ 3, false, false }, // Group
+	{ 4, false, false }, // Vehicle
+	{ 5, false, false } // Direct
+};
+
+//Hud Configurations
+showNotePad = 0;
+showMap = 0;
+showHUD[] = {
+	true,	// Scripted HUD (same as showHUD command)
+	true,	// Vehicle + soldier info
+	false,	// Vehicle radar [HIDDEN]
+	true,	// Vehicle compass [HIDDEN]
+	true,	// Tank direction indicator
+	false,	// Commanding menu
+	false,	// Group Bar
+	true,	// HUD Weapon Cursors
+	true	// Vehicle display panels
+};
