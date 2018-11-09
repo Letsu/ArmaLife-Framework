@@ -23,7 +23,16 @@
 //Configuration
 diag_log "Initalizise the default Variables";
 [] call lts_core_fnc_configuration;
-diag_log "Complett Initalizise the default Variables";
+diag_log "Finish Initalizise the default Variables";
+
+diag_log "Initalizise the Keyhandler";
+waitUntil {!(isNull (findDisplay 46))};
+(findDisplay 46) displayAddEventHandler["KeyDown","_this spawn lts_fnc_keyDown"];
+diag_log "Finish Initalizise the Keyhandlers";
+
+diag_log "Initalizise of the Eventhandlers";
+[] call lts_core_fnc_setupEVH;
+diag_log "Finish Initalizise of the Eventhandlers";
 
 
 0 cutText ["","BLACK IN"];

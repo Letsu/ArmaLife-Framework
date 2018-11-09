@@ -3,7 +3,8 @@ class lts_core {
     class core {
         file = "core";
         class configuration {};
-        class init {};
+        class init          {};
+        class setupEVH      {};
     }
 }
 
@@ -14,6 +15,7 @@ class Lts_framework {
         file = "core\functions";
         class hint {};
         class log {};
+        class keyDown {};
     }
 
     class respawn {
