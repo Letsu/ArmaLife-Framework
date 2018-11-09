@@ -8,11 +8,11 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=116;
+		nextID=117;
 	};
 	class MarkerIDProvider
 	{
-		nextID=2;
+		nextID=3;
 	};
 	class Camera
 	{
@@ -27,15 +27,13 @@ addons[]=
 {
 	"A3_Structures_F_Naval_Piers",
 	"A3_Ui_F",
-	"A3_Characters_F",
-	"A3_Boat_F_Jets_Carrier_01",
-	"A3_Boat_F_Destroyer_Destroyer_01"
+	"A3_Characters_F"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=5;
+		items=3;
 		class Item0
 		{
 			className="A3_Structures_F";
@@ -54,20 +52,6 @@ class AddonsMetaData
 		{
 			className="A3_Characters_F";
 			name="Arma 3 Alpha - Characters and Clothing";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item3
-		{
-			className="A3_Boat_F_Jets";
-			name="Arma 3 Jets - Boats and Submersibles";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item4
-		{
-			className="A3_Boat_F_Destroyer";
-			name="Arma 3 Jets - Boats and Submersibles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -153,7 +137,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=11;
+		items=9;
 		class Item0
 		{
 			dataType="Object";
@@ -650,50 +634,12 @@ class Mission
 		};
 		class Item8
 		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={3404.397,0,2483.5083};
-			};
-			side="Empty";
-			class Attributes
-			{
-			};
-			id=112;
-			type="Land_Carrier_01_base_F";
-			atlOffset=64.677223;
-		};
-		class Item9
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={3131.123,0,2334.2295};
-				angles[]={0,2.3713131,0};
-			};
-			side="Empty";
-			class Attributes
-			{
-			};
-			id=114;
-			type="Land_Destroyer_01_base_F";
-			atlOffset=68.005951;
-		};
-		class Item10
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={3618.4165,0,2097.8164};
-				angles[]={0,3.1631551,0};
-			};
-			side="Empty";
-			class Attributes
-			{
-			};
-			id=115;
-			type="Land_Destroyer_01_base_F";
-			atlOffset=46.232422;
+			dataType="Marker";
+			position[]={7252.2612,167.524,7929.52};
+			name="spawn_1";
+			type="Empty";
+			id=116;
+			atlOffset=0.00015258789;
 		};
 	};
 };

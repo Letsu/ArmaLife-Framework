@@ -6,8 +6,8 @@ class lts_core {
         class init          {};
         class setupEVH      {};
         class loop          {};
-    }
-}
+    };
+};
 
 class Lts_framework {
     tag = "lts";
@@ -17,7 +17,7 @@ class Lts_framework {
         class hint {};
         class log {};
         class keyDown {};
-    }
+    };
 
     class respawn {
         file = "core\respawn";
@@ -27,5 +27,18 @@ class Lts_framework {
     class changeSide{
         file = "core\side";
         class changeSide {};
+    };
+};
+
+class lts_dialog {
+    tag = "lts_dialog";
+
+    class core {
+        file = "dialogs\functions";
+    };
+
+    class spawn {
+        file = "dialogs\functions\spawn";
+        class getSpawnPoints {};
     };
 };
