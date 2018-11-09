@@ -16,7 +16,7 @@ private["_avabileSide", "_newSide", "_curSides"];
  */
 _newSide = _this select 0;
 _curSides = lts_core_curSide;
- _avabileSide = getArray (missionConfigFile >> "Master_Class" >> "avabileSide");
+ _avabileSide = getArray (missionConfigFile >> "Master_Class" >> "avabileSides");
 
 //Conditions
 if (_newSide == _curSides) exitWith { ["Sie sind aktuell schon auf dieser Seite"] call lts_fnc_hint }; //Add Stringtable
