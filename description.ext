@@ -6,7 +6,7 @@ enableDebugConsole = 2; // Need to set to 1!!!!!""
 
 //Dialog includes
 #include "dialogs\dialogHandler.cpp"
-#include "dialogs\Spawn_Dialog.cpp"
+
 
 class CfgFunctions {
     #include "functions.cpp"
