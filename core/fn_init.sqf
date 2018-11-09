@@ -16,5 +16,5 @@
 
 //Configuration
 diag_log "Initalizise the default Variables";
-[] call lts_core_fnc_init;
+[] call lts_core_fnc_configuration;
 diag_log "Complett Initalizise the default Variables";
