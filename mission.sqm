@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=104;
+		nextID=106;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={12570.471,4.4970584,48.109749};
-		dir[]={-0.5556128,-0.83050495,-0.041319143};
-		up[]={-0.82824886,0.55695701,-0.061591823};
-		aside[]={-0.074164197,2.4376495e-006,0.99732172};
+		pos[]={12570.29,9.5274334,52.753971};
+		dir[]={0.047661126,-0.75800335,-0.65067786};
+		up[]={0.055376511,0.65217465,-0.75602931};
+		aside[]={-0.99742764,1.3771742e-006,-0.073060036};
 	};
 };
 binarizationWanted=0;
@@ -496,17 +496,16 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={12571.592,1.9769489,45.480385};
+						position[]={12571.592,2.2730181,45.480385};
 					};
 					side="Civilian";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						isPlayable=1;
 					};
 					id=97;
 					type="C_man_polo_1_F";
-					atlOffset=78.172493;
 				};
 				class Item16
 				{

@@ -1,5 +1,5 @@
 class Config_Side {
-    avabileSides[] = {"civ", "cop", "medic"} //Need all Sides that are Configure whit the Config Name
+    avabileSides[] = {"civ", "cop", "medic"}; //Need all Sides that are Configure whit the Config Name
 
     class civilian {
         Var = "civ";
