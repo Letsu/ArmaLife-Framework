@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=111;
+		nextID=116;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={7142.6646,238.0016,8963.0186};
-		dir[]={0.24342075,-0.63040465,-0.7372821};
-		up[]={0.19764239,0.77626324,-0.59862846};
-		aside[]={-0.94972861,1.2230921e-006,-0.31355712};
+		pos[]={2581.6467,304.96811,5668.3335};
+		dir[]={-0.018799052,-0.97826445,0.20663263};
+		up[]={-0.088635862,0.20726101,0.97425461};
+		aside[]={0.99590796,2.285451e-007,0.090604275};
 	};
 };
 binarizationWanted=0;
@@ -27,13 +27,15 @@ addons[]=
 {
 	"A3_Structures_F_Naval_Piers",
 	"A3_Ui_F",
-	"A3_Characters_F"
+	"A3_Characters_F",
+	"A3_Boat_F_Jets_Carrier_01",
+	"A3_Boat_F_Destroyer_Destroyer_01"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=3;
+		items=5;
 		class Item0
 		{
 			className="A3_Structures_F";
@@ -52,6 +54,20 @@ class AddonsMetaData
 		{
 			className="A3_Characters_F";
 			name="Arma 3 Alpha - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item3
+		{
+			className="A3_Boat_F_Jets";
+			name="Arma 3 Jets - Boats and Submersibles";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item4
+		{
+			className="A3_Boat_F_Destroyer";
+			name="Arma 3 Jets - Boats and Submersibles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -137,7 +153,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=8;
+		items=11;
 		class Item0
 		{
 			dataType="Object";
@@ -631,6 +647,53 @@ class Mission
 			};
 			id=102;
 			atlOffset=78.338989;
+		};
+		class Item8
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3404.397,0,2483.5083};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=112;
+			type="Land_Carrier_01_base_F";
+			atlOffset=64.677223;
+		};
+		class Item9
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3131.123,0,2334.2295};
+				angles[]={0,2.3713131,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=114;
+			type="Land_Destroyer_01_base_F";
+			atlOffset=68.005951;
+		};
+		class Item10
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3618.4165,0,2097.8164};
+				angles[]={0,3.1631551,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=115;
+			type="Land_Destroyer_01_base_F";
+			atlOffset=46.232422;
 		};
 	};
 };
