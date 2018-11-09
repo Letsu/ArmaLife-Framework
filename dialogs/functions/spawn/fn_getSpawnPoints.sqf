@@ -14,13 +14,14 @@ private["_config", "_allSpawnPoints"];
  *
  * Public: [Yes/No]
  */
- hint "Execute!";
 _config = "";
 _allSpawnPoints = [];
 
+createDialog "SpawnDialog";
+waitUntil {!(isNull (findDisplay 60001))};
 //Display
 _display = findDisplay 60001;
-_spawnList = _display displayCtrl 1500;
+_spawnList = _display displayCtrl 60500;
 
 
 {
@@ -36,7 +37,7 @@ _spawnList = _display displayCtrl 1500;
     _spawnMarker = getText (missionConfigFile >> "Config_Spawn" >> _x >> "Marker");
 
     hint format["%1, %2, %3", _x, _spawnName, _spawnMarker];
-    lbAdd [60500, _spawnName]; // <----- Not Working!!!
+    _spawnList lbAdd (_spawnName); // <----- Not Working!!!
     _spawnList lbSetData [(lbSize _spawnList)-1, _spawnMarker];
 } forEach _allSpawnPoints;
 

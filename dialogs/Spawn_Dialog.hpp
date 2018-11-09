@@ -1,8 +1,8 @@
-class SpawmDialog
+class SpawnDialog
 {
 		idd = 60001;
 		movingenable = 0;
-		onLoad = "[] call lts_dialog_fnc_getSpawnPoints"
+	//	onLoad = "[] call lts_dialog_fnc_getSpawnPoints";
 
 		class ControlsBackground {
 			class Backgrund_Spawn: RscText
@@ -18,7 +18,7 @@ class SpawmDialog
 
 		class controls
 		{
-			class ListboxSpawnSelection: RscListbox
+			class ListboxSpawnSelection: RscListBox
 			{
 				idc = 60500;
 				x = 0.613438 * safezoneW + safezoneX;
