@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=106;
+		nextID=111;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={12570.29,9.5274334,52.753971};
-		dir[]={0.047661126,-0.75800335,-0.65067786};
-		up[]={0.055376511,0.65217465,-0.75602931};
-		aside[]={-0.99742764,1.3771742e-006,-0.073060036};
+		pos[]={7142.6646,238.0016,8963.0186};
+		dir[]={0.24342075,-0.63040465,-0.7372821};
+		up[]={0.19764239,0.77626324,-0.59862846};
+		aside[]={-0.94972861,1.2230921e-006,-0.31355712};
 	};
 };
 binarizationWanted=0;
@@ -255,33 +255,119 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={12572.577,2.2728283,45.597736};
+						position[]={12572.577,2.2726486,45.598};
 					};
 					side="Civilian";
-					flags=7;
+					flags=3;
 					class Attributes
 					{
+						isPlayer=1;
 						isPlayable=1;
 					};
 					id=103;
 					type="C_man_polo_1_F";
+					atlOffset=78.338989;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male02GRE";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.01;
+								};
+							};
+						};
+						nAttributes=2;
+					};
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={12567.117,2.2728722,45.54604};
+						position[]={12567.117,2.2731674,45.545998};
 					};
 					side="Civilian";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
-						isPlayer=1;
+						isPlayable=1;
 					};
 					id=69;
 					type="C_man_polo_1_F";
-					atlOffset=79.083702;
+					atlOffset=0.00028038025;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male04GRE";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=2;
+					};
 				};
 				class Item2
 				{
@@ -544,6 +630,7 @@ class Mission
 			{
 			};
 			id=102;
+			atlOffset=78.338989;
 		};
 	};
 };

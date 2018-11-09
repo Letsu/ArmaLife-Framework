@@ -5,6 +5,7 @@ class lts_core {
         class configuration {};
         class init          {};
         class setupEVH      {};
+        class loop          {};
     }
 }
 
