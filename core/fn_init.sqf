@@ -35,7 +35,7 @@ diag_log "Initalizise of the Eventhandlers";
 diag_log "Finish Initalizise of the Eventhandlers";
 
 diag_log "Initalizise of the Master Loop";
-[] call lts_core_fnc_loop;
+[] spawn lts_core_fnc_loop;
 diag_log "Finish Initalizise of the Master Loop";
 
 
