@@ -32,10 +32,10 @@ class SpawmDialog
 						y = 0.522 * safezoneH + safezoneY;
 						w = 0.0721875 * safezoneW;
 						h = 0.055 * safezoneH;
-						tooltip = "Zum Spawnen den Button DrÃ¼cken"; //--- ToDo: Localize;
+						tooltip = "Zum Spawnen den Button Druecken"; //--- ToDo: Localize;
 					};
 
-					class TextMap: RscText
+					class TextMap: RscMapControl
 					{
 						idc = 1001;
 						x = 0.319531 * safezoneW + safezoneX;
