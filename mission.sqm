@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=68;
+		nextID=104;
 	};
 	class MarkerIDProvider
 	{
@@ -16,25 +16,24 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={12577.711,90.195152,99.422485};
-		dir[]={-0.52828622,-0.64977062,-0.54657269};
-		up[]={-0.45166826,0.7600134,-0.46730143};
-		aside[]={-0.71904427,-1.1311495e-006,0.69498789};
+		pos[]={12570.471,4.4970584,48.109749};
+		dir[]={-0.5556128,-0.83050495,-0.041319143};
+		up[]={-0.82824886,0.55695701,-0.061591823};
+		aside[]={-0.074164197,2.4376495e-006,0.99732172};
 	};
 };
 binarizationWanted=0;
 addons[]=
 {
 	"A3_Structures_F_Naval_Piers",
-	"A3_Characters_F",
-	"A3_Weapons_F",
-	"A3_Ui_F"
+	"A3_Ui_F",
+	"A3_Characters_F"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=4;
+		items=3;
 		class Item0
 		{
 			className="A3_Structures_F";
@@ -44,22 +43,15 @@ class AddonsMetaData
 		};
 		class Item1
 		{
-			className="A3_Characters_F";
-			name="Arma 3 Alpha - Characters and Clothing";
+			className="A3_Ui_F";
+			name="Arma 3 - User Interface";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
 		class Item2
 		{
-			className="A3_Weapons_F";
-			name="Arma 3 Alpha - Weapons and Accessories";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item3
-		{
-			className="A3_Ui_F";
-			name="Arma 3 - User Interface";
+			className="A3_Characters_F";
+			name="Arma 3 Alpha - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -215,22 +207,6 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={12594.129,-2.3481259,46.152271};
-			};
-			side="Empty";
-			flags=1;
-			class Attributes
-			{
-			};
-			id=7;
-			type="Land_Pier_F";
-			atlOffset=72.381493;
-		};
-		class Item5
-		{
-			dataType="Object";
-			class PositionInfo
-			{
 				position[]={12594.062,-2.3481259,75.927498};
 			};
 			side="Empty";
@@ -242,346 +218,7 @@ class Mission
 			type="Land_Pier_F";
 			atlOffset=74.103699;
 		};
-		class Item6
-		{
-			dataType="Group";
-			side="Independent";
-			class Entities
-			{
-				items=13;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12570.64,2.269696,77.302002};
-					};
-					side="Independent";
-					flags=1;
-					class Attributes
-					{
-						description="Malden Armed Forces";
-						isPlayer=1;
-						class Inventory
-						{
-							class uniform
-							{
-								typeName="U_I_CombatUniform";
-								isBackpack=0;
-								class MagazineCargo
-								{
-									items=1;
-									class Item0
-									{
-										name="MiniGrenade";
-										count=4;
-										ammoLeft=1;
-									};
-								};
-							};
-						};
-					};
-					id=36;
-					type="I_Survivor_F";
-					atlOffset=81.652;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male03GRE";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.04;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item1
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12571.276,2.2724349,75.948006};
-					};
-					side="Independent";
-					flags=7;
-					class Attributes
-					{
-						description="Malden Armed Forces";
-						isPlayable=1;
-					};
-					id=38;
-					type="I_Survivor_F";
-					atlOffset=0.00022125244;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male03GRE";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.01;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item2
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12570.098,2.272197,75.954704};
-					};
-					side="Independent";
-					flags=5;
-					class Attributes
-					{
-						description="Malden Armed Forces";
-						isPlayable=1;
-					};
-					id=40;
-					type="I_Survivor_F";
-				};
-				class Item3
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12568.833,2.2725203,75.755196};
-					};
-					side="Independent";
-					flags=5;
-					class Attributes
-					{
-						description="Malden Armed Forces";
-						isPlayable=1;
-					};
-					id=42;
-					type="I_Survivor_F";
-				};
-				class Item4
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12568.159,2.2726481,75.676048};
-					};
-					side="Independent";
-					flags=5;
-					class Attributes
-					{
-						description="Malden Armed Forces";
-						isPlayable=1;
-					};
-					id=44;
-					type="I_Survivor_F";
-				};
-				class Item5
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12568.154,2.2738273,74.963722};
-					};
-					side="Independent";
-					flags=5;
-					class Attributes
-					{
-						description="Malden Armed Forces";
-						isPlayable=1;
-					};
-					id=46;
-					type="I_Survivor_F";
-				};
-				class Item6
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12569.287,2.2743828,74.631798};
-					};
-					side="Independent";
-					flags=5;
-					class Attributes
-					{
-						description="Malden Armed Forces";
-						isPlayable=1;
-					};
-					id=48;
-					type="I_Survivor_F";
-				};
-				class Item7
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12569.995,2.2741954,74.747299};
-					};
-					side="Independent";
-					flags=5;
-					class Attributes
-					{
-						description="Malden Armed Forces";
-						isPlayable=1;
-					};
-					id=50;
-					type="I_Survivor_F";
-				};
-				class Item8
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12570.77,2.274173,74.763161};
-					};
-					side="Independent";
-					flags=5;
-					class Attributes
-					{
-						description="Malden Armed Forces";
-						isPlayable=1;
-					};
-					id=52;
-					type="I_Survivor_F";
-				};
-				class Item9
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12571.693,2.2739794,74.883018};
-					};
-					side="Independent";
-					flags=5;
-					class Attributes
-					{
-						description="Malden Armed Forces";
-						isPlayable=1;
-					};
-					id=54;
-					type="I_Survivor_F";
-				};
-				class Item10
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12572.361,2.2738106,74.98687};
-					};
-					side="Independent";
-					flags=5;
-					class Attributes
-					{
-						description="Malden Armed Forces";
-						isPlayable=1;
-					};
-					id=56;
-					type="I_Survivor_F";
-				};
-				class Item11
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12573.007,2.2730181,75.46743};
-					};
-					side="Independent";
-					flags=5;
-					class Attributes
-					{
-						description="Malden Armed Forces";
-						isPlayable=1;
-					};
-					id=58;
-					type="I_Survivor_F";
-				};
-				class Item12
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12572.56,2.2723024,75.898392};
-					};
-					side="Independent";
-					flags=5;
-					class Attributes
-					{
-						description="Malden Armed Forces";
-						isPlayable=1;
-					};
-					id=60;
-					type="I_Survivor_F";
-				};
-			};
-			class Attributes
-			{
-			};
-			id=35;
-			atlOffset=0.00022125244;
-		};
-		class Item7
+		class Item5
 		{
 			dataType="Marker";
 			position[]={12581.643,0.86199999,59.198002};
@@ -589,6 +226,325 @@ class Mission
 			type="Empty";
 			id=64;
 			atlOffset=76.185059;
+		};
+		class Item6
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12594.129,-2.3481259,46.152271};
+			};
+			side="Empty";
+			flags=1;
+			class Attributes
+			{
+			};
+			id=7;
+			type="Land_Pier_F";
+			atlOffset=72.381493;
+		};
+		class Item7
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=18;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12572.577,2.2728283,45.597736};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=103;
+					type="C_man_polo_1_F";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12567.117,2.2728722,45.54604};
+					};
+					side="Civilian";
+					flags=1;
+					class Attributes
+					{
+						isPlayer=1;
+					};
+					id=69;
+					type="C_man_polo_1_F";
+					atlOffset=79.083702;
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12566.819,2.2712171,46.553516};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=71;
+					type="C_man_polo_1_F";
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12567.047,2.269984,47.299194};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=73;
+					type="C_man_polo_1_F";
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12568.174,2.2728536,45.569477};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=75;
+					type="C_man_polo_1_F";
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12568.368,2.2712801,46.520405};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=77;
+					type="C_man_polo_1_F";
+				};
+				class Item6
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12568.334,2.2701643,47.193867};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=79;
+					type="C_man_polo_1_F";
+				};
+				class Item7
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12569.76,2.2728131,45.598648};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=81;
+					type="C_man_polo_1_F";
+				};
+				class Item8
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12569.588,2.2714307,46.433102};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=83;
+					type="C_man_polo_1_F";
+				};
+				class Item9
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12569.671,2.2703273,47.099659};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=85;
+					type="C_man_polo_1_F";
+				};
+				class Item10
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12570.896,2.2729537,45.517162};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=87;
+					type="C_man_polo_1_F";
+				};
+				class Item11
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12570.973,2.2717106,46.267933};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=89;
+					type="C_man_polo_1_F";
+				};
+				class Item12
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12570.837,2.2705872,46.946163};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=91;
+					type="C_man_polo_1_F";
+				};
+				class Item13
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12571.929,2.2707703,46.838726};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=93;
+					type="C_man_polo_1_F";
+				};
+				class Item14
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12571.754,2.2718694,46.174721};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=95;
+					type="C_man_polo_1_F";
+				};
+				class Item15
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12571.592,1.9769489,45.480385};
+					};
+					side="Civilian";
+					flags=1;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=97;
+					type="C_man_polo_1_F";
+					atlOffset=78.172493;
+				};
+				class Item16
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12572.632,2.2711389,46.618656};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=99;
+					type="C_man_polo_1_F";
+				};
+				class Item17
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12572.653,2.2717874,46.226944};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=101;
+					type="C_man_polo_1_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=102;
 		};
 	};
 };
