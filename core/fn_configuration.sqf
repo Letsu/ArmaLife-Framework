@@ -20,6 +20,10 @@ lts_core_thirst = 100;
 lts_core_curSide = "civ"; //Posible Value "civ", "cop", "med"
 lts_core_curVehicles = [];
 
+//Money
+lts_moeny_cash = 0,
+lts_money_bank = 0;
+
 //civ
 lts_civ_inv = []; //Needs to fill whit an Defualt Value
 lts_civ_licenses = [];
