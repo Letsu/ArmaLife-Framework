@@ -14,7 +14,7 @@ class SpawmDialog
 						h = 0.187 * safezoneH;
 					};
 
-					class Listbox-Spawn-Selection: RscListbox
+					class ListboxSpawnSelection: RscListbox
 					{
 						idc = 1500;
 						x = 0.613438 * safezoneW + safezoneX;
@@ -24,7 +24,7 @@ class SpawmDialog
 						tooltip = "Auswahl deines Spawn punktes"; //--- ToDo: Localize;
 					};
 
-					class Button-Spawn: RscButton
+					class ButtonSpawn: RscButton
 					{
 						idc = 1600;
 						text = "Spawn"; //--- ToDo: Localize;
@@ -35,7 +35,7 @@ class SpawmDialog
 						tooltip = "Zum Spawnen den Button DrÃ¼cken"; //--- ToDo: Localize;
 					};
 
-					class Text-Map: RscText
+					class TextMap: RscText
 					{
 						idc = 1001;
 						x = 0.319531 * safezoneW + safezoneX;
@@ -43,6 +43,6 @@ class SpawmDialog
 						w = 0.283594 * safezoneW;
 						h = 0.165 * safezoneH;
 						tooltip = "die Karte"; //--- ToDo: Localize;
-					};	
+					};
 		};
 };
