@@ -34,6 +34,10 @@ diag_log "Initalizise of the Eventhandlers";
 [] call lts_core_fnc_setupEVH;
 diag_log "Finish Initalizise of the Eventhandlers";
 
+diag_log "Initalizise of the Master Loop";
+[] call lts_core_fnc_loop;
+diag_log "Finish Initalizise of the Master Loop";
+
 
 0 cutText ["","BLACK IN"];
 ["--------------------------------------------"] call lts_fnc_log;
