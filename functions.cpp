@@ -22,7 +22,7 @@ class Lts_framework {
     };
 
     class changeSide{
-        file = = "core\side";
+        file = "core\side";
         class changeSide {};
     };
 };
