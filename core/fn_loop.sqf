@@ -1,3 +1,4 @@
+private ["_fnc_food", "_fnc_thirst", "_food", "_thirst"];
 /*
  * Author: Johannes "Letus" Bindriem
  * The While excutet the whole Time and execute Commands thats need to Run in an FOrever Loop!
@@ -43,5 +44,5 @@ for "_i" from 0 to 1 step 0 do {
     if ((time - _food) > 400 ) then { call _fnc_food; _food = time };
     if ((time - _thirst) > 350 ) then { call _fnc_thirst; _thirst = time };
 
-    uiSleep 1;
+    uiSleep 10;
 };
