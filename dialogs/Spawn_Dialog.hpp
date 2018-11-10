@@ -20,7 +20,7 @@ class SpawnDialog
 		{
 			class ListboxSpawnSelection: RscListBox
 			{
-				idc = 60500;
+				idc = 1500;
 				x = 0.613438 * safezoneW + safezoneX;
 				y = 0.412 * safezoneH + safezoneY;
 				w = 0.0721875 * safezoneW;
@@ -37,6 +37,7 @@ class SpawnDialog
 				w = 0.0721875 * safezoneW;
 				h = 0.055 * safezoneH;
 				tooltip = "Zum Spawnen den Button Druecken"; //--- ToDo: Localize;
+				action = " [] call lts_dialog_fnc_spawn ";
 			};
 
 			class TextMap: RscMapControl

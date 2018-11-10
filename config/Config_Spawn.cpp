@@ -3,4 +3,9 @@ class Config_Spawn {
         DisplayName = "La Trinite";
         Marker = "spawn_1";
     };
+
+    class city {
+        DisplayName = "Andere Stadt";
+        Marker = "spawn_2";
+    };
 };

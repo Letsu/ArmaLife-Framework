@@ -40,5 +40,6 @@ class lts_dialog {
     class spawn {
         file = "dialogs\functions\spawn";
         class getSpawnPoints {};
+        class spawn {};
     };
 };

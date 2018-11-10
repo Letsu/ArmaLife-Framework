@@ -1,4 +1,4 @@
-private["_config", "_allSpawnPoints"];
+private["_config", "_allSpawnPoints", "_display", "_spawnList"];
 /*
  * Author: Johannes "Letus" Bindriem
  * [Description]
@@ -21,24 +21,19 @@ createDialog "SpawnDialog";
 waitUntil {!(isNull (findDisplay 60001))};
 //Display
 _display = findDisplay 60001;
-_spawnList = _display displayCtrl 60500;
+_spawnList = _display displayCtrl 1500;
 
 
 {
     _pfad = str(_x) splitString "/, \";
     _config = _pfad select ((count _pfad) - 1);
-    config2 = _config;
-    _allSpawnPoints pushBackUnique _config;
+
+    _spawnName = getText (missionConfigFile >> "Config_Spawn" >> _config >> "DisplayName");
+    _spawnMarker = getText (missionConfigFile >> "Config_Spawn" >> _config >> "Marker");
+
+    _spawnList lbAdd (_spawnName);
+    _spawnList lbSetData [(lbSize _spawnList)-1, _spawnMarker];
 
 } forEach ("true" configClasses (missionConfigFile >> "Config_Spawn"));
-
-{
-    _spawnName = getText (missionConfigFile >> "Config_Spawn" >> _x >> "DisplayName");
-    _spawnMarker = getText (missionConfigFile >> "Config_Spawn" >> _x >> "Marker");
-
-    hint format["%1, %2, %3", _x, _spawnName, _spawnMarker];
-    _spawnList lbAdd (_spawnName); // <----- Not Working!!!
-    _spawnList lbSetData [(lbSize _spawnList)-1, _spawnMarker];
-} forEach _allSpawnPoints;
 
 _spawnList lbSetCurSel 0;
