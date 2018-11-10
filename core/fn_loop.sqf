@@ -40,8 +40,8 @@ _food = time;
 _thirst = time;
 for "_i" from 0 to 1 step 0 do {
 
-    if ((time - _food) > 20 ) then { call _fnc_food; _food = time };
-    if ((time - _thirst) > 10 ) then { call _fnc_thirst; _thirst = time };
+    if ((time - _food) > 400 ) then { call _fnc_food; _food = time };
+    if ((time - _thirst) > 350 ) then { call _fnc_thirst; _thirst = time };
 
 
     dbug_while = dbug_while + 1;
