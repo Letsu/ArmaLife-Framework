@@ -26,7 +26,7 @@ class SpawnDialog
 				w = 0.0721875 * safezoneW;
 				h = 0.088 * safezoneH;
 				tooltip = "Auswahl deines Spawn punktes"; //--- ToDo: Localize;
-			//	onLBSelChanged = "[] call lts_dialog_fnc_spawnLbChange";
+				onLBSelChanged = "[] call lts_dialog_fnc_spawnLbChange"; //<---- Not Working
 			//	onLBSelChanged = "hint ""change""";
 			//	onLBSelChanged = "[] call lts_dialog_fnc_spawn";
 				onLBDblClick = "systemChat str ['onLBDblClick',_this]; false";
