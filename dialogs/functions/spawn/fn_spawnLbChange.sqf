@@ -16,10 +16,11 @@ private ["_display", "_spawnList", "_spawnButton", "_spawnMap", "_curSel", "_spa
  */
 hint "Change";
 
+
 _display = findDisplay 60001;
 _spawnList = _display displayCtrl 1500;
 _spawnButton = _display displayCtrl 1600;
-_spawnMap = _dispaly displayCtrl 1001;
+_spawnMap = _display displayCtrl 1001;
 
 _curSel = lbCurSel _spawnList;
 _spawnMarker =  _spawnList lbData _curSel;

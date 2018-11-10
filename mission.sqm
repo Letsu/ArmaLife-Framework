@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=127;
+		nextID=131;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={7303.5449,630.53424,10643.639};
-		dir[]={-0.88077921,-0.2439968,0.40593579};
-		up[]={-0.22162929,0.96976531,0.10214365};
-		aside[]={0.41858599,2.686138e-007,0.90822518};
+		pos[]={10164.165,64.678635,4018.8826};
+		dir[]={-0.83130723,-0.50276577,-0.23746322};
+		up[]={-0.48345831,0.86439574,-0.13810259};
+		aside[]={-0.27469188,3.5584962e-006,0.96165663};
 	};
 };
 binarizationWanted=0;
@@ -27,14 +27,13 @@ addons[]=
 {
 	"A3_Structures_F_Naval_Piers",
 	"A3_Ui_F",
-	"A3_Characters_F",
-	"A3_Air_F_Heli_Light_01"
+	"A3_Characters_F"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=4;
+		items=3;
 		class Item0
 		{
 			className="A3_Structures_F";
@@ -53,13 +52,6 @@ class AddonsMetaData
 		{
 			className="A3_Characters_F";
 			name="Arma 3 Alpha - Characters and Clothing";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item3
-		{
-			className="A3_Air_F";
-			name="Arma 3 Alpha - Aircraft";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -145,7 +137,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=12;
+		items=10;
 		class Item0
 		{
 			dataType="Object";
@@ -656,100 +648,6 @@ class Mission
 			type="Empty";
 			angle=316.91449;
 			id=117;
-		};
-		class Item10
-		{
-			dataType="Group";
-			side="Civilian";
-			class Entities
-			{
-				items=2;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={5559.063,71.761444,11191.935};
-						angles[]={-0,1.8499173,0};
-					};
-					side="Civilian";
-					flags=6;
-					class Attributes
-					{
-						isPlayer=1;
-					};
-					id=125;
-					type="C_man_1_1_F";
-				};
-				class Item1
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={5559.063,71.761444,11191.935};
-						angles[]={-0,1.8499173,0};
-					};
-					side="Civilian";
-					flags=4;
-					class Attributes
-					{
-					};
-					id=126;
-					type="C_man_1_1_F";
-				};
-			};
-			class Attributes
-			{
-			};
-			class CrewLinks
-			{
-				class LinkIDProvider
-				{
-					nextID=2;
-				};
-				class Links
-				{
-					items=2;
-					class Item0
-					{
-						linkID=0;
-						item0=125;
-						item1=124;
-						class CustomData
-						{
-							role=1;
-						};
-					};
-					class Item1
-					{
-						linkID=1;
-						item0=126;
-						item1=124;
-						class CustomData
-						{
-							role=2;
-							turretPath[]={0};
-						};
-					};
-				};
-			};
-			id=123;
-		};
-		class Item11
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={5559.063,72.364708,11190.904};
-				angles[]={-0,1.8499173,0};
-			};
-			side="Civilian";
-			flags=6;
-			class Attributes
-			{
-			};
-			id=124;
-			type="C_Heli_Light_01_civil_F";
 		};
 	};
 };
