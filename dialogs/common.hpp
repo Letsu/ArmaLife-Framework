@@ -1602,20 +1602,36 @@ class RscMapControl
   h = 0.60;
 
   colorBackground[] = {1.00, 1.00, 1.00, 1.00};
+  colorOutside[] = {1.00, 1.00, 1.00, 1.00};
   colorText[] = {0.00, 0.00, 0.00, 1.00};
   colorSea[] = {0.56, 0.80, 0.98, 0.50};
   colorForest[] = {0.60, 0.80, 0.20, 0.50};
   colorRocks[] = {0.50, 0.50, 0.50, 0.50};
+  colorRailWay[] = {0.00, 0.00, 0.00, 1.00};
+  colorTracks[] = {0.00, 0.00, 0.00, 1.00};
+  colorRoads[] = {0.00, 0.00, 0.00, 1.00};
   colorCountlines[] = {0.65, 0.45, 0.27, 0.50};
   colorMainCountlines[] = {0.65, 0.45, 0.27, 1.00};
   colorCountlinesWater[] = {0.00, 0.53, 1.00, 0.50};
   colorMainCountlinesWater[] = {0.00, 0.53, 1.00, 1.00};
   colorForestBorder[] = {0.40, 0.80, 0.00, 1.00};
   colorRocksBorder[] = {0.50, 0.50, 0.50, 1.00};
-  colorPowerLines[] = {0.00, 0.00, 0.00, 1.00};
+  colorPowerLines[] = {1.00, 1.00, 1.00, 1.00};
   colorNames[] = {0.00, 0.00, 0.00, 1.00};
   colorInactive[] = {1.00, 1.00, 1.00, 0.50};
   colorLevels[] = {0.00, 0.00, 0.00, 1.00};
+
+  colorMainRoads[] = {1.00, 1.00, 1.00, 1.00};
+  colorTracksFill[] = {1.00, 1.00, 1.00, 1.00};
+  colorRoadsFill[] = {1.00, 1.00, 1.00, 1.00};
+  colorMainRoadsFill[] = {1.00, 1.00, 1.00, 1.00};
+  colorGrid[] = {1.00, 1.00, 1.00, 1.00};
+  colorGridMap[] = {1.00, 1.00, 1.00, 1.00};
+
+
+  maxSatelliteAlpha = 1.0;
+  alphaFadeStartScale = 1.0;
+  alphaFadeEndScale = 1.0;
 
   font = "TahomaB";
   sizeEx = 0.040000;
@@ -1645,7 +1661,8 @@ class RscMapControl
   ptsPerSquareRoad = 2;
   ptsPerSquareObj = 10;
 
-  text = "\ca\ui\data\map_background2_co.paa";
+  //text = "\ca\ui\data\map_background2_co.paa";
+  text = "";
   showCountourInterval=2;
   scaleDefault = 0.1;
   onMouseButtonClick = "";

@@ -26,8 +26,10 @@ _spawnName = _spawnList lbText _curSel;
 
 hint format ["%1, %2", _spawnMarker, _spawnName];
 
+//Delete Cam and Light
 spawn_cam cameraEffect ["TERMINATE","BACK"];
 camDestroy spawn_cam;
+deleteVehicle spawn_light;
 closeDialog 0;
 
 player setPos _spawnPos;

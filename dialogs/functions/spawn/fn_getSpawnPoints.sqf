@@ -32,8 +32,11 @@ spawn_cam camSetPos (player modelToWorld [1,4,2]);
 spawn_cam camSetFOV .33;
 spawn_cam camSetFocus [50, 0];
 spawn_cam camCommit 0;
-
-//spawn_cam cameraEffect ["TERMINATE","BACK"];
+//Set Ligt under the Player
+spawn_light = "#lightpoint" createVehicleLocal (getPos player);
+spawn_light setLightBrightness 0.5;
+spawn_light setLightColor [1,1,1];
+spawn_light setLightAmbient [1,1,1];
 
 //Display
 _display = findDisplay 60001;
