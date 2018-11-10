@@ -28,6 +28,12 @@ class Lts_framework {
         file = "core\side";
         class changeSide {};
     };
+
+    class gather{
+        file = "core\gather";
+        class initGather {};
+    }
+
 };
 
 class lts_dialog {

@@ -8,18 +8,18 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=134;
+		nextID=137;
 	};
 	class MarkerIDProvider
 	{
-		nextID=4;
+		nextID=7;
 	};
 	class Camera
 	{
-		pos[]={7258.5571,168.33745,7929.6768};
-		dir[]={-0.99173218,-0.12001944,-0.048086129};
-		up[]={-0.11998594,0.99272341,-0.0058193109};
-		aside[]={-0.048433382,-3.0752926e-006,0.99896002};
+		pos[]={4174.8633,104.74514,4237.1108};
+		dir[]={-0.21474546,-0.88933116,0.40370768};
+		up[]={-0.41768831,0.45711356,0.78522956};
+		aside[]={0.88286996,-5.1944517e-007,0.46962541};
 	};
 };
 binarizationWanted=0;
@@ -127,6 +127,8 @@ class Mission
 		forecastWind=0.1;
 		forecastWaves=0.1;
 		forecastLightnings=0.1;
+		wavesForced=1;
+		windForced=1;
 		year=2035;
 		month=6;
 		day=24;
@@ -137,7 +139,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=10;
+		items=11;
 		class Item0
 		{
 			dataType="Object";
@@ -649,6 +651,14 @@ class Mission
 			type="Empty";
 			angle=316.91449;
 			id=117;
+		};
+		class Item10
+		{
+			dataType="Marker";
+			position[]={4157.502,42.548428,4279.7808};
+			name="spawn_test";
+			type="mil_circle";
+			id=134;
 		};
 	};
 };
