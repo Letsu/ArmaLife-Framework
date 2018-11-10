@@ -17,12 +17,13 @@
 
 
 [] spawn {
-    sleep 10;
-    if (isNull (findDisplay 60001)) then {
+    sleep 3;
+    if (isNull (findDisplay 60001) && !(spawn_finish)) then {
         [] call lts_dialog_fnc_callSpawn;
     };
-}
+};
 
+waitUntil {!(isNull (findDisplay 46))};
 createDialog "SpawnDialog";
 waitUntil {!(isNull (findDisplay 60001))};
 [] call lts_dialog_fnc_getSpawnPoints;

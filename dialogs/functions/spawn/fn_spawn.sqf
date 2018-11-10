@@ -30,6 +30,7 @@ hint format ["%1, %2", _spawnMarker, _spawnName];
 spawn_cam cameraEffect ["TERMINATE","BACK"];
 camDestroy spawn_cam;
 deleteVehicle spawn_light;
+spawn_finish = true;
 closeDialog 0;
 
 player setPos _spawnPos;

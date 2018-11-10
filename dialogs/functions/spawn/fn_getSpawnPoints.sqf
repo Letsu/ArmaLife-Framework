@@ -17,7 +17,7 @@ private["_config", "_allSpawnPoints", "_display", "_spawnList"];
 _config = "";
 _allSpawnPoints = [];
 
-createDialog "SpawnDialog";
+//createDialog "SpawnDialog";
 waitUntil {!(isNull (findDisplay 60001))};
 (findDisplay 60001) displayAddEventHandler ["KeyDown","if ((_this select 1) isEqualTo 1) then { true } "]; //Disaple the ESC Key in the Dialog that the can´t close the Dialog!
 

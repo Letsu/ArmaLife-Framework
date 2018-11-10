@@ -38,3 +38,7 @@ lts_cop_inv = []; //Needs to fill whit an Defualt Value
 //Medic
 lts_med_level = 0;
 lts_med_inv = []; //Needs to fill whit an Defualt Value
+
+
+//Spawn
+spawn_finish = false;
