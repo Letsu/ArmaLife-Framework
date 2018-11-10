@@ -1,7 +1,7 @@
 private["_config", "_allSpawnPoints", "_display", "_spawnList"];
 /*
  * Author: Johannes "Letus" Bindriem
- * [Description]
+ * Call the Spawn Dialog, Fill the Listbox & create an Camare anamed spaw_cam infront of the Player!
  *
  * Arguments:
  * 0: Argument Name <TYPE>
@@ -10,7 +10,7 @@ private["_config", "_allSpawnPoints", "_display", "_spawnList"];
  * Return Name <TYPE>
  *
  * Example:
- * ["example"] call ace_[module]_fnc_[functionName]
+ * [] call lts_dialog_fnc_getSpawnPoints;
  *
  * Public: [Yes/No]
  */
@@ -19,6 +19,22 @@ _allSpawnPoints = [];
 
 createDialog "SpawnDialog";
 waitUntil {!(isNull (findDisplay 60001))};
+(findDisplay 60001) displayAddEventHandler ["KeyDown","if ((_this select 1) isEqualTo 1) then { true } "]; //Disaple the ESC Key in the Dialog that the can´t close the Dialog!
+
+//Set Cam infront of PLayer on Spawn
+player setPos (getMarkerPos "spawn_marker"); // add an Config option and More Positions!
+player setDir (random 356);
+spawn_cam = "CAMERA" camCreate getPos player;
+showCinemaBorder false;
+spawn_cam cameraEffect ["Internal", "Back"];
+spawn_cam camSetTarget (player modelToWorld [0,0,1]);
+spawn_cam camSetPos (player modelToWorld [1,4,2]);
+spawn_cam camSetFOV .33;
+spawn_cam camSetFocus [50, 0];
+spawn_cam camCommit 0;
+
+//spawn_cam cameraEffect ["TERMINATE","BACK"];
+
 //Display
 _display = findDisplay 60001;
 _spawnList = _display displayCtrl 1500;

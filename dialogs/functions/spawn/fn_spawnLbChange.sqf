@@ -1,4 +1,4 @@
-private["_dispaly", "_spawnList", "_spawnButton"];
+private ["_display", "_spawnList", "_spawnButton", "_spawnMap", "_curSel", "_spawnMarker", "_spawnPos", "_spawnName"];
 /*
  * Author: Johannes "Letus" Bindriem
  * [Description]
@@ -14,20 +14,16 @@ private["_dispaly", "_spawnList", "_spawnButton"];
  *
  * Public: [Yes/No]
  */
+hint "Change";
 
 _display = findDisplay 60001;
 _spawnList = _display displayCtrl 1500;
 _spawnButton = _display displayCtrl 1600;
+_spawnMap = _dispaly displayCtrl 1001;
 
 _curSel = lbCurSel _spawnList;
 _spawnMarker =  _spawnList lbData _curSel;
 _spawnPos = getMarkerPos _spawnMarker;
 _spawnName = _spawnList lbText _curSel;
 
-hint format ["%1, %2", _spawnMarker, _spawnName];
-
-spawn_cam cameraEffect ["TERMINATE","BACK"];
-camDestroy spawn_cam;
-closeDialog 0;
-
-player setPos _spawnPos;
+_spawnMap ctrlMapAnimAdd [1, 0.1, _spawnPos];
