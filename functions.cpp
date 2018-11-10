@@ -34,6 +34,13 @@ class Lts_framework {
         class initGather {};
     }
 
+    class player {
+        file = "core\player";
+        class buyLicense {};
+        class hasLicense {};
+        class removeLicense {};
+    }
+
 };
 
 class lts_dialog {

@@ -22,7 +22,11 @@ if (!(_newLicense == _var)) exitWith { ["Something is badly Wrong in buyLicense!
 _licenseName = getText (missionConfigFile >> "Config_License" >> _newLicense >> "DisplayName");
 _licensePrice = getNumber (missionConfigFile >> "Config_License" >> _newLicense >> "Price");
 
-if (lts_moeny_cash < _licensePrice) exitWith { [format ["Du hast nicht genug Geld um die Lizenz: %1 zu kaufen!", _licenseName] ] call lts_fnc_hint };
+_hasLicense = [_var] call lts_fnc_hasLicense;
+if (_hasLicense select 0) exitWith { ["Du hast diese Lizenz schon!"] call lts_fnc_hint};
+
+
+/if (lts_moeny_cash < _licensePrice) exitWith { [format ["Du hast nicht genug Geld um die Lizenz: %1 zu kaufen!", _licenseName] ] call lts_fnc_hint };
 lts_moeny_cash = lts_moeny_cash - _price;
 
 lts_core_licenses pushback [_var, true];

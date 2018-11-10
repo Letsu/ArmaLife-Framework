@@ -1,4 +1,4 @@
-private ["_var"]
+private ["_var"];
 /*
  * Author: Johannes "Letus" Bindriem
  * [Description]
@@ -19,14 +19,14 @@ _var = _this select 0;
 _hasLicense = false;
 
 _num = 0;
-_num2 = 0;
+_num2 = -1;
 {
     if (_x select 0 == _var && _x select 1) then {
         _hasLicense = true;
         _num2 = _num;
     } else {
         _hasLicense = false;
-    }
+    };
     _num = _num + 1;
 } forEach lts_core_licenses;
 
