@@ -14,24 +14,25 @@ class SpawnDialog
 				h = 0.187 * safezoneH;
 				colorBackground[] = {0, 0, 0, 0.8};
 			};
-		};
 
-		class controls
-		{
 			class ListboxSpawnSelection: RscListBox
 			{
 				idc = 1500;
+				onLBSelChanged = "_this call lts_dialog_fnc_spawnLbChange"; //<---- Not Working
 				x = 0.613438 * safezoneW + safezoneX;
 				y = 0.412 * safezoneH + safezoneY;
 				w = 0.0721875 * safezoneW;
 				h = 0.088 * safezoneH;
 				tooltip = "Auswahl deines Spawn punktes"; //--- ToDo: Localize;
-				onLBSelChanged = "[] spawn lts_dialog_fnc_spawnLbChange"; //<---- Not Working
 			//	onLBSelChanged = "hint ""change""";
 			//	onLBSelChanged = "[] call lts_dialog_fnc_spawn";
 				onLBDblClick = "systemChat str ['onLBDblClick',_this]; false";
 				onLBListSelChanged = "systemChat str ['onLBListSelChanged',_this]; false"
 			};
+		};
+
+		class controls
+		{
 
 			class ButtonSpawn: RscButton
 			{

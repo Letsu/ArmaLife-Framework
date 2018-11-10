@@ -8,18 +8,18 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=137;
+		nextID=140;
 	};
 	class MarkerIDProvider
 	{
-		nextID=7;
+		nextID=8;
 	};
 	class Camera
 	{
-		pos[]={7735.3008,218.18085,9376.8496};
-		dir[]={0.41188174,-0.38650995,0.82528961};
-		up[]={0.17268404,0.92219901,0.34600142};
-		aside[]={0.89482349,-1.5855767e-006,-0.44659039};
+		pos[]={4223.2661,92.65638,4320.4395};
+		dir[]={-0.56573617,-0.36411458,-0.73996705};
+		up[]={-0.22151709,0.93112099,-0.28973246};
+		aside[]={-0.79450262,-2.385641e-007,0.60743374};
 	};
 };
 binarizationWanted=0;
@@ -27,13 +27,14 @@ addons[]=
 {
 	"A3_Structures_F_Naval_Piers",
 	"A3_Ui_F",
-	"A3_Characters_F"
+	"A3_Characters_F",
+	"A3_Weapons_F"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=3;
+		items=4;
 		class Item0
 		{
 			className="A3_Structures_F";
@@ -52,6 +53,13 @@ class AddonsMetaData
 		{
 			className="A3_Characters_F";
 			name="Arma 3 Alpha - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item3
+		{
+			className="A3_Weapons_F";
+			name="Arma 3 Alpha - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -139,7 +147,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=11;
+		items=12;
 		class Item0
 		{
 			dataType="Object";
@@ -265,6 +273,18 @@ class Mission
 					{
 						isPlayer=1;
 						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="U_C_Poloshirt_blue";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							gps="ItemGPS";
+						};
 					};
 					id=103;
 					type="C_man_polo_1_F";
@@ -659,6 +679,18 @@ class Mission
 			name="spawn_test";
 			type="mil_circle";
 			id=134;
+		};
+		class Item11
+		{
+			dataType="Marker";
+			position[]={4156.7769,42.655998,4280.6211};
+			name="marker_7";
+			markerType="ELLIPSE";
+			type="ellipse";
+			a=100;
+			b=100;
+			id=139;
+			atlOffset=0.00045776367;
 		};
 	};
 };

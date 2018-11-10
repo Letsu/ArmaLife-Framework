@@ -19,7 +19,7 @@ _allSpawnPoints = [];
 
 //createDialog "SpawnDialog";
 waitUntil {!(isNull (findDisplay 60001))};
-(findDisplay 60001) displayAddEventHandler ["KeyDown","if ((_this select 1) isEqualTo 1) then { true } "]; //Disaple the ESC Key in the Dialog that the can´t close the Dialog!
+(findDisplay 60001) displayAddEventHandler ["KeyDown","if (!((_this select 1) isEqualTo 28)) then { true } "]; //Disaple the ESC Key in the Dialog that the can´t close the Dialog!
 
 //Set Cam infront of PLayer on Spawn
 player setPos (getMarkerPos "spawn_marker"); // add an Config option and More Positions!
