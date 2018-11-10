@@ -42,4 +42,4 @@ waitUntil {!(isNull (findDisplay 46))};
 ["--------------------------------------------"] call lts_fnc_log;
 ["----- End of Initalisation in init.sqf call player Spawn -----"] call lts_fnc_log;
 ["--------------------------------------------"] call lts_fnc_log;
-[] call lts_dialog_fnc_getSpawnPoints;
+[] call lts_dialog_fnc_callSpawn;

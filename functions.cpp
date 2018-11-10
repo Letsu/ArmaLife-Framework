@@ -55,5 +55,6 @@ class lts_dialog {
         class getSpawnPoints {};
         class spawn {};
         class spawnLbChange {};
+        class callSpawn {};
     };
 };

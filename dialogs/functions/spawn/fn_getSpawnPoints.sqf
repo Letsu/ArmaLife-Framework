@@ -24,6 +24,7 @@ waitUntil {!(isNull (findDisplay 60001))};
 //Set Cam infront of PLayer on Spawn
 player setPos (getMarkerPos "spawn_marker"); // add an Config option and More Positions!
 player setDir (random 356);
+player action ["WeaponOnBack", player];
 spawn_cam = "CAMERA" camCreate getPos player;
 showCinemaBorder false;
 spawn_cam cameraEffect ["Internal", "Back"];
