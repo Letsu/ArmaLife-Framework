@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1;
+	toggles=129;
 	class ItemIDProvider
 	{
-		nextID=140;
+		nextID=143;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4223.2661,92.65638,4320.4395};
-		dir[]={-0.56573617,-0.36411458,-0.73996705};
-		up[]={-0.22151709,0.93112099,-0.28973246};
-		aside[]={-0.79450262,-2.385641e-007,0.60743374};
+		pos[]={7210.1934,175.65486,7791.4346};
+		dir[]={0.21532285,-0.16055456,-0.96330023};
+		up[]={0.035029482,0.98702216,-0.15671358};
+		aside[]={-0.97595686,1.3653334e-008,-0.21815136};
 	};
 };
 binarizationWanted=0;
@@ -28,13 +28,14 @@ addons[]=
 	"A3_Structures_F_Naval_Piers",
 	"A3_Ui_F",
 	"A3_Characters_F",
-	"A3_Weapons_F"
+	"A3_Weapons_F",
+	"A3_Soft_F_Offroad_01"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=4;
+		items=5;
 		class Item0
 		{
 			className="A3_Structures_F";
@@ -60,6 +61,13 @@ class AddonsMetaData
 		{
 			className="A3_Weapons_F";
 			name="Arma 3 Alpha - Weapons and Accessories";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item4
+		{
+			className="A3_Soft_F";
+			name="Arma 3 Alpha - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -147,7 +155,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=12;
+		items=13;
 		class Item0
 		{
 			dataType="Object";
@@ -691,6 +699,23 @@ class Mission
 			b=100;
 			id=139;
 			atlOffset=0.00045776367;
+		};
+		class Item12
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7233.252,169.17532,7929.5645};
+				angles[]={6.282495,1.667739,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=141;
+			type="C_Offroad_01_F";
+			atlOffset=0.00016784668;
 		};
 	};
 };
