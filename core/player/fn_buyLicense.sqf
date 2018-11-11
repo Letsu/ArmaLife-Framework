@@ -24,10 +24,15 @@ _licensePrice = getNumber (missionConfigFile >> "Config_License" >> _newLicense 
 
 _hasLicense = [_var] call lts_fnc_hasLicense;
 if (_hasLicense select 0) exitWith { ["Du hast diese Lizenz schon!"] call lts_fnc_hint};
-
-
 if (lts_moeny_cash < _licensePrice) exitWith { [format ["Du hast nicht genug Geld um die Lizenz: %1 zu kaufen!", _licenseName] ] call lts_fnc_hint };
-lts_moeny_cash = lts_moeny_cash - _price;
+debug2 = _hasLicense select 1;
+if (((_hasLicense select 1) isEqualTo -1)) then {
+    hint "Test123";
+    lts_moeny_cash = lts_moeny_cash - _price;
 
-lts_core_licenses pushback [_var, true];
-lts_moeny_cash = lts_moeny_cash - _price;
+    lts_core_licenses pushback [_var, true];
+} else {
+    lts_moeny_cash = lts_moeny_cash - _price;
+
+    (lts_core_licenses select (_hasLicense select 1)) set[1, true];
+}

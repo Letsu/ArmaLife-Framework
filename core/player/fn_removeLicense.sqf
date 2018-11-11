@@ -21,4 +21,7 @@ _hasLicense = _license select 0;
 if (!_hasLicense) exitWith { ["Error in removeLicense Player hasen´t the License!"] call lts_fnc_log };
 _index = _license select 1;
 
-lts_core_licenses select _index select 1 = false;
+
+debug1 = _index;
+
+(lts_core_licenses select _index) set[1, false];

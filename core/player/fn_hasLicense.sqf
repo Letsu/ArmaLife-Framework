@@ -21,8 +21,8 @@ _hasLicense = false;
 _num = 0;
 _num2 = -1;
 {
-    if (_x select 0 == _var && _x select 1) then {
-        _hasLicense = true;
+    if (_x select 0 == _var) then {
+        _hasLicense = _x select 1;
         _num2 = _num;
     } else {
         _hasLicense = false;
