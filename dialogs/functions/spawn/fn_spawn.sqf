@@ -1,16 +1,17 @@
-private["_dispaly", "_spawnList", "_spawnButton"];
+private["_dispaly", "_spawnList", "_spawnButton", "_curSel", "_spawnMarker", "_spawnPos", "_spawnName"];
 /*
  * Author: Johannes "Letus" Bindriem
- * [Description]
+ * Executed when player press the Spawn button on the Spawn Menu
+ * When Executet the Player set to the Spawn Position, the Cam and Lighzt from the Spawn whould be destroyd and an new Cam whould be created to fly from spawn to zhe place the player spawns!
  *
  * Arguments:
- * 0: Argument Name <TYPE>
+ * None
  *
  * Return Value:
- * Return Name <TYPE>
+ * None
  *
  * Example:
- * ["example"] call ace_[module]_fnc_[functionName]
+ * [] call lts_dialog_fnc_spawn;
  *
  * Public: [Yes/No]
  */
@@ -33,7 +34,6 @@ closeDialog 0;
 
 _oldPlayerPos = getPos player;
 _heightPlayerPos = [_oldPlayerPos select 0, _oldPlayerPos select 1, 10];
-player setPos _spawnPos;
 
 [_oldPlayerPos, _heightPlayerPos] spawn {
     _oldPlayerPos = _this select 0;
@@ -47,20 +47,20 @@ player setPos _spawnPos;
 
     came1 camPrepareTarget _oldPlayerPos;
     came1 camPrepareFOV 1;
-    came1 camCommitPrepared 0.5;
+    came1 camCommitPrepared 0;
 
     // pos 2
     came1 camPreparePos _heightPlayerPos;
     came1 camPrepareTarget _oldPlayerPos;
     came1 camPrepareFOV 2;
-    came1 camCommitPrepared 1;
-    sleep 1.5;
+    came1 camCommitPrepared 0.5;
+    sleep 0.5;
 
     came1 camPreparePos [5676, 2979, 700];
     came1 camPrepareTarget player;
     came1 camPrepareFOV 2;
     came1 camCommitPrepared 3;
-    sleep 3;
+    sleep 2.9;
 
     // pos 3
     came1 camPreparePos [(getPos player select 0) + 50, (getPos player select 1), 50];
@@ -69,15 +69,17 @@ player setPos _spawnPos;
     came1 camCommitPrepared 3;
     sleep 3;
 
-    came1 camPreparePos getPos player;
+    came1 camPreparePos [(getPos player) select 0, (getPos player) select 1, ((getPos player) select 2) + 1];
     came1 camPrepareTarget player;
     came1 camPrepareFOV 0.5;
-    came1 camCommitPrepared 1;
+    came1 camCommitPrepared 2;
     /*
     came1 cameraEffect ["internal", "BACK"];
     came1 camCommand "inertia on";
     */
-    sleep 1;
+    sleep 2;
     came1 cameraEffect ["TERMINATE","BACK"];
     camDestroy came1;
 };
+
+player setPos _spawnPos;
