@@ -1,4 +1,4 @@
-private["_dispaly", "_spawnList", "_spawnButton", "_curSel", "_spawnMarker", "_spawnPos", "_spawnName"];
+private["_dispaly", "_spawnList", "_spawnButton", "_curSel", "_spawnMarker", "_spawnPos", "_spawnName", "_oldPlayerPos", "_heightPlayerPos"];
 /*
  * Author: Johannes "Letus" Bindriem
  * Executed when player press the Spawn button on the Spawn Menu
@@ -39,47 +39,43 @@ _heightPlayerPos = [_oldPlayerPos select 0, _oldPlayerPos select 1, 10];
     _oldPlayerPos = _this select 0;
     _heightPlayerPos = _this select 1;
     //pos 1
-    came1 = "camera" camCreate _oldPlayerPos;
+    _came1 = "camera" camCreate _oldPlayerPos;
                showCinemaBorder true;
 
-    came1 cameraEffect ["internal", "BACK"];
-    came1 camCommand "inertia on";
+    _came1 cameraEffect ["internal", "BACK"];
+    _came1 camCommand "inertia on";
 
-    came1 camPrepareTarget _oldPlayerPos;
-    came1 camPrepareFOV 1;
-    came1 camCommitPrepared 0;
+    _came1 camPrepareTarget _oldPlayerPos;
+    _came1 camPrepareFOV 1;
+    _came1 camCommitPrepared 0;
 
     // pos 2
-    came1 camPreparePos _heightPlayerPos;
-    came1 camPrepareTarget _oldPlayerPos;
-    came1 camPrepareFOV 2;
-    came1 camCommitPrepared 0.5;
+    _came1 camPreparePos _heightPlayerPos;
+    _came1 camPrepareTarget _oldPlayerPos;
+    _came1 camPrepareFOV 2;
+    _came1 camCommitPrepared 0.5;
     sleep 0.5;
 
-    came1 camPreparePos [5676, 2979, 700];
-    came1 camPrepareTarget player;
-    came1 camPrepareFOV 2;
-    came1 camCommitPrepared 3;
+    _came1 camPreparePos [5676, 2979, 700];
+    _came1 camPrepareTarget player;
+    _came1 camPrepareFOV 2;
+    _came1 camCommitPrepared 3;
     sleep 2.9;
 
     // pos 3
-    came1 camPreparePos [(getPos player select 0) + 50, (getPos player select 1), 50];
-    came1 camPrepareTarget player;
-    came1 camPrepareFOV 2;
-    came1 camCommitPrepared 3;
+    _came1 camPreparePos [(getPos player select 0) + 50, (getPos player select 1), 50];
+    _came1 camPrepareTarget player;
+    _came1 camPrepareFOV 2;
+    _came1 camCommitPrepared 3;
     sleep 3;
 
-    came1 camPreparePos [(getPos player) select 0, (getPos player) select 1, ((getPos player) select 2) + 1];
-    came1 camPrepareTarget player;
-    came1 camPrepareFOV 0.5;
-    came1 camCommitPrepared 2;
-    /*
-    came1 cameraEffect ["internal", "BACK"];
-    came1 camCommand "inertia on";
-    */
+    _came1 camPreparePos [(getPos player) select 0, (getPos player) select 1, ((getPos player) select 2) + 1];
+    _came1 camPrepareTarget player;
+    _came1 camPrepareFOV 0.5;
+    _came1 camCommitPrepared 2;
     sleep 2;
-    came1 cameraEffect ["TERMINATE","BACK"];
-    camDestroy came1;
+    _came1 cameraEffect ["TERMINATE","BACK"];
+    camDestroy _came1;
 };
 
 player setPos _spawnPos;
