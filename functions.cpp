@@ -17,6 +17,7 @@ class Lts_framework {
         class hint {};
         class log {};
         class keyDown {};
+        class addItem {};
     };
 
     class respawn {

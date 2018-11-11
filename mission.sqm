@@ -8,7 +8,7 @@ class EditorData
 	toggles=129;
 	class ItemIDProvider
 	{
-		nextID=143;
+		nextID=146;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={7183.5068,301.43076,7764.6704};
-		dir[]={0.23158978,-0.95618349,-0.17914267};
-		up[]={0.75634301,0.2926611,-0.58505833};
-		aside[]={-0.61185259,4.3874024e-008,-0.7909807};
+		pos[]={7259.5806,182.21321,7930.5986};
+		dir[]={-0.76846224,-0.59203005,0.24292986};
+		up[]={-0.56458038,0.80584854,0.17847769};
+		aside[]={0.30143067,-7.9159508e-007,0.95351398};
 	};
 };
 binarizationWanted=0;
@@ -29,13 +29,14 @@ addons[]=
 	"A3_Ui_F",
 	"A3_Characters_F",
 	"A3_Weapons_F",
-	"A3_Soft_F_Offroad_01"
+	"A3_Soft_F_Offroad_01",
+	"Fox_Taurus16LED"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=5;
+		items=6;
 		class Item0
 		{
 			className="A3_Structures_F";
@@ -70,6 +71,11 @@ class AddonsMetaData
 			name="Arma 3 Alpha - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
+		};
+		class Item5
+		{
+			className="Fox_Taurus16LED";
+			name="Fox_Taurus16LED";
 		};
 	};
 };
@@ -155,7 +161,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=13;
+		items=14;
 		class Item0
 		{
 			dataType="Object";
@@ -716,6 +722,23 @@ class Mission
 			id=141;
 			type="C_Offroad_01_F";
 			atlOffset=0.00016784668;
+		};
+		class Item13
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7243.5688,168.94292,7930.5928};
+				angles[]={6.282495,0,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=144;
+			type="Fox_Taurus16LED_HWP";
+			atlOffset=-0.0043792725;
 		};
 	};
 };
