@@ -18,6 +18,7 @@ class Lts_framework {
         class log {};
         class keyDown {};
         class addItem {};
+        class addWeapon {};
     };
 
     class respawn {

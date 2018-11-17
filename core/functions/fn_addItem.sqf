@@ -35,6 +35,7 @@ _fnc_addToBackpack = {
 };
 
 
+
 _item = param[0];
 _ammount = param[0, 1];
 _assignItem = param [1, false];
@@ -43,108 +44,25 @@ _addToBackpack = param [2, false];
 _exit = false;
 
 //Check if Item is an Weapon to add the Weapon direkty to the Weaponslot
-if (isClass (configFile >> "CFGweapons" >> _item) then {
+_isWeapon = ([_item] call BIS_fnc_itemType) select 0 isEqualTo "Weapon";
+if (_isWeapon) then {
     //init some Defualt Variables!
     _isPrimaryWeapon   = false;
     _isHandgunWeapon   = false;
     _isSecondaryWeapon = false;
 
+    //When addToBackpack is enable add Weapon to Backpack and exit!
+    if (_addToBackpack) exitWith { [_item, _ammount] call _fnc_addToBackpack; _exit = true; };
+
     //Some Checks befor add Weapon.
-    if (_amount > 1) exitWith { ["Du kannst nur maximal 1 Waffe auf einmal kaufen!"] call lts_fnc_hint; _exit = true };
+    if (_amount > 1) exitWith { ["Du kannst nur maximal 1 Waffe auf einmal kaufen!"] call lts_fnc_hint; _exit = true; };
+
     //Get Typ of the Weapon
     _typ = [_item] call BIS_fnc_itemType;
     _typ = _typ select 1;
-    if (_typ == "AssaultRifle") then { _isPrimaryWeapon = true } else { if (_typ == "Handgun") then { _isHandgunWeapon = true } else { _isSecondaryWeapon = true };};
-    //When addToBackpack is enable add Weapon to Backpack and exit!
-    if (_addToBackpack) exitWith { [_item, _ammount] call _fnc_addToBackpack; _exit = true };
-    //Exec 3 DiferentCode for every Weapon Typ
-    if (_isPrimaryWeapon) then {
+    [_item, _typ] call lts_fnc_addWeapon;
 
-
-
-        //-----------------------------------------------------------------------
-        //Primary Weapon
-        //------------------------------------------------------------------------
-        //Check if Player alrady has an Primary Weapon
-        _primaryWeapon = primaryWeapon player;
-        if (isNil _primaryWeapon) then {
-            //Player has no Weapon so add the Weapon to the Free Slot and Exit!
-            player addWeapon _item;
-            _exit = true;
-         } else {
-             //Player already has an Primary Weapon ask him to put the Weapon to the Backpack when he has one!
-             //First check if the Player has an Backpack
-             if (isNil (backpack player)) exitWith { ["Du hast bereits eine Waffe!"] call lts_fnc_hint; _exit = true};
-             _controll = [
-                "Du hast schon eine Waffe. Willst du deine neue Waffe in dein Rucksack legen?",
-                "Kein Platz!",
-                "Ja",
-                "Nein"
-             ] call BIS_fnc_guiMessage;
-
-             //Player chose Yes so put the Weapon to backpack
-             if (_controll) exitWith { [_item] call _fnc_addToBackpack; _exit = true};
-         };
-         _exit = true;
-    } else {
-
-
-
-        //-----------------------------------------------------------------------
-        //Handgun Weapon
-        //------------------------------------------------------------------------
-        if (_isHandgunWeapon) then {
-            //Check if Player alrady has an Handgun Weapon
-            _handgunWeapon = handgunWeapon player;
-            if (isNil _handgunWeapon) then {
-                //Player has no Weapon so add the Weapon to the Free Slot and Exit!
-                player addWeapon _item;
-                _exit = true;
-             } else {
-                 //Player already has an Hadngun Weapon ask him to put the Weapon to the Backpack when he has one!
-                 //First check if the Player has an Backpack
-                 if (isNil (backpack player)) exitWith { ["Du hast bereits eine Waffe!"] call lts_fnc_hint; _exit = true};
-                 _controll = [
-                    "Du hast schon eine Waffe. Willst du deine neue Waffe in dein Rucksack legen?",
-                    "Kein Platz!",
-                    "Ja",
-                    "Nein"
-                 ] call BIS_fnc_guiMessage;
-
-                 //Player chose Yes so put the Weapon to backpack
-                 if (_controll) exitWith { [_item] call _fnc_addToBackpack; _exit = true};
-             };
-             _exit = true;
-        } else { // is no Handgun and no Primary so it´s an secondary
-
-
-
-            //-----------------------------------------------------------------------
-            //Secondary Weapon
-            //------------------------------------------------------------------------
-            //Check if Player alrady has an Secondary Weapon
-            _secondaryWeapon = secondaryWeapon player;
-            if (isNil _secondaryWeapon) then {
-                //Player has no Weapon so add the Weapon to the Free Slot and Exit!
-                player addWeapon _item;
-                _exit = true;
-            } else {
-                //Player already has an Secondary Weapon ask him to put the Weapon to the Backpack when he has one!
-                //First check if the Player has an Backpack
-                if (isNil (backpack player)) exitWith { ["Du hast bereits eine Waffe!"] call lts_fnc_hint; _exit = true};
-                _controll = [
-                    "Du hast schon eine Waffe. Willst du deine neue Waffe in dein Rucksack legen?",
-                    "Kein Platz!",
-                    "Ja",
-                    "Nein"
-                ] call BIS_fnc_guiMessage;
-
-                //Player chose Yes so put the Weapon to backpack
-                if (_controll) exitWith { [_item] call _fnc_addToBackpack; _exit = true};
-            };
-        _exit = true;
-        };
-    };
+    _exit = true;
 };
 
 if (_exit) exitWith {};
