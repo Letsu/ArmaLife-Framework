@@ -25,7 +25,7 @@ Primary Weapon
 ------------------------------------------------------------
 */
 _fnc_addPrimaryWeapon = {
-    _weapon = param [0];
+    _item = param [0];
 
     _primaryWeapon = primaryWeapon player;
     if (_primaryWeapon isEqualTo "") then {
@@ -34,7 +34,7 @@ _fnc_addPrimaryWeapon = {
     } else {
         //Player already has an Weapon ask him to put the Weapon to the Backpack when he has one!
         //First check if the Player has an Backpack
-        if (isNil (backpack player)) exitWith { ["Du hast bereits eine Waffe!"] call lts_fnc_hint };
+        if (!(player canAddItemToBackpack _item)) exitWith { ["Du hast bereits eine Waffe!"] call lts_fnc_hint };
         _controll = [
             "Du hast schon eine Waffe. Willst du deine neue Waffe in dein Rucksack legen?",
             "Kein Platz!",
@@ -54,7 +54,7 @@ Handgun Weapon
 ------------------------------------------------------------
 */
 _fnc_addHandgunWeapon = {
-    _weapon = param [0];
+    _item = param [0];
 
     _handgunWeapon = handgunWeapon player;
     if (_handgunWeapon isEqualTo "") then {
@@ -63,7 +63,7 @@ _fnc_addHandgunWeapon = {
     } else {
         //Player already has an Weapon ask him to put the Weapon to the Backpack when he has one!
         //First check if the Player has an Backpack
-        if (isNil (backpack player)) exitWith { ["Du hast bereits eine Waffe!"] call lts_fnc_hint };
+        if (!(player canAddItemToBackpack _item)) exitWith { ["Du hast bereits eine Waffe!"] call lts_fnc_hint };
         _controll = [
             "Du hast schon eine Waffe. Willst du deine neue Waffe in dein Rucksack legen?",
             "Kein Platz!",
@@ -83,7 +83,7 @@ Secondary Weapon
 ------------------------------------------------------------
 */
 _fnc_addSecondaryWeapon = {
-    _weapon = param [0];
+    _item = param [0];
 
     _secondaryWeapon = secondaryWeapon player;
     if (_secondaryWeapon isEqualTo "") then {
@@ -92,7 +92,7 @@ _fnc_addSecondaryWeapon = {
     } else {
         //Player already has an Weapon ask him to put the Weapon to the Backpack when he has one!
         //First check if the Player has an Backpack
-        if (isNil (backpack player)) exitWith { ["Du hast bereits eine Waffe!"] call lts_fnc_hint };
+        if (!(player canAddItemToBackpack _item)) exitWith { ["Du hast bereits eine Waffe!"] call lts_fnc_hint };
         _controll = [
             "Du hast schon eine Waffe. Willst du deine neue Waffe in dein Rucksack legen?",
             "Kein Platz!",
@@ -119,3 +119,6 @@ _weapon = param [0];
 _type = param[1, "AssaultRifle"];
 
 if (_typ == "AssaultRifle") then { [_weapon] call _fnc_addPrimaryWeapon } else { if (_typ == "Handgun") then { [_weapon] call _fnc_addHandgunWeapon } else { [_weapon] call _fnc_addPrimaryWeapon }/*End IF*/; }/*End Else*/;
+
+
+//If hinmzufügen um die Waffe vom Spieler auszulesen(je Nach Typ) und dann einfach damit weiter arbeiten dann sind keine Drei Funktionen erforderlich!

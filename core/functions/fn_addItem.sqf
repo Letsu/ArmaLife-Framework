@@ -29,7 +29,7 @@ _isWeapon = ([_item] call BIS_fnc_itemType) select 0 isEqualTo "Weapon";
 if (_isWeapon) then {
 
     //Some Checks befor add Weapon.
-    if (_amount > 1) exitWith { ["Du kannst nur maximal 1 Waffe auf einmal kaufen!"] call lts_fnc_hint; _exit = true; };
+    if (_amount > 1) exitWith { ["Du kannst nur maximal 1 Waffe auf einmal kaufen!"] call lts_fnc_hint; _exit = true; }; //On Secend call this Line throws an Erroe
 
     //When addToBackpack is enable add Weapon to Backpack and exit!
     if (_addToBackpack) exitWith { [_item, _ammount] call lts_fnc_addToBackpack; _exit = true; };
