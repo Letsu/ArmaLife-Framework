@@ -15,6 +15,9 @@
  */
 
 
+//Error that thrown on open of Dialog!!
+//File f:\armaprojekt.malden\dialogs\Spawn_Dialog.hpp, line 30: '/SpawnDialog/ControlsBackground/ListboxSpawnSelection.onLBListSelChanged': Missing ';' prior '}'
+
 waitUntil {!(isNull (findDisplay 46))};
 
 [] spawn {
