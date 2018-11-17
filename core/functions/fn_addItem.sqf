@@ -134,3 +134,12 @@ if (_itemTyp isEqualTo "Item") then {
     _exit = true;
 };
 if (_exit) exitWith {};
+
+//Add Action for Weapon Mounts
+
+//Add Action for Ace Items like Bandages because of error in ACE Code
+
+if (!exit) then {
+    if (_addToBackpack) exitWith { [_item, _ammount] call lts_fnc_addToBackpack };
+    player addItem _item;
+};
