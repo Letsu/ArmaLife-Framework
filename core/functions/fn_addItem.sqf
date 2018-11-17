@@ -17,20 +17,27 @@ private ["_fnc_addToBackpack", "_item", "_amount", "_assignItem", "_addToBackpac
  *
  */
 
+//IMPORTEN!!!!!!!
+//ACE Items like Bandages and somethings are from Type ["Item","AccessoryBipod"] thats the Arma Bipod so this Item must Handels in Extra Class!!!!!
+//IMPORTEN!!!!!!!
+
 _item = param[0];
 _ammount = param[0, 1];
 _assignItem = param [1, false];
 _addToBackpack = param [2, false];
 
+
+_typ = [_item] call BIS_fnc_itemType;
+_itemTyp = _typ select 0;
 _exit = false;
 
-//Check if Item is an Weapon to add the Weapon direkty to the Weaponslot
-_isWeapon = ([_item] call BIS_fnc_itemType) select 0 isEqualTo "Weapon";
-if (_isWeapon) then {
+
+//Is Item an Weapon?
+if (_itemTyp isEqualTo "Weapon") then {
 
     //Some Checks befor add Weapon.
-    if (_amount > 1) exitWith { ["Du kannst nur maximal 1 Waffe auf einmal kaufen!"] call lts_fnc_hint; _exit = true; }; /*On Secend call this Line throws an Error:
-    
+    if (_amount > 1) exitWith { ["Du kannst nur maximal 1 Waffe auf einmal kaufen!"] call lts_fnc_hint; _exit = true; }; /*On call in spawn(Secend call) this Line throws an Error:
+
     18:15:40   Error position: <_amount > 1) exitWith { ["Du kannst nur >
     18:15:40   Error Undefined variable in expression: _amount
     18:15:40 File core\functions\fn_addItem.sqf [lts_fnc_addItem], line 32
@@ -40,14 +47,46 @@ if (_isWeapon) then {
     if (_addToBackpack) exitWith { [_item, _ammount] call lts_fnc_addToBackpack; _exit = true; };
 
 
-    //Get Typ of the Weapon
-    _typ = [_item] call BIS_fnc_itemType;
-    _typ = _typ select 1;
-    [_item, _typ] call lts_fnc_addWeapon;
+    //Get the Weapon Typ and send it to lts_fnc_addWeapon;
+    _weaponTyp = _typ select 1;
+    [_item, _weaponTyp] call lts_fnc_addWeapon;
 
 
     //Set Exit to true to Exit the Function
     _exit = true;
 };
+if (_exit) exitWith {};
 
+
+
+//Is Item CLothing???
+if (_itemTyp isEqualTo "Equipment") then {
+    //Some checks befor add the Clothin!
+    if (_amount > 1) exitWith { ["Du kannst nur maximal 1 ein Kleidungsstück auf einmal kaufen!"] call lts_fnc_hint; _exit = true; };
+
+    if (_addToBackpack) exitWith { [_item, _ammount] call lts_fnc_addToBackpack; _exit = true; };
+
+    _clotTyp = _typ select 1;
+
+    if (_clotTyp isEqualTo "Uniform") exitWith {
+        player addUniform _item;
+        _exit = true;
+    };
+    if (_clotTyp isEqualTo "Vest") exitWith {
+        player addVest _item;
+        _exit = true;
+    if (_clotTyp isEqualTo "Backpack") exitWith {
+        player addBackpack _item;
+        _exit = true;
+    };
+    if (_clotTyp isEqualTo "Headgear") exitWith {
+        player addHeadgear _item;
+        _exit = true;
+    };
+
+
+
+
+    _exit = true;
+};
 if (_exit) exitWith {};
