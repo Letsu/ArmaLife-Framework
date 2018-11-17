@@ -28,7 +28,7 @@ _fnc_addPrimaryWeapon = {
     _weapon = param [0];
 
     _primaryWeapon = primaryWeapon player;
-    if (isNil _primaryWeapon) then {
+    if (_primaryWeapon isEqualTo "") then {
         //Player has no Weapon so add the Weapon to the Free Slot and Exit!
         player addWeapon _item;
     } else {
@@ -57,7 +57,7 @@ _fnc_addHandgunWeapon = {
     _weapon = param [0];
 
     _handgunWeapon = handgunWeapon player;
-    if (isNil _handgunWeapon) then {
+    if (_handgunWeapon isEqualTo "") then {
         //Player has no Weapon so add the Weapon to the Free Slot and Exit!
         player addWeapon _item;
     } else {
@@ -86,7 +86,7 @@ _fnc_addSecondaryWeapon = {
     _weapon = param [0];
 
     _secondaryWeapon = secondaryWeapon player;
-    if (isNil _secondaryWeapon) then {
+    if (_secondaryWeapon isEqualTo "") then {
         //Player has no Weapon so add the Weapon to the Free Slot and Exit!
         player addWeapon _item;
     } else {
