@@ -43,7 +43,7 @@ _fnc_addPrimaryWeapon = {
         ] call BIS_fnc_guiMessage;
 
         //If Player chose Yes put the Weapon to backpack
-        if (_controll) exitWith { [_item] call _fnc_addToBackpack };
+        if (_controll) exitWith { [_item] call lts_fnc_addToBackpack };
     };
 };
 
@@ -72,7 +72,7 @@ _fnc_addHandgunWeapon = {
         ] call BIS_fnc_guiMessage;
 
         //If Player chose Yes put the Weapon to backpack
-        if (_controll) exitWith { [_item] call _fnc_addToBackpack };
+        if (_controll) exitWith { [_item] call lts_fnc_addToBackpack };
     };
 };
 
@@ -101,7 +101,7 @@ _fnc_addSecondaryWeapon = {
         ] call BIS_fnc_guiMessage;
 
         //If Player chose Yes put the Weapon to backpack
-        if (_controll) exitWith { [_item] call _fnc_addToBackpack };
+        if (_controll) exitWith { [_item] call lts_fnc_addToBackpack };
     };
 };
 

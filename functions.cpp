@@ -19,6 +19,7 @@ class Lts_framework {
         class keyDown {};
         class addItem {};
         class addWeapon {};
+        class addToBackpack {};
     };
 
     class respawn {
