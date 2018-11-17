@@ -8,7 +8,7 @@ class EditorData
 	toggles=129;
 	class ItemIDProvider
 	{
-		nextID=146;
+		nextID=150;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={7238.8433,173.6627,7929.6123};
-		dir[]={-0.66163254,-0.74615359,-0.074522577};
-		up[]={-0.74153399,0.66569489,-0.08352121};
-		aside[]={-0.1119298,2.3839129e-007,0.99374098};
+		pos[]={7233.3677,170.95927,7928.3618};
+		dir[]={0.72401506,-0.57809627,-0.3765614};
+		up[]={0.51292849,0.81590617,-0.26677495};
+		aside[]={-0.46147168,2.8603245e-006,-0.88726252};
 	};
 };
 binarizationWanted=0;
@@ -28,14 +28,20 @@ addons[]=
 	"A3_Structures_F_Naval_Piers",
 	"A3_Ui_F",
 	"A3_Characters_F",
+	"A3_Weapons_F_Tank_Launchers_MRAWS",
+	"A3_Weapons_F_Tank",
 	"A3_Weapons_F",
+	"ace_optics",
+	"A3_Characters_F_Orange_Facewear",
+	"ace_goggles",
+	"ace_nightvision",
 	"A3_Soft_F_Offroad_01"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=5;
+		items=10;
 		class Item0
 		{
 			className="A3_Structures_F";
@@ -59,12 +65,47 @@ class AddonsMetaData
 		};
 		class Item3
 		{
+			className="A3_Weapons_F_Tank";
+			name="Arma 3 Tank - Weapons and Accessories";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item4
+		{
 			className="A3_Weapons_F";
 			name="Arma 3 Alpha - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item4
+		class Item5
+		{
+			className="ace_optics";
+			name="ACE3 - Optics";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item6
+		{
+			className="A3_Characters_F_Orange";
+			name="Arma 3 Orange - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item7
+		{
+			className="ace_goggles";
+			name="ACE3 - Goggles";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item8
+		{
+			className="ace_nightvision";
+			name="ACE3 - Night Vision";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item9
 		{
 			className="A3_Soft_F";
 			name="Arma 3 Alpha - Unarmored Land Vehicles";
@@ -283,6 +324,19 @@ class Mission
 						isPlayable=1;
 						class Inventory
 						{
+							class secondaryWeapon
+							{
+								name="launch_MRAWS_sand_rail_F";
+								class primaryMuzzleMag
+								{
+									name="MRAWS_HEAT_F";
+									ammoLeft=1;
+								};
+							};
+							class binocular
+							{
+								name="Binocular";
+							};
 							class uniform
 							{
 								typeName="U_C_Poloshirt_blue";
@@ -292,11 +346,25 @@ class Mission
 							{
 								typeName="B_Carryall_oli";
 								isBackpack=1;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="MRAWS_HEAT_F";
+										count=1;
+										ammoLeft=1;
+									};
+								};
 							};
 							map="ItemMap";
 							compass="ItemCompass";
 							watch="ItemWatch";
+							radio="ItemRadio";
 							gps="ItemGPS";
+							goggles="G_Aviator";
+							hmd="ACE_NVG_Gen1";
+							headgear="H_Cap_oli";
 						};
 					};
 					id=103;
@@ -710,7 +778,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={7233.252,169.17532,7929.5645};
+				position[]={7237.1104,169.17441,7928.6284};
 				angles[]={6.282495,1.667739,0};
 			};
 			side="Empty";
@@ -720,7 +788,6 @@ class Mission
 			};
 			id=141;
 			type="C_Offroad_01_F";
-			atlOffset=0.00016784668;
 		};
 	};
 };

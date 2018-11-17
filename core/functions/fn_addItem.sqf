@@ -1,4 +1,4 @@
-private ["_fnc_addToBackpack", "_item", "_amount", "_assignItem", "_addToBackpack"];
+private [ "_item", "_amount", "_addToBackpack"];
 /*
  * Author: Johannes "Letus" Bindriem
  * To Add Items to PLayer Inventory when boaght an Item or Some other handels who an Weapon must add to the Player Inventory
@@ -6,8 +6,7 @@ private ["_fnc_addToBackpack", "_item", "_amount", "_assignItem", "_addToBackpac
  * Arguments:
  * 0: The Item [String]
  * 1(Optiaml): Number of Items. Defualt: 1 [Number]
- * 2(Optiaml): Asseign Item to Player. Defualt: false [Bool]
- * 3(Optimal): Add Item to Backback. Default: false [Bool]
+ * 2(Optimal): Add Item to Backback. Default: false [Bool]
  *
  * Return Value:
  * NONE
@@ -22,8 +21,7 @@ private ["_fnc_addToBackpack", "_item", "_amount", "_assignItem", "_addToBackpac
 //IMPORTEN!!!!!!!
 
 _item = param[0];
-_ammount = param[0, 1];
-_assignItem = param [1, false];
+_ammount = param[1, 1];
 _addToBackpack = param [2, false];
 
 
@@ -42,7 +40,6 @@ if (_itemTyp isEqualTo "Weapon") then {
     18:15:40   Error Undefined variable in expression: _amount
     18:15:40 File core\functions\fn_addItem.sqf [lts_fnc_addItem], line 32
     */
-
     //When addToBackpack is enable add Weapon to Backpack and exit!
     if (_addToBackpack) exitWith { [_item, _ammount] call lts_fnc_addToBackpack; _exit = true; };
 
@@ -75,6 +72,7 @@ if (_itemTyp isEqualTo "Equipment") then {
     if (_clotTyp isEqualTo "Vest") exitWith {
         player addVest _item;
         _exit = true;
+    };
     if (_clotTyp isEqualTo "Backpack") exitWith {
         player addBackpack _item;
         _exit = true;
@@ -83,9 +81,55 @@ if (_itemTyp isEqualTo "Equipment") then {
         player addHeadgear _item;
         _exit = true;
     };
+    if (_clotTyp isEqualTo "Glasses") exitWith {
+        player addGoggles _item;
+        _exit = true;
+    };
 
 
 
+    _exit = true;
+};
+if (_exit) exitWith {};
+
+
+
+
+//Is Item Something else???
+if (_itemTyp isEqualTo "Item") then {
+    if (_addToBackpack) exitWith { [_item, _ammount] call lts_fnc_addToBackpack; _exit = true; };
+
+    _itemOtherTyp = _typ select 1;
+
+
+    if (_itemOtherTyp isEqualTo "GPS") exitWith {
+            player linkItem _item;
+            _exit = true;
+    };
+    if (_itemOtherTyp isEqualTo "NVGoggles") exitWith {
+            player linkItem _item;
+            _exit = true;
+    };
+    if (_itemOtherTyp isEqualTo "Binocular") exitWith {
+        player addWeapon _item;
+        _exit = true;
+    };
+    if (_itemOtherTyp isEqualTo "Radio") exitWith {
+        player addWeapon _item;
+        _exit = true;
+    };
+    if (_itemOtherTyp isEqualTo "Map") exitWith {
+            player linkItem _item;
+            _exit = true;
+    };
+    if (_itemOtherTyp isEqualTo "Compass") exitWith {
+            player linkItem _item;
+            _exit = true;
+    };
+    if (_itemOtherTyp isEqualTo "Radio") exitWith {
+            player linkItem _item;
+            _exit = true;
+    };
 
     _exit = true;
 };
