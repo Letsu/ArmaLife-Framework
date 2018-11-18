@@ -35,6 +35,7 @@ class Lts_framework {
     class gather{
         file = "core\gather";
         class initGather {};
+        class gather {};
     }
 
     class player {
