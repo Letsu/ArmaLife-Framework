@@ -37,6 +37,7 @@ _heightPlayerPos = [_oldPlayerPos select 0, _oldPlayerPos select 1, 10];
 
 
 //Spawn for Cam for Intro effect!
+/*
 [_oldPlayerPos, _heightPlayerPos] spawn {
     _oldPlayerPos = _this select 0;
     _heightPlayerPos = _this select 1;
@@ -81,5 +82,5 @@ _heightPlayerPos = [_oldPlayerPos select 0, _oldPlayerPos select 1, 10];
     _came1 cameraEffect ["TERMINATE","BACK"];
     camDestroy _came1;
 };
-
+*/
 player setPos _spawnPos;

@@ -37,3 +37,17 @@ showHUD[] = {
 	true,	// HUD Weapon Cursors
 	true	// Vehicle display panels
 };
+
+
+class CfgSounds
+{
+	sounds[] = {};
+	class carUnlock {
+		name = "carUnlock";
+		sound[] = { "sounds\carUnlock.ogg", 1, 1, 100 };
+	};
+    class carLock {
+    	name = "carLock";
+    	sound[] = { "sounds\carLock.ogg", 1, 1, 100 };
+    };
+};
