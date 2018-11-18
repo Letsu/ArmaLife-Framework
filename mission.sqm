@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1;
+	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=150;
+		nextID=158;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4205.2388,74.967384,4236.293};
-		dir[]={0.5585959,-0.15406284,0.81501168};
-		up[]={0.087100051,0.9880594,0.12708203};
-		aside[]={0.82485908,6.8452209e-008,-0.56534457};
+		pos[]={7042.6929,433.81165,7954.9287};
+		dir[]={0.69788939,-0.71619958,-0.0051446529};
+		up[]={0.71618742,0.69788772,-0.0052796267};
+		aside[]={-0.0073711616,4.7700951e-008,-0.99998105};
 	};
 };
 binarizationWanted=0;
@@ -28,20 +28,27 @@ addons[]=
 	"A3_Structures_F_Naval_Piers",
 	"A3_Ui_F",
 	"A3_Characters_F",
-	"A3_Weapons_F_Tank_Launchers_MRAWS",
-	"A3_Weapons_F_Tank",
+	"A3_Weapons_F_Mark_LongRangeRifles_DMR_02",
+	"ace_realisticnames",
+	"A3_Weapons_F_Mark_Acc",
+	"ace_laserpointer",
+	"A3_Weapons_F_Exp",
+	"A3_Weapons_F_Mark",
+	"ace_ballistics",
 	"A3_Weapons_F",
 	"ace_optics",
 	"A3_Characters_F_Orange_Facewear",
 	"ace_goggles",
 	"ace_nightvision",
-	"A3_Soft_F_Offroad_01"
+	"A3_Characters_F_Mark",
+	"A3_Soft_F_Offroad_01",
+	"A3_Soft_F_Beta_Truck_02"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=10;
+		items=15;
 		class Item0
 		{
 			className="A3_Structures_F";
@@ -65,50 +72,85 @@ class AddonsMetaData
 		};
 		class Item3
 		{
-			className="A3_Weapons_F_Tank";
-			name="Arma 3 Tank - Weapons and Accessories";
+			className="A3_Weapons_F_Mark";
+			name="Arma 3 Marksmen - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
 		class Item4
+		{
+			className="ace_laserpointer";
+			name="ACE3 - Laser Pointer";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item5
+		{
+			className="A3_Weapons_F_Exp";
+			name="Arma 3 Apex - Weapons and Accessories";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item6
+		{
+			className="ace_ballistics";
+			name="ACE3 - Ballistics";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item7
 		{
 			className="A3_Weapons_F";
 			name="Arma 3 Alpha - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item5
+		class Item8
 		{
 			className="ace_optics";
 			name="ACE3 - Optics";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item6
+		class Item9
 		{
 			className="A3_Characters_F_Orange";
 			name="Arma 3 Orange - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item7
+		class Item10
 		{
 			className="ace_goggles";
 			name="ACE3 - Goggles";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item8
+		class Item11
 		{
 			className="ace_nightvision";
 			name="ACE3 - Night Vision";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item9
+		class Item12
+		{
+			className="A3_Characters_F_Mark";
+			name="Arma 3 Marksmen - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item13
 		{
 			className="A3_Soft_F";
 			name="Arma 3 Alpha - Unarmored Land Vehicles";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item14
+		{
+			className="A3_Soft_F_Beta";
+			name="Arma 3 Beta - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -196,7 +238,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=13;
+		items=14;
 		class Item0
 		{
 			dataType="Object";
@@ -324,13 +366,17 @@ class Mission
 						isPlayable=1;
 						class Inventory
 						{
-							class secondaryWeapon
+							class primaryWeapon
 							{
-								name="launch_MRAWS_sand_rail_F";
+								name="srifle_DMR_02_camo_F";
+								optics="optic_AMS_khk";
+								muzzle="muzzle_snds_338_green";
+								flashlight="ACE_acc_pointer_green";
+								underBarrel="bipod_01_F_khk";
 								class primaryMuzzleMag
 								{
-									name="MRAWS_HEAT_F";
-									ammoLeft=1;
+									name="10Rnd_338_Mag";
+									ammoLeft=10;
 								};
 							};
 							class binocular
@@ -339,20 +385,35 @@ class Mission
 							};
 							class uniform
 							{
-								typeName="U_C_Poloshirt_blue";
+								typeName="U_B_FullGhillie_sard";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="10Rnd_338_Mag";
+										count=3;
+										ammoLeft=10;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="V_PlateCarrier2_rgr";
 								isBackpack=0;
 							};
 							class backpack
 							{
-								typeName="B_Carryall_oli";
+								typeName="B_AssaultPack_mcamo";
 								isBackpack=1;
 								class MagazineCargo
 								{
 									items=1;
 									class Item0
 									{
-										name="MRAWS_HEAT_F";
-										count=1;
+										name="HandGrenade";
+										count=16;
 										ammoLeft=1;
 									};
 								};
@@ -788,6 +849,22 @@ class Mission
 			};
 			id=141;
 			type="C_Offroad_01_F";
+		};
+		class Item13
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7237.7891,169.94875,7933.7207};
+				angles[]={6.282495,1.8328297,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=157;
+			type="I_Truck_02_transport_F";
 		};
 	};
 };

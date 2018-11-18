@@ -25,6 +25,7 @@ class Lts_framework {
     class respawn {
         file = "core\respawn";
         class onRespawn {};
+        class onPlayerUnconsious {};
     };
 
     class changeSide{
