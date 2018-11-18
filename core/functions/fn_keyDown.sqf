@@ -6,8 +6,7 @@ _alt     = _this select 4;
 
 _disableKey = false;
 
-switch (_key) do {
-    
+switch (_key) do {    
 };
 
 
