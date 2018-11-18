@@ -37,7 +37,7 @@ if _state then {
 	_reqNoMedic ctrlCommit 0;
 	_reqNoMedic ctrlSetBackgroundColor [0, 0, 0, 0.7];
 	_reqNoMedic ctrlSetText "Kein Medic rufen";
-	_reqNoMedic ctrlAddEventHandler [" ButtonClick", " ctrlEnable [1931, false] "];
+	_reqNoMedic ctrlAddEventHandler [" ButtonClick", "ctrlEnable [1931, false]"];
 
 	_reqMedic = (uiNamespace getVariable ["ace_common_dlgDisableMouse", displayNull]) ctrlCreate ["RscButtonMenu",1932];
 	_reqMedic ctrlSetPosition [0.304062 * safezoneW + safezoneX,0.533 * safezoneH + safezoneY,0.190781 * safezoneW,0.077 * safezoneH];
