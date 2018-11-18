@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=158;
+		nextID=159;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={7042.6929,433.81165,7954.9287};
-		dir[]={0.69788939,-0.71619958,-0.0051446529};
-		up[]={0.71618742,0.69788772,-0.0052796267};
-		aside[]={-0.0073711616,4.7700951e-008,-0.99998105};
+		pos[]={7249.1685,192.9071,7926.2466};
+		dir[]={0.52480966,-0.85013789,-0.043264814};
+		up[]={0.84727204,0.52654678,-0.06984809};
+		aside[]={-0.082161017,-1.3627869e-008,-0.99663299};
 	};
 };
 binarizationWanted=0;
@@ -42,13 +42,14 @@ addons[]=
 	"ace_nightvision",
 	"A3_Characters_F_Mark",
 	"A3_Soft_F_Offroad_01",
-	"A3_Soft_F_Beta_Truck_02"
+	"A3_Soft_F_Beta_Truck_02",
+	"A3_Air_F_Heli_Light_01"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=15;
+		items=16;
 		class Item0
 		{
 			className="A3_Structures_F";
@@ -154,6 +155,13 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+		class Item15
+		{
+			className="A3_Air_F";
+			name="Arma 3 Alpha - Aircraft";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
 	};
 };
 randomSeed=11229602;
@@ -238,7 +246,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=14;
+		items=15;
 		class Item0
 		{
 			dataType="Object";
@@ -865,6 +873,22 @@ class Mission
 			};
 			id=157;
 			type="I_Truck_02_transport_F";
+		};
+		class Item14
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7266.8799,169.34558,7928.6548};
+				angles[]={6.2824135,0,0.00077204045};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=158;
+			type="B_Heli_Light_01_F";
 		};
 	};
 };
