@@ -33,18 +33,28 @@ class Lts_framework {
         class changeSide {};
     };
 
-    class gather{
+    class gather {
         file = "core\gather";
         class initGather {};
         class gather {};
-    }
+        class process {};
+    };
 
     class player {
         file = "core\player";
         class buyLicense {};
         class hasLicense {};
         class removeLicense {};
-    }
+    };
+
+    class vehicle {
+        class addKeyToVeh {};
+        class createVehicle{};
+        class deleteVehicle {};
+        class getVehicle {};
+        class removeVehicleFromPlayer {};
+        class updateVehArray {};
+    };
 
 };
 
@@ -61,5 +71,6 @@ class lts_dialog {
         class spawn {};
         class spawnLbChange {};
         class callSpawn {};
+        class createCam {};
     };
 };

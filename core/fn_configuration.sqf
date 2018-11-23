@@ -17,9 +17,11 @@
 //Core Values Initalisation
 lts_core_food = 100;
 lts_core_thirst = 100;
-lts_core_curSide = "civ"; //Posible Value "civ", "cop", "med"
+lts_core_curSide = "civ"; //Posible Value can set in Config_Side
+
 lts_core_curVehicles = [];
 lts_core_licenses = [];
+
 
 
 

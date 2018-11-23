@@ -1,18 +1,19 @@
-private [];
+private ["_target", "_player", "_actionParams", "item"];
 /*
- * Author: [Name of Author(s)]
- * [Description]
+ * Author: Johannes "Letus" Bindriem
+ * Function for Gather Resources for Farming
  *
  * Arguments:
- * 0: Argument Name <TYPE>
+ * 0: The Target of the Ace Action [Object]
+ * 1: Player that exec the Action [Object]
+ * 2: Parameter of Function [Array]
  *
  * Return Value:
- * Return Name <TYPE>
+ * NONE
  *
  * Example:
- * ["example"] call ace_[module]_fnc_[functionName]
+ * [_target, _player, _actionParams] call lts_fnc_gather
  *
- * Public: [Yes/No]
  */
 _target = param [0];
 _player = param [1];

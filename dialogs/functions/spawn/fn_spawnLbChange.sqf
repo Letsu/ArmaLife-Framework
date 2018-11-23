@@ -1,19 +1,20 @@
-//private ["_display", "_spawnList", "_spawnButton", "_spawnMap", "_curSel", "_spawnMarker", "_spawnPos", "_spawnName"];
+private ["_display", "_spawnList", "_spawnButton", "_spawnMap", "_curSel", "_spawnMarker", "_spawnPos", "_spawnName"];
 /*
  * Author: Johannes "Letus" Bindriem
  * [Description]
  *
  * Arguments:
- * 0: Argument Name <TYPE>
+ * NONE
  *
  * Return Value:
- * Return Name <TYPE>
+ * NONE
  *
  * Example:
- * ["example"] call ace_[module]_fnc_[functionName]
+ * [] call lts_dialog_fnc_spawnLbChange;
  *
- * Public: [Yes/No]
  */
+
+ //Get Display and Data
 _display = findDisplay 60001;
 _spawnList = _display displayCtrl 1500;
 _spawnButton = _display displayCtrl 1600;

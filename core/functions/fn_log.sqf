@@ -1,18 +1,18 @@
 private ["_msg"];
 /*
  * Author: Johannes "Letus" Bindriem
- * [Description]
+ * Add an Msg to the Logs
+ * For Futur Use
  *
  * Arguments:
- * 0: Argument Name <TYPE>
+ * 0: MSG [String]
  *
  * Return Value:
- * Return Name <TYPE>
+ * NONE
  *
  * Example:
- * ["example"] call ace_[module]_fnc_[functionName]
+ * ["MSG"] call lts_fnc_log
  *
- * Public: [Yes/No]
  */
 _msg = _this select 0;
 

@@ -5,25 +5,25 @@ private["_dispaly", "_spawnList", "_spawnButton", "_curSel", "_spawnMarker", "_s
  * When Executet the Player set to the Spawn Position, the Cam and Lighzt from the Spawn whould be destroyd and an new Cam whould be created to fly from spawn to zhe place the player spawns!
  *
  * Arguments:
- * None
+ * NONE
  *
  * Return Value:
- * None
+ * NONE
  *
  * Example:
  * [] call lts_dialog_fnc_spawn;
  *
- * Public: [Yes/No]
  */
 
-_display = findDisplay 60001;
-_spawnList = _display displayCtrl 1500;
+//Get the Dialog Controls and the Data
+_display     = findDisplay 60001;
+_spawnList   = _display displayCtrl 1500;
 _spawnButton = _display displayCtrl 1600;
 
-_curSel = lbCurSel _spawnList;
+_curSel      = lbCurSel _spawnList;
 _spawnMarker =  _spawnList lbData _curSel;
-_spawnPos = getMarkerPos _spawnMarker;
-_spawnName = _spawnList lbText _curSel;
+_spawnPos    = getMarkerPos _spawnMarker;
+_spawnName   = _spawnList lbText _curSel;
 
 //Delete Cam and Light
 spawn_cam cameraEffect ["TERMINATE","BACK"];
@@ -32,15 +32,14 @@ deleteVehicle spawn_light;
 spawn_finish = true;
 closeDialog 0;
 
-_oldPlayerPos = getPos player;
-_heightPlayerPos = [_oldPlayerPos select 0, _oldPlayerPos select 1, 10];
-
 
 //Spawn for Cam for Intro effect!
 /*
-[_oldPlayerPos, _heightPlayerPos] spawn {
-    _oldPlayerPos = _this select 0;
-    _heightPlayerPos = _this select 1;
+[] spawn {
+    //Get PLayer Pos 
+    _oldPlayerPos    = getPos player;
+    _heightPlayerPos = [_oldPlayerPos select 0, _oldPlayerPos select 1, 10];
+
     //pos 1
     _came1 = "camera" camCreate _oldPlayerPos;
                showCinemaBorder true;

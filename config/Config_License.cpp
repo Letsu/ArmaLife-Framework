@@ -1,3 +1,10 @@
+/*
+ * Author: Johannes "Letus" Bindriem
+ *
+ *
+ *
+ *
+ */
 class Config_License {
     /*
     Class Name must be the Same as the var!

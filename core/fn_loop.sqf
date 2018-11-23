@@ -13,7 +13,7 @@ private ["_fnc_food", "_fnc_thirst", "_food", "_thirst"];
  * [] spawn lts_core_fnc_loop;
  *
  */
-dbug_while = 0;
+
 _fnc_food = {
     switch (lts_core_food) do {
         case (20): {["Du hast Hunger und Solltest was Essen!"] call lts_fnc_hint};

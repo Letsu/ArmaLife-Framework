@@ -1,29 +1,29 @@
-private [];
+private ["_unit", "_state"];
 /*
- * Author: [Name of Author(s)]
- * [Description]
+ * Author: Johannes "Letus" Bindriem
+ * Open an Dialog when player is Unconscious.
  *
  * Arguments:
- * 0: Argument Name <TYPE>
+ * 0: Unit that fall in Unconscious [Object]
+ * 1: State of the Player [Bool]
  *
  * Return Value:
- * Return Name <TYPE>
+ * NONE
  *
  * Example:
- * ["example"] call ace_[module]_fnc_[functionName]
+ * [Player, true] call lts_fnc_onPlayerUnconsious
  *
- * Public: [Yes/No]
  */
 disableSerialization;
 
-_unit = param[0];
-_state = param[1];
+_unit = param[0, player];
+_state = param[1, true];
 
 if _state then {
+	private ["_text1", "_reqMedic", "_reqNoMedic"];
 	(findDisplay 49) closeDisplay 0;
-    _display = uiNamespace getVariable ["ace_common_dlgDisableMouse", displayNull];
 
-//Omly for DEBUG!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//Only for DEBUG Enable when Online!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 //    (uiNamespace getVariable ["ace_common_dlgDisableMouse", displayNull]) displayAddEventHandler ["KeyDown","if (!((_this select 1) isEqualTo 28)) then { true } "]; //Disaple the ESC Key in the Dialog that the can´t close the Dialog!
 //-------------------------------------------------------------------------------------
     _text1 = (uiNamespace getVariable ["ace_common_dlgDisableMouse", displayNull]) ctrlCreate ["RscStructuredText",1930];

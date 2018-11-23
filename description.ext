@@ -1,12 +1,12 @@
 //Debug Configurations
-enableDebugConsole = 2; // Need to set to 1!!!!!""
+enableDebugConsole = 2; // Need to set to 1!!!!!
 //enableDebugConsole[] = { "76561198XXXXXXXXX", "76561198YYYYYYYYY", }; <---- Importent!
+
 //Include Config Files
 #include "config\Config_Master.cpp"
 
 //Dialog includes
 #include "dialogs\dialogHandler.cpp"
-
 
 class CfgFunctions {
     #include "functions.cpp"

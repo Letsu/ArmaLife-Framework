@@ -96,57 +96,20 @@
 ///////////////////////////////////////////////////////////////////////////
 /// Base Classes
 ///////////////////////////////////////////////////////////////////////////
-class RscText
-{
+class RscText {
 	deletable = 0;
 	fade = 0;
 	access = 0;
 	type = 0;
 	idc = -1;
-	colorBackground[] =
-	{
-		0,
-		0,
-		0,
-		0
-	};
-	colorText[] =
-	{
-		1,
-		1,
-		1,
-		1
-	};
+	colorBackground[] = { 0, 0, 0, 0 };
+	colorText[] = { 1, 1, 1, 1 };
 	text = "";
 	fixedWidth = 0;
-	colorShadow[] =
-	{
-		0,
-		0,
-		0,
-		0.5
-	};
-	tooltipColorText[] =
-	{
-		1,
-		1,
-		1,
-		1
-	};
-	tooltipColorBox[] =
-	{
-		1,
-		1,
-		1,
-		1
-	};
-	tooltipColorShade[] =
-	{
-		0,
-		0,
-		0,
-		0.65
-	};
+	colorShadow[] = { 0, 0, 0, 0.5 };
+	tooltipColorText[] = { 1, 1, 1, 1 };
+	tooltipColorBox[] = { 1, 1, 1, 1 };
+	tooltipColorShade[] = { 0, 0, 0, 0.65 };
 	x = 0;
 	y = 0;
 	h = 0.037;
@@ -157,23 +120,16 @@ class RscText
 	SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
 	linespacing = 1;
 };
-class RscStructuredText
-{
+
+class RscStructuredText {
 	deletable = 0;
 	fade = 0;
 	access = 0;
 	type = 13;
 	idc = -1;
 	style = 0;
-	colorText[] =
-	{
-		1,
-		1,
-		1,
-		1
-	};
-	class Attributes
-	{
+	colorText[] = { 1, 1, 1, 1 };
+	class Attributes {
 		font = "RobotoCondensed";
 		color = "#ffffff";
 		colorLink = "#D09B43";
@@ -188,62 +144,32 @@ class RscStructuredText
 	size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
 	shadow = 1;
 };
-class RscPicture
-{
+
+class RscPicture {
 	deletable = 0;
 	fade = 0;
 	access = 0;
 	type = 0;
 	idc = -1;
 	style = 48;
-	colorBackground[] =
-	{
-		0,
-		0,
-		0,
-		0
-	};
-	colorText[] =
-	{
-		1,
-		1,
-		1,
-		1
-	};
+	colorBackground[] = { 0, 0, 0, 0 };
+	colorText[] = { 1, 1, 1, 1 };
 	font = "TahomaB";
 	sizeEx = 0;
 	lineSpacing = 0;
 	text = "";
 	fixedWidth = 0;
-	tooltipColorText[] =
-	{
-		1,
-		1,
-		1,
-		1
-	};
-	tooltipColorBox[] =
-	{
-		1,
-		1,
-		1,
-		1
-	};
-	tooltipColorShade[] =
-	{
-		0,
-		0,
-		0,
-		0.65
-	};
+	tooltipColorText[] = { 1, 1, 1, 1 };
+	tooltipColorBox[] = { 1, 1, 1, 1 };
+	tooltipColorShade[] = { 0, 0, 0, 0.65 };
 	shadow = 0;
 	x = 0;
 	y = 0;
 	w = 0.2;
 	h = 0.15;
 };
-class RscEdit
-{
+
+class RscEdit {
 	deletable = 0;
 	fade = 0;
 	access = 0;
@@ -252,29 +178,10 @@ class RscEdit
 	y = 0;
 	h = 0.04;
 	w = 0.2;
-	colorBackground[] =
-	{
-		0,
-		0,
-		0,
-		0
-	};
-	colorText[] =
-	{
-		0.95,
-		0.95,
-		0.95,
-		1
-	};
-	colorDisabled[] =
-	{
-		1,
-		1,
-		1,
-		0.25
-	};
-	colorSelection[] =
-	{
+	colorBackground[] = { 0, 0, 0, 0 };
+	colorText[] = { 0.95, 0.95, 0.95, 1 };
+	colorDisabled[] = { 1, 1, 1, 0.25 };
+	colorSelection[] = {
 		"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.13])",
 		"(profilenamespace getvariable ['GUI_BCG_RGB_G',0.54])",
 		"(profilenamespace getvariable ['GUI_BCG_RGB_B',0.21])",
@@ -283,201 +190,49 @@ class RscEdit
 	autocomplete = "";
 	text = "";
 	size = 0.2;
-	tooltipColorText[] =
-	{
-		1,
-		1,
-		1,
-		1
-	};
-	tooltipColorBox[] =
-	{
-		1,
-		1,
-		1,
-		1
-	};
-	tooltipColorShade[] =
-	{
-		0,
-		0,
-		0,
-		0.65
-	};
+	tooltipColorText[] = { 1, 1, 1, 1 };
+	tooltipColorBox[] = { 1, 1, 1, 1 };
+	tooltipColorShade[] = { 0, 0, 0, 0.65 };
 	style = "0x00 + 0x40";
 	font = "RobotoCondensed";
 	shadow = 2;
 	sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
 	canModify = 1;
 };
+
 class RscCombo
 {
 	deletable = 0;
 	fade = 0;
 	access = 0;
 	type = 4;
-	colorSelect[] =
-	{
-		0,
-		0,
-		0,
-		1
-	};
-	colorText[] =
-	{
-		1,
-		1,
-		1,
-		1
-	};
-	colorBackground[] =
-	{
-		0,
-		0,
-		0,
-		1
-	};
-	colorScrollbar[] =
-	{
-		1,
-		0,
-		0,
-		1
-	};
-	colorDisabled[] =
-	{
-		1,
-		1,
-		1,
-		0.25
-	};
-	colorPicture[] =
-	{
-		1,
-		1,
-		1,
-		1
-	};
-	colorPictureSelected[] =
-	{
-		1,
-		1,
-		1,
-		1
-	};
-	colorPictureDisabled[] =
-	{
-		1,
-		1,
-		1,
-		0.25
-	};
-	colorPictureRight[] =
-	{
-		1,
-		1,
-		1,
-		1
-	};
-	colorPictureRightSelected[] =
-	{
-		1,
-		1,
-		1,
-		1
-	};
-	colorPictureRightDisabled[] =
-	{
-		1,
-		1,
-		1,
-		0.25
-	};
-	colorTextRight[] =
-	{
-		1,
-		1,
-		1,
-		1
-	};
-	colorSelectRight[] =
-	{
-		0,
-		0,
-		0,
-		1
-	};
-	colorSelect2Right[] =
-	{
-		0,
-		0,
-		0,
-		1
-	};
-	tooltipColorText[] =
-	{
-		1,
-		1,
-		1,
-		1
-	};
-	tooltipColorBox[] =
-	{
-		1,
-		1,
-		1,
-		1
-	};
-	tooltipColorShade[] =
-	{
-		0,
-		0,
-		0,
-		0.65
-	};
-	soundSelect[] =
-	{
-		"\A3\ui_f\data\sound\RscCombo\soundSelect",
-		0.1,
-		1
-	};
-	soundExpand[] =
-	{
-		"\A3\ui_f\data\sound\RscCombo\soundExpand",
-		0.1,
-		1
-	};
-	soundCollapse[] =
-	{
-		"\A3\ui_f\data\sound\RscCombo\soundCollapse",
-		0.1,
-		1
-	};
+	colorSelect[] = { 0, 0, 0, 1 };
+	colorText[] = { 1, 1, 1, 1 };
+	colorBackground[] = { 0, 0, 0, 1 };
+	colorScrollbar[] = { 1, 0, 0, 1 };
+	colorDisabled[] = { 1, 1, 1, 0.25 };
+	colorPicture[] = { 1, 1, 1, 1 };
+	colorPictureSelected[] = { 1, 1, 1, 1 };
+	colorPictureDisabled[] = { 1, 1, 1, 0.25 };
+	colorPictureRight[] = { 1, 1, 1, 1 };
+	colorPictureRightSelected[] = { 1, 1, 1, 1 };
+	colorPictureRightDisabled[] = { 1, 1, 1, 0.25 };
+	colorTextRight[] = { 1, 1, 1, 1 };
+	colorSelectRight[] = { 0, 0, 0, 1 };
+	colorSelect2Right[] = { 0, 0, 0, 1 };
+	tooltipColorText[] = { 1, 1, 1, 1 };
+	tooltipColorBox[] = { 1, 1, 1, 1 };
+	tooltipColorShade[] = { 0, 0, 0, 0.65 };
+	soundSelect[] = { "\A3\ui_f\data\sound\RscCombo\soundSelect", 0.1, 1 };
+	soundExpand[] = { "\A3\ui_f\data\sound\RscCombo\soundExpand", 0.1, 1 };
+	soundCollapse[] = { "\A3\ui_f\data\sound\RscCombo\soundCollapse", 0.1, 1 };
 	maxHistoryDelay = 1;
-	class ComboScrollBar
-	{
-		color[] =
-		{
-			1,
-			1,
-			1,
-			1
-		};
+	class ComboScrollBar {
+		color[] = { 1, 1, 1, 1 };
 	};
-	colorSelectBackground[] =
-	{
-		1,
-		1,
-		1,
-		0.7
-	};
-	colorActive[] =
-	{
-		1,
-		0,
-		0,
-		1
-	};
+
+	colorSelectBackground[] = { 1, 1, 1, 0.7 };
+	colorActive[] = { 1, 0, 0, 1 };
 	style = "0x10 + 0x200";
 	font = "RobotoCondensed";
 	sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
@@ -490,182 +245,44 @@ class RscCombo
 	arrowFull = "\A3\ui_f\data\GUI\RscCommon\rsccombo\arrow_combo_active_ca.paa";
 	wholeHeight = 0.45;
 };
-class RscListBox
-{
+
+class RscListBox {
 	deletable = 0;
 	fade = 0;
 	access = 0;
 	type = 5;
 	rowHeight = 0;
-	colorText[] =
-	{
-		1,
-		1,
-		1,
-		1
-	};
-	colorDisabled[] =
-	{
-		1,
-		1,
-		1,
-		0.25
-	};
-	colorScrollbar[] =
-	{
-		1,
-		0,
-		0,
-		0
-	};
-	colorSelect[] =
-	{
-		0,
-		0,
-		0,
-		1
-	};
-	colorSelect2[] =
-	{
-		0,
-		0,
-		0,
-		1
-	};
-	colorSelectBackground[] =
-	{
-		0.95,
-		0.95,
-		0.95,
-		1
-	};
-	colorSelectBackground2[] =
-	{
-		1,
-		1,
-		1,
-		0.5
-	};
-	colorBackground[] =
-	{
-		0,
-		0,
-		0,
-		0.3
-	};
-	soundSelect[] =
-	{
-		"\A3\ui_f\data\sound\RscListbox\soundSelect",
-		0.09,
-		1
-	};
+	colorText[] = { 1, 1, 1, 1 };
+	colorDisabled[] = { 1, 1, 1, 0.25 };
+	colorScrollbar[] = { 1, 0, 0, 0 };
+	colorSelect[] = { 0, 0, 0, 1 };
+	colorSelect2[] = { 0, 0, 0, 1 };
+	colorSelectBackground[] = { 0.95, 0.95, 0.95, 1 };
+	colorSelectBackground2[] = { 1, 1, 1, 0.5 };
+	colorBackground[] = { 0, 0, 0, 0.3 };
+	soundSelect[] = { "\A3\ui_f\data\sound\RscListbox\soundSelect", 0.09, 1 };
 	autoScrollSpeed = -1;
 	autoScrollDelay = 5;
 	autoScrollRewind = 0;
 	arrowEmpty = "#(argb,8,8,3)color(1,1,1,1)";
 	arrowFull = "#(argb,8,8,3)color(1,1,1,1)";
-	colorPicture[] =
-	{
-		1,
-		1,
-		1,
-		1
-	};
-	colorPictureSelected[] =
-	{
-		1,
-		1,
-		1,
-		1
-	};
-	colorPictureDisabled[] =
-	{
-		1,
-		1,
-		1,
-		0.25
-	};
-	colorPictureRight[] =
-	{
-		1,
-		1,
-		1,
-		1
-	};
-	colorPictureRightSelected[] =
-	{
-		1,
-		1,
-		1,
-		1
-	};
-	colorPictureRightDisabled[] =
-	{
-		1,
-		1,
-		1,
-		0.25
-	};
-	colorTextRight[] =
-	{
-		1,
-		1,
-		1,
-		1
-	};
-	colorSelectRight[] =
-	{
-		0,
-		0,
-		0,
-		1
-	};
-	colorSelect2Right[] =
-	{
-		0,
-		0,
-		0,
-		1
-	};
-	tooltipColorText[] =
-	{
-		1,
-		1,
-		1,
-		1
-	};
-	tooltipColorBox[] =
-	{
-		1,
-		1,
-		1,
-		1
-	};
-	tooltipColorShade[] =
-	{
-		0,
-		0,
-		0,
-		0.65
-	};
-	class ListScrollBar
-	{
-		color[] =
-		{
-			1,
-			1,
-			1,
-			1
-		};
+	colorPicture[] = { 1, 1, 1, 1 };
+	colorPictureSelected[] = { 1, 1, 1, 1 };
+	colorPictureDisabled[] = { 1, 1, 1, 0.25 };
+	colorPictureRight[] = { 1, 1, 1, 1 };
+	colorPictureRightSelected[] = { 1, 1, 1, 1 };
+	colorPictureRightDisabled[] = { 1, 1, 1, 0.25 };
+	colorTextRight[] = { 1, 1, 1, 1 };
+	colorSelectRight[] = { 0, 0, 0, 1 };
+	colorSelect2Right[] = { 0, 0, 0, 1 };
+	tooltipColorText[] = { 1, 1, 1, 1 };
+	tooltipColorBox[] = { 1, 1, 1, 1 };
+	tooltipColorShade[] = { 0, 0, 0, 0.65 };
+	class ListScrollBar {
+		color[] = { 1, 1, 1, 1 };
 		autoScrollEnabled = 1;
 	};
-	colorShadow[] =
-	{
-		0,
-		0,
-		0,
-		0.5
-	};
+	colorShadow[] = { 0, 0, 0, 0.5 };
 	x = 0;
 	y = 0;
 	w = 0.3;
@@ -677,93 +294,25 @@ class RscListBox
 	period = 1.2;
 	maxHistoryDelay = 1;
 };
-class RscButton
-{
+
+class RscButton {
 	deletable = 0;
 	fade = 0;
 	access = 0;
 	type = 1;
 	text = "";
-	colorText[] =
-	{
-		1,
-		1,
-		1,
-		1
-	};
-	colorDisabled[] =
-	{
-		1,
-		1,
-		1,
-		0.25
-	};
-	colorBackground[] =
-	{
-		0,
-		0,
-		0,
-		0.5
-	};
-	colorBackgroundDisabled[] =
-	{
-		0,
-		0,
-		0,
-		0.5
-	};
-	colorBackgroundActive[] =
-	{
-		0,
-		0,
-		0,
-		1
-	};
-	colorFocused[] =
-	{
-		0,
-		0,
-		0,
-		1
-	};
-	colorShadow[] =
-	{
-		0,
-		0,
-		0,
-		0
-	};
-	colorBorder[] =
-	{
-		0,
-		0,
-		0,
-		1
-	};
-	soundEnter[] =
-	{
-		"\A3\ui_f\data\sound\RscButton\soundEnter",
-		0.09,
-		1
-	};
-	soundPush[] =
-	{
-		"\A3\ui_f\data\sound\RscButton\soundPush",
-		0.09,
-		1
-	};
-	soundClick[] =
-	{
-		"\A3\ui_f\data\sound\RscButton\soundClick",
-		0.09,
-		1
-	};
-	soundEscape[] =
-	{
-		"\A3\ui_f\data\sound\RscButton\soundEscape",
-		0.09,
-		1
-	};
+	colorText[] = { 1, 1, 1, 1 };
+	colorDisabled[] = { 1, 1, 1, 0.25 };
+	colorBackground[] = { 0, 0, 0, 0.5 };
+	colorBackgroundDisabled[] = { 0, 0, 0, 0.5 };
+	colorBackgroundActive[] = { 0, 0, 0, 1 };
+	colorFocused[] = { 0, 0, 0, 1 };
+	colorShadow[] = { 0, 0, 0, 0 };
+	colorBorder[] = { 0, 0, 0, 1 };
+	soundEnter[] = { "\A3\ui_f\data\sound\RscButton\soundEnter", 0.09, 1 };
+	soundPush[] = { "\A3\ui_f\data\sound\RscButton\soundPush", 0.09, 1 };
+	soundClick[] = { "\A3\ui_f\data\sound\RscButton\soundClick", 0.09, 1 };
+	soundEscape[] = { "\A3\ui_f\data\sound\RscButton\soundEscape", 0.09, 1 };
 	idc = -1;
 	style = 2;
 	x = 0;
@@ -780,148 +329,56 @@ class RscButton
 	offsetPressedY = 0;
 	borderSize = 0;
 };
-class RscShortcutButton
-{
+
+class RscShortcutButton {
 	deletable = 0;
 	fade = 0;
 	type = 16;
 	x = 0.1;
 	y = 0.1;
-	class HitZone
-	{
+	class HitZone {
 		left = 0;
 		top = 0;
 		right = 0;
 		bottom = 0;
 	};
-	class ShortcutPos
-	{
+	class ShortcutPos {
 		left = 0;
 		top = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 20) - (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)) / 2";
 		w = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1) * (3/4)";
 		h = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
 	};
-	class TextPos
-	{
+	class TextPos {
 		left = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1) * (3/4)";
 		top = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 20) - (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)) / 2";
 		right = 0.005;
 		bottom = 0;
 	};
-	shortcuts[] =
-	{
-	};
+
+	shortcuts[] = { };
 	textureNoShortcut = "#(argb,8,8,3)color(0,0,0,0)";
-	color[] =
-	{
-		1,
-		1,
-		1,
-		1
-	};
-	colorFocused[] =
-	{
-		1,
-		1,
-		1,
-		1
-	};
-	color2[] =
-	{
-		0.95,
-		0.95,
-		0.95,
-		1
-	};
-	colorDisabled[] =
-	{
-		1,
-		1,
-		1,
-		0.25
-	};
-	colorBackground[] =
-	{
-		"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.13])",
-		"(profilenamespace getvariable ['GUI_BCG_RGB_G',0.54])",
-		"(profilenamespace getvariable ['GUI_BCG_RGB_B',0.21])",
-		1
-	};
-	colorBackgroundFocused[] =
-	{
-		"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.13])",
-		"(profilenamespace getvariable ['GUI_BCG_RGB_G',0.54])",
-		"(profilenamespace getvariable ['GUI_BCG_RGB_B',0.21])",
-		1
-	};
-	colorBackground2[] =
-	{
-		1,
-		1,
-		1,
-		1
-	};
-	soundEnter[] =
-	{
-		"\A3\ui_f\data\sound\RscButton\soundEnter",
-		0.09,
-		1
-	};
-	soundPush[] =
-	{
-		"\A3\ui_f\data\sound\RscButton\soundPush",
-		0.09,
-		1
-	};
-	soundClick[] =
-	{
-		"\A3\ui_f\data\sound\RscButton\soundClick",
-		0.09,
-		1
-	};
-	soundEscape[] =
-	{
-		"\A3\ui_f\data\sound\RscButton\soundEscape",
-		0.09,
-		1
-	};
-	class Attributes
-	{
+	color[] = { 1, 1, 1, 1 };
+	colorFocused[] = { 1, 1, 1, 1 };
+	color2[] = { 0.95, 0.95, 0.95, 1 };
+	colorDisabled[] = { 1, 1, 1, 0.25 };
+	colorBackground[] = { "(profilenamespace getvariable ['GUI_BCG_RGB_R',0.13])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.54])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.21])", 1 };
+	colorBackgroundFocused[] = { "(profilenamespace getvariable ['GUI_BCG_RGB_R',0.13])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.54])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.21])", 1 };
+	colorBackground2[] = { 1, 1, 1, 1 };
+	soundEnter[] = { "\A3\ui_f\data\sound\RscButton\soundEnter", 0.09, 1 };
+	soundPush[] = { "\A3\ui_f\data\sound\RscButton\soundPush", 0.09, 1 };
+	soundClick[] = { "\A3\ui_f\data\sound\RscButton\soundClick", 0.09, 1 };
+	soundEscape[] = { "\A3\ui_f\data\sound\RscButton\soundEscape", 0.09, 1 };
+	class Attributes {
 		font = "RobotoCondensed";
 		color = "#E5E5E5";
 		align = "left";
 		shadow = "true";
 	};
-	colorSecondary[] =
-	{
-		1,
-		1,
-		1,
-		1
-	};
-	colorFocusedSecondary[] =
-	{
-		1,
-		1,
-		1,
-		1
-	};
-	color2Secondary[] =
-	{
-		0.95,
-		0.95,
-		0.95,
-		1
-	};
-	colorDisabledSecondary[] =
-	{
-		1,
-		1,
-		1,
-		0.25
-	};
-	class AttributesImage
-	{
+	colorSecondary[] = { 1, 1, 1, 1 };
+	colorFocusedSecondary[] = { 1, 1, 1, 1 };
+	color2Secondary[] = { 0.95, 0.95, 0.95, 1 };
+	colorDisabledSecondary[] = { 1, 1, 1, 0.25 };
+	class AttributesImage {
 		font = "RobotoCondensed";
 		color = "#E5E5E5";
 		align = "left";
@@ -951,38 +408,23 @@ class RscShortcutButton
 	url = "";
 	action = "";
 };
-class RscShortcutButtonMain
-{
-	color[] =
-	{
-		1,
-		1,
-		1,
-		1
-	};
-	colorDisabled[] =
-	{
-		1,
-		1,
-		1,
-		0.25
-	};
-	class HitZone
-	{
+
+class RscShortcutButtonMain {
+	color[] = { 1, 1, 1, 1 };
+	colorDisabled[] = { 1, 1, 1, 0.25 };
+	class HitZone {
 		left = 0;
 		top = 0;
 		right = 0;
 		bottom = 0;
 	};
-	class ShortcutPos
-	{
+	class ShortcutPos {
 		left = 0.0145;
 		top = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 20) - (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1.2)) / 2";
 		w = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1.2) * (3/4)";
 		h = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1.2)";
 	};
-	class TextPos
-	{
+	class TextPos {
 		left = "(((safezoneW / safezoneH) min 1.2) / 32) * 1.5";
 		top = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 20)*2 - (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1.2)) / 2";
 		right = 0.005;
@@ -1019,22 +461,10 @@ class RscShortcutButtonMain
 	text = "";
 	action = "";
 };
-class RscFrame
-{
-	colorBackground[] =
-	{
-		0,
-		0,
-		0,
-		0
-	};
-	colorText[] =
-	{
-		1,
-		1,
-		1,
-		1
-	};
+
+class RscFrame {
+	colorBackground[] = { 0, 0, 0, 0 };
+	colorText[] = { 1, 1, 1, 1 };
 	type = 0;
 	idc = -1;
 	deletable = 0;
@@ -1048,49 +478,25 @@ class RscFrame
 	w = 0.3;
 	h = 0.3;
 };
-class RscSlider
-{
+
+class RscSlider {
 	deletable = 0;
 	fade = 0;
 	access = 0;
 	type = 3;
 	style = 1024;
-	color[] =
-	{
-		1,
-		1,
-		1,
-		0.8
-	};
-	colorActive[] =
-	{
-		1,
-		1,
-		1,
-		1
-	};
+	color[] = { 1, 1, 1, 0.8 };
+	colorActive[] = { 1, 1, 1, 1 };
 	shadow = 0;
 	x = 0;
 	y = 0;
 	w = 0.3;
 	h = 0.025;
 };
-class IGUIBack
-{
-	colorText[] =
-	{
-		0,
-		0,
-		0,
-		0
-	};
-	colorbackground[] =
-	{
-		"(profilenamespace getvariable ['IGUI_BCG_RGB_R',0])",
-		"(profilenamespace getvariable ['IGUI_BCG_RGB_G',1])",
-		"(profilenamespace getvariable ['IGUI_BCG_RGB_B',1])",
-		"(profilenamespace getvariable ['IGUI_BCG_RGB_A',0.8])"
-	};
+
+class IGUIBack {
+	colorText[] = { 0, 0, 0, 0 };
+	colorbackground[] = { "(profilenamespace getvariable ['IGUI_BCG_RGB_R',0])", "(profilenamespace getvariable ['IGUI_BCG_RGB_G',1])", "(profilenamespace getvariable ['IGUI_BCG_RGB_B',1])","(profilenamespace getvariable ['IGUI_BCG_RGB_A',0.8])" };
 	type = 0;
 	idc = 124;
 	style = 128;
@@ -1103,123 +509,26 @@ class IGUIBack
 	w = 0.1;
 	h = 0.1;
 };
+
 class RscCheckBox
 {
-	color[] =
-	{
-		1,
-		1,
-		1,
-		0.7
-	};
-	colorFocused[] =
-	{
-		1,
-		1,
-		1,
-		1
-	};
-	colorHover[] =
-	{
-		1,
-		1,
-		1,
-		1
-	};
-	colorPressed[] =
-	{
-		1,
-		1,
-		1,
-		1
-	};
-	colorDisabled[] =
-	{
-		1,
-		1,
-		1,
-		0.2
-	};
-	colorBackground[] =
-	{
-		0,
-		0,
-		0,
-		0
-	};
-	colorBackgroundFocused[] =
-	{
-		0,
-		0,
-		0,
-		0
-	};
-	colorBackgroundHover[] =
-	{
-		0,
-		0,
-		0,
-		0
-	};
-	colorBackgroundPressed[] =
-	{
-		0,
-		0,
-		0,
-		0
-	};
-	colorBackgroundDisabled[] =
-	{
-		0,
-		0,
-		0,
-		0
-	};
-	tooltipColorText[] =
-	{
-		1,
-		1,
-		1,
-		1
-	};
-	tooltipColorBox[] =
-	{
-		1,
-		1,
-		1,
-		1
-	};
-	tooltipColorShade[] =
-	{
-		0,
-		0,
-		0,
-		0.65
-	};
-	soundEnter[] =
-	{
-		"",
-		0.1,
-		1
-	};
-	soundPush[] =
-	{
-		"",
-		0.1,
-		1
-	};
-	soundClick[] =
-	{
-		"",
-		0.1,
-		1
-	};
-	soundEscape[] =
-	{
-		"",
-		0.1,
-		1
-	};
+	color[] = { 1, 1, 1, 0.7 };
+	colorFocused[] = { 1, 1, 1, 1 };
+	colorHover[] = { 1, 1, 1, 1 };
+	colorPressed[] = { 1, 1, 1, 1 };
+	colorDisabled[] = { 1, 1, 1, 0.2 };
+	colorBackground[] = { 0, 0, 0, 0 };
+	colorBackgroundFocused[] = { 0, 0, 0, 0 };
+	colorBackgroundHover[] = { 0, 0, 0, 0 };
+	colorBackgroundPressed[] = { 0, 0, 0, 0 };
+	colorBackgroundDisabled[] = { 0, 0, 0, 0 };
+	tooltipColorText[] = { 1, 1, 1, 1 };
+	tooltipColorBox[] = { 1, 1, 1, 1 };
+	tooltipColorShade[] = { 0, 0, 0, 0.65 };
+	soundEnter[] = { "", 0.1, 1 };
+	soundPush[] = { "", 0.1, 1 };
+	soundClick[] = { "", 0.1, 1 };
+	soundEscape[] = { "", 0.1, 1 };
 	idc = -1;
 	type = 77;
 	deletable = 0;
@@ -1240,93 +549,21 @@ class RscCheckBox
 	textureDisabledChecked = "A3\Ui_f\data\GUI\RscCommon\RscCheckBox\CheckBox_checked_ca.paa";
 	textureDisabledUnchecked = "A3\Ui_f\data\GUI\RscCommon\RscCheckBox\CheckBox_unchecked_ca.paa";
 };
-class RscTextCheckBox
-{
-	colorText[] =
-	{
-		1,
-		0,
-		0,
-		1
-	};
-	color[] =
-	{
-		0,
-		0,
-		0,
-		0
-	};
-	colorBackground[] =
-	{
-		0,
-		0,
-		0,
-		0
-	};
-	colorTextSelect[] =
-	{
-		0,
-		0.8,
-		0,
-		1
-	};
-	colorSelectedBg[] =
-	{
-		"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.13])",
-		"(profilenamespace getvariable ['GUI_BCG_RGB_G',0.54])",
-		"(profilenamespace getvariable ['GUI_BCG_RGB_B',0.21])",
-		1
-	};
-	colorSelect[] =
-	{
-		0,
-		0,
-		0,
-		1
-	};
-	colorTextDisable[] =
-	{
-		0.4,
-		0.4,
-		0.4,
-		1
-	};
-	colorDisable[] =
-	{
-		0.4,
-		0.4,
-		0.4,
-		1
-	};
-	tooltipColorText[] =
-	{
-		1,
-		1,
-		1,
-		1
-	};
-	tooltipColorBox[] =
-	{
-		1,
-		1,
-		1,
-		1
-	};
-	tooltipColorShade[] =
-	{
-		0,
-		0,
-		0,
-		0.65
-	};
-	strings[] =
-	{
-		"UNCHECKED"
-	};
-	checked_strings[] =
-	{
-		"CHECKED"
-	};
+
+class RscTextCheckBox {
+	colorText[] = { 1, 0, 0, 1 };
+	color[] = { 0, 0, 0, 0 };
+	colorBackground[] = { 0, 0, 0, 0 };
+	colorTextSelect[] = { 0, 0.8, 0, 1 };
+	colorSelectedBg[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.13])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.54])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.21])", 1 };
+	colorSelect[] = { 0, 0, 0, 1 };
+	colorTextDisable[] = { 0.4, 0.4, 0.4, 1 };
+	colorDisable[] = { 0.4, 0.4, 0.4, 1 };
+	tooltipColorText[] = { 1, 1, 1, 1 };
+	tooltipColorBox[] = { 1, 1, 1, 1 };
+	tooltipColorShade[] = { 0, 0, 0, 0.65 };
+	strings[] = { "UNCHECKED" };
+	checked_strings[] = { "CHECKED" };
 	idc = -1;
 	type = 7;
 	style = 0;
@@ -1339,158 +576,45 @@ class RscTextCheckBox
 	rows = 1;
 	columns = 1;
 };
-class RscButtonMenu
-{
-	colorBackground[] =
-	{
-		0,
-		0,
-		0,
-		0.8
-	};
-	colorBackgroundFocused[] =
-	{
-		1,
-		1,
-		1,
-		1
-	};
-	colorBackground2[] =
-	{
-		0.75,
-		0.75,
-		0.75,
-		1
-	};
-	color[] =
-	{
-		1,
-		1,
-		1,
-		1
-	};
-	colorFocused[] =
-	{
-		0,
-		0,
-		0,
-		1
-	};
-	color2[] =
-	{
-		0,
-		0,
-		0,
-		1
-	};
-	colorText[] =
-	{
-		1,
-		1,
-		1,
-		1
-	};
-	colorDisabled[] =
-	{
-		1,
-		1,
-		1,
-		0.25
-	};
-	colorSecondary[] =
-	{
-		1,
-		1,
-		1,
-		1
-	};
-	colorFocusedSecondary[] =
-	{
-		0,
-		0,
-		0,
-		1
-	};
-	color2Secondary[] =
-	{
-		0,
-		0,
-		0,
-		1
-	};
-	colorDisabledSecondary[] =
-	{
-		1,
-		1,
-		1,
-		0.25
-	};
-	tooltipColorText[] =
-	{
-		1,
-		1,
-		1,
-		1
-	};
-	tooltipColorBox[] =
-	{
-		1,
-		1,
-		1,
-		1
-	};
-	tooltipColorShade[] =
-	{
-		0,
-		0,
-		0,
-		0.65
-	};
-	class TextPos
-	{
+
+class RscButtonMenu {
+	colorBackground[] = { 0, 0, 0, 0.8 };
+	colorBackgroundFocused[] = { 1, 1, 1, 1 };
+	colorBackground2[] = { 0.75, 0.75, 0.75, 1 };
+	color[] = { 1, 1, 1, 1 };
+	colorFocused[] = { 0, 0, 0, 1 };
+	color2[] = { 0, 0, 0, 1 };
+	colorText[] = { 1, 1, 1, 1 };
+	colorDisabled[] = { 1, 1, 1, 0.25 };
+	colorSecondary[] = { 1, 1, 1, 1 };
+	colorFocusedSecondary[] = { 0, 0, 0, 1 };
+	color2Secondary[] = { 0, 0, 0, 1 };
+	colorDisabledSecondary[] = { 1, 1, 1, 0.25 };
+	tooltipColorText[] = { 1, 1, 1, 1 };
+	tooltipColorBox[] = { 1, 1, 1, 1 };
+	tooltipColorShade[] = { 0, 0, 0, 0.65 };
+	class TextPos {
 		left = "0.25 * (((safezoneW / safezoneH) min 1.2) / 40)";
 		top = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) - (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)) / 2";
 		right = 0.005;
 		bottom = 0;
 	};
-	class Attributes
-	{
+	class Attributes {
 		font = "PuristaLight";
 		color = "#E5E5E5";
 		align = "left";
 		shadow = "false";
 	};
-	class ShortcutPos
-	{
+	class ShortcutPos {
 		left = "5.25 * (((safezoneW / safezoneH) min 1.2) / 40)";
 		top = 0;
 		w = "1 * (((safezoneW / safezoneH) min 1.2) / 40)";
 		h = "1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 	};
-	soundEnter[] =
-	{
-		"\A3\ui_f\data\sound\RscButtonMenu\soundEnter",
-		0.09,
-		1
-	};
-	soundPush[] =
-	{
-		"\A3\ui_f\data\sound\RscButtonMenu\soundPush",
-		0.09,
-		1
-	};
-	soundClick[] =
-	{
-		"\A3\ui_f\data\sound\RscButtonMenu\soundClick",
-		0.09,
-		1
-	};
-	soundEscape[] =
-	{
-		"\A3\ui_f\data\sound\RscButtonMenu\soundEscape",
-		0.09,
-		1
-	};
+	soundEnter[] = { "\A3\ui_f\data\sound\RscButtonMenu\soundEnter", 0.09, 1 };
+	soundPush[] = { "\A3\ui_f\data\sound\RscButtonMenu\soundPush", 0.09, 1 };
+	soundClick[] = { "\A3\ui_f\data\sound\RscButtonMenu\soundClick", 0.09, 1 };
+	soundEscape[] = { "\A3\ui_f\data\sound\RscButtonMenu\soundEscape", 0.09, 1 };
 	idc = -1;
 	type = 16;
 	style = "0x02 + 0xC0";
@@ -1515,64 +639,34 @@ class RscButtonMenu
 	size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
 	sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
 };
-class RscButtonMenuOK
-{
-	shortcuts[] =
-	{
-		"0x00050000 + 0",
-		28,
-		57,
-		156
-	};
-	soundPush[] =
-	{
-		"\A3\ui_f\data\sound\RscButtonMenuOK\soundPush",
-		0.09,
-		1
-	};
+
+class RscButtonMenuOK {
+	shortcuts[] = { "0x00050000 + 0", 28, 57, 156 };
+	soundPush[] = { "\A3\ui_f\data\sound\RscButtonMenuOK\soundPush", 0.09, 1 };
 	idc = 1;
 	default = 1;
 	text = "OK";
 };
-class RscButtonMenuCancel
-{
-	shortcuts[] =
-	{
-		"0x00050000 + 1"
-	};
+
+class RscButtonMenuCancel {
+	shortcuts[] = { "0x00050000 + 1" };
 	idc = 2;
 	text = "Cancel";
 };
-class RscControlsGroup
-{
+
+class RscControlsGroup {
 	deletable = 0;
 	fade = 0;
-	class VScrollbar
-	{
-		color[] =
-		{
-			1,
-			1,
-			1,
-			1
-		};
+	class VScrollbar {
+		color[] = { 1, 1, 1, 1 };
 		width = 0.021;
 		autoScrollEnabled = 1;
 	};
-	class HScrollbar
-	{
-		color[] =
-		{
-			1,
-			1,
-			1,
-			1
-		};
+	class HScrollbar {
+		color[] = { 1, 1, 1, 1 };
 		height = 0.028;
 	};
-	class Controls
-	{
-	};
+	class Controls { };
 	type = 15;
 	idc = -1;
 	x = 0;
@@ -1589,279 +683,351 @@ class RscControlsGroup
 #define CT_MAP_MAIN 101
 #define ST_PICTURE 48
 
-class RscMapControl
-{
-  access = 0;
-  idc = -1;
-  type = CT_MAP_MAIN;
-  style = ST_PICTURE;
-
-  x = 0.10;
-  y = 0.10;
-  w = 0.80;
-  h = 0.60;
-
-  colorBackground[] = {1.00, 1.00, 1.00, 1.00};
-  colorOutside[] = {1.00, 1.00, 1.00, 1.00};
-  colorText[] = {0.00, 0.00, 0.00, 1.00};
-  colorSea[] = {0.56, 0.80, 0.98, 0.50};
-  colorForest[] = {0.60, 0.80, 0.20, 0.50};
-  colorRocks[] = {0.50, 0.50, 0.50, 0.50};
-  colorRailWay[] = {0.00, 0.00, 0.00, 1.00};
-  colorTracks[] = {0.00, 0.00, 0.00, 1.00};
-  colorRoads[] = {0.00, 0.00, 0.00, 1.00};
-  colorCountlines[] = {0.65, 0.45, 0.27, 0.50};
-  colorMainCountlines[] = {0.65, 0.45, 0.27, 1.00};
-  colorCountlinesWater[] = {0.00, 0.53, 1.00, 0.50};
-  colorMainCountlinesWater[] = {0.00, 0.53, 1.00, 1.00};
-  colorForestBorder[] = {0.40, 0.80, 0.00, 1.00};
-  colorRocksBorder[] = {0.50, 0.50, 0.50, 1.00};
-  colorPowerLines[] = {1.00, 1.00, 1.00, 1.00};
-  colorNames[] = {0.00, 0.00, 0.00, 1.00};
-  colorInactive[] = {1.00, 1.00, 1.00, 0.50};
-  colorLevels[] = {0.00, 0.00, 0.00, 1.00};
-
-  colorMainRoads[] = {1.00, 1.00, 1.00, 1.00};
-  colorTracksFill[] = {1.00, 1.00, 1.00, 1.00};
-  colorRoadsFill[] = {1.00, 1.00, 1.00, 1.00};
-  colorMainRoadsFill[] = {1.00, 1.00, 1.00, 1.00};
-  colorGrid[] = {1.00, 1.00, 1.00, 1.00};
-  colorGridMap[] = {1.00, 1.00, 1.00, 1.00};
-
-
-  maxSatelliteAlpha = 1.0;
-  alphaFadeStartScale = 1.0;
-  alphaFadeEndScale = 1.0;
-
-  font = "TahomaB";
-  sizeEx = 0.040000;
-
-  fontLabel = "TahomaB";
-  sizeExLabel = 0.02;
-  fontGrid = "TahomaB";
-  sizeExGrid = 0.02;
-  fontUnits = "TahomaB";
-  sizeExUnits = 0.02;
-  fontNames = "TahomaB";
-  sizeExNames = 0.02;
-  fontInfo = "TahomaB";
-  sizeExInfo = 0.02;
-  fontLevel = "TahomaB";
-  sizeExLevel = 0.02;
-
-  stickX[] = {0.20, {"Gamma", 1.00, 1.50} };
-  stickY[] = {0.20, {"Gamma", 1.00, 1.50} };
-  ptsPerSquareSea = 6;
-  ptsPerSquareTxt = 8;
-  ptsPerSquareCLn = 8;
-  ptsPerSquareExp = 8;
-  ptsPerSquareCost = 8;
-  ptsPerSquareFor = "4.0f";
-  ptsPerSquareForEdge = "10.0f";
-  ptsPerSquareRoad = 2;
-  ptsPerSquareObj = 10;
-
-  //text = "\ca\ui\data\map_background2_co.paa";
-  text = "";
-  showCountourInterval=2;
-  scaleDefault = 0.1;
-  onMouseButtonClick = "";
-  onMouseButtonDblClick = "";
-
-  class ActiveMarker {
-    color[] = {0.30, 0.10, 0.90, 1.00};
-    size = 50;
-  };
-  class Bunker {
-    icon = "\ca\ui\data\map_bunker_ca.paa";
-    color[] = {0.00, 0.35, 0.70, 1.00};
-    size = 14;
-    importance = "1.5 * 14 * 0.05";
-    coefMin = 0.25;
-    coefMax = 4.00;
-  };
-  class Bush {
-    icon = "\ca\ui\data\map_bush_ca.paa";
-    color[] = {0.55, 0.64, 0.43, 1.00};
-    size = 14;
-    importance = "0.2 * 14 * 0.05";
-    coefMin = 0.25;
-    coefMax = 4.00;
-  };
-  class BusStop {
-    icon = "\ca\ui\data\map_busstop_ca.paa";
-    color[] = {0.00, 0.00, 1.00, 1.00};
-    size = 10;
-    importance = "1 * 10 * 0.05";
-    coefMin = 0.25;
-    coefMax = 4.00;
-  };
-  class Command {
-    icon = "#(argb,8,8,3)color(1,1,1,1)";
-    color[] = {0.00, 0.00, 0.00, 1.00};
-    size = 18;
-    importance = 1.00;
-    coefMin = 1.00;
-    coefMax = 1.00;
-  };
-  class Cross {
-    icon = "\ca\ui\data\map_cross_ca.paa";
-    color[] = {0.00, 0.35, 0.70, 1.00};
-    size = 16;
-    importance = "0.7 * 16 * 0.05";
-    coefMin = 0.25;
-    coefMax = 4.00;
-  };
-  class Fortress {
-    icon = "\ca\ui\data\map_bunker_ca.paa";
-    color[] = {0.00, 0.35, 0.70, 1.00};
-    size = 16;
-    importance = "2 * 16 * 0.05";
-    coefMin = 0.25;
-    coefMax = 4.00;
-  };
-  class Fuelstation {
-    icon = "\ca\ui\data\map_fuelstation_ca.paa";
-    color[] = {1.00, 0.35, 0.35, 1.00};
-    size = 16;
-    importance = "2 * 16 * 0.05";
-    coefMin = 0.75;
-    coefMax = 4.00;
-  };
-  class Fountain {
-    icon = "\ca\ui\data\map_fountain_ca.paa";
-    color[] = {0.00, 0.35, 0.70, 1.00};
-    size = 12;
-    importance = "1 * 12 * 0.05";
-    coefMin = 0.25;
-    coefMax = 4.00;
-  };
-  class Hospital {
-    icon = "\ca\ui\data\map_hospital_ca.paa";
-    color[] = {0.78, 0.00, 0.05, 1.00};
-    size = 16;
-    importance = "2 * 16 * 0.05";
-    coefMin = 0.50;
-    coefMax = 4;
-  };
-  class Chapel {
-    icon = "\ca\ui\data\map_chapel_ca.paa";
-    color[] = {0.00, 0.35, 0.70, 1.00};
-    size = 16;
-    importance = "1 * 16 * 0.05";
-    coefMin = 0.90;
-    coefMax = 4.00;
-  };
-  class Church {
-    icon = "\ca\ui\data\map_church_ca.paa";
-    color[] = {0.00, 0.35, 0.70, 1.00};
-    size = 16;
-    importance = "2 * 16 * 0.05";
-    coefMin = 0.90;
-    coefMax = 4.00;
-  };
-  class Lighthouse {
-    icon = "\ca\ui\data\map_lighthouse_ca.paa";
-    color[] = {0.78, 0.00, 0.05, 1.00};
-    size = 20;
-    importance = "3 * 16 * 0.05";
-    coefMin = 0.90;
-    coefMax = 4.00;
-  };
-  class Quay {
-    icon = "\ca\ui\data\map_quay_ca.paa";
-    color[] = {0.00, 0.35, 0.70, 1.00};
-    size = 16;
-    importance = "2 * 16 * 0.05";
-    coefMin = 0.50;
-    coefMax = 4.00;
-  };
-  class Rock {
-    icon = "\ca\ui\data\map_rock_ca.paa";
-    color[] = {0.35, 0.35, 0.35, 1.00};
-    size = 12;
-    importance = "0.5 * 12 * 0.05";
-    coefMin = 0.25;
-    coefMax = 4.00;
-  };
-  class Ruin {
-    icon = "\ca\ui\data\map_ruin_ca.paa";
-    color[] = {0.78, 0.00, 0.05, 1.00};
-    size = 16;
-    importance = "1.2 * 16 * 0.05";
-    coefMin = 1.00;
-    coefMax = 4.00;
-  };
-  class Stack {
-    icon = "\ca\ui\data\map_stack_ca.paa";
-    color[] = {0.00, 0.35, 0.70, 1.00};
-    size = 20;
-    importance = "2 * 16 * 0.05";
-    coefMin = 0.90;
-    coefMax = 4.00;
-  };
-  class Tree {
-    icon = "\ca\ui\data\map_tree_ca.paa";
-    color[] = {0.55, 0.64, 0.43, 1.00};
-    size = 12;
-    importance = "0.9 * 16 * 0.05";
-    coefMin = 0.25;
-    coefMax = 4.00;
-  };
-  class SmallTree {
-    icon = "\ca\ui\data\map_smalltree_ca.paa";
-    color[] = {0.55, 0.64, 0.43, 1.00};
-    size = 12;
-    importance = "0.6 * 12 * 0.05";
-    coefMin = 0.25;
-    coefMax = 4.00;
-  };
-  class Tourism {
-    icon = "\ca\ui\data\map_tourism_ca.paa";
-    color[] = {0.78, 0.00, 0.05, 1.00};
-    size = 16;
-    importance = "1 * 16 * 0.05";
-    coefMin = 0.70;
-    coefMax = 4.00;
-  };
-  class Transmitter {
-    icon = "\ca\ui\data\map_transmitter_ca.paa";
-    color[] = {0.00, 0.35, 0.70, 1.00};
-    size = 20;
-    importance = "2 * 16 * 0.05";
-    coefMin = 0.90;
-    coefMax = 4.00;
-  };
-  class ViewTower {
-    icon = "\ca\ui\data\map_viewtower_ca.paa";
-    color[] = {0.00, 0.35, 0.70, 1.00};
-    size = 16;
-    importance = "2.5 * 16 * 0.05";
-    coefMin = 0.50;
-    coefMax = 4.00;
-  };
-  class Watertower {
-    icon = "\ca\ui\data\map_watertower_ca.paa";
-    color[] = {0.00, 0.35, 0.70, 1.00};
-    size = 32;
-    importance = "1.2 * 16 * 0.05";
-    coefMin = 0.90;
-    coefMax = 4.00;
-  };
-  class Waypoint {
-    icon = "\ca\ui\data\map_waypoint_ca.paa";
-    color[] = {0.00, 0.00, 0.00, 1.00};
-    size = 24;
-    importance = 1.00;
-    coefMin = 1.00;
-    coefMax = 1.00;
-  };
-  class WaypointCompleted {
-    icon = "\ca\ui\data\map_waypoint_completed_ca.paa";
-    color[] = {0.00, 0.00, 0.00, 1.00};
-    size = 24;
-    importance = 1.00;
-    coefMin = 1.00;
-    coefMax = 1.00;
-  };
+class RscMapControl {
+    access = 0;
+    type = 101;
+    idc = 51;
+    style = 48;
+    colorBackground[] = {0.969,0.957,0.949,1};
+    colorOutside[] = {0,0,0,1};
+    colorText[] = {0,0,0,1};
+    font = "TahomaB";
+    sizeEx = 0.04;
+    colorSea[] = {0.467,0.631,0.851,0.5};
+    colorForest[] = {0.624,0.78,0.388,0.5};
+    colorRocks[] = {0,0,0,0.3};
+    colorCountlines[] = {0.572,0.354,0.188,0.25};
+    colorMainCountlines[] = {0.572,0.354,0.188,0.5};
+    colorCountlinesWater[] = {0.491,0.577,0.702,0.3};
+    colorMainCountlinesWater[] = {0.491,0.577,0.702,0.6};
+    colorForestBorder[] = {0,0,0,0};
+    colorRocksBorder[] = {0,0,0,0};
+    colorPowerLines[] = {0.1,0.1,0.1,1};
+    colorRailWay[] = {0.8,0.2,0,1};
+    colorNames[] = {0.1,0.1,0.1,0.9};
+    colorInactive[] = {1,1,1,0.5};
+    colorLevels[] = {0.286,0.177,0.094,0.5};
+    colorTracks[] = {0.84,0.76,0.65,0.15};
+    colorRoads[] = {0.7,0.7,0.7,1};
+    colorMainRoads[] = {0.9,0.5,0.3,1};
+    colorTracksFill[] = {0.84,0.76,0.65,1};
+    colorRoadsFill[] = {1,1,1,1};
+    colorMainRoadsFill[] = {1,0.6,0.4,1};
+    colorGrid[] = {0.1,0.1,0.1,0.6};
+    colorGridMap[] = {0.1,0.1,0.1,0.6};
+    stickX[] = {0.2,{"Gamma",1,1.5}};
+    stickY[] = {0.2,{"Gamma",1,1.5}};
+    class Legend {
+        colorBackground[] = {1,1,1,0.5};
+        color[] = {0,0,0,1};
+        x = "SafeZoneX + (((safezoneW / safezoneH) min 1.2) / 40)";
+        y = "SafeZoneY + safezoneH - 4.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+        w = "10 * (((safezoneW / safezoneH) min 1.2) / 40)";
+        h = "3.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+        font = "RobotoCondensed";
+        sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
+    };
+    class ActiveMarker {
+        color[] = {0.3,0.1,0.9,1};
+        size = 50;
+    };
+    class Command {
+        color[] = {1,1,1,1};
+        icon = "\A3\ui_f\data\map\mapcontrol\waypoint_ca.paa";
+        size = 18;
+        importance = 1;
+        coefMin = 1;
+        coefMax = 1;
+    };
+    class Task {
+        colorCreated[] = {1,1,1,1};
+        colorCanceled[] = {0.7,0.7,0.7,1};
+        colorDone[] = {0.7,1,0.3,1};
+        colorFailed[] = {1,0.3,0.2,1};
+        color[] = {"(profilenamespace getvariable ['IGUI_TEXT_RGB_R',0])","(profilenamespace getvariable ['IGUI_TEXT_RGB_G',1])","(profilenamespace getvariable ['IGUI_TEXT_RGB_B',1])","(profilenamespace getvariable ['IGUI_TEXT_RGB_A',0.8])"};
+        icon = "\A3\ui_f\data\map\mapcontrol\taskIcon_CA.paa";
+        iconCreated = "\A3\ui_f\data\map\mapcontrol\taskIconCreated_CA.paa";
+        iconCanceled = "\A3\ui_f\data\map\mapcontrol\taskIconCanceled_CA.paa";
+        iconDone = "\A3\ui_f\data\map\mapcontrol\taskIconDone_CA.paa";
+        iconFailed = "\A3\ui_f\data\map\mapcontrol\taskIconFailed_CA.paa";
+        size = 27;
+        importance = 1;
+        coefMin = 1;
+        coefMax = 1;
+    };
+    class CustomMark {
+        color[] = {0,0,0,1};
+        icon = "\A3\ui_f\data\map\mapcontrol\custommark_ca.paa";
+        size = 24;
+        importance = 1;
+        coefMin = 1;
+        coefMax = 1;
+    };
+    class Tree {
+        color[] = {0.45,0.64,0.33,0.4};
+        icon = "\A3\ui_f\data\map\mapcontrol\bush_ca.paa";
+        size = 12;
+        importance = "0.9 * 16 * 0.05";
+        coefMin = 0.25;
+        coefMax = 4;
+    };
+    class SmallTree {
+        color[] = {0.45,0.64,0.33,0.4};
+        icon = "\A3\ui_f\data\map\mapcontrol\bush_ca.paa";
+        size = 12;
+        importance = "0.6 * 12 * 0.05";
+        coefMin = 0.25;
+        coefMax = 4;
+    };
+    class Bush {
+        color[] = {0.45,0.64,0.33,0.4};
+        icon = "\A3\ui_f\data\map\mapcontrol\bush_ca.paa";
+        size = "14/2";
+        importance = "0.2 * 14 * 0.05 * 0.05";
+        coefMin = 0.25;
+        coefMax = 4;
+    };
+    class Church {
+        color[] = {1,1,1,1};
+        icon = "\A3\ui_f\data\map\mapcontrol\church_CA.paa";
+        size = 24;
+        importance = 1;
+        coefMin = 0.85;
+        coefMax = 1;
+    };
+    class Chapel {
+        color[] = {0,0,0,1};
+        icon = "\A3\ui_f\data\map\mapcontrol\Chapel_CA.paa";
+        size = 24;
+        importance = 1;
+        coefMin = 0.85;
+        coefMax = 1;
+    };
+    class Cross {
+        color[] = {0,0,0,1};
+        icon = "\A3\ui_f\data\map\mapcontrol\Cross_CA.paa";
+        size = 24;
+        importance = 1;
+        coefMin = 0.85;
+        coefMax = 1;
+    };
+    class Rock {
+        color[] = {0.1,0.1,0.1,0.8};
+        icon = "\A3\ui_f\data\map\mapcontrol\rock_ca.paa";
+        size = 12;
+        importance = "0.5 * 12 * 0.05";
+        coefMin = 0.25;
+        coefMax = 4;
+    };
+    class Bunker {
+        color[] = {0,0,0,1};
+        icon = "\A3\ui_f\data\map\mapcontrol\bunker_ca.paa";
+        size = 14;
+        importance = "1.5 * 14 * 0.05";
+        coefMin = 0.25;
+        coefMax = 4;
+    };
+    class Fortress {
+        color[] = {0,0,0,1};
+        icon = "\A3\ui_f\data\map\mapcontrol\bunker_ca.paa";
+        size = 16;
+        importance = "2 * 16 * 0.05";
+        coefMin = 0.25;
+        coefMax = 4;
+    };
+    class Fountain {
+        color[] = {0,0,0,1};
+        icon = "\A3\ui_f\data\map\mapcontrol\fountain_ca.paa";
+        size = 11;
+        importance = "1 * 12 * 0.05";
+        coefMin = 0.25;
+        coefMax = 4;
+    };
+    class ViewTower {
+        color[] = {0,0,0,1};
+        icon = "\A3\ui_f\data\map\mapcontrol\viewtower_ca.paa";
+        size = 16;
+        importance = "2.5 * 16 * 0.05";
+        coefMin = 0.5;
+        coefMax = 4;
+    };
+    class Lighthouse {
+        color[] = {1,1,1,1};
+        icon = "\A3\ui_f\data\map\mapcontrol\lighthouse_CA.paa";
+        size = 24;
+        importance = 1;
+        coefMin = 0.85;
+        coefMax = 1;
+    };
+    class Quay {
+        color[] = {1,1,1,1};
+        icon = "\A3\ui_f\data\map\mapcontrol\quay_CA.paa";
+        size = 24;
+        importance = 1;
+        coefMin = 0.85;
+        coefMax = 1;
+    };
+    class Fuelstation {
+        color[] = {1,1,1,1};
+        icon = "\A3\ui_f\data\map\mapcontrol\fuelstation_CA.paa";
+        size = 24;
+        importance = 1;
+        coefMin = 0.85;
+        coefMax = 1;
+    };
+    class Hospital {
+        color[] = {1,1,1,1};
+        icon = "\A3\ui_f\data\map\mapcontrol\hospital_CA.paa";
+        size = 24;
+        importance = 1;
+        coefMin = 0.85;
+        coefMax = 1;
+    };
+    class BusStop {
+        color[] = {1,1,1,1};
+        icon = "\A3\ui_f\data\map\mapcontrol\busstop_CA.paa";
+        size = 24;
+        importance = 1;
+        coefMin = 0.85;
+        coefMax = 1;
+    };
+    class Transmitter {
+        color[] = {1,1,1,1};
+        icon = "\A3\ui_f\data\map\mapcontrol\transmitter_CA.paa";
+        size = 24;
+        importance = 1;
+        coefMin = 0.85;
+        coefMax = 1;
+    };
+    class Stack {
+        color[] = {0,0,0,1};
+        icon = "\A3\ui_f\data\map\mapcontrol\stack_ca.paa";
+        size = 20;
+        importance = "2 * 16 * 0.05";
+        coefMin = 0.9;
+        coefMax = 4;
+    };
+    class Ruin {
+        color[] = {0,0,0,1};
+        icon = "\A3\ui_f\data\map\mapcontrol\ruin_ca.paa";
+        size = 16;
+        importance = "1.2 * 16 * 0.05";
+        coefMin = 1;
+        coefMax = 4;
+    };
+    class Tourism {
+        color[] = {0,0,0,1};
+        icon = "\A3\ui_f\data\map\mapcontrol\tourism_ca.paa";
+        size = 16;
+        importance = "1 * 16 * 0.05";
+        coefMin = 0.7;
+        coefMax = 4;
+    };
+    class Watertower {
+        color[] = {1,1,1,1};
+        icon = "\A3\ui_f\data\map\mapcontrol\watertower_CA.paa";
+        size = 24;
+        importance = 1;
+        coefMin = 0.85;
+        coefMax = 1;
+    };
+    class Waypoint {
+        color[] = {0,0,0,1};
+        size = 24;
+        importance = 1;
+        coefMin = 1;
+        coefMax = 1;
+        icon = "\A3\ui_f\data\map\mapcontrol\waypoint_ca.paa";
+    };
+    class WaypointCompleted {
+        color[] = {0,0,0,1};
+        size = 24;
+        importance = 1;
+        coefMin = 1;
+        coefMax = 1;
+        icon = "\A3\ui_f\data\map\mapcontrol\waypointCompleted_ca.paa";
+    };
+    moveOnEdges = 0;//1;
+    x = "SafeZoneXAbs";
+    y = "SafeZoneY + 1.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+    w = "SafeZoneWAbs";
+    h = "SafeZoneH - 1.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+    shadow = 0;
+    ptsPerSquareSea = 5;
+    ptsPerSquareTxt = 3;
+    ptsPerSquareCLn = 10;
+    ptsPerSquareExp = 10;
+    ptsPerSquareCost = 10;
+    ptsPerSquareFor = 9;
+    ptsPerSquareForEdge = 9;
+    ptsPerSquareRoad = 6;
+    ptsPerSquareObj = 9;
+    showCountourInterval = 0;
+    scaleMin = 0.001;
+    scaleMax = 1;
+    scaleDefault = 0.16;
+    maxSatelliteAlpha = 0.85;
+    alphaFadeStartScale = 0.35;
+    alphaFadeEndScale = 0.4;
+    fontLabel = "RobotoCondensed";
+    sizeExLabel = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
+    fontGrid = "TahomaB";
+    sizeExGrid = 0.02;
+    fontUnits = "TahomaB";
+    sizeExUnits = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
+    fontNames = "RobotoCondensed";
+    sizeExNames = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8) * 2";
+    fontInfo = "RobotoCondensed";
+    sizeExInfo = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
+    fontLevel = "TahomaB";
+    sizeExLevel = 0.02;
+    text = "#(argb,8,8,3)color(1,1,1,1)";
+    //text = "\a3\ui_f\data\map_background2_co.paa";
+    class power {
+        icon = "\A3\ui_f\data\map\mapcontrol\power_CA.paa";
+        size = 24;
+        importance = 1;
+        coefMin = 0.85;
+        coefMax = 1;
+        color[] = {1,1,1,1};
+    };
+    class powersolar {
+        icon = "\A3\ui_f\data\map\mapcontrol\powersolar_CA.paa";
+        size = 24;
+        importance = 1;
+        coefMin = 0.85;
+        coefMax = 1;
+        color[] = {1,1,1,1};
+    };
+    class powerwave {
+        icon = "\A3\ui_f\data\map\mapcontrol\powerwave_CA.paa";
+        size = 24;
+        importance = 1;
+        coefMin = 0.85;
+        coefMax = 1;
+        color[] = {1,1,1,1};
+    };
+    class powerwind {
+        icon = "\A3\ui_f\data\map\mapcontrol\powerwind_CA.paa";
+        size = 24;
+        importance = 1;
+        coefMin = 0.85;
+        coefMax = 1;
+        color[] = {1,1,1,1};
+    };
+    class shipwreck {
+        icon = "\A3\ui_f\data\map\mapcontrol\shipwreck_CA.paa";
+        size = 24;
+        importance = 1;
+        coefMin = 0.85;
+        coefMax = 1;
+        color[] = {1,1,1,1};
+    };
+    class LineMarker {
+        lineDistanceMin = 3e-005;
+        lineLengthMin = 5;
+        lineWidthThick = 0.014;
+        lineWidthThin = 0.008;
+        textureComboBoxColor = "#(argb,8,8,3)color(1,1,1,1)";
+    };
 };

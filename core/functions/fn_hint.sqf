@@ -1,18 +1,19 @@
 private ["_msg"];
 /*
  * Author: Johannes "Letus" Bindriem
- * [Description]
+ * Function to show an Hint on Player Screen
+ *
+ * Function for Futur use.
  *
  * Arguments:
  * 0: Message [String]
  *
  * Return Value:
- * Return Name <TYPE>
+ * NONE
  *
  * Example:
- * ["example"] call ace_[module]_fnc_[functionName]
+ * [] call lts_fnc_hint
  *
- * Public: [Yes/No]
  */
 
 _msg = _this select 0;

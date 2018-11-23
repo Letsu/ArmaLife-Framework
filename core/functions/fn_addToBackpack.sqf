@@ -1,26 +1,30 @@
 private ["_item", "_ammount", "_fits"];
 /*
  * Author: Johannes "Letus" Bindriem
- * [Description]
+ * Function to add Item to Players Backpack
  *
  * Arguments:
- * 0: Argument Name <TYPE>
+ * 0: Item that would added [String]
+ * 1: Amount of Items [Number]
  *
  * Return Value:
- * Return Name <TYPE>
+ * NONE
  *
  * Example:
- * ["example"] call ace_[module]_fnc_[functionName]
+ * [] call lts_fnc_addToBackpack
  *
- * Public: [Yes/No]
  */
 _item    = param[0];
 _ammount = param[1, 1];
-
 
 //Check if Item can Put to Backpack or its to Large.
 _fits = player canAddItemToBackpack _item;
 if (!_fits) exitWith { ["Du hast kein Platz um das Item zu Kaufen!"] call lts_fnc_hint };
 
  //Add Item to Backpack from Player!
- player addItemToBackpack _item;
+
+ for "_i" from 1 to _amount do {
+     if (!_fits) exitWith { ["Du hast nicht genug Platz für alles"] call lts_fnc_hint };
+
+     player addItemToBackpack _item;
+ };

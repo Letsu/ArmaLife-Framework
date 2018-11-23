@@ -1,17 +1,16 @@
 /*
  * Author: Johannes "Letus" Bindriem
- *
+ * Init that call all needed Function on Client when he Joins the Server!
  *
  * Arguments:
- * 0: Argument Name <TYPE>
+ * NONE
  *
  * Return Value:
- * Return Name <TYPE>
+ * NONE
  *
  * Example:
- * ["example"] call ace_[module]_fnc_[functionName]
- *
- * Public: [Yes/No]
+ * [] call lts_core_fnc_init;
+
  */
 //Start
  ["--------------------------------------------"] call lts_fnc_log;
@@ -37,6 +36,11 @@ waitUntil {!(isNull (findDisplay 46))};
 ["Initalizise of the Master Loop"] call lts_fnc_log;
 [] spawn lts_core_fnc_loop;
 ["Finish Initalizise of the Master Loop"] call lts_fnc_log;
+
+["Initalizise of Player Interactions"] call lts_fnc_log;
+[] spawn lts_core_fnc_playerInteraction;
+["Finish Initalizise of Player Interactions"] call lts_fnc_log;
+
 0 cutText ["","BLACK IN"];
 
 ["--------------------------------------------"] call lts_fnc_log;

@@ -1,24 +1,29 @@
 private [];
 /*
  * Author: [Name of Author(s)]
- * [Description]
+ * Function called by Eventhandler for Action by KeyDown.
  *
  * Arguments:
- * 0: Argument Name <TYPE>
+ * 0: The Dispaly of the Eventhandler [Dispaly]
+ * 1: The Code of the Key that pressed [Number]
+ * 2: Player pressed Shift [Bool]
+ * 3: Player pressed Ctrl [Bool]
+ * 4: Player pressed Alt [Bool]
+ *
+ *
  *
  * Return Value:
- * Return Name <TYPE>
+ * Use Key by Arma Engine
  *
  * Example:
- * ["example"] call ace_[module]_fnc_[functionName]
+ * [Display, Key, Shift, Ctrl, Alt] call lts_fnc_keyDown
  *
- * Public: [Yes/No]
  */
-_display = _this select 0;
-_key     = _this select 1;
-_shift   = _this select 2;
-_ctrl    = _this select 3;
-_alt     = _this select 4;
+_display = param [0];
+_key     = param [1];
+_shift   = param [2];
+_ctrl    = param [3];
+_alt     = param [4];
 
 _disableKey = false;
 

@@ -1,3 +1,10 @@
+/*
+ * Author: Johannes "Letus" Bindriem
+ *
+ *
+ *
+ *
+ */
 class Config_Spawn {
     class LaTrintie {
         DisplayName = "La Trinite";

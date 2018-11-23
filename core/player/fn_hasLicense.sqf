@@ -1,7 +1,7 @@
 private ["_var"];
 /*
  * Author: Johannes "Letus" Bindriem
- * [Description]
+ * Give status of License of the Player and the Position in the License Array
  *
  * Arguments:
  * 0: License Type [String]
@@ -11,11 +11,10 @@ private ["_var"];
  * 1: Player of teh License in the Array [Number]
  *
  * Example:
- * ["example"] call ace_[module]_fnc_[functionName]
+ * [""] call lts_fnc_hasLicense;
  *
- * Public: [Yes/No]
  */
-_var = _this select 0;
+_var = param [0, ""];
 _hasLicense = false;
 
 _num = 0;

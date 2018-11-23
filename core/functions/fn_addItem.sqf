@@ -1,4 +1,4 @@
-private [ "_item", "_amount", "_addToBackpack"];
+private [ "_fnc_addItems", "_item", "_amount", "_addToBackpack", "_typ", "_itemTyp", "_exit", "_aceItems"];
 /*
  * Author: Johannes "Letus" Bindriem
  * To Add Items to PLayer Inventory when boaght an Item or Some other handels who an Weapon must add to the Player Inventory
@@ -21,7 +21,7 @@ private [ "_item", "_amount", "_addToBackpack"];
 //IMPORTEN!!!!!!!
 
 _item = param[0];
-_ammount = param[1, 1];
+_amount = param[1, 1];
 _addToBackpack = param [2, false];
 
 
@@ -29,19 +29,27 @@ _typ = [_item] call BIS_fnc_itemType;
 _itemTyp = _typ select 0;
 _exit = false;
 
+//Init some Functions
+_fnc_addItems = {
+    private ["_item", "_amount"];
+    _item param [0, ""];
+    _amount = param [1, 1];
+
+    for "_i" from 1 to _amount do {
+        player additem _item; //Check if player can add more than fits?
+    };
+
+};
+
 
 //Is Item an Weapon?
 if (_itemTyp isEqualTo "Weapon") then {
 
     //Some Checks befor add Weapon.
-    if (_amount > 1) exitWith { ["Du kannst nur maximal 1 Waffe auf einmal kaufen!"] call lts_fnc_hint; _exit = true; }; /*On call in spawn(Secend call) this Line throws an Error:
+    if (_amount > 1) exitWith { ["Du kannst nur maximal 1 Waffe auf einmal kaufen!"] call lts_fnc_hint; _exit = true; };
 
-    18:15:40   Error position: <_amount > 1) exitWith { ["Du kannst nur >
-    18:15:40   Error Undefined variable in expression: _amount
-    18:15:40 File core\functions\fn_addItem.sqf [lts_fnc_addItem], line 32
-    */
     //When addToBackpack is enable add Weapon to Backpack and exit!
-    if (_addToBackpack) exitWith { [_item, _ammount] call lts_fnc_addToBackpack; _exit = true; };
+    if (_addToBackpack) exitWith { [_item, _amount] call lts_fnc_addToBackpack; _exit = true; };
 
 
     //Get the Weapon Typ and send it to lts_fnc_addWeapon;
@@ -61,7 +69,7 @@ if (_itemTyp isEqualTo "Equipment") then {
     //Some checks befor add the Clothin!
     if (_amount > 1) exitWith { ["Du kannst nur maximal 1 ein Kleidungsstück auf einmal kaufen!"] call lts_fnc_hint; _exit = true; };
 
-    if (_addToBackpack) exitWith { [_item, _ammount] call lts_fnc_addToBackpack; _exit = true; };
+    if (_addToBackpack) exitWith { [_item, _amount] call lts_fnc_addToBackpack; _exit = true; };
 
     _clotTyp = _typ select 1;
 
@@ -85,9 +93,6 @@ if (_itemTyp isEqualTo "Equipment") then {
         player addGoggles _item;
         _exit = true;
     };
-
-
-
     _exit = true;
 };
 if (_exit) exitWith {};
@@ -97,7 +102,7 @@ if (_exit) exitWith {};
 
 //Is Item Something else???
 if (_itemTyp isEqualTo "Item") then {
-    if (_addToBackpack) exitWith { [_item, _ammount] call lts_fnc_addToBackpack; _exit = true; };
+    if (_addToBackpack) exitWith { [_item, _amount] call lts_fnc_addToBackpack; _exit = true; };
 
     _itemOtherTyp = _typ select 1;
 
@@ -115,7 +120,7 @@ if (_itemTyp isEqualTo "Item") then {
         _exit = true;
     };
     if (_itemOtherTyp isEqualTo "Radio") exitWith {
-        player addWeapon _item;
+        player linkItem _item;
         _exit = true;
     };
     if (_itemOtherTyp isEqualTo "Map") exitWith {
@@ -126,20 +131,24 @@ if (_itemTyp isEqualTo "Item") then {
             player linkItem _item;
             _exit = true;
     };
-    if (_itemOtherTyp isEqualTo "Radio") exitWith {
-            player linkItem _item;
-            _exit = true;
-    };
 
+    _exit = true;
+};
+if (_exit) exitWith {};
+
+//Check if Item is Ace Item and give the Item to the Player Inv.
+_aceItems = getArray (missionConfigFile >> "Config_Master" >> "AceItems");
+if (_itemTyp in _aceItems) then {
+    if (_addToBackpack) exitWith { [_item, _amount] call lts_fnc_addToBackpack; _exit = true };
+    [_item, _amount] call _fnc_addItems;
     _exit = true;
 };
 if (_exit) exitWith {};
 
 //Add Action for Weapon Mounts
 
-//Add Action for Ace Items like Bandages because of error in ACE Code
 
 if (!exit) then {
-    if (_addToBackpack) exitWith { [_item, _ammount] call lts_fnc_addToBackpack };
-    player addItem _item;
+    if (_addToBackpack) exitWith { [_item, _amount] call lts_fnc_addToBackpack };
+    [_item, _amount] call _fnc_addItems;
 };

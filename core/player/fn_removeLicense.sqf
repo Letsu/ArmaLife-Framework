@@ -3,25 +3,21 @@
  * Remove the License form the Player from the Var Name!
  *
  * Arguments:
- * 0: typ of teh License [String]
+ * 0: Typ of the License [String]
  *
  * Return Value:
- * Return Name <TYPE>
+ * NONE
  *
  * Example:
- * ["example"] call ace_[module]_fnc_[functionName]
+ * ["LicenseVar"] call lts_fnc_removeLicense;
  *
- * Public: [Yes/No]
  */
 
- _var = _this select 0;
+ _var = param [0, ""];
 
 _license = [_var] call lts_fnc_hasLicense;
 _hasLicense = _license select 0;
 if (!_hasLicense) exitWith { ["Error in removeLicense Player hasen´t the License!"] call lts_fnc_log };
 _index = _license select 1;
-
-
-debug1 = _index;
 
 (lts_core_licenses select _index) set[1, false];

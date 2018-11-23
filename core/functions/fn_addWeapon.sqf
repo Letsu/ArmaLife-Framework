@@ -1,124 +1,43 @@
-private [];
+private [ "_weapon", "_type", "_weapon", "_item" ];
 /*
  * Author: Johannes "Letus" Bindriem
- * [Description]
+ * Adds an Weapon to the PLayer Inv or Backpack
  *
  * Arguments:
  * 0: CLassname of the Weapon
  * 1: Typ of Weapon
  *
  * Return Value:
- * Return Name <TYPE>
+ * NONE
  *
  * Example:
- * ["example"] call ace_[module]_fnc_[functionName]
+ * ["Classname", "WeaponTyp"] call lts_fnc_addWeapon;
  *
- * Public: [Yes/No]
  */
 
-//Firt setup some Function that can used in this Function
-
-
-/*
-------------------------------------------------------------
-Primary Weapon
-------------------------------------------------------------
-*/
-_fnc_addPrimaryWeapon = {
-    _item = param [0];
-
-    _primaryWeapon = primaryWeapon player;
-    if (_primaryWeapon isEqualTo "") then {
-        //Player has no Weapon so add the Weapon to the Free Slot and Exit!
-        player addWeapon _item;
-    } else {
-        //Player already has an Weapon ask him to put the Weapon to the Backpack when he has one!
-        //First check if the Player has an Backpack
-        if (!(player canAddItemToBackpack _item)) exitWith { ["Du hast bereits eine Waffe!"] call lts_fnc_hint };
-        _controll = [
-            "Du hast schon eine Waffe. Willst du deine neue Waffe in dein Rucksack legen?",
-            "Kein Platz!",
-            "Ja",
-            "Nein"
-        ] call BIS_fnc_guiMessage;
-
-        //If Player chose Yes put the Weapon to backpack
-        if (_controll) exitWith { [_item] call lts_fnc_addToBackpack };
-    };
-};
-
-
-/*
-------------------------------------------------------------
-Handgun Weapon
-------------------------------------------------------------
-*/
-_fnc_addHandgunWeapon = {
-    _item = param [0];
-
-    _handgunWeapon = handgunWeapon player;
-    if (_handgunWeapon isEqualTo "") then {
-        //Player has no Weapon so add the Weapon to the Free Slot and Exit!
-        player addWeapon _item;
-    } else {
-        //Player already has an Weapon ask him to put the Weapon to the Backpack when he has one!
-        //First check if the Player has an Backpack
-        if (!(player canAddItemToBackpack _item)) exitWith { ["Du hast bereits eine Waffe!"] call lts_fnc_hint };
-        _controll = [
-            "Du hast schon eine Waffe. Willst du deine neue Waffe in dein Rucksack legen?",
-            "Kein Platz!",
-            "Ja",
-            "Nein"
-        ] call BIS_fnc_guiMessage;
-
-        //If Player chose Yes put the Weapon to backpack
-        if (_controll) exitWith { [_item] call lts_fnc_addToBackpack };
-    };
-};
-
-
-/*
-------------------------------------------------------------
-Secondary Weapon
-------------------------------------------------------------
-*/
-_fnc_addSecondaryWeapon = {
-    _item = param [0];
-
-    _secondaryWeapon = secondaryWeapon player;
-    if (_secondaryWeapon isEqualTo "") then {
-        //Player has no Weapon so add the Weapon to the Free Slot and Exit!
-        player addWeapon _item;
-    } else {
-        //Player already has an Weapon ask him to put the Weapon to the Backpack when he has one!
-        //First check if the Player has an Backpack
-        if (!(player canAddItemToBackpack _item)) exitWith { ["Du hast bereits eine Waffe!"] call lts_fnc_hint };
-        _controll = [
-            "Du hast schon eine Waffe. Willst du deine neue Waffe in dein Rucksack legen?",
-            "Kein Platz!",
-            "Ja",
-            "Nein"
-        ] call BIS_fnc_guiMessage;
-
-        //If Player chose Yes put the Weapon to backpack
-        if (_controll) exitWith { [_item] call lts_fnc_addToBackpack };
-    };
-};
-
-
-
-
-/*
-------------------------------------------------------------
-Start of Function!!
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-*/
-
-//Init of Variaqbles
-_weapon = param [0];
+_item = param [0, ""];
 _type = param[1, "AssaultRifle"];
+_weapon = "";
 
-if (_typ == "AssaultRifle") then { [_weapon] call _fnc_addPrimaryWeapon } else { if (_typ == "Handgun") then { [_weapon] call _fnc_addHandgunWeapon } else { [_weapon] call _fnc_addPrimaryWeapon }/*End IF*/; }/*End Else*/;
+//Check wich type of Weapon the Player has and if the Weapon slot is full
+if (_type == "AssaultRifle") then { _weapon = primaryWeapon player } else { if (_type == "Handgun") then { _weapon = handgunWeapon player } else { _weapon = secondaryWeapon player }/*End IF*/; }/*End Else*/;
 
+//Add Weapon to Weapon Slot or backpack of the Player
+if (_weapon isEqualTo "") then {
+    //Player has no Weapon so add the Weapon to the Free Slot and Exit!
+    player addWeapon _item;
+} else {
+    private ["_controll"];
+    //Player already has an Weapon ask him to put the Weapon to the Backpack when he has one!
+    //First check if the Player has an Backpack and if the Backpack is Full?
+    if (!(player canAddItemToBackpack _item)) exitWith { ["Du hast bereits eine Waffe!"] call lts_fnc_hint };
+    _controll = [
+        "Du hast schon eine Waffe. Willst du deine neue Waffe in dein Rucksack legen?",
+        "Kein Platz!",
+        "Ja",
+        "Nein"
+    ] call BIS_fnc_guiMessage;
 
-//If hinmzufügen um die Waffe vom Spieler auszulesen(je Nach Typ) und dann einfach damit weiter arbeiten dann sind keine Drei Funktionen erforderlich!
+    //If Player chose Yes put the Weapon to backpack
+    if (_controll) exitWith { [_item] call lts_fnc_addToBackpack };
+};
