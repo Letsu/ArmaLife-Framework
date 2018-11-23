@@ -6,6 +6,7 @@ class lts_core {
         class init          {};
         class setupEVH      {};
         class loop          {};
+        class playerInteraction {};
     };
 };
 
@@ -48,6 +49,7 @@ class Lts_framework {
     };
 
     class vehicle {
+        file = "core\vehicle";
         class addKeyToVeh {};
         class createVehicle{};
         class deleteVehicle {};

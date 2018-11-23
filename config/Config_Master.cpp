@@ -9,4 +9,4 @@ class Config_Master {
 #include "Config_Spawn.cpp"
 #include "Config_Gather.cpp"
 #include "Config_License.cpp"
-#include "Config_Process"
+#include "Config_Process.cpp"
