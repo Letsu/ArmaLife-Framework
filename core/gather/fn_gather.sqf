@@ -1,4 +1,4 @@
-private ["_target", "_player", "_actionParams", "item"];
+private ["_target", "_player", "_actionParams", "_item"];
 /*
  * Author: Johannes "Letus" Bindriem
  * Function for Gather Resources for Farming
