@@ -10,3 +10,4 @@ class Config_Master {
 #include "Config_Gather.cpp"
 #include "Config_License.cpp"
 #include "Config_Process.cpp"
+#include "Config_Shops.cpp"

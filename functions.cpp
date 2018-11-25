@@ -21,6 +21,7 @@ class Lts_framework {
         class addItem {};
         class addWeapon {};
         class addToBackpack {};
+        class getDisplayName {};
     };
 
     class respawn {
@@ -74,5 +75,11 @@ class lts_dialog {
         class spawnLbChange {};
         class callSpawn {};
         class createCam {};
+    };
+
+    class shop {
+        file = "dialogs\functions\shop";
+        class callShop {};
+        class getShopConfig {};
     };
 };
