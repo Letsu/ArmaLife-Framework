@@ -15,6 +15,11 @@ private ["_target", "_player", "_actionParams", "_item"];
  * [_target, _player, _actionParams] call lts_fnc_gather
  *
  */
+
+/*--------------------------------
+This File Mybe musst Pack to the Server
+-----------------------------------*/
+
 _target = param [0];
 _player = param [1];
 _actionParams = param [2]; //Action Param dont working is giving evere Time Any from initGather!

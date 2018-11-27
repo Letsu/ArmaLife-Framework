@@ -14,11 +14,6 @@ private[];
  * [] call lts_fnc_initGather;
  *
  */
-
-//-------------------------------------------------------
-//-------------------Need to Put in Server!!!------------
-//-------------------------------------------------------
-
 {
     private ["_pfad", "_config", "_fieldRange", "_item", "_fields"];
     _pfad = str(_x) splitString "/, \";
