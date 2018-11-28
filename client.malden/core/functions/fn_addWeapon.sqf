@@ -26,6 +26,7 @@ if (_type == "AssaultRifle") then { _weapon = primaryWeapon player } else { if (
 if (_weapon isEqualTo "") then {
     //Player has no Weapon so add the Weapon to the Free Slot and Exit!
     player addWeapon _item;
+    player action ["WeaponOnBack", player];
 } else {
     private ["_controll"];
     //Player already has an Weapon ask him to put the Weapon to the Backpack when he has one!
