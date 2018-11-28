@@ -80,5 +80,7 @@ class lts_dialog {
         file = "dialogs\functions\shop";
         class callShop {};
         class getShopConfig {};
+        class onShopBuy {};
+        class shopLbChange {};
     };
 };

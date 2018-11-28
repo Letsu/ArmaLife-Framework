@@ -31,6 +31,8 @@ if (_weapon isEqualTo "") then {
     //Player already has an Weapon ask him to put the Weapon to the Backpack when he has one!
     //First check if the Player has an Backpack and if the Backpack is Full?
     if (!(player canAddItemToBackpack _item)) exitWith { ["Du hast bereits eine Waffe!"] call lts_fnc_hint };
+    _controll = false;
+    //Msg Bix dont open when exec!
     _controll = [
         "Du hast schon eine Waffe. Willst du deine neue Waffe in dein Rucksack legen?",
         "Kein Platz!",

@@ -32,10 +32,12 @@ _itemList = getArray (missionConfigFile >> "Config_Shops" >> _shopClass >> "Item
 //First some Checks!
 _hasCondition = false;
 if !(_condition isEqualTo "") then { _hasCondition = true };
-if (_hasCondition && compile (_condition)) exitWith { };
+has = _hasCondition;
+if (_hasCondition && call compile (_condition)) exitWith { ["Du darfst dieses Geschäft nicht benutzen"] call lts_fnc_hint; closeDialog 0 };
 //Set Text
 _shopName ctrlSetText _displayName;
 
+_index = 0;
 {
     _item = _x select 0;
     _itemName = _x select 1;
@@ -48,10 +50,11 @@ _shopName ctrlSetText _displayName;
     if (_itemName isEqualTo "") then { _itemName = [_item] call lts_fnc_getDisplayName };
 
     _lbShop lbAdd _itemName;
-    /*
+
     _curSize = lbSize _lbShop - 1;
-    _lbShop lbSetData [ _curSize, _shopClass];
-*/
+    _data = format["%1,%2",_shopClass, _index];
+    _lbShop lbSetData [ _curSize, _data];
+    _index = _index + 1;
 } forEach _itemList;
 
 _lbShop lbSetCurSel 0;
