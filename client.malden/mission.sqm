@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={7093.0752,610.51624,8022.502};
-		dir[]={0.74038637,-0.49490339,-0.45489797};
-		up[]={0.42171809,0.86891741,-0.2591075};
-		aside[]={-0.52350312,-7.2500552e-007,-0.85204899};
+		pos[]={7802.9321,511.03604,6279.3853};
+		dir[]={-0.12349081,-0.74830478,0.65180296};
+		up[]={-0.13930248,0.66332006,0.73525912};
+		aside[]={0.98255098,1.5998376e-007,0.18615368};
 	};
 };
 binarizationWanted=0;
@@ -28,28 +28,17 @@ addons[]=
 	"A3_Structures_F_Naval_Piers",
 	"A3_Ui_F",
 	"A3_Characters_F",
-	"A3_Weapons_F_Mark_LongRangeRifles_DMR_02",
-	"ace_realisticnames",
-	"A3_Weapons_F_Mark_Acc",
-	"ace_laserpointer",
-	"A3_Weapons_F_Exp",
-	"A3_Weapons_F_Mark",
-	"ace_ballistics",
-	"A3_Weapons_F",
-	"ace_optics",
-	"A3_Characters_F_Orange_Facewear",
-	"ace_goggles",
-	"ace_nightvision",
-	"A3_Characters_F_Mark",
+	"A3_Characters_F_Orange",
 	"A3_Soft_F_Offroad_01",
 	"A3_Soft_F_Beta_Truck_02",
+	"ace_realisticnames",
 	"A3_Air_F_Heli_Light_01"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=16;
+		items=7;
 		class Item0
 		{
 			className="A3_Structures_F";
@@ -73,89 +62,26 @@ class AddonsMetaData
 		};
 		class Item3
 		{
-			className="A3_Weapons_F_Mark";
-			name="Arma 3 Marksmen - Weapons and Accessories";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item4
-		{
-			className="ace_laserpointer";
-			name="ACE3 - Laser Pointer";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item5
-		{
-			className="A3_Weapons_F_Exp";
-			name="Arma 3 Apex - Weapons and Accessories";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item6
-		{
-			className="ace_ballistics";
-			name="ACE3 - Ballistics";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item7
-		{
-			className="A3_Weapons_F";
-			name="Arma 3 Alpha - Weapons and Accessories";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item8
-		{
-			className="ace_optics";
-			name="ACE3 - Optics";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item9
-		{
 			className="A3_Characters_F_Orange";
 			name="Arma 3 Orange - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item10
-		{
-			className="ace_goggles";
-			name="ACE3 - Goggles";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item11
-		{
-			className="ace_nightvision";
-			name="ACE3 - Night Vision";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item12
-		{
-			className="A3_Characters_F_Mark";
-			name="Arma 3 Marksmen - Characters and Clothing";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item13
+		class Item4
 		{
 			className="A3_Soft_F";
 			name="Arma 3 Alpha - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item14
+		class Item5
 		{
 			className="A3_Soft_F_Beta";
 			name="Arma 3 Beta - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item15
+		class Item6
 		{
 			className="A3_Air_F";
 			name="Arma 3 Alpha - Aircraft";
@@ -374,66 +300,16 @@ class Mission
 						isPlayable=1;
 						class Inventory
 						{
-							class primaryWeapon
-							{
-								name="srifle_DMR_02_camo_F";
-								optics="optic_AMS_khk";
-								muzzle="muzzle_snds_338_green";
-								flashlight="ACE_acc_pointer_green";
-								underBarrel="bipod_01_F_khk";
-								class primaryMuzzleMag
-								{
-									name="10Rnd_338_Mag";
-									ammoLeft=10;
-								};
-							};
-							class binocular
-							{
-								name="Binocular";
-							};
 							class uniform
 							{
-								typeName="U_B_FullGhillie_sard";
-								isBackpack=0;
-								class MagazineCargo
-								{
-									items=1;
-									class Item0
-									{
-										name="10Rnd_338_Mag";
-										count=3;
-										ammoLeft=10;
-									};
-								};
-							};
-							class vest
-							{
-								typeName="V_PlateCarrier2_rgr";
+								typeName="U_C_IDAP_Man_TeeShorts_F";
 								isBackpack=0;
 							};
 							class backpack
 							{
-								typeName="B_AssaultPack_mcamo";
+								typeName="B_Bergen_tna_F";
 								isBackpack=1;
-								class MagazineCargo
-								{
-									items=1;
-									class Item0
-									{
-										name="HandGrenade";
-										count=16;
-										ammoLeft=1;
-									};
-								};
 							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="ItemRadio";
-							gps="ItemGPS";
-							goggles="G_Aviator";
-							hmd="ACE_NVG_Gen1";
-							headgear="H_Cap_oli";
 						};
 					};
 					id=103;
