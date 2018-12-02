@@ -34,52 +34,56 @@ closeDialog 0;
 
 
 //Spawn for Cam for Intro effect!
+//------------------------------------------------
+//Disabled for DBUG need to enable when on Server!
+//--------------------------------------------------
+
 /*
 [] spawn {
-    //Get PLayer Pos 
+    //Get PLayer Pos
     _oldPlayerPos    = getPos player;
     _heightPlayerPos = [_oldPlayerPos select 0, _oldPlayerPos select 1, 10];
 
     //pos 1
-    _came1 = "camera" camCreate _oldPlayerPos;
+    _cam1 = "camera" camCreate _oldPlayerPos;
                showCinemaBorder true;
-    _came1 cameraEffect ["internal", "BACK"];
-    _came1 camCommand "inertia on";
+    _cam1 cameraEffect ["internal", "BACK"];
+    _cam1 camCommand "inertia on";
 
     //Pos 2
-    _came1 camPrepareTarget _oldPlayerPos;
-    _came1 camPrepareFOV 1;
-    _came1 camCommitPrepared 0;
+    _cam1 camPrepareTarget _oldPlayerPos;
+    _cam1 camPrepareFOV 1;
+    _cam1 camCommitPrepared 0;
 
     // pos 3
-    _came1 camPreparePos _heightPlayerPos;
-    _came1 camPrepareTarget _oldPlayerPos;
-    _came1 camPrepareFOV 2;
-    _came1 camCommitPrepared 0.5;
+    _cam1 camPreparePos _heightPlayerPos;
+    _cam1 camPrepareTarget _oldPlayerPos;
+    _cam1 camPrepareFOV 2;
+    _cam1 camCommitPrepared 0.5;
     sleep 0.5;
 
     //Pos 4
-    _came1 camPreparePos [5676, 2979, 700];
-    _came1 camPrepareTarget player;
-    _came1 camPrepareFOV 2;
-    _came1 camCommitPrepared 3;
+    _cam1 camPreparePos [5676, 2979, 700];
+    _cam1 camPrepareTarget player;
+    _cam1 camPrepareFOV 2;
+    _cam1 camCommitPrepared 3;
     sleep 2.9;
 
     // pos 5
-    _came1 camPreparePos [(getPos player select 0) + 50, (getPos player select 1), 50];
-    _came1 camPrepareTarget player;
-    _came1 camPrepareFOV 2;
-    _came1 camCommitPrepared 3;
+    _cam1 camPreparePos [(getPos player select 0) + 50, (getPos player select 1), 50];
+    _cam1 camPrepareTarget player;
+    _cam1 camPrepareFOV 2;
+    _cam1 camCommitPrepared 3;
     sleep 3;
 
     //Pos 6
-    _came1 camPreparePos [(getPos player) select 0, (getPos player) select 1, ((getPos player) select 2) + 1];
-    _came1 camPrepareTarget player;
-    _came1 camPrepareFOV 0.5;
-    _came1 camCommitPrepared 2;
+    _cam1 camPreparePos [(getPos player) select 0, (getPos player) select 1, ((getPos player) select 2) + 1];
+    _cam1 camPrepareTarget player;
+    _cam1 camPrepareFOV 0.5;
+    _cam1 camCommitPrepared 2;
     sleep 2;
-    _came1 cameraEffect ["TERMINATE","BACK"];
-    camDestroy _came1;
+    _cam1 cameraEffect ["TERMINATE","BACK"];
+    camDestroy _cam1;
 };
 */
 player setPos _spawnPos;

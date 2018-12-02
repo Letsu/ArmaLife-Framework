@@ -22,8 +22,6 @@ if (_shop isEqualTo "") exitWith { ["None Class given on Shop Dialog Call!"] cal
 //Create the Dialog
 createDialog "ShopMenu";
 waitUntil {!(isNull (findDisplay 70001))};
-//Add Keyhandler to Dialog for disablle all Keys
-//( _display ) displayAddEventHandler ["KeyDown","if (!((_this select 1) isEqualTo 28)) then { true } "]; //Disaple the ESC Key in the Dialog that the can´t close the Dialog!
 
 //Read Config File and Fill List Box
 [_shop] call lts_dialog_fnc_getShopConfig;

@@ -1,6 +1,6 @@
 /*
  * Author: Johannes "Letus" Bindriem
- * Adds an new player entry in Database
+ * [Description]
  *
  * Arguments:
  * 0: Argument Name <TYPE>
@@ -11,4 +11,10 @@
  * Example:
  * ["example"] call ace_[module]_fnc_[functionName]
  *
+ * Public: [Yes/No]
  */
+
+_uid = param [0];
+_newLevel = param [1, 0];
+
+//Database entry

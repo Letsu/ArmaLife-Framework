@@ -17,7 +17,7 @@ private ["_target", "_player", "_actionParams", "_item"];
  */
 
 /*--------------------------------
-This File Mybe musst Pack to the Server
+This File MAYBE musst in the Server
 -----------------------------------*/
 
 _target = param [0];
@@ -25,8 +25,8 @@ _player = param [1];
 _actionParams = param [2]; //Action Param dont working is giving evere Time Any from initGather!
 _item = _actionParams select 0;
 
-//Some Checks!
-if (player canAdd _item) exitWith { ["Dein Inventar ist Voll!"] call lts_fnc_hint };
+//Get an Random Amount of Item
+_amount = random[1, 2, 4];
 
-
-player addItem _item;
+//Add Items
+[_item, _amount] call lts_fnc_addItem;

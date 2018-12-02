@@ -1,17 +1,16 @@
 /*
  * Author: Johannes "Letus" Bindriem
- * [Description]
+ * Funcion to return Displayname from an Item from Class Name
  *
  * Arguments:
  * 0: Item Classname [String]
  *
  * Return Value:
- * Return Name <TYPE>
+ * Displayname of Item [String]
  *
  * Example:
- * ["example"] call ace_[module]_fnc_[functionName]
+ * ["ClassName"] call lts_fnc_getDisplayName
  *
- * Public: [Yes/No]
  */
 
 _item = param [0, ""];

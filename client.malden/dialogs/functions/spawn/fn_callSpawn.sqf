@@ -28,7 +28,7 @@ waitUntil {!(isNull (findDisplay 46))};
 //Create the Dialog
 createDialog "SpawnDialog";
 waitUntil {!(isNull (findDisplay 60001))};
-//Add Keyhandler to Dialog for disablle all Keys
+//Adds Keyhandler to Dialog to disable all Keys
 (findDisplay 60001) displayAddEventHandler ["KeyDown","if (!((_this select 1) isEqualTo 28)) then { true } "]; //Disaple the ESC Key in the Dialog that the can´t close the Dialog!
 
 //Spawn the function to create an Cam

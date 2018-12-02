@@ -20,8 +20,8 @@ _text = getText (missionConfigFile >> "Config_Process" >> _clsss >> "DisplayName
 _from = getText (missionConfigFile >> "Config_Process" >> _class >> "From");
 _to = getText (missionConfigFile >> "Config_Process" >> _class >> "To");
 
-//Maybe writh Function for this Action
 //Check if player has Items and how much
+//Maybe writh Function for this Action
 _items = items player; //IMPORTENT: check if Funtion give the Right output
 _itemAmount = 0;
 {
@@ -35,4 +35,4 @@ _itemAmount = 0;
 //Add Processbar from ACe "ace_common_fnc_progressBar"
 
 //Remove old Items and add the new one
-player removeItem item
+//player removeItem item

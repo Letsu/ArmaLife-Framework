@@ -11,11 +11,14 @@ private ["side", "_oldSide"];
  * NONE
  *
  * Example:
- * [] call lts_cop_fnc_initCop;
+ * [] call lts_cop_fnc_init;
  *
  */
 
 _side = param [0, "cop"];
 _oldSide = param [1, "civ"];
 
-//Load Cop Loadout from Database
+//Load Cop Loadout
+[] call lts_cop_fnc_loadout;
+
+//Add Acces to Wanted List 

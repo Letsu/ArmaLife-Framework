@@ -1,6 +1,6 @@
 /*
  * Author: Johannes "Letus" Bindriem
- * Adds an new player entry in Database
+ * Send the Player Data to the Server to update the DB Player Entry
  *
  * Arguments:
  * 0: Argument Name <TYPE>
@@ -9,6 +9,6 @@
  * Return Name <TYPE>
  *
  * Example:
- * ["example"] call ace_[module]_fnc_[functionName]
+ * [] call lts_interface_fnc_sendPlayerData
  *
  */

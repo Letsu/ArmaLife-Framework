@@ -32,8 +32,6 @@ if (_weapon isEqualTo "") then {
     //First check if the Player has an Backpack and if the Backpack is Full?
     if (!(player canAddItemToBackpack _item)) exitWith { ["Du hast bereits eine Waffe!"] call lts_fnc_hint };
 
-    closeDialog 0;
-
 //Dialog dont open!
     _controll = [
         "Du hast schon eine Waffe. Willst du deine neue Waffe in dein Rucksack legen?",
@@ -42,6 +40,6 @@ if (_weapon isEqualTo "") then {
         "Nein"
     ] call BIS_fnc_guiMessage;
 
-    //If Player chose Yes put the Weapon to backpack
+    //If Player chose Yes so put the Weapon to backpack
     if (_controll) exitWith { [_item] call lts_fnc_addToBackpack };
 };

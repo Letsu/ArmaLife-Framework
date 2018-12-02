@@ -12,16 +12,17 @@ private [ "_fnc_addItems", "_item", "_amount", "_addToBackpack", "_typ", "_itemT
  * NONE
  *
  * Example:
- * ["example"] call ace_[module]_fnc_[functionName]
+ * ["Item"] call lts_fnc_addItem
  *
  */
 
 //IMPORTEN!!!!!!!
 //ACE Items like Bandages and somethings are from Type ["Item","AccessoryBipod"] thats the Arma Bipod so this Item must Handels in Extra Class!!!!!
+//And befor the Weapon Acc.
 //IMPORTEN!!!!!!!
 
-_item = param[0];
-_amount = param[1, 1];
+_item          = param[0];
+_amount        = param[1, 1];
 _addToBackpack = param [2, false];
 
 
@@ -147,8 +148,8 @@ if (_exit) exitWith {};
 
 //Add Action for Weapon Mounts
 
-
-if (!exit) then {
+//It was non Item from above so its an Normal Item that can add normaly to Player Inventory
+if (!_exit) then {
     if (_addToBackpack) exitWith { [_item, _amount] call lts_fnc_addToBackpack };
     [_item, _amount] call _fnc_addItems;
 };

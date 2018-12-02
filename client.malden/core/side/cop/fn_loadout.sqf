@@ -1,15 +1,15 @@
 /*
  * Author: Johannes "Letus" Bindriem
- * [Description]
+ * Giving Item to an Cop when he die or change to Cop Side
  *
  * Arguments:
- * 0: Argument Name <TYPE>
+ * NONE
  *
  * Return Value:
- * Return Name <TYPE>
+ * NONE
  *
  * Example:
- * ["example"] call ace_[module]_fnc_[functionName]
+ * [] call lts_cop_fnc_loadout
  *
  * Public: [Yes/No]
  */

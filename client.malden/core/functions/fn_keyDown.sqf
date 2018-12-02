@@ -1,6 +1,6 @@
-private [];
+private ["_display", "_key", "_shift", "_ctrl", "_alt", "_disableKey"];
 /*
- * Author: [Name of Author(s)]
+ * Author: Johannes "Letus" Bindriem
  * Function called by Eventhandler for Action by KeyDown.
  *
  * Arguments:
@@ -39,7 +39,7 @@ switch (_key) do {
 
         //Some CHecks
         if (!(_veh isKindOf "AllVehicles")) exitWith {};
-        //FOR DEBUG!!!!!!! if (_veh in lts_core_curVehicles) exitWith {};
+        //Need to ENABLE when Server is Live!!!!!!! if (_veh in lts_core_curVehicles) exitWith {};
         _locked = locked _veh;
 
         if (_locked == 1) then { //Vehicle is Unlocked so Lock Vehicle
@@ -55,7 +55,6 @@ switch (_key) do {
     };
 
 };
-
 
 
 _disableKey;

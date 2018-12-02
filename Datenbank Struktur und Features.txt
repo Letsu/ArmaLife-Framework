@@ -1,0 +1,73 @@
+Genaral DB
+Alle Infos die Immer gebraucht werden.
+
+Player UID (Prm. Key) | money | bank | lizenzen(vlt. in eigene DB) | Inventar
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+
+Ausweiß DB 
+Daten die im Ausweiß des Spielers sind diese werden beim ersten Joinen auf den Server festgelegt und sind nicht änderbar. 
+
+Daten wie Wohnort sind vlt. bei kauf eines Hauses änderbar 
+
+Player UID( Prm. Key) | Displayname | Geburtsdatum | Wohnort(Ort, Straße, Hausnummer) | Geschlecht |  
+
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+Seite Cop/Med
+
+Cops/med bekommen eigene Datenbank zwecks Übersicht:
+Cops und Meds sind nicht in einer Datenbank sondern getrennt zwecks Seiten Spz. Infos!
+
+Diese Infos werden auch dazu verwendet um einen Dienstausweiß für denn Spieler zu Generieren.
+
+DienstNummer(Prm. KEY) | UID | Displayname | Rang | 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+
+Vehicle DB
+Datenbank fürs speichern von fahrzeuge
+
+In Splate verfügbar wird gespeichert ob das Fahrzeug vom Spieler ausgeparkt werden kann.
+Das Fahrzeug kann immer nur an der Garage ausgeparkt werden an der es auch eingeparkt wurde.
+
+
+
+Nummernschild(Prm. Key) | Owner Pid | Key Owners PIDs | Fuel | Inventar | Verfügbar | Wo Ausgeparkt | Am Leben | 
+
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+
+Dialog Wanted List:
+
+
+Cop sucht nach spieler:
+
+daraufhin werden im alle spieler angzeigt die einen änlichen namen haben wie die suche von ihm.
+
+Wenn er einen Spieler auswählt sieht er die Ausweiß Nummer(Player UID) um ganau abzugleichen ob es der Spieler ist was nicht nötig ist wenn der 
+
+Spieler nur 1 Mal auf dem Server existiert. 
+
+Im eintrag des Spielers sitz der Cop Vorherige Straftaten (Einträge in die Wanted) List und ob der Spieler gerade gesucht wird(aktuelle einträge in 
+der Wanted List). Auch sieht der Cop Notizen für denn Spieler die Bei Wanted List einträgen hinzugefühgt werden können oder 
+unabhänich von Waned List einträgen hinzugefügt werden können. 
+
+Auch werden dem Polizist daten von Ausweiß, fahrzeuge oder Häuser die der Spieler besitzt angezeigt 
+
+Die DB wird erst ausgelesen wenn der Cop auf dem Spieler bei der Suche geht da
+sonst nicht im Web mit denn Daten von der Wanted List gearbeitet werden kann(zwecks Webinterface).
+
+Auslesen von einträgen bei Spielern soll auch möglich sein wenn dieser nicht online ist
+
+Struktur DB:
+
+Wanted DB
+ID(Prm. Key)| Timestamp | Cop UID | Name Cop(from) |Player UID | Display Name | Strafftat | Strafe | Notiz
+
+Notiz DB
+ID (Prm. Key) | Timestamp | Cop UID | Name Cop(from) | Player UID | Dispaly Name | Notiz |

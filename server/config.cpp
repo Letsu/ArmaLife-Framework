@@ -1,6 +1,6 @@
 class CfgPatches {
     class server {
-        units[] = {"C_man_1"};
+        units[] = {};
         weapons[] = {};
         requiredAddons[] = {};
         fileName = "server.pbo";
