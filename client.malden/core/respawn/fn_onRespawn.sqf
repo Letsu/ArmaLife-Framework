@@ -32,6 +32,6 @@ Acts_SittingWounded_loop
 _newUnit = _this select 0;
 _oldUnit = _this select 1;
 
-[] call lts_dialog_callSpawn;
+[] call lts_dialog_fnc_callSpawn;
 
 deleteVehicle _oldUnit;
