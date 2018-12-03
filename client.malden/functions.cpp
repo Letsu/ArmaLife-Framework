@@ -49,7 +49,7 @@ class lts_framework {
         class addWeapon      {};
         class addToBackpack  {};
         class getDisplayName {};
-        class deleteFromArr  {};
+        class deleteFormArr  {};
     };
 
     class respawn {
