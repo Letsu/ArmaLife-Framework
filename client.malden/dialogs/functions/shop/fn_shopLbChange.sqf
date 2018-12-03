@@ -1,4 +1,4 @@
-private ["_dispaly", "_shopName", "_textPrice", "_lbShop", "_buttonBuy", "_buttonAbort", "_curSel", "_data", "_dataArr", "_shopClass", "_index"]
+private ["_dispaly", "_shopName", "_textPrice", "_lbShop", "_buttonBuy", "_buttonAbort", "_curSel", "_data", "_dataArr", "_shopClass", "_index"];
 /*
  * Author: Johannes "Letus" Bindriem
  * Function call every time Player change the current selected Listbox entry
