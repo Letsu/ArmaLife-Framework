@@ -25,7 +25,5 @@ private [];
  _buttonBuy = _display displayCtrl 1600;
  _buttonAbort = _display displayCtrl 1601;
 
- //Get Shop Config
- _displayName = getText (missionConfigFile >> "Config_Shops" >> _shopClass >> "DisplayName");
- _condition = getText (missionConfigFile >> "Config_Shops" >> _shopClass >> "Condition");
- _itemList = getArray (missionConfigFile >> "Config_Shops" >> _shopClass >> "Items");
+//Get Shop Config
+//_displayName = getText (missionConfigFile >> "Config_Shops" >> _shopClass >> "DisplayName");
