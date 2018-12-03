@@ -1,4 +1,4 @@
-private [];
+private ["_shopClass", "_display", "_shopName", "_textPrice", "_lbShop", "_buttonBuy", "_buttonAbort"];
 /*
  * Author: Johannes "Letus" Bidnriem
  * Fills the Listboxes from Shop Dialog whit Values from Config
