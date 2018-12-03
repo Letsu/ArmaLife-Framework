@@ -20,6 +20,8 @@ waitUntil {!(isNull (findDisplay 46))};
 (findDisplay 46) displayAddEventHandler["KeyDown","_this call lts_fnc_keyDown"];
 
 //Eventhandlers local on the Player
+player addEventHandler ["Respawn", { _this call lts_fnc_onRespawn }];
+
 
 //Ace Eventhanders called whit CBA.
 ["ace_unconscious", {

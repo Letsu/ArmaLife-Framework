@@ -1,11 +1,11 @@
 version=53;
 class EditorData
 {
-	moveGridStep=2;
+	moveGridStep=1;
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=525;
+	toggles=513;
 	class ItemIDProvider
 	{
 		nextID=163;
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={7802.9321,511.03604,6279.3853};
-		dir[]={0.23447606,-0.85388809,0.46470931};
-		up[]={0.38466114,0.52042782,0.762362};
-		aside[]={0.8928178,3.0035153e-007,-0.45048556};
+		pos[]={7816.373,537.71527,6312.4692};
+		dir[]={0.21710908,-0.35199466,0.91050804};
+		up[]={0.0816596,0.93597746,0.34246299};
+		aside[]={0.9727602,-1.7647835e-007,-0.23195352};
 	};
 };
 binarizationWanted=0;

@@ -1,15 +1,27 @@
 /*
  * Author: Johannes "Letus" Bindriem
- * [Description]
+ * Init the Vehicle Dialog, open the Dialog and call all needed Functions
  *
  * Arguments:
- * 0: Argument Name <TYPE>
+ * 0: Class of Shop
  *
  * Return Value:
- * Return Name <TYPE>
+ * NONE
  *
  * Example:
- * ["example"] call ace_[module]_fnc_[functionName]
+ * [] call lts_dialog_fnc_callVehicleShop;
  *
- * Public: [Yes/No]
  */
+
+ //Check if Display is opend and crate an Eventhandler to Disable the ESC Key that the Player can´t exit in Spawn screen
+waitUntil {!(isNull (findDisplay 46))};
+
+_shop = param [0, ""];
+if (_shop isEqualTo "") exitWith { ["None Class given on Vehicle Shop Dialog Call!"] call lts_fnc_log };
+
+//Create the Dialog
+createDialog "ShopMenu";
+waitUntil {!(isNull (findDisplay 70001))};
+
+//Read Config File and Fill List Box
+[_shop] call lts_dialog_fnc_getVehShopConfig;
