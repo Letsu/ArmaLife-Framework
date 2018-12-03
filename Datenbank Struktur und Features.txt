@@ -81,7 +81,8 @@ Spieler Abfrage von Finanz Daten (Aktuelles Geld auf der Bank...)
 Einsehen von Vorhandenen Lizenzen
 App zum schreiben von Nachrichten an andere Spieler und dem Notruf.
 Telefon App zum Anrufen von anderen Spielern und dem Notruf(Über TFAR verwirklicht)
-
+Einsehen von ausgeparkten Fahrzeugen von dennen man einen Schlüssel hat(Schlüsselsammlung, Keine Entfernung der Fahrzeuge)
+ 
 
 Cop:
 Einshen von Wanted List
