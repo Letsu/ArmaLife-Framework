@@ -26,4 +26,4 @@ _respawnPos = getMarkerPos "respawn";
 //Call Init of gather Script to create the Farming Fields
 
 //Gather working not on Player net to remote Exec!
-[] call lts_fnc_initGather;
+[] call lts_server_fnc_initGather;

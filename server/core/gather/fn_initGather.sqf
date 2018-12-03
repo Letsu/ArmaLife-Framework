@@ -11,7 +11,7 @@ private[];
  * NONE
  *
  * Example:
- * [] call lts_fnc_initGather;
+ * [] call lts_server_fnc_initGather;
  *
  */
 {
