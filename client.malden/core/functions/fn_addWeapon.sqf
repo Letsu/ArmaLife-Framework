@@ -19,8 +19,6 @@ _item = param [0, ""];
 _type = param[1, "AssaultRifle"];
 _weapon = "";
 
-closeDialog 0;
-
 //Check wich type of Weapon the Player has and if the Weapon slot is full
 if (_type == "AssaultRifle") then { _weapon = primaryWeapon player } else { if (_type == "Handgun") then { _weapon = handgunWeapon player } else { _weapon = secondaryWeapon player }/*End IF*/; }/*End Else*/;
 
@@ -29,7 +27,9 @@ if (_weapon isEqualTo "") then {
     //Player has no Weapon so add the Weapon to the Free Slot and Exit!
     player addWeapon _item;
     player action ["WeaponOnBack", player];
-}
+} else {
+    ["Du hast schon eine Waffe!"] call lts_fnc_hint;
+};
 /* Dont work! When Player call SCript and have Dialog open it throw an Error and dont open MSG box
 else {
     //Player already has an Weapon ask him to put the Weapon to the Backpack when he has one!
