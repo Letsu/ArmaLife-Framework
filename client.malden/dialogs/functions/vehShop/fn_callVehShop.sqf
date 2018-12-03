@@ -1,3 +1,4 @@
+private ["_shop"];
 /*
  * Author: Johannes "Letus" Bindriem
  * Init the Vehicle Dialog, open the Dialog and call all needed Functions

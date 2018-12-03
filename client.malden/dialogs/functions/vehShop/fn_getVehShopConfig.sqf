@@ -4,7 +4,7 @@ private [];
  * Fills the Listboxes from Shop Dialog whit Values from Config
  *
  * Arguments:
- * NONE
+ * 1: ShopClass [String]
  *
  * Return Value:
  * NONE
@@ -13,3 +13,19 @@ private [];
  * [] call lts_fialog_fnc_getVehShopConfig;
  *
  */
+
+ _shopClass = param [0, ""];
+
+ //Display Controlls
+ _display = findDisplay 70001;
+
+ _shopName = _display displayCtrl 1001;
+ _textPrice = _display displayCtrl 1003;
+ _lbShop = _display displayCtrl 1500;
+ _buttonBuy = _display displayCtrl 1600;
+ _buttonAbort = _display displayCtrl 1601;
+
+ //Get Shop Config
+ _displayName = getText (missionConfigFile >> "Config_Shops" >> _shopClass >> "DisplayName");
+ _condition = getText (missionConfigFile >> "Config_Shops" >> _shopClass >> "Condition");
+ _itemList = getArray (missionConfigFile >> "Config_Shops" >> _shopClass >> "Items");
