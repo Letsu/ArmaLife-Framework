@@ -16,7 +16,7 @@
 //Need check  if Player exist in Database
 
 //Need to Replayce whit the Funtion to Load Player Data
-_data = [] call funtion_server_load_playerData
+//_data = [] call funtion_server_load_playerData;
 /*
 * Data of _data (Currently )
 * 0: Player UID
@@ -29,6 +29,7 @@ _data = [] call funtion_server_load_playerData
 * 7:
 */
 
+/*
 _uid;
 _name;
 _money;
@@ -36,3 +37,4 @@ _bank;
 _inv;
 _sides;
 _licanses;
+*/
