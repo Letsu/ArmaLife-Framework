@@ -11,3 +11,5 @@ class Config_Master {
 #include "Config_License.cpp"
 #include "Config_Process.cpp"
 #include "Config_Shops.cpp"
+#include "Config_Vehicle.cpp"
+#include "Config_VehicleDefines.cpp"

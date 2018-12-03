@@ -71,3 +71,19 @@ ID(Prm. Key)| Timestamp | Cop UID | Name Cop(from) |Player UID | Display Name | 
 
 Notiz DB
 ID (Prm. Key) | Timestamp | Cop UID | Name Cop(from) | Player UID | Dispaly Name | Notiz |
+
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+P Menu Dialog
+
+Spieler Abfrage von Finanz Daten (Aktuelles Geld auf der Bank...)
+Einsehen von Vorhandenen Lizenzen
+App zum schreiben von Nachrichten an andere Spieler und dem Notruf.
+Telefon App zum Anrufen von anderen Spielern und dem Notruf(Über TFAR verwirklicht)
+
+
+Cop:
+Einshen von Wanted List
+
+
