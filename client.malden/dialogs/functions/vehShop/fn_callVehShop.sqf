@@ -18,6 +18,7 @@ private ["_shop"];
 waitUntil {!(isNull (findDisplay 46))};
 
 _shop = param [0, ""];
+//check if class is existing
 if (_shop isEqualTo "") exitWith { ["None Class given on Vehicle Shop Dialog Call!"] call lts_fnc_log };
 
 //Create the Dialog

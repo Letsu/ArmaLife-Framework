@@ -6,7 +6,7 @@
  *
  *
 */
-Config_Vehicle {
+class Config_Vehicle {
     class vehicle_shop_test_01 {
         DisplayName = "Test Shop 1"; //Name of Shop
         Condtion = ""; // Condition to open
