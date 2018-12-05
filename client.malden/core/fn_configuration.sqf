@@ -40,5 +40,5 @@ lts_med_level = 0;
 //lts_med_inv = []; //Need to define in Site Init
 
 
-//Spawn
+//variables only needet in spezific Scitps
 spawn_finish = false; //For Spawn Script to check if PLayer has finish spawned
