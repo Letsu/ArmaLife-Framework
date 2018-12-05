@@ -23,7 +23,7 @@ Cops und Meds sind nicht in einer Datenbank sondern getrennt zwecks Seiten Spz. 
 
 Diese Infos werden auch dazu verwendet um einen Dienstausweiß für denn Spieler zu Generieren.
 
-DienstNummer(Prm. KEY) | UID | Displayname | Rang | 
+DienstNummer(Prm. KEY) | UID | Rang | 
 
 ---------------------------------------------------------------------------------------------------------------------------------
 
