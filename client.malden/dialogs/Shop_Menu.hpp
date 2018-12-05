@@ -41,7 +41,7 @@ class ShopMenu {
 
         class Lb_Shop: RscListbox {
         	idc = 1500;
-  	    //	onLBSelChanged = "_this call lts_dialog_fnc_shopLbChange";
+  	    	onLBSelChanged = "_this call lts_dialog_fnc_shopLbChange";
         	x = 0.716563 * safezoneW + safezoneX;
         	y = 0.192 * safezoneH + safezoneY;
         	w = 0.154687 * safezoneW;
@@ -57,7 +57,7 @@ class ShopMenu {
         	y = 0.577 * safezoneH + safezoneY;
         	w = 0.0721875 * safezoneW;
         	h = 0.033 * safezoneH;
-	//		action = "call lts_dialog_fnc_onShopBuy";
+			action = "call lts_dialog_fnc_onShopBuy";
         };
 
         class Button_Abort: RscButton {
