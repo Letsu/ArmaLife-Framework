@@ -57,7 +57,7 @@ class VehShopMenu {
         	y = 0.577 * safezoneH + safezoneY;
         	w = 0.0721875 * safezoneW;
         	h = 0.033 * safezoneH;
-	//		action = "call lts_dialog_fnc_onShopBuy";
+			action = "call lts_dialog_fnc_onVehBuy";
         };
 
         class Button_Abort: RscButton {

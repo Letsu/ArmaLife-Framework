@@ -6,8 +6,7 @@ private ["_vehicleClass", "_pos", "_vehicle"];
  * Arguments:
  * 0: Vehicle Classname [String]
  * 1: Position of Vehicle on Spawn [Array, Pos]
- * 2 Optimal: UID of the Vehicle Owner [Number]
- * 3 Optimal: Name of the Vehicle Owner [Text]
+ * 2 Optimal: The Vehicle Owner [Object]
  * 4 Optimal: UIDs of Key Owners [Array]
  * 5 Optimal: Names of Key Owener [Array]
  *
@@ -23,19 +22,22 @@ private ["_vehicleClass", "_pos", "_vehicle"];
 
 _vehicleClass = param [0, ""];
 _pos          = param [1, [0, 0, 0]];
-_ownerUID     = param [2, (getPlayerUID player)]; //Optional
-_ownerName    = param [3, (name player)]; //Optional
+_owner        = param [2, player; //Optional
+//Add for at Add to Key to add Mutiplay owners on init!
 _keyUIDs      = param [4, [(getPlayerUID player)]]; //Optional
 _keyNames     = param [5, [(name player)]]; //Optional
 
 //Create the Vehicle at given Pos
 _vehicle = _vehicleClass createVehicle _pos;
 //Add Vehicle in Vehicle Array
-[_vehicle] call lts_fnc_addVehicleToPlayer;
+//Add for for form Param given Owners! 
+[_vehicle] call lts_fnc_addKeyToVeh;
 
+
+_ownerUID  = getPlayerUID _owner;
+_ownerName = name _owner;
 
 //Set some Variables on Veh
 _vehicle setVariable [ "owner_uid" , _ownerUID  ]; //Steam64 ID of Owner of Vehicle
+_vehicle setVariable [ "owner_obj" , _owner  ]; //Obj of Owner
 _vehicle setVariable [ "owner_name", _ownerName ]; //Display Name of Owener of Vehicle
-_vehicle setVariable [ "key_uids"  , _keyUIDs   ]; //Steam64 ID: List of all KeyOwener
-_vehicle setVariable [ "key_names" , _keyNames  ]; //Name of all Key Oweners

@@ -15,6 +15,7 @@ private ["_shopClass", "_display", "_shopName", "_textPrice", "_lbShop", "_butto
  */
 
  _shopClass = param [0, ""];
+ _spawnPos  = param [1, ""];
 
  //Display Controlls
  _display = findDisplay 80001;
@@ -36,6 +37,7 @@ if (_hasCondition && call compile (_condition)) exitWith { ["Du darfst dieses Ge
 
 _shopName ctrlSetText _displayName;
 
+_vehPos = 0;
 {
     _vehicleClass  = _x select 0;
     _price         = _x select 1;
@@ -54,8 +56,8 @@ _shopName ctrlSetText _displayName;
 
         _lbShop lbAdd _vehDisplayName;
         _size = lbSize _lbShop;
-        _data = format ["%1,%2", _shopClass, _vehicleClass];
-        _lbShop lbSetData [(_size - 1), _data]; //Data: ShopClassname | VehClassname
+        _data = format ["%1,%2,%3,%4", _shopClass, _vehicleClass, _vehPos, _spawnPos];
+        _lbShop lbSetData [(_size - 1), _data]; //Data: ShopClassname | VehClassname | Pos in Veh Array | Spawn Marker
 
 /*
         {
@@ -66,6 +68,7 @@ _shopName ctrlSetText _displayName;
         } forEach _types;
 */
 //    };
+    _vehPos = _vehPos + 1;
 } forEach _vehicleList;
 
 _lbShop lbSetCurSel 0

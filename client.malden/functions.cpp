@@ -117,6 +117,7 @@ class lts_dialog {
     class vehicle {
         file = "dialogs\functions\vehShop";
         class callVehShop      {};
-        class getVehShopCOnfig {};
+        class getVehShopConfig {};
+        class onVehBuy         {};
     };
 };
