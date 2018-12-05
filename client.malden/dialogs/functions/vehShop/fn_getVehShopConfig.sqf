@@ -17,7 +17,7 @@ private ["_shopClass", "_display", "_shopName", "_textPrice", "_lbShop", "_butto
  _shopClass = param [0, ""];
 
  //Display Controlls
- _display = findDisplay 70001;
+ _display = findDisplay 80001;
 
  _shopName = _display displayCtrl 1001;
  _textPrice = _display displayCtrl 1003;

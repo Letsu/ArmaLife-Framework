@@ -22,8 +22,8 @@ _shop = param [0, ""];
 if (_shop isEqualTo "") exitWith { ["None Class given on Vehicle Shop Dialog Call!"] call lts_fnc_log };
 
 //Create the Dialog
-createDialog "ShopMenu";
-waitUntil {!(isNull (findDisplay 70001))};
+createDialog "VehShopMenu";
+waitUntil {!(isNull (findDisplay 80001))};
 
 //Read Config File and Fill List Box
 [_shop] call lts_dialog_fnc_getVehShopConfig;
