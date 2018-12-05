@@ -37,27 +37,35 @@ if (_hasCondition && call compile (_condition)) exitWith { ["Du darfst dieses Ge
 _shopName ctrlSetText _displayName;
 
 {
-    _vehicleClass = param [0, ""];
-    _price        = param [1, 10];
-    _shopCondition    = param [2, ""];
+    _vehicleClass  = _x select 0;
+    _price         = _x select 1;
+    _vehCondition = _x select 2;
 
-    if !((_shopCondition isEqualTo "") && (call compile (_shopCondition))) then {
+/*
+    Dont Working!!!
+    _hasCondition = false;
+    if !(_condition isEqualTo "") then { _hasCondition = true };
+    if (_hasCondition && call compile (_condition)) then {
+*/
         _types          = getArray (missionConfigFile >> "Config_VehicleDefines" >> _vehicleClass >> "Types");
         _vehDisplayName = getText (missionConfigFile >> "Config_VehicleDefines" >> _vehicleClass >> "DisplayName");
+
+        if (_vehDisplayName isEqualTo "") then {_vehDisplayName = [_vehDisplayName] call lts_fnc_getDisplayName};
 
         _lbShop lbAdd _vehDisplayName;
         _size = lbSize _lbShop;
         _data = format ["%1,%2", _shopClass, _vehicleClass];
-        _lbShop lbSetData [_size - 1, ] //Data: ShopClassname | VehClassname
+        _lbShop lbSetData [(_size - 1), _data]; //Data: ShopClassname | VehClassname
 
+/*
         {
             //Function to add Skin to Vehicle
-            _skin           = _x param [0];
-            _skinDisplayName = _x param [1, ""];
-            _skinCondition      = _x param [2, ""];
+            _skin           = _x select 0;
+            _skinDisplayName = _x select 1;
+            _skinCondition      = _x select 2;
         } forEach _types;
-
-    };
+*/
+//    };
 } forEach _vehicleList;
 
 _lbShop lbSetCurSel 0

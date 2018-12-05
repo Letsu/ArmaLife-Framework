@@ -11,7 +11,7 @@ class Config_Vehicle {
         DisplayName = "Test Shop 1"; //Name of Shop
         Condtion = ""; // Condition to open
         Vehicles[] = {
-            {"Classname", 1/*Price*/, "Condition (True, False)"}
+            {"C_Offroad_01_F", 10, ""}
         };
     };
 };
