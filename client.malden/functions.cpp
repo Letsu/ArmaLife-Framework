@@ -120,4 +120,10 @@ class lts_dialog {
         class getVehShopConfig {};
         class onVehBuy         {};
     };
+
+    class pMenu {
+        file = "dialogs\functions\pMenu";
+        class callPMenu {};
+        class fillPMenu {};
+    };
 };

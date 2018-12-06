@@ -22,7 +22,7 @@ private ["_vehicleClass", "_pos", "_vehicle"];
 
 _vehicleClass = param [0, ""];
 _pos          = param [1, [0, 0, 0]];
-_owner        = param [2, player; //Optional
+_owner        = param [2, player]; //Optional
 //Add for at Add to Key to add Mutiplay owners on init!
 _keyUIDs      = param [4, [(getPlayerUID player)]]; //Optional
 _keyNames     = param [5, [(name player)]]; //Optional
@@ -30,7 +30,7 @@ _keyNames     = param [5, [(name player)]]; //Optional
 //Create the Vehicle at given Pos
 _vehicle = _vehicleClass createVehicle _pos;
 //Add Vehicle in Vehicle Array
-//Add for for form Param given Owners! 
+//Add for for form Param given Owners!
 [_vehicle] call lts_fnc_addKeyToVeh;
 
 

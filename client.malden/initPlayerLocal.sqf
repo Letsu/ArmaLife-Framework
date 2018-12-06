@@ -11,5 +11,5 @@
  * NONE
  *
  */
-//Call the Mian init
+//Call the Main init
 [] call lts_core_fnc_init;
