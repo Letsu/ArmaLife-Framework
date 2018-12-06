@@ -6,37 +6,37 @@ Player UID (Prm. Key) | money | bank | lizenzen(vlt. in eigene DB) | Inventar
 ---------------------------------------------------------------------------------------------------------------------------------
 
 
-Ausweiß DB 
-Daten die im Ausweiß des Spielers sind diese werden beim ersten Joinen auf den Server festgelegt und sind nicht änderbar. 
+Ausweiï¿½ DB
+Daten die im Ausweiï¿½ des Spielers sind diese werden beim ersten Joinen auf den Server festgelegt und sind nicht ï¿½nderbar.
 
-Daten wie Wohnort sind vlt. bei kauf eines Hauses änderbar 
+Daten wie Wohnort sind vlt. bei kauf eines Hauses ï¿½nderbar
 
-Player UID( Prm. Key) | Displayname | Geburtsdatum | Wohnort(Ort, Straße, Hausnummer) | Geschlecht |  
+Player UID( Prm. Key) | Displayname | Geburtsdatum | Wohnort(Ort, Straï¿½e, Hausnummer) | Geschlecht |
 
 
 ---------------------------------------------------------------------------------------------------------------------------------
 
 Seite Cop/Med
 
-Cops/med bekommen eigene Datenbank zwecks Übersicht:
+Cops/med bekommen eigene Datenbank zwecks ï¿½bersicht:
 Cops und Meds sind nicht in einer Datenbank sondern getrennt zwecks Seiten Spz. Infos!
 
-Diese Infos werden auch dazu verwendet um einen Dienstausweiß für denn Spieler zu Generieren.
+Diese Infos werden auch dazu verwendet um einen Dienstausweiï¿½ fï¿½r denn Spieler zu Generieren.
 
-DienstNummer(Prm. KEY) | UID | Rang | 
+DienstNummer(Prm. KEY) | UID | Rang |
 
 ---------------------------------------------------------------------------------------------------------------------------------
 
 
 Vehicle DB
-Datenbank fürs speichern von fahrzeuge
+Datenbank fï¿½rs speichern von fahrzeuge
 
-In Splate verfügbar wird gespeichert ob das Fahrzeug vom Spieler ausgeparkt werden kann.
+In Splate verfï¿½gbar wird gespeichert ob das Fahrzeug vom Spieler ausgeparkt werden kann.
 Das Fahrzeug kann immer nur an der Garage ausgeparkt werden an der es auch eingeparkt wurde.
 
 
 
-Nummernschild(Prm. Key) | Owner Pid | Key Owners PIDs | Fuel | Inventar | Verfügbar | Wo Ausgeparkt | Am Leben | 
+Nummernschild(Prm. Key) | Owner Pid | Key Owners PIDs | Fuel | Inventar | Verfï¿½gbar | Wo Ausgeparkt | Am Leben |
 
 
 ---------------------------------------------------------------------------------------------------------------------------------
@@ -47,22 +47,22 @@ Dialog Wanted List:
 
 Cop sucht nach spieler:
 
-daraufhin werden im alle spieler angzeigt die einen änlichen namen haben wie die suche von ihm.
+daraufhin werden im alle spieler angzeigt die einen ï¿½nlichen namen haben wie die suche von ihm.
 
-Wenn er einen Spieler auswählt sieht er die Ausweiß Nummer(Player UID) um ganau abzugleichen ob es der Spieler ist was nicht nötig ist wenn der 
+Wenn er einen Spieler auswï¿½hlt sieht er die Ausweiï¿½ Nummer(Player UID) um ganau abzugleichen ob es der Spieler ist was nicht nï¿½tig ist wenn der
 
-Spieler nur 1 Mal auf dem Server existiert. 
+Spieler nur 1 Mal auf dem Server existiert.
 
-Im eintrag des Spielers sitz der Cop Vorherige Straftaten (Einträge in die Wanted) List und ob der Spieler gerade gesucht wird(aktuelle einträge in 
-der Wanted List). Auch sieht der Cop Notizen für denn Spieler die Bei Wanted List einträgen hinzugefühgt werden können oder 
-unabhänich von Waned List einträgen hinzugefügt werden können. 
+Im eintrag des Spielers sitz der Cop Vorherige Straftaten (Eintrï¿½ge in die Wanted) List und ob der Spieler gerade gesucht wird(aktuelle eintrï¿½ge in
+der Wanted List). Auch sieht der Cop Notizen fï¿½r denn Spieler die Bei Wanted List eintrï¿½gen hinzugefï¿½hgt werden kï¿½nnen oder
+unabhï¿½nich von Waned List eintrï¿½gen hinzugefï¿½gt werden kï¿½nnen.
 
-Auch werden dem Polizist daten von Ausweiß, fahrzeuge oder Häuser die der Spieler besitzt angezeigt 
+Auch werden dem Polizist daten von Ausweiï¿½, fahrzeuge oder Hï¿½user die der Spieler besitzt angezeigt
 
 Die DB wird erst ausgelesen wenn der Cop auf dem Spieler bei der Suche geht da
 sonst nicht im Web mit denn Daten von der Wanted List gearbeitet werden kann(zwecks Webinterface).
 
-Auslesen von einträgen bei Spielern soll auch möglich sein wenn dieser nicht online ist
+Auslesen von eintrï¿½gen bei Spielern soll auch mï¿½glich sein wenn dieser nicht online ist
 
 Struktur DB:
 
@@ -80,11 +80,10 @@ P Menu Dialog
 Spieler Abfrage von Finanz Daten (Aktuelles Geld auf der Bank...)
 Einsehen von Vorhandenen Lizenzen
 App zum schreiben von Nachrichten an andere Spieler und dem Notruf.
-Telefon App zum Anrufen von anderen Spielern und dem Notruf(Über TFAR verwirklicht)
-Einsehen von ausgeparkten Fahrzeugen von dennen man einen Schlüssel hat(Schlüsselsammlung, Keine Entfernung der Fahrzeuge)
- 
+Telefon App zum Anrufen von anderen Spielern und dem Notruf(ï¿½ber TFAR verwirklicht)
+Einsehen von ausgeparkten Fahrzeugen von dennen man einen Schlï¿½ssel hat(Schlï¿½sselsammlung, Keine Entfernung der Fahrzeuge)
+Einstellungen
+
 
 Cop:
-Einshen von Wanted List
-
-
+Einsehen von Wanted List
