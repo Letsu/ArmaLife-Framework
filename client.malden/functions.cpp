@@ -23,6 +23,8 @@ class lts_core {
         class setupEVH          {};
         class loop              {};
         class playerInteraction {};
+
+        class test {};
     };
 };
 
@@ -123,7 +125,8 @@ class lts_dialog {
 
     class pMenu {
         file = "dialogs\functions\pMenu";
-        class callPMenu {};
-        class fillPMenu {};
+        class callPMenu   {};
+        class fillPMenu   {};
+        class pMenuSelect {};
     };
 };

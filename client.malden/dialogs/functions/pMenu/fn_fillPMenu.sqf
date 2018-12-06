@@ -37,7 +37,7 @@ _header  = _dispaly displayCtrl 1001;
 
     _lb lbAdd _displayName;
     _size = lbSize _lb;
-    _data = format ["%1", _function];
+    _data = format ["%1,%2", _function, _config];
     _lb lbSetData [_size, _data];
 
 } forEach ("true" configClasses (missionConfigFile >> "Config_PMenu"));

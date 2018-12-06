@@ -13,6 +13,8 @@ class pMenu {
         };
         class pMenuLB: RscListbox {
         	idc = 1500;
+			//onLBSelChanged = "_this call lts_dialog_fnc_shopLbChange";
+			onLBDblClick = "_this call lts_dialog_fnc_pMenuSelect";
         	x = 0.680469 * safezoneW + safezoneX;
         	y = 0.379 * safezoneH + safezoneY;
         	w = 0.144375 * safezoneW;
