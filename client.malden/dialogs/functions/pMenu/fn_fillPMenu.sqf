@@ -37,7 +37,6 @@ _header  = _dispaly displayCtrl 1001;
 
     _lb lbAdd _displayName;
     _size = lbSize _lb;
-    pSize = _size;
     _data = format ["%1,%2", _function, _config];
     _lb lbSetData [(_size - 1), _data];
 

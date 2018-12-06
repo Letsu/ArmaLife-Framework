@@ -21,10 +21,8 @@
  _curSel = lbCurSel _lb;
 
 _data      = _lb lbData _curSel;
-data2 = _data;
 _dataSplit = _data splitString ",";
 
-data = _dataSplit;
 
 _func  = _dataSplit select 0;
 _class = _dataSplit select 1;
