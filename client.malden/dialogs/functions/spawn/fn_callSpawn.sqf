@@ -16,6 +16,7 @@
  //Check if Display is opend and crate an Eventhandler to Disable the ESC Key that the Player can´t exit in Spawn screen
 waitUntil {!(isNull (findDisplay 46))};
 
+spawn_finish = false;
 
 //New Thread to check if Dialog has not open and call the Function new
 [] spawn {
