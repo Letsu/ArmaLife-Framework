@@ -43,9 +43,9 @@ _respawnPos = getMarkerPos "respawn";
 [] call lts_server_fnc_initGather;
 
 
-_data = call compile ("extDB3" callExtension "0:Player:GetPlayerData:123456789")
+_data = call compile ("extDB3" callExtension "0:Player:GetPlayerData:123456789");
 
-diag_log str(_data)
+diag_log str(_data);
 
 
 ["--------------------------------------------"] call lts_server_fnc_log;
