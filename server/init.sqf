@@ -26,8 +26,8 @@ _respawnPos = getMarkerPos "respawn";
 "respawn" setMarkerPos [_respawnPos select 0, _respawnPos select 1, 90];
 
 ["Establishing connection with DB"] call lts_server_fnc_log;
-_successfully = [] call lts_db_fnc_initDB;
-waitUntil (_successfully);
+/*_successfully =*/ [] call lts_db_fnc_initDB;
+//waitUntil (_successfully);
 ["Connection with DB successfully"] call lts_server_fnc_log;
 
 ["Check if Database is Complet"] call lts_server_fnc_log;
