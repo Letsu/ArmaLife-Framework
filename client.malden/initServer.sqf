@@ -13,4 +13,4 @@ private["_respawnPos"];
  */
 
  if (!(_this select 0)) exitWith {}; //Not server
- [] call compile preprocessFileLineNumbers "\serverMod\init.sqf";
+ [] call compile preprocessFileLineNumbers "\server\init.sqf";
