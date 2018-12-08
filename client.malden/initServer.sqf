@@ -11,5 +11,5 @@
  *
  */
 
- if (!(_this select 0)) exitWith {}; //Not server
+ if (!(_this select 0)) exitWith {}; //Not the server?
  [] call compile preprocessFileLineNumbers  "\server\init.sqf";

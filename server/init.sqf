@@ -31,7 +31,7 @@ waitUntil (_successfully);
 
 ["Check if Database is Complet"] call lts_server_fnc_log;
 [] call lts_db_fnc_createDB;
-["Finish Check if Database is Complet"] call lts_server_fnc_lo
+["Finish Check if Database is Complet"] call lts_server_fnc_log;
 
 
 
