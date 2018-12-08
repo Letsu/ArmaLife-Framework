@@ -1,4 +1,3 @@
-private["_respawnPos"];
 /*
  * Author: Johannes "Letus" Bindriem
  * Script Exec Automatikly on Server start and run local on the Server.
