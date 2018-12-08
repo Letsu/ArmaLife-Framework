@@ -12,23 +12,22 @@
  * [] call lts_db_fnc_initDB
  *
  */
-["Establishing connection with DB"] call lts_server_fnc_log;
 _successfully = false;
 
 
 "extDB3" callExtension "9:RESET";
 
-_connection = call compile ("extDB3" callExtension "9:ADD_DATABASE:Arma");
+_connection = call compile ("extDB3" callExtension "9:ADD_DATABASE:arma");
 
-_createDB   = call compile ("extDB3" callExtension "9:ADD_DATABASE_PROTOCOL:Arma:SQL_CUSTOM:CreateDB:createDB.ini");
-_player     = call compile ("extDB3" callExtension "9:ADD_DATABASE_PROTOCOL:Arma:SQL_CUSTOM:Player:player.ini"); //own Inv database
-_passport   = call compile ("extDB3" callExtension "9:ADD_DATABASE_PROTOCOL:Arma:SQL_CUSTOM:Passport:passport.ini");
-_vehicle    = call compile ("extDB3" callExtension "9:ADD_DATABASE_PROTOCOL:Arma:SQL_CUSTOM:Vehicle:vehicle.ini");
-_wanted     = call compile ("extDB3" callExtension "9:ADD_DATABASE_PROTOCOL:Arma:SQL_CUSTOM:Wanted:wanted.ini");
+_createDB   = call compile ("extDB3" callExtension "9:ADD_DATABASE_PROTOCOL:arma:SQL_CUSTOM:CreateDB:createDB.ini");
+_player     = call compile ("extDB3" callExtension "9:ADD_DATABASE_PROTOCOL:arma:SQL_CUSTOM:Player:player.ini"); //own Inv database
+_passport   = call compile ("extDB3" callExtension "9:ADD_DATABASE_PROTOCOL:arma:SQL_CUSTOM:Passport:passport.ini");
+_vehicle    = call compile ("extDB3" callExtension "9:ADD_DATABASE_PROTOCOL:arma:SQL_CUSTOM:Vehicle:vehicle.ini");
+_wanted     = call compile ("extDB3" callExtension "9:ADD_DATABASE_PROTOCOL:arma:SQL_CUSTOM:Wanted:wanted.ini");
 
 //Side DBS
-_cop = call compile ("extDB3" callExtension "9:ADD_DATABASE_PROTOCOL:Arma:SQL_CUSTOM:Cop:cop.ini");
-_med = call compile ("extDB3" callExtension "9:ADD_DATABASE_PROTOCOL:Arma:SQL_CUSTOM:Med:med.ini");
+_cop = call compile ("extDB3" callExtension "9:ADD_DATABASE_PROTOCOL:arma:SQL_CUSTOM:Cop:cop.ini");
+_med = call compile ("extDB3" callExtension "9:ADD_DATABASE_PROTOCOL:arma:SQL_CUSTOM:Med:med.ini");
 
 
 "extDB3" callExtension "9:LOCK:unlock_me";
