@@ -19,6 +19,7 @@ publicVariable "lts_server_setupFinish";
 ["---- Start of Serve Initalisation  ----"] call lts_server_fnc_log;
 ["--------------------------------------------"] call lts_server_fnc_log;
 
+_successfully = false;
 
 //Set RespawnMarker need an existing marker named "respawn" on the Map
 _respawnPos = getMarkerPos "respawn";
