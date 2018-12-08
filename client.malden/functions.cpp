@@ -23,8 +23,6 @@ class lts_core {
         class setupEVH          {};
         class loop              {};
         class playerInteraction {};
-
-        class test {};
     };
 };
 
