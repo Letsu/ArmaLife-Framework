@@ -20,15 +20,15 @@ _successfully = false;
 
 _connection = call compile ("extDB3" callExtension "9:ADD_DATABASE:Arma");
 
-_createDB   = call compile ("extDB3" callExtension "9:ADD_DATABASE_PROTOCOL:Arma:SQL_COUSTOM:CreateDB:createDB.ini");
-_player     = call compile ("extDB3" callExtension "9:ADD_DATABASE_PROTOCOL:Arma:SQL_COUSTOM:Player:player.ini"); //own Inv database
-_passport   = call compile ("extDB3" callExtension "9:ADD_DATABASE_PROTOCOL:Arma:SQL_COUSTOM:Passport:passport.ini");
-_vehicle    = call compile ("extDB3" callExtension "9:ADD_DATABASE_PROTOCOL:Arma:SQL_COUSTOM:Vehicle:vehicle.ini");
-_wanted     = call compile ("extDB3" callExtension "9:ADD_DATABASE_PROTOCOL:Arma:SQL_COUSTOM:Wanted:wanted.ini");
+_createDB   = call compile ("extDB3" callExtension "9:ADD_DATABASE_PROTOCOL:Arma:SQL_CUSTOM:CreateDB:createDB.ini");
+_player     = call compile ("extDB3" callExtension "9:ADD_DATABASE_PROTOCOL:Arma:SQL_CUSTOM:Player:player.ini"); //own Inv database
+_passport   = call compile ("extDB3" callExtension "9:ADD_DATABASE_PROTOCOL:Arma:SQL_CUSTOM:Passport:passport.ini");
+_vehicle    = call compile ("extDB3" callExtension "9:ADD_DATABASE_PROTOCOL:Arma:SQL_CUSTOM:Vehicle:vehicle.ini");
+_wanted     = call compile ("extDB3" callExtension "9:ADD_DATABASE_PROTOCOL:Arma:SQL_CUSTOM:Wanted:wanted.ini");
 
 //Side DBS
-_cop = call compile ("extDB3" callExtension "9:ADD_DATABASE_PROTOCOL:Arma:SQL_COUSTOM:Cop:cop.ini");
-_med = call compile ("extDB3" callExtension "9:ADD_DATABASE_PROTOCOL:Arma:SQL_COUSTOM:Med:med.ini");
+_cop = call compile ("extDB3" callExtension "9:ADD_DATABASE_PROTOCOL:Arma:SQL_CUSTOM:Cop:cop.ini");
+_med = call compile ("extDB3" callExtension "9:ADD_DATABASE_PROTOCOL:Arma:SQL_CUSTOM:Med:med.ini");
 
 
 "extDB3" callExtension "9:LOCK:unlock_me";
