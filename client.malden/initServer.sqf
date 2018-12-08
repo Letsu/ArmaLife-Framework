@@ -12,4 +12,4 @@
  */
 
  if (!(_this select 0)) exitWith {}; //Not server
- [] execVM "\server\init.sqf";
+ [] call compile preprocessFileLineNumbers  "\server\init.sqf";
