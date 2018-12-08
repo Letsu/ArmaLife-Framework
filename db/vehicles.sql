@@ -4,8 +4,8 @@ CREATE TABLE IF NOT EXISTS `arma`.`vehicles`  (
   `PID` int(18) NOT NULL,
   `keyOwner` char(255) NOT NULL,
   `fuel` int(100) NOT NULL DEFAULT 100,
-  `inventory` char(2500) NOT NULL DEFAULT [],
+  `inventory` text(1000) NOT NULL,
   `available` tinyint(2) NOT NULL DEFAULT 0,
   `alive` tinyint(2) NOT NULL,
-  PRIMARY KEY (`plate`)
+  PRIMARY KEY (`id`)
 );
