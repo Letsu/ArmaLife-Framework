@@ -1,4 +1,4 @@
-CREATE TABLE `arma`.`cop`  (
+CREATE TABLE IF NOT EXISTS `arma`.`cop`  (
   `serviceNumber` int(12) NOT NULL,
   `PID` int(18) NOT NULL,
   `rank` int(25) NOT NULL DEFAULT 1,

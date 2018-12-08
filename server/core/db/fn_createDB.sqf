@@ -14,26 +14,17 @@
  *
  */
 
- //Create Core Table
+//create Player DB table
+_query = call compile ("extDB3" callExtension "0:CreateDB:CreatePlayerDB");
 
-//Player UID (Primary Key) | Inventory | Money | Bank | Licenses (Maybe own Table) |
+//create Passport table
+_query = call compile ("extDB3" callExtension "0:CreateDB:CreatePassportDB");
 
- //Create Cop Side Tabel
+//Create Cop DB
+_query = call compile ("extDB3" callExtension "0:CreateDB:CreateCopDB");
 
- //Cop Number (Primary Key) | Displayname | Player UID | Level
+//Create Med DB
+_query = call compile ("extDB3" callExtension "0:CreateDB:CreateMedDB");
 
-//Create Med Side Tabel
-
- //Med Number (Primary Key) | Displayname | Player UID | Level
-
- //Create Passport DB
-
-//Player UID (Primary Key) | Displayname | Birth | Living place | Gender
-
- //Create Vehicle DB
-
-//Vehicle Plate (Primary Key) | Owener UID | Key Owners Uids | Fuel | Inventory | alive | avaible | parked |
-
- //Create Wanted Db
-
- //Create Player Note DB
+//Create Vehicle Db
+_query = call compile ("extDB3" callExtension "0:CreateDB:CreateVehicleDB");

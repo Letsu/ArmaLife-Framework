@@ -4,6 +4,11 @@ class lts_server {
         file = "core";
     };
 
+    class function {
+        file = "core\functions";
+        class log {};
+    };
+
     class gather {
         file = "core\gather";
         class initGather {};
@@ -16,5 +21,6 @@ class lts_db {
   class db_core {
       file = "core\db";
       class createDB {};
+      class initDB   {};
   };
 };
