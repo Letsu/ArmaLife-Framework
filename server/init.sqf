@@ -42,9 +42,9 @@ _respawnPos = getMarkerPos "respawn";
 //Gather working not on Player net to remote Exec!
 [] call lts_server_fnc_initGather;
 
-_data = call compile ("extDB3" callExtension "Player:GetPlayerData:1234579543");
+_data = call compile ("extDB3" callExtension "0:Player:GetPlayerData:1234579543");
 
-diag_log str(_data);
+diag_log str( _data);
 
 
 ["--------------------------------------------"] call lts_server_fnc_log;
