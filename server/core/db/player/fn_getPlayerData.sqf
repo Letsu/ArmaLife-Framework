@@ -19,6 +19,8 @@ _return = [];
 _data = format ["0:Player:GetPlayerData:%1", _pid];
 _query = call compile ("extDB3" callExtension _data);
 
-if (count _data == 0) exitWith { false };
+if (count _query == 0) exitWith { false };
 
-diag_log _query;
+diag_log str(_query);
+
+true;
