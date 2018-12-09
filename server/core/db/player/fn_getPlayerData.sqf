@@ -20,6 +20,12 @@ _return = [];
 _data = format ["0:Player:GetPlayerData:%1", _pid];
 _query = call compile ("extDB3" callExtension _data);
 
+server_dbug = (count (_query select 1) == 0);
+publicVariable "server_dbug";
+
+server_query = _query;
+publicVariable "server_query"
+
 if (count (_query select 1) == 0) exitWith { false };
 
 diag_log str(_query);

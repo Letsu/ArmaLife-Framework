@@ -16,6 +16,8 @@
 
 _pid = getPlayerUID player;
 
+
+
 _return = [_pid] remoteExec ["lts_db_fnc_getPlayerData", 2];
 
 return = _return;
