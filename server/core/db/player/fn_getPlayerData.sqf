@@ -22,7 +22,7 @@ _data = format ["0:Player:GetPlayerData:%1", _pid];
 _query = call compile ("extDB3" callExtension _data);
 
 
-if ((_query select 1) isEqualTo []) exitWith { [] remoteExec ["lts_db_fnc_createNewPlayer", _player] };
+if ((_query select 1) isEqualTo []) exitWith { [] remoteExec ["lts_interface_fnc_createNewPlayer", _player] };
 
 
 
