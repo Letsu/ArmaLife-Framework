@@ -22,4 +22,4 @@ _inv = getUnitLoadout player;
 
 [_pid, _cash, _bank, _licenses, _inv] remoteExec ["lts_db_fnc_createNewPlayer", 2];
 
-hint "Create NEw Player";
+hint "Create New Player";
