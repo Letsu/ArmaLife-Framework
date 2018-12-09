@@ -20,6 +20,6 @@ _bank = lts_money_bank;
 _licenses = lts_core_licenses;
 _inv = getUnitLoadout player;
 
-[] remoteExec ["lts_db_fnc_createNewPlayer", 2];
+[_pid, _cash, _bank, _licenses, _inv] remoteExec ["lts_db_fnc_createNewPlayer", 2];
 
 hint "Create NEw Player";
