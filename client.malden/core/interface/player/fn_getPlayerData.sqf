@@ -14,6 +14,6 @@
  * Public: [Yes/No]
  */
 
-_data = param [0];
+_data = param [0, []];
 
 data01 = _data;
