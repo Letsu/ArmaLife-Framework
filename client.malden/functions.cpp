@@ -31,8 +31,8 @@ class lts_interface {
     tag = "lts_interface";
     class player_interface {
         file = "core\Interface\player";
-        class loadPlayerData {};
-        class sendPlayerData {};
+        class createNewPlayer {};
+        class getPlayerDAta {};
     };
 };
 

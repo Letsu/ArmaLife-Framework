@@ -23,4 +23,10 @@ class lts_db {
       class createDB {};
       class initDB   {};
   };
+
+  class db_player {
+      file = "\server\core\db\player";
+      class createNewPlayer {};
+      class getPlayerData {};
+  };
 };
