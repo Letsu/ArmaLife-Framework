@@ -32,7 +32,7 @@ class lts_interface {
     class player_interface {
         file = "core\Interface\player";
         class createNewPlayer {};
-        class getPlayerDAta {};
+        class getPlayerData {};
     };
 };
 
