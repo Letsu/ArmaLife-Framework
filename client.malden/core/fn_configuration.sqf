@@ -24,7 +24,7 @@ lts_core_licenses = []; //All Licenses an Player has
 
 
 //Money
-lts_moeny_cash = 0; //Cash of Player
+lts_money_cash = 0; //Cash of Player
 lts_money_bank = 0; //Bank Cash of Player
 
 //civ

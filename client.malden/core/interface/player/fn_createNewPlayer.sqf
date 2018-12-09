@@ -14,7 +14,7 @@
  * Public: [Yes/No]
  */
 
-_pid = call compile (getPlayerUID player);
+_pid = getPlayerUID player;
 _cash = lts_money_cash;
 _bank = lts_money_bank;
 _licenses = lts_core_licenses;

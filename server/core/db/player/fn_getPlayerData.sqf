@@ -15,8 +15,6 @@ private ["_pid", "_return", "_data", "_query"];
  */
 _pid = param [0];
 _player = param [1];
-_return = [];
-
 
 _data = format ["0:Player:GetPlayerData:%1", _pid];
 _query = call compile ("extDB3" callExtension _data);
