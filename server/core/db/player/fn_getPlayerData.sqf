@@ -26,7 +26,7 @@ publicVariable "server_dbug";
 server_query = _query;
 publicVariable "server_query"
 
-if (count (_query select 1) == 0) exitWith { false };
+if (_query isEqualTo []) exitWith { false };
 
 diag_log str(_query);
 
