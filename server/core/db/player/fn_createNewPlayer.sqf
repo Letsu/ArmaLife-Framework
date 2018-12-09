@@ -26,4 +26,4 @@ _data = format ["Player:CreatePlayer:%1:%2:%3:%4:%5",
     _inventory
     ];
 
-_query = call compile ("extDB3" callExtension _data)
+_query = call compile ("extDB3" callExtension _data);
