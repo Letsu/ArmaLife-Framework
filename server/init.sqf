@@ -42,8 +42,6 @@ _respawnPos = getMarkerPos "respawn";
 //Gather working not on Player net to remote Exec!
 [] call lts_server_fnc_initGather;
 
-diag_log str( _data);
-
 
 ["--------------------------------------------"] call lts_server_fnc_log;
 ["---- Finish of Server Initalisation  ----"] call lts_server_fnc_log;
