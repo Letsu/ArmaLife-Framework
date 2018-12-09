@@ -16,7 +16,7 @@
 
 _pid = getPlayerUID player;
 
-_return = [_uid] remoteExec ["lts_db_fnc_getPlayerData", 2]:
+_return = [_pid] remoteExec ["lts_db_fnc_getPlayerData", 2];
 
 if !(_return select 0) exitWith { [] call lts_interface_fnc_createNewPlayer };
 

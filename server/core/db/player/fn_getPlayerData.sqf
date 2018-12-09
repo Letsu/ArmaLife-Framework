@@ -16,7 +16,7 @@ _pid = param [0];
 _return = [];
 
 
-_data = format ["Player:GetPlayerData:%1", _pid];
+_data = format ["0:Player:GetPlayerData:%1", _pid];
 _query = call compile ("extDB3" callExtension _data);
 
 if (_data select 0 isEqualTo 1) exitWith { _return = [false]; _return };

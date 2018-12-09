@@ -18,7 +18,7 @@ _bank      = param [2, 0];
 _licenses  = param [3, "[]"];
 _inventory = param [4, "[]"];
 
-_data = format ["Player:CreatePlayer:%1:%2:%3:%4:%5",
+_data = format ["0:Player:CreatePlayer:%1:%2:%3:%4:%5",
     _pid,
     _money,
     _bank,

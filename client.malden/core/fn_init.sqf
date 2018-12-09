@@ -47,7 +47,7 @@ waitUntil {!(isNull (findDisplay 46))};
 
 //Send Request to Server to Load player Data from DB and set these Values on Player.
 ["Load Player Vars and Loadout"] call lts_fnc_log;
-[] call lts_interface_fnc_loadPlayerData;
+[] call lts_interface_fnc_getPlayerData;
 ["Finish Player Vars and Loadout"] call lts_fnc_log;
 
 0 cutText ["","BLACK IN"];
