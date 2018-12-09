@@ -21,8 +21,8 @@ _data = format ["0:Player:GetPlayerData:%1", _pid];
 _query = call compile ("extDB3" callExtension _data);
 
 
-if ((_query select 1) isEqualTo []) exitWith { false; };
+//if ((_query select 1) isEqualTo []) exitWith { false; };
 
 diag_log str(_query);
 
-true;
+_query;

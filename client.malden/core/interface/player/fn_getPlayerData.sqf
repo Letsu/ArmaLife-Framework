@@ -1,3 +1,4 @@
+private ["_pid", "_return"];
 /*
  * Author: Johannes "letus" Bindriem
  * [Description]
