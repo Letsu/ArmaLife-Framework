@@ -12,7 +12,6 @@ private ["_pid"];
  * Example:
  * [] call lts_interface_fnc_requestPlayerData
  *
- * Public: [Yes/No]
  */
 
 _pid = getPlayerUID player;
