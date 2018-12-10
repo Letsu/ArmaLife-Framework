@@ -137,9 +137,12 @@ if (_itemTyp isEqualTo "Item") then {
 };
 if (_exit) exitWith {};
 
+
+
+
 //Check if Item is Ace Item and give the Item to the Player Inv.
-_aceItems = getArray (missionConfigFile >> "Config_Master" >> "AceItems");
-if (_itemTyp in _aceItems) then {
+_biPod = ["bipod_03_F_blk", "bipod_02_F_blk", "bipod_01_F_blk", "bipod_02_F_hex", "bipod_01_F_khk", "bipod_01_F_mtp", "bipod_03_F_oli", "bipod_01_F_snd", "bipod_02_F_tan"];
+if (_itemTyp in _biPod) then {
     if (_addToBackpack) exitWith { [_item, _amount] call lts_fnc_addToBackpack; _exit = true };
     [_item, _amount] call _fnc_addItems;
     _exit = true;

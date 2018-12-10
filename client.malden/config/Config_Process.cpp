@@ -1,8 +1,9 @@
 class Config_Process {
     class Wood {
         Var = "Wood";
-        DispalyName = "Holz";
-        From = "l_item_wood"; //Check Item Name
-        To = "l_item_plank"; //Need to add Item
+        DisplayName = "Holz wird Verarbeitet";
+        From = "L_Item_Wood"; //Check Item Name
+        To = "ItemWatch"; //Need to add Item
+        Time = 2;
     }
 };
