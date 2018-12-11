@@ -1,17 +1,17 @@
 /*
  * Author: johannes "Letus" Bindriem
- * [Description]
+ * Delete an value from an Array and give back the new Array whitout the Value
  *
  * Arguments:
- * 0: Argument Name <TYPE>
+ * 0: Array [Array]
+ * 1: Value in Array that should delet [Any]
  *
  * Return Value:
- * Return Name <TYPE>
+ * The New Array
  *
  * Example:
- * ["example"] call ace_[module]_fnc_[functionName]
+ * [[Array], Value] call lts_fnc_deleteFromArr
  *
- * Public: [Yes/No]
  */
 
 _arr = param [0];
@@ -22,4 +22,4 @@ _newArr = [];
     if !(_x isEqualTo _value) then {_x pushBack _newArr};
 } forEach _arr;
 
-_newArr; 
+_newArr;

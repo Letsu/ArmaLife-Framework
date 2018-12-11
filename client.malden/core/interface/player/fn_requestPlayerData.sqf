@@ -1,18 +1,17 @@
 private ["_pid"];
 /*
  * Author: Johannes "letus" Bindriem
- * [Description]
+ * Send an request too Server to Read out Data from Player Database and send to lts_interface_fnc_getPlayerData
  *
  * Arguments:
- * 0: Argument Name <TYPE>
+ * NONE
  *
  * Return Value:
- * Return Name <TYPE>
+ * NONE
  *
  * Example:
- * ["example"] call ace_[module]_fnc_[functionName]
+ * [] call lts_interface_fnc_requestPlayerData
  *
- * Public: [Yes/No]
  */
 
 _pid = getPlayerUID player;

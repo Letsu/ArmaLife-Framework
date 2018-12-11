@@ -1,17 +1,17 @@
+private ["_data"];
 /*
  * Author: Johannes "Letus" Bindriem
- * [Description]
+ * Get the Player Data from lts_interface_fnc_requestPlayerData
  *
  * Arguments:
- * 0: Argument Name <TYPE>
+ * 0: Data [Any]
  *
  * Return Value:
- * Return Name <TYPE>
+ * None
  *
  * Example:
- * ["example"] call ace_[module]_fnc_[functionName]
+ * [data] call lts_interface_fnc_getPlayerData
  *
- * Public: [Yes/No]
  */
 
 _data = param [0, []];
