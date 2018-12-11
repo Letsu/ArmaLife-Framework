@@ -21,7 +21,7 @@ _query = str(call compile ("extDB3" callExtension _data));
 
 diag_log _query;
 
-if ((_query select 1) isEqualTo []) exitWith { [] remoteExec ["lts_interface_fnc_createNewPlayer", _player] };
+//if ((_query select 1) isEqualTo []) exitWith { [] remoteExec ["lts_interface_fnc_createNewPlayer", _player] }; Testing only
 
 
 
