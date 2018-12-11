@@ -9,7 +9,7 @@
  * NONE
  *
  * Example:
- * [] exec "\server\init.sqf" From Client
+ * [] exec "\server\init.sqf"
  *
  */
 
@@ -41,6 +41,9 @@ _respawnPos = getMarkerPos "respawn";
 
 //Gather working not on Player net to remote Exec!
 [] call lts_server_fnc_initGather;
+
+//Testing!
+[76561198153107554] call lts_db_fnc_getPlayerData;
 
 
 ["--------------------------------------------"] call lts_server_fnc_log;
