@@ -15,9 +15,14 @@ private ["_pid", "_cash", "_bank", "_licenses", "_inv"];
  */
 
 _pid = getPlayerUID player;
-_cash = lts_money_cash;
-_bank = lts_money_bank;
 _licenses = lts_core_licenses;
 _inv = getUnitLoadout player;
 
-[_pid, _cash, _bank, _licenses, _inv] remoteExec ["lts_db_fnc_createNewPlayer", 2];
+_startMoney = getNumber (missionConfigFile >> "Config_Master" >> "StartMoney");
+_startBank  = getNumber (missionConfigFile >> "Config_Master" >> "StartBank");
+
+//Set Start Money
+lts_money_cash = _startMoney;
+lts_money_bank = _startBank;
+
+[_pid, _startMoney, _startBank, _licenses, _inv] remoteExec ["lts_db_fnc_createNewPlayer", 2];

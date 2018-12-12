@@ -4,8 +4,9 @@ class lts_cop {
 
     class cop {
         file = "core\side\cop";
-        class init    {};
-        class loadout {};
+        class init        {};
+        class loadout     {};
+        class setCopLevel {};
     };
 };
 
@@ -31,8 +32,8 @@ class lts_interface {
     tag = "lts_interface";
     class player_interface {
         file = "core\Interface\player";
-        class createNewPlayer {};
-        class getPlayerData {};
+        class createNewPlayer   {};
+        class getPlayerData     {};
         class requestPlayerData {};
     };
 };
