@@ -23,11 +23,29 @@ _finish = {
     _errorCode   = param [3];
 
     player removeItems _from;
-    [] call lts_fnc_addItem;
+    [_to, _itemAmount] call lts_fnc_addItem;
 };
 
 _abort = {
+    _args        = param [0];
+    _itemAmount  = _args select 0;
+    _from        = _args select 1;
+    _to          = _args select 2;
+    _elapsedTime = param [1];
+    _totalTime   = param [2];
+    _errorCode   = param [3];
     ["Du hast die Verarbeitung abgebrochen!"] call lts_fnc_hint;
+
+    //Get the Amount of Processed Items
+    _newAmount = _elapsedTime / _itemAmount;
+    _newAmount = floor _newAmount;
+
+    //Remove the Processed Items
+    for "_i" from 0 to _newAmount do {
+        player removeItem _from
+    };
+    //Add new Items
+    [_to, _newAmount] call lts_fnc_addItem;
 };
 
 _class = param [0, ""];

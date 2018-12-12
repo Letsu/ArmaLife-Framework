@@ -25,4 +25,4 @@ if ((_query select 1) isEqualTo []) exitWith { [] remoteExec ["lts_interface_fnc
 
 
 
-[_query] remoteExec ["lts_interface_fnc_getPlayerData", _player]; 
+[_query] remoteExec ["lts_interface_fnc_getPlayerData", _player];
