@@ -17,9 +17,9 @@ class EditorData
 	class Camera
 	{
 		pos[]={7281.4082,232.69992,8012.7266};
-		dir[]={-0.50664663,-0.65185392,-0.5644328};
-		up[]={-0.43543571,0.7583093,-0.48510104};
-		aside[]={-0.74424684,-5.8641308e-007,0.66804892};
+		dir[]={0.19556212,-0.88205802,-0.4288587};
+		up[]={0.36595005,0.47118729,-0.8025102};
+		aside[]={-0.90995252,-1.1958182e-006,-0.4149456};
 	};
 };
 binarizationWanted=0;
@@ -29,6 +29,7 @@ addons[]=
 	"A3_Ui_F",
 	"A3_Characters_F",
 	"A3_Characters_F_Orange",
+	"lts_itemsMaster",
 	"A3_Soft_F_Offroad_01",
 	"A3_Soft_F_Beta_Truck_02",
 	"ace_realisticnames",
@@ -38,7 +39,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=7;
+		items=8;
 		class Item0
 		{
 			className="A3_Structures_F";
@@ -69,19 +70,24 @@ class AddonsMetaData
 		};
 		class Item4
 		{
+			className="lts_itemsMaster";
+			name="lts_itemsMaster";
+		};
+		class Item5
+		{
 			className="A3_Soft_F";
 			name="Arma 3 Alpha - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item5
+		class Item6
 		{
 			className="A3_Soft_F_Beta";
 			name="Arma 3 Beta - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item6
+		class Item7
 		{
 			className="A3_Air_F";
 			name="Arma 3 Alpha - Aircraft";
@@ -304,6 +310,15 @@ class Mission
 							{
 								typeName="U_C_IDAP_Man_TeeShorts_F";
 								isBackpack=0;
+								class ItemCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="L_Item_Wood";
+										count=22;
+									};
+								};
 							};
 							class backpack
 							{

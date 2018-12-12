@@ -17,7 +17,7 @@ _pid = param [0];
 _player = param [1];
 
 _data = format ["0:Player:GetPlayerData:%1", _pid];
-_query = str(call compile ("extDB3" callExtension _data));
+_query = call compile ("extDB3" callExtension _data);
 
 diag_log _query;
 

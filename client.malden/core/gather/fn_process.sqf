@@ -13,16 +13,34 @@
  *
  */
 
+_finish = {
+    _args        = param [0];
+    _itemAmount  = _args select 0;
+    _from        = _args select 1;
+    _to          = _args select 2;
+    _elapsedTime = param [1];
+    _totalTime   = param [2];
+    _errorCode   = param [3];
+
+    player removeItems _from;
+    [] call lts_fnc_addItem;
+};
+
+_abort = {
+    ["Du hast die Verarbeitung abgebrochen!"] call lts_fnc_hint;
+};
+
 _class = param [0, ""];
 
-_var = getText (missionConfigFile >> "Config_Process" >> _class >> "Var");
-_text = getText (missionConfigFile >> "Config_Process" >> _clsss >> "DisplayName");
-_from = getText (missionConfigFile >> "Config_Process" >> _class >> "From");
-_to = getText (missionConfigFile >> "Config_Process" >> _class >> "To");
+_var  = getText   (missionConfigFile >> "Config_Process" >> _class >> "Var");
+_text = getText   (missionConfigFile >> "Config_Process" >> _class >> "DisplayName");
+_from = getText   (missionConfigFile >> "Config_Process" >> _class >> "From");
+_to   = getText   (missionConfigFile >> "Config_Process" >> _class >> "To");
+_time = getNumber (missionConfigFile >> "Config_Process" >> _class >> "Time");
 
 //Check if player has Items and how much
 //Maybe writh Function for this Action
-_items = items player; //IMPORTENT: check if Funtion give the Right output
+_items = items player;
 _itemAmount = 0;
 {
     if (_x isEqualTo _from) then {
@@ -30,9 +48,11 @@ _itemAmount = 0;
     };
 } forEach _items;
 
+//befor perform Action some Checks!
+if (_itemAmount isEqualTo 0) exitWith { ["Du hast keine Items die du hier Verarbeiten kannst!"] call lts_fnc_hint };
 
+_timeToProcess = _itemAmount * _time;
+_finish = false;
 
 //Add Processbar from ACe "ace_common_fnc_progressBar"
-
-//Remove old Items and add the new one
-//player removeItem item
+[_timeToProcess, [_itemAmount, _form, _to], {call _abort}, {call _finish}, _text] call ace_common_fnc_progressBar;
