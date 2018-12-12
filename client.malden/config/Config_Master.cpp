@@ -1,7 +1,8 @@
-//Add Include in description
 class Config_Master {
-    //Ace Items need to add Manual ecause an error in Ace Config where all Items clasifated as Bipod.
-    AceItems[] = {};
+    StartMoney = 0; //Amount of Money the Player has at first Join
+    StartBank  = 0; //Amount of Bank the Player has at first Join
+
+
 
 };
 

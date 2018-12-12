@@ -41,8 +41,9 @@ _index = 0;
     //get Item Vars from Config
     _item = _x select 0;
     _itemName = _x select 1;
-    _price = _x select 2;
-    _itemCondition = _x select 3;
+    _buyPrice = _x select 2;
+    _sellPrice = _x select 3;
+    _itemCondition = _x select 4;
 
     //Check Condition when Item has Conditoun and the Condtion is false exit Here to Skip Item
     if !(_itemCondition isEqualTo "") then { _hasItemCondition = true };
