@@ -45,8 +45,6 @@ _respawnPos = getMarkerPos "respawn";
 //Testing!
 //_query = str(call compile ("extDB3" callExtension "0:Player:GetPlayerData:76561198153107554"));
 
-diag_log _query;
-
 ["--------------------------------------------"] call lts_server_fnc_log;
 ["---- Finish of Server Initalisation  ----"] call lts_server_fnc_log;
 ["--------------------------------------------"] call lts_server_fnc_log;

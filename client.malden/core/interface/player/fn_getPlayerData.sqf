@@ -15,5 +15,3 @@ private ["_data"];
  */
 
 _data = param [0, []];
-
-
