@@ -38,6 +38,7 @@ class lts_interface {
     };
 
     class cop_interface {
+        file = "core\interface\cop";
         class createNewCop   {};
         class updateCopLevel {};
     };
