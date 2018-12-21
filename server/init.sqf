@@ -34,6 +34,9 @@ _respawnPos = getMarkerPos "respawn";
 [] call lts_db_fnc_createDB;
 ["Finish Check if Database is Complet"] call lts_server_fnc_log;
 
+["Get Data from Database that need for all Players"] call lts_server_fnc_log;
+[] call lts_db_fnc_getServiceNumber;
+["Finish Getting Data from Database that need for all Players"] call lts_server_fnc_log;
 
 
 

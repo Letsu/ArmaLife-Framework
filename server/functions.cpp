@@ -29,4 +29,11 @@ class lts_db {
       class createNewPlayer {};
       class getPlayerData {};
   };
+
+  class db_cop {
+      file = "\server\core\db\player\cop";
+      class createNewCop      {};
+      class GetServiceNumbers {};
+      class updateCopLevel    {};
+  };
 };
