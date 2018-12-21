@@ -14,7 +14,11 @@
  * Public: [Yes/No]
  */
 
-_uid = param [0];
+_pid = param [0];
 _newLevel = param [1, 0];
 
-//Database entry
+_data = format ["0:Cop:UpdateCopLevel:%1:%2"
+    _pid,
+    _newLevel
+    ];
+_query = call compile ("extDB3" callExtension _data);

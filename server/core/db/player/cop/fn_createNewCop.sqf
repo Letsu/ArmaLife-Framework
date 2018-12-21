@@ -1,6 +1,6 @@
 /*
  * Author: Johannes "Letus" Bindriem
- * Create new Cop in Database
+ * Function get an Request from Client to Send an Request to the DB to create an new Entry in the Cop Table
  *
  * Arguments:
  * 0: Argument Name <TYPE>
@@ -13,10 +13,14 @@
  *
  */
 
-_uid = param [0];
-_name = param [1, "UNKOWN"];
-_level = param [2, 0];
+_sn = param [0];
+_pid = param [1];
+_copLevel = param [2];
 
-if (_name isEqualTo "UNKOWN") exitWith { [format ["%1: No Name given by Create an new Cop Entry", _uid]] call lts_fnc_log };
+_data = format ["0:Cop:CreateCop:%1:%2:%3",
+    _sn,
+    _pid,
+    _copLevel
+    ];
 
-//database Entry
+_query = call compile ("extDB3" callExtension _data);
