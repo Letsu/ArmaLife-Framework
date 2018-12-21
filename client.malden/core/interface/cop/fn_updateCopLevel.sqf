@@ -16,5 +16,5 @@
 _newLevel = lts_cop_level;
 _pid = getPlayerUID player;
 
-["Cop Level synced to the Database!"] call lts_fnc_log;
+["Your Cop Level synced to the Database!"] call lts_fnc_log;
 [_pid, _newLevel] remoteExec ["lts_db_fnc_updateCopLevel", 2];
