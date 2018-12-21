@@ -16,7 +16,10 @@ private ["_pid", "_return", "_data", "_query"];
 _pid = param [0];
 _player = param [1];
 
+[_pid] call lts_server_fnc_log;
+
 _data = format ["0:Player:GetPlayerData:%1", _pid];
+[_data] call lts_server_fnc_log;
 _query = call compile ("extDB3" callExtension _data);
 
 diag_log _query;
