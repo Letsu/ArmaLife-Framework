@@ -33,7 +33,7 @@ class lts_db {
   class db_cop {
       file = "\server\core\db\player\cop";
       class createNewCop      {};
-      class GetServiceNumbers {};
+      class getServiceNumbers {};
       class updateCopLevel    {};
   };
 };

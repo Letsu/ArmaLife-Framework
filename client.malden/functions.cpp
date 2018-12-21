@@ -36,6 +36,11 @@ class lts_interface {
         class getPlayerData     {};
         class requestPlayerData {};
     };
+
+    class cop_interface {
+        class createNewCop   {};
+        class updateCopLevel {};
+    };
 };
 
 //Framework Files
