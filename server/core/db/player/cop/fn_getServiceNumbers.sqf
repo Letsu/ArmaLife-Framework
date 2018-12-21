@@ -15,7 +15,7 @@
  */
 
 _query = call compile ("extDB3" callExtension "0:Cop:GetServiceNumbers");
-_query = parseSimpleArray _query;
+//_query = parseSimpleArray _query;
 
  allServiceNumbers =_query select 1;
  publicVariable "allServiceNumbers";
