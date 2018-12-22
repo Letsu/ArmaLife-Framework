@@ -25,7 +25,7 @@ _query = call compile ("extDB3" callExtension _data);
 diag_log _query;
 
 if ((_query select 1) isEqualTo []) exitWith { [] remoteExec ["lts_interface_fnc_createNewPlayer", _player] };
-
+_playerData =_query select 1;
 
 
 
