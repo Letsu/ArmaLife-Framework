@@ -3,10 +3,10 @@
  * Send Request to Server to Create an new Cop DB Entry
  *
  * Arguments:
- * 0: Argument Name <TYPE>
+ * NONE
  *
  * Return Value:
- * Return Name <TYPE>
+ * 0: Error Code 0 when sucsessly
  *
  * Example:
  * [] call lts_interface_fnc_createNewCop
