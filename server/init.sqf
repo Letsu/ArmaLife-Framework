@@ -16,7 +16,7 @@
 lts_server_setupFinish = false;
 publicVariable "lts_server_setupFinish";
 ["--------------------------------------------"] call lts_server_fnc_log;
-["---- Start of Server Initalisation  ----"] call lts_server_fnc_log;
+["------ Start of Server Initalisation  ------"] call lts_server_fnc_log;
 ["--------------------------------------------"] call lts_server_fnc_log;
 
 _successfully = false;
