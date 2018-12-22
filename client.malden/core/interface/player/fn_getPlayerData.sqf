@@ -24,7 +24,7 @@ private _licenses = parseSimpleArray(_data select 3);
 dbug_licenses = _licenses;
 
 //Macke own Inv Table
-private _inv      = _data select 4;
+private _inv      = parseSimpleArray(_data select 4);
 //DBUG
 dbug_inv = _inv;
 
