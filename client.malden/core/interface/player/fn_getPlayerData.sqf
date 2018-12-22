@@ -20,13 +20,13 @@ private _pid      = parseNumber(_data select 0);
 private _money    = parseNumber(_data select 1);
 private _bank     = parseNumber(_data select 2);
 private _licenses = parseSimpleArray(_data select 3);
+//DBUG
+dbug_licenses = _licenses;
 
 //Macke own Inv Table
 private _inv      = _data select 4;
+//DBUG
+dbug_inv = _inv;
 
 
-dataPid = _pid;
-dataMoney = _money;
-dataBank = _bank;
-dataLicenses = _licenses;
-dataInv = _inv;
+[_money, _bank, _licenses, _inv] call lts_fnc_setPlayerCore;
