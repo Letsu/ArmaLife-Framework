@@ -16,10 +16,10 @@
 private _data = param [0, []];
 _data = _data select 0;
 
-private _pid      = _data select 0;
-private _money    = _data select 1;
-private _bank     = _data select 2;
-private _licenses = _data select 3;
+private _pid      = parseNumber(_data select 0);
+private _money    = parseNumber(_data select 1);
+private _bank     = parseNumber(_data select 2);
+private _licenses = parseSimpleArray(_data select 3);
 
 //Macke own Inv Table
 private _inv      = _data select 4;

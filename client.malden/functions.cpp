@@ -58,6 +58,7 @@ class lts_framework {
         class addToBackpack  {};
         class getDisplayName {};
         class deleteFormArr  {};
+        class setPlayerCore  {};
     };
 
     class respawn {
