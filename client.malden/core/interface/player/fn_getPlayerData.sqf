@@ -14,7 +14,7 @@
  */
 
 private _data = param [0, []];
-
+data = _data;
 
 private _pid      = _data select 0;
 private _money    = _data select 1;
