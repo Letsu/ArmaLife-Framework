@@ -17,7 +17,7 @@ _copLevel = lts_cop_level;
 _sn = 0;
 _pid = getPlayerUID player;
 
-if (_copLevel = 0) exitWith { ["PLayer added to Cop Db whithout an Cop Level!"] call lts_fnc_log };
+if (_copLevel = 0) exitWith { ["PLayer added to Cop Db whithout an Cop Level!"] call lts_fnc_log; [1, "noCopLevel"] };
 
 //Create an New Service Number and set this Var on the Player
 while {!(_sn in allServiceNumbers)} do {
@@ -29,4 +29,4 @@ player setVariable ["copServiceNumber", _sn, true];
 
 [_sn, _pid, _copLevel] remoteExec ["lts_db_fnc_createNewCop", 2];
 
-[1, "noCopLevel"];
+[0, ""];
