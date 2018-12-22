@@ -12,7 +12,7 @@ class lts_cop {
 
 /* ---------------------
 Start of Framwork Files
-*/
+----------------------*/
 
 //All Core Files the most of them called on Player join
 class lts_core {

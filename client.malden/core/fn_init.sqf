@@ -50,6 +50,10 @@ waitUntil {!(isNull (findDisplay 46))};
 [] call lts_interface_fnc_requestPlayerData;
 ["Finish Player Vars and Loadout"] call lts_fnc_log;
 
+["Initalisation of Farming Scripts and setup Actions for Farming"] call lts_fnc_log;
+[] call lts_server_fnc_initGather;
+["Finish Initalisation of Farming Scripts and setup Actions for Farming"] call lts_fnc_log;
+
 0 cutText ["","BLACK IN"];
 
 ["--------------------------------------------"] call lts_fnc_log;

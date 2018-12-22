@@ -16,40 +16,30 @@
 lts_server_setupFinish = false;
 publicVariable "lts_server_setupFinish";
 ["--------------------------------------------"] call lts_server_fnc_log;
-["---- Start of Serve Initalisation  ----"] call lts_server_fnc_log;
+["---- Start of Server Initalisation  ----"] call lts_server_fnc_log;
 ["--------------------------------------------"] call lts_server_fnc_log;
 
 _successfully = false;
 
-//Set RespawnMarker need an existing marker named "respawn" on the Map
+["Handeling Objects on Map"] call lts_server_fnc_log;
 _respawnPos = getMarkerPos "respawn";
 "respawn" setMarkerPos [_respawnPos select 0, _respawnPos select 1, 90];
+["Finish Handeling Objects on Map"] call lts_server_fnc_log;
 
 ["Establishing connection with DB"] call lts_server_fnc_log;
-/*_successfully =*/ [] call lts_db_fnc_initDB;
-//waitUntil (_successfully);
+[] call lts_db_fnc_initDB;
 ["Connection with DB successfully"] call lts_server_fnc_log;
 
 ["Check if Database is Complet"] call lts_server_fnc_log;
 [] call lts_db_fnc_createDB;
 ["Finish Check if Database is Complet"] call lts_server_fnc_log;
 
-["Get Data from Database that need for all Players"] call lts_server_fnc_log;
+["Get Static Global Variables"] call lts_server_fnc_log;
 [] call lts_db_fnc_getServiceNumbers;
-["Finish Getting Data from Database that need for all Players"] call lts_server_fnc_log;
-
-
-
-//Call Init of gather Script to create the Farming Fields
-
-//Gather working not on Player net to remote Exec!
-[] call lts_server_fnc_initGather;
-
-//Testing!
-//_query = str(call compile ("extDB3" callExtension "0:Player:GetPlayerData:76561198153107554"));
+["Finish Getting Static Global Variables"] call lts_server_fnc_log;
 
 ["--------------------------------------------"] call lts_server_fnc_log;
-["---- Finish of Server Initalisation  ----"] call lts_server_fnc_log;
+["----- Finish of Server Initalisation  ------"] call lts_server_fnc_log;
 ["--------------------------------------------"] call lts_server_fnc_log;
 lts_server_setupFinish = true;
 publicVariable "lts_server_setupFinish";
