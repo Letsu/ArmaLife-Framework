@@ -29,4 +29,4 @@ _playerData =_query select 1;
 
 
 
-[_query] remoteExec ["lts_interface_fnc_getPlayerData", _player];
+[_playerData] remoteExec ["lts_interface_fnc_getPlayerData", _player];
