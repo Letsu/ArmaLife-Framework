@@ -28,18 +28,18 @@ class lts_db {
   class db_player {
       file = "\server\core\db\player";
       class createNewPlayer {};
-      class getPlayerData {};
+      class getPlayerData   {};
   };
 
   class db_cop {
       file = "\server\core\db\player\cop";
-      class createNewCop      {};
-      class updateCopLevel    {};
+      class createNewCop   {};
+      class updateCopLevel {};
   };
 
   class db_med {
       file = "\server\core\db\player\med";
-      class createNewMed      {};
-      class updateMedLevel    {};
+      class createNewMed   {};
+      class updateMedLevel {};
   };
 };
