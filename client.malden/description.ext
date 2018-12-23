@@ -39,8 +39,7 @@ showHUD[] = {
 };
 
 
-class CfgSounds
-{
+class CfgSounds {
 	sounds[] = {};
 	class carUnlock {
 		name = "carUnlock";

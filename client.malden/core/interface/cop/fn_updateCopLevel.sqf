@@ -9,7 +9,7 @@
  * Return Name <TYPE>
  *
  * Example:
- * ["example"] call ace_[module]_fnc_[functionName]
+ * [] call lts_interface_fnc_updateCopLevel
  *
  * Public: [Yes/No]
  */

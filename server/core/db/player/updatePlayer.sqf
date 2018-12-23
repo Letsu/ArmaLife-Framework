@@ -12,7 +12,3 @@
  * ["example"] call ace_[module]_fnc_[functionName]
  *
  */
-
-_updateAll = {
-
-};
