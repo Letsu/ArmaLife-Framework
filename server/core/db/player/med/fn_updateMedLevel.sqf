@@ -1,6 +1,6 @@
 /*
  * Author: Johannes "Letus" Bindriem
- * Function get an Request from lts_interface_fnc_createNewCop to Send an Request to the DB to create an new Entry in the Cop Table
+ * [Description]
  *
  * Arguments:
  * 0: Argument Name <TYPE>
@@ -11,16 +11,14 @@
  * Example:
  * ["example"] call ace_[module]_fnc_[functionName]
  *
+ * Public: [Yes/No]
  */
 
-_sn = param [0];
-_pid = param [1];
-_copLevel = param [2];
+_pid = param [0];
+_newLevel = param [1, 0];
 
-_data = format ["0:Cop:CreateCop:%1:%2:%3",
-    _sn,
+_data = format ["0:Med:UpdateMedLevel:%1:%2"
     _pid,
-    _copLevel
+    _newLevel
     ];
-
 _query = call compile ("extDB3" callExtension _data);

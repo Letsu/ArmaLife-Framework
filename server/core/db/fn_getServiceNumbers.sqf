@@ -14,8 +14,12 @@
  * Public: [Yes/No]
  */
 
-_query = call compile ("extDB3" callExtension "0:Cop:GetServiceNumbers");
+private _copSN = call compile ("extDB3" callExtension "0:Cop:GetServiceNumbers");
+private _medSN = call compile ("extDB3" callExtension "0:Med:GetServiceNumbers");
 //_query = parseSimpleArray _query;
 
- allServiceNumbers =_query select 1;
+_copSN = _copSN select 1;
+_medSN = _medSN select 1;
+
+ allServiceNumbers = _copSN + _medSN;
  publicVariable "allServiceNumbers";

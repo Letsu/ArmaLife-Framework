@@ -22,6 +22,7 @@ class lts_db {
       file = "\server\core\db";
       class createDB {};
       class initDB   {};
+      class getServiceNumbers {};
   };
 
   class db_player {
@@ -33,7 +34,12 @@ class lts_db {
   class db_cop {
       file = "\server\core\db\player\cop";
       class createNewCop      {};
-      class getServiceNumbers {};
       class updateCopLevel    {};
+  };
+
+  class db_med {
+      file = "\server\core\db\player\med";
+      class createNewMed      {};
+      class updateMedLevel    {};
   };
 };
