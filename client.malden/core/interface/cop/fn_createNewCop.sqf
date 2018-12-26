@@ -19,7 +19,7 @@ _sn = 0;
 _pid = getPlayerUID player;
 
 if (_copLevel == 0) exitWith { ["Player added to Cop DB without an Cop Level!"] call lts_fnc_log; [1, "noLevel"] };
-if (player getVariable ["serviceNumber", -1] isEqualTo -1) exitWith { ["Player added to Cop DB is already Cop!"]; [1, "alreadyCop"] };
+if (player getVariable ["serviceNumber", -1] isEqualTo -1) exitWith { ["Player added to Cop DB is already Cop!"] call lts_fnc_log; [1, "alreadyCop"] };
 
 //Create an New Service Number and set this Var on the Player
 while {!(_sn in allServiceNumbers)} do {
