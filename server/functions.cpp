@@ -35,6 +35,7 @@ class lts_db {
       file = "\server\core\db\player\cop";
       class createNewCop   {};
       class updateCopLevel {};
+      class getCopData     {};
   };
 
   class db_med {
