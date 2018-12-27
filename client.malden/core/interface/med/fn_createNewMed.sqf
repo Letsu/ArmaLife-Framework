@@ -19,6 +19,8 @@ private _sn       = 0;
 private _pid      = getPlayerUID player;
 
 if (_medLevel isEqualTo 0) exitWith { ["Player added to Medic DB without an Med Level!"] call lts_fnc_log; [1, "noLevel"] };
+if (player getVariable ["serviceNumber", -1] isEqualTo -1) exitWith { ["Player added to Cop DB is already Cop!"]; [1, "alreadyInDB"] };
+
 
 //Create an New Service Number and set this Var on the Player
 while {!(_sn in allServiceNumbers)} do {
