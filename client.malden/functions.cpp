@@ -1,15 +1,21 @@
 //All Side specific Files
-class lts_cop {
-    tag = "lts_cop";
-
+class lts_side {
     class cop {
         file = "core\side\cop";
+        tag = "lts_cop";
         class init           {};
-        class loadout        {};
         class setCopLevel    {};
         class setCopCoreData {};
     };
+
+    class med {
+        file = "core\side\med";
+        tag = "lts_med";
+        class init           {};
+        class setMedCoreData {};
+    };
 };
+
 
 /* ---------------------
 Start of Framwork Files
