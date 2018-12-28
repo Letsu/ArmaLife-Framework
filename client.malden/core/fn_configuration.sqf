@@ -38,3 +38,6 @@ lts_cop_level = 0; //Cop Level
 //Medic
 lts_med_level = 0;
 //lts_med_inv = []; //Need to define in Site Init
+
+//Init of Variables on the Player whit setVariable
+player setVariable ["serviceNumber", -1, true]; //Filled whit value when Player join as Cop
