@@ -14,22 +14,25 @@
  *
  */
 
-private _copLevel = lts_cop_level;
+private _level = lts_cop_level;
 private _sn = 0;
+private _hasSN = false;
+private _curSN = player getVariable ["serviceNumber", -1];
 private _pid = getPlayerUID player;
 
-if (_copLevel == 0) exitWith { ["Player added to Cop DB without an Cop Level!"] call lts_fnc_log; [1, "noLevel"] };
-if (player getVariable ["serviceNumber", -1] isEqualTo -1) exitWith { ["Player added to Cop DB is already Cop!"] call lts_fnc_log; [1, "alreadyInDB"] };
+if (_level == 0) exitWith { ["Player added to Cop DB without an Cop Level!"] call lts_fnc_log; [1, "noLevel"] };
+if (_curSN != -1 && _curSN > 499999) exitWith { ["Player added to Cop DB is already Cop!"]; [1, "alreadyInDB"] };
+if (_curSN != -1 && _curSN < 500000) then { _hasSN = true; _sn = _curSN }; //Players has already an SN so
 
-//Create an New Service Number and set this Var on the Player
-while {!(_sn in allServiceNumbers)} do {
-    _sn = random [100000, 500000, 999999];
+
+//Create an New Service Number and set this Var on the Player Cop Range is 500000 to 999999
+while {!(_sn in allServiceNumbers) && !(_hasSN)} do {
+    _sn = random [500000, 650000, 999999];
 };
-
 allServiceNumbers pushBackUnique _sn;
 publicVariable "allServiceNumbers";
 player setVariable ["serviceNumber", _sn, true];
 
-[_sn, _pid, _copLevel] remoteExec ["lts_db_fnc_createNewCop", 2];
+[_sn, _pid, _level] remoteExec ["lts_db_fnc_createNewCop", 2];
 
 [0, ""];
