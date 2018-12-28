@@ -1,12 +1,24 @@
-/*Head*/
+/*
+ * Author: Johannes "Letus" Bindriem
+ * [Description]
+ *
+ * Arguments:
+ * 0: Argument Name <TYPE>
+ *
+ * Return Value:
+ * Return Name <TYPE>
+ *
+ * Example:
+ * ["example"] call ace_[module]_fnc_[functionName]
+ *
+ * Public: [Yes/No]
+ */
 
 private _data  = param [0];
-//Error handling
+if ( _data isEqualTo [] ) exitWith { };
+
+private _pid   = _data select 1;
 private _sn    = parseNumber(_data select 0);
-private _pid   = _data  select 1;
 private _level = parseNumber(_data select 2);
 
-
-//set Variables on the Player(Maybe put to an own setCopCoreData File?)
-lts_cop_level = _level;
-player setVariable ["serviceNumber", _sn, true];
+[_sn, _level] call lts_cop_setCopCoreData;

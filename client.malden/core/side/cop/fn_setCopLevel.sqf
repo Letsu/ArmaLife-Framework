@@ -18,5 +18,5 @@ _oldLevel = lts_cop_level;
 
 if (_oldLevel isEqualTo 0) then { /*Send Request to Interface*/ };
 
-hint format ["Du wurdest im Cop Dienst befördert!"];
+[format ["Du wurdest gerade von Level %1 auf %2 Befördert!"]] call lts_fnc_hint;
 lts_cop_level = _newLevel;

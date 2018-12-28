@@ -1,5 +1,5 @@
 /*
- * Author: Johannes 'Letus' Bindriem
+ * Author: Johannes "Letus" Bindriem
  * [Description]
  *
  * Arguments:
@@ -12,6 +12,9 @@
  * ["example"] call ace_[module]_fnc_[functionName]
  *
  */
-private _pid = getPlayerUID player;
 
-[_pid, player] remoteExec ["lts_db_fnc_getCopData", 2];
+private _sn    = param [0, -1];
+private _level = param [1, 1];
+
+player setVariable ["serviceNumber", _sn, true];
+lts_cop_level = _level;

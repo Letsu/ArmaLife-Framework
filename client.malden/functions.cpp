@@ -4,9 +4,10 @@ class lts_cop {
 
     class cop {
         file = "core\side\cop";
-        class init        {};
-        class loadout     {};
-        class setCopLevel {};
+        class init           {};
+        class loadout        {};
+        class setCopLevel    {};
+        class setCopCoreData {};
     };
 };
 
@@ -58,7 +59,6 @@ class lts_framework {
         class addToBackpack  {};
         class getDisplayName {};
         class deleteFormArr  {};
-        class setPlayerCore  {};
     };
 
     class respawn {
@@ -83,6 +83,7 @@ class lts_framework {
         class buyLicense    {};
         class hasLicense    {};
         class removeLicense {};
+        class setPlayerCore {};
     };
 
     class vehicle {
