@@ -1,4 +1,3 @@
-private ["_pid", "_return", "_data", "_query"];
 /*
  * Author: Johannes "letus" Bindriem
  * [Description]
@@ -13,12 +12,11 @@ private ["_pid", "_return", "_data", "_query"];
  * [] call lts_db_fnc_getPlayerData
  *
  */
-_pid = param [0];
-_player = param [1];
+private _pid = param [0];
+private _player = param [1];
 
-_data = format ["0:Med:GetMedData:%1", _pid];
-_query = call compile ("extDB3" callExtension _data);
+private _query = call compile ("extDB3" callExtension (format ["0:Med:GetMedData:%1", _pid]) );
 
-_playerData = _query select 1;
+_query = _query select 1;
 
-[_playerData] remoteExec ["lts_interface_fnc_getCopData", _player];
+[_query] remoteExec ["lts_interface_fnc_getCopData", _player];
