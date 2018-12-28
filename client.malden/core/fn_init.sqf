@@ -49,6 +49,7 @@ waitUntil {!(isNull (findDisplay 46))};
 ["Load Player Prestige Data"] call lts_fnc_log;
 [] call lts_interface_fnc_requestPlayerData;
 [] call lts_interface_fnc_requestCopData; //load Cop Data at Join so the Player has an ServiceNumber also when he is an Civ
+[] call lts_interface_fnc_requestMedData; //load Med Data at Join so the Player has an ServiceNumber also when he is an Civ
 ["Finish Loading Player Prestige Data"] call lts_fnc_log;
 
 ["Initalisation of Farming Scripts and setup Actions for Farming"] call lts_fnc_log;

@@ -29,7 +29,7 @@ class Config_Side {
     class med {
         Var = "med";
         DisplayName = "Medic"; //Add Stringtable
-        Init = "";
+        Init = "lts_med_fnc_init";
         Condition = "lts_med_level"; //Need an global Variable player can join Side when the Value of the Variable isn´t 0 Empty when every playewr can join Side
     };
 
