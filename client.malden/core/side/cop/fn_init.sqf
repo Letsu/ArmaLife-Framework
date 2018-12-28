@@ -19,6 +19,10 @@ _side = param [0, "cop"];
 _oldSide = param [1, "civ"];
 
 //Load Cop Loadout
-[] call lts_cop_fnc_loadout;
 
-//Add Acces to Wanted List 
+/*
+[] call lts_cop_fnc_loadout;
+*/
+
+
+//Add Acces to Wanted List

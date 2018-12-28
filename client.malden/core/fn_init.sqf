@@ -46,8 +46,9 @@ waitUntil {!(isNull (findDisplay 46))};
 ["Finish Initalizise of Player Interactions"] call lts_fnc_log;
 
 //Send Request to Server to Load player Data from DB and set these Values on Player.
-["Load Player Vars and Loadout"] call lts_fnc_log;
+["Load Player Prestige Data"] call lts_fnc_log;
 [] call lts_interface_fnc_requestPlayerData;
+[] call lts_interface_fnc_requestCopData; //load Cop Data at Join so the Player has an ServiceNumber also when he is an Civ
 ["Finish Player Vars and Loadout"] call lts_fnc_log;
 
 ["Initalisation of Farming Scripts and setup Actions for Farming"] call lts_fnc_log;
