@@ -10,8 +10,6 @@
  *
  */
 class Config_Side {
-    avabileSides[] = {"civ", "cop", "med"}; //Need all Sides that are Configure whit the Config Name //Delete this
-
     class civ { //defualt Side
         Var = "civ";
         DisplayName = "Civilian"; //Add Stringtable
@@ -23,14 +21,14 @@ class Config_Side {
         Var = "cop";
         DisplayName = "Police"; //Add Stringtable
         Init = "lts_cop_fnc_init";
-        Condition = "lts_cop_level"; //Need an global Variable player can join Side when the Value of the Variable isn´t 0 Empty when every playewr can join Side
+        Condition = "lts_cop_level > 0"; //Need an global Variable player can join Side when the Value of the Variable isn´t 0 Empty when every playewr can join Side
     };
 
     class med {
         Var = "med";
         DisplayName = "Medic"; //Add Stringtable
         Init = "lts_med_fnc_init";
-        Condition = "lts_med_level"; //Need an global Variable player can join Side when the Value of the Variable isn´t 0 Empty when every playewr can join Side
+        Condition = "lts_med_level > 0"; //Need an global Variable player can join Side when the Value of the Variable isn´t 0 Empty when every playewr can join Side
     };
 
 };

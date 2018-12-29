@@ -1,4 +1,3 @@
-private["_avabileSide", "_newSide", "_curSides", "_sideVar", "_sideName", "_sideStrCondition", "_sideLevel"];
 /*
  * Author: Johannes "Letus" Bindriem
  * Function to Switch the Current Side of the Player.
@@ -14,32 +13,34 @@ private["_avabileSide", "_newSide", "_curSides", "_sideVar", "_sideName", "_side
  * ["Side"] call lts_fnc_changeSide;
  *
  */
-_newSide = param [0, "civ"];
-
-//Get Variables
-_curSide = lts_core_curSide;
-_avabileSide = getArray (missionConfigFile >> "Config_Side" >> "avabileSides");
+private _newSide = param [0, "civ"];
 
 //Some Checks
-if (!(_newSide in _avabileSide)) exitWith { [format["Unkown Side: %1 was given in ChangeSide! Maybe you forgot to add the Side in AvabileSides or the Site dont exist!", _newSide]] call lts_fnc_log };
+private _isSide = false;
+{
+    _pfad = str(_x) splitString "/, \";
+    _config = _pfad select ((count _pfad) - 1);
+    if (_config isEqualTo _newSide) exitWith { _isSide = true };
+} forEach ("true" configClasses (missionConfigFile >> "Config_Side"));
+
+private _curSide = lts_core_curSide;
+if (_newSide isEqualTo _curSide) exitWith { ["Du bist schon auf dieser Seite!"]] call lts_fnc_hint }; //Add Stringtable
 
 //Get Vars from Config
-_sideVar = getText (missionConfigFile >> "Config_Side" >> _newSide >> "Var"); //Hopefully Same as _newSide maybe delete this
-_sideName = getText (missionConfigFile >> "Config_Side" >> _newSide >> "DisplayName");
-_sideStrCondition =  getText (missionConfigFile >> "Config_Side" >> _newSide >> "Condition");
-_initScript = getText(missionConfigFile >> "Config_Side" >> _newSide >> "Init");
+private _sideVar = getText (missionConfigFile >> "Config_Side" >> _newSide >> "Var"); //Hopefully Same as _newSide maybe delete this
+private _sideName = getText (missionConfigFile >> "Config_Side" >> _newSide >> "DisplayName");
+private _sideStrCondition =  getText (missionConfigFile >> "Config_Side" >> _newSide >> "Condition");
+private _initScript = getText(missionConfigFile >> "Config_Side" >> _newSide >> "Init");
 
-
-//More Checks
-if (_newSide isEqualTo _curSide) exitWith { [format["Du bist schon: %1", _sideName]] call lts_fnc_hint }; //Add Stringtable
-_sideLevel = 0;
+//Check Condition
+private _exit = false;
 if !(_sideStrCondition isEqualTo "") then {
-    _sideLevel = call (compile _sideStrCondition);
-} else { _sideLevel = 1 };
-if (_sideLevel == 0) exitWith { [format["Du Kannst nicht bei der %1 in den Dienst gehen!", _sideName]] call lts_fnc_hint };
+    if (call compile(_sideStrCondition)) exitWith { _exit = true };
+};
+if (_exit) exitWith { ["Du kannst auf diese Seite nicht wechseln!"] call lts_fnc_hint };
 
 //Set new Site
- lts_core_curSide = _newSide;
+lts_core_curSide = _newSide;
 
 //exec the Side Init Script if set
 if !(_initScript isEqualTo "") then {
