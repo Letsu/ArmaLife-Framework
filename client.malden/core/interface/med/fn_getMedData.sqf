@@ -22,4 +22,4 @@ private _pid   = _data select 1;
 private _sn    = parseNumber(_data select 0);
 private _level = parseNumber(_data select 2);
 
-[_sn, _level] call lts_med_setMedCoreData;
+[_sn, _level] call lts_med_fnc_setMedCoreData;

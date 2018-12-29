@@ -22,4 +22,4 @@ private _pid   = _data select 1;
 private _sn    = parseNumber(_data select 0);
 private _level = parseNumber(_data select 2);
 
-[_sn, _level] call lts_cop_setCopCoreData;
+[_sn, _level] call lts_cop_fnc_setCopCoreData;
