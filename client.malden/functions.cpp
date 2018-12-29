@@ -38,7 +38,7 @@ class lts_core {
 class lts_interface {
     tag = "lts_interface";
     class player_interface {
-        file = "core\Interface\player";
+        file = "core\interface\player";
         class createNewPlayer   {};
         class getPlayerData     {};
         class requestPlayerData {};
@@ -48,6 +48,16 @@ class lts_interface {
         file = "core\interface\cop";
         class createNewCop   {};
         class updateCopLevel {};
+        class requestCopData {};
+        class getCopData     {};
+    };
+
+    class med_interface {
+        file = "core\interface\med";
+        class createNewMed   {};
+        class getMedData     {};
+        class requestMedData {};
+        class updateMedLevel {};
     };
 };
 
