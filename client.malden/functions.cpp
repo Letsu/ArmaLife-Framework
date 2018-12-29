@@ -1,16 +1,18 @@
-//All Side specific Files
-class lts_side {
-    class cop {
+//All Side specific Functions
+class cop_side {
+    tag = "lts_cop";
+    class core {
         file = "core\side\cop";
-        tag = "lts_cop";
         class init           {};
         class setCopLevel    {};
         class setCopCoreData {};
     };
+};
 
-    class med {
+class med_side {
+    tag = "lts_med";
+    class core {
         file = "core\side\med";
-        tag = "lts_med";
         class init           {};
         class setMedCoreData {};
     };
