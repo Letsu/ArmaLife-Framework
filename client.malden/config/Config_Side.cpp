@@ -10,7 +10,7 @@
  *
  */
 class Config_Side {
-    avabileSides[] = {"civ", "cop", "med"}; //Need all Sides that are Configure whit the Config Name //Maybe delete this
+    avabileSides[] = {"civ", "cop", "med"}; //Need all Sides that are Configure whit the Config Name //Delete this
 
     class civ { //defualt Side
         Var = "civ";
