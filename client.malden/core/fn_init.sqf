@@ -53,7 +53,7 @@ waitUntil {!(isNull (findDisplay 46))};
 ["Finish Loading Player Prestige Data"] call lts_fnc_log;
 
 ["Initalisation of Farming Scripts and setup Actions for Farming"] call lts_fnc_log;
-[] call lts_server_fnc_initGather;
+[] call lts_fnc_initGather;
 ["Finish Initalisation of Farming Scripts and setup Actions for Farming"] call lts_fnc_log;
 
 0 cutText ["","BLACK IN"];
