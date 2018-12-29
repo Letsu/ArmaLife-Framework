@@ -36,7 +36,7 @@ Das Fahrzeug kann immer nur an der Garage ausgeparkt werden an der es auch einge
 
 
 
-Nummernschild(Prm. Key) | Owner Pid | Key Owners PIDs | Fuel | Inventar | Verf�gbar | Wo Ausgeparkt | Am Leben |
+Nummernschild(Prm. Key) | Owner Pid | Key Owners PIDs | Key Owner Names | Fuel | Inventar | Verf�gbar | Am Leben |
 
 
 ---------------------------------------------------------------------------------------------------------------------------------
