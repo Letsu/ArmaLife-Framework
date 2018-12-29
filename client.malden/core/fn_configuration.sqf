@@ -18,6 +18,7 @@
 lts_core_food = 100; //Current Value of Food
 lts_core_thirst = 100; //Current Value of Thirst
 lts_core_curSide = "civ"; //Posible Value can set in Config_Side
+lts_core_firstSpawn = false; //True when Client is First Time on Server
 
 lts_core_curVehicles = []; // All Parked out Vehicles
 lts_core_licenses = []; //All Licenses an Player has

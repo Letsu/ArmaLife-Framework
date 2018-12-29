@@ -24,5 +24,7 @@ _startBank  = getNumber (missionConfigFile >> "Config_Master" >> "StartBank");
 //Set Start Money
 lts_money_cash = _startMoney;
 lts_money_bank = _startBank;
+lts_core_firstSpawn = true;
+
 
 [_pid, _startMoney, _startBank, _licenses, _inv] remoteExec ["lts_db_fnc_createNewPlayer", 2];
