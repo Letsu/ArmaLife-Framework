@@ -92,8 +92,9 @@ class lts_framework {
 
     class gather {
         file = "core\gather";
-        class gather  {};
-        class process {};
+        class gather     {};
+        class process    {};
+        class initGather {};
     };
 
     class player {
