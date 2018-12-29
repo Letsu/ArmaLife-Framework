@@ -1,0 +1,11 @@
+All
+Ausweiß zeigen
+
+Cop & Med
+Ticket/Rechnung Ausstellen
+
+Cop Only
+Lizenzen/Häuser überprüfen(vlt. über Wanted)
+Fahrzeug besitzer/Nummerschild Abfragen
+
+Med Only
