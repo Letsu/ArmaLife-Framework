@@ -35,4 +35,4 @@ player setVariable ["serviceNumber", _sn, true];
 
 [_sn, _pid, _level] remoteExec ["lts_db_fnc_createNewMed", 2];
 
-[0, ""];
+[0, nil];
