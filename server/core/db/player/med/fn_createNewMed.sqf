@@ -20,7 +20,7 @@ _medLevel = param [2];
 _data = format ["0:Med:CreateMed:%1:%2:%3",
     _sn,
     _pid,
-    _copLevel
+    _medLevel
     ];
 
 _query = call compile ("extDB3" callExtension _data);
