@@ -14,8 +14,8 @@
  * Public: [Yes/No]
  */
 allServiceNumbers = [];
-private _copSN = call compile ("extDB3" callExtension "0:Cop:GetServiceNumbers");
-private _medSN = call compile ("extDB3" callExtension "0:Med:GetServiceNumbers");
+private _copSN = call compile ("extDB3" callExtension "0:Cop:GetCopServiceNumbers");
+private _medSN = call compile ("extDB3" callExtension "0:Med:GetMedServiceNumbers");
 //_query = parseSimpleArray _query;
 
 _copSN = _copSN select 1;
