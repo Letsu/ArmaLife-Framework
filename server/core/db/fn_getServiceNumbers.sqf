@@ -13,7 +13,7 @@
  *
  * Public: [Yes/No]
  */
-
+allServiceNumbers = [];
 private _copSN = call compile ("extDB3" callExtension "0:Cop:GetServiceNumbers");
 private _medSN = call compile ("extDB3" callExtension "0:Med:GetServiceNumbers");
 //_query = parseSimpleArray _query;
@@ -23,10 +23,12 @@ _medSN = _medSN select 1;
 
 {
     allServiceNumbers pushBackUnique (parseNumber _x);
+    diag_log _x;
 } forEach _copSN;
 
 {
     allServiceNumbers pushBackUnique (parseNumber _x);
+    diag_log _x;
 } forEach _medSN;
 
 // allServiceNumbers = _copSN + _medSN;
