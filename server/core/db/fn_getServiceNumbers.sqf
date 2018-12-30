@@ -22,12 +22,12 @@ _copSN = _copSN select 1;
 _medSN = _medSN select 1;
 
 {
-    allServiceNumbers pushBackUnique (parseNumber _x);
+    allServiceNumbers pushBackUnique (parseNumber (_x select 0));
     diag_log _x;
 } forEach _copSN;
 
 {
-    allServiceNumbers pushBackUnique (parseNumber _x);
+    allServiceNumbers pushBackUnique (parseNumber (_x select 0);
     diag_log _x;
 } forEach _medSN;
 
