@@ -21,3 +21,5 @@ if (_newLevel == 0) exitWith { ["Cop Update send an Request to Update to Level 0
 
 ["Your Cop Level synced to the Database!"] call lts_fnc_log;
 [_pid, _newLevel] remoteExec ["lts_db_fnc_updateCopLevel", 2];
+
+[0, nil];
