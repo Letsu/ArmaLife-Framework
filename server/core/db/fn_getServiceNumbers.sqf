@@ -18,16 +18,20 @@ private _copSN = call compile ("extDB3" callExtension "0:Cop:GetServiceNumbers")
 private _medSN = call compile ("extDB3" callExtension "0:Med:GetServiceNumbers");
 //_query = parseSimpleArray _query;
 
+diag_log _copSN;
+diag_log _medSN;
 _copSN = _copSN select 1;
+_copSN = _copSN select 0;
 _medSN = _medSN select 1;
+_copSN = _copSN select 0;
 
 {
-    allServiceNumbers pushBackUnique (parseNumber (_x select 0));
+    allServiceNumbers pushBackUnique (parseNumber _x);
     diag_log _x;
 } forEach _copSN;
 
 {
-    allServiceNumbers pushBackUnique (parseNumber (_x select 0);
+    allServiceNumbers pushBackUnique (parseNumber _x);
     diag_log _x;
 } forEach _medSN;
 
