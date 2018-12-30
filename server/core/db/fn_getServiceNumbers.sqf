@@ -21,5 +21,13 @@ private _medSN = call compile ("extDB3" callExtension "0:Med:GetServiceNumbers")
 _copSN = _copSN select 1;
 _medSN = _medSN select 1;
 
- allServiceNumbers = _copSN + _medSN;
+{
+    allServiceNumbers pushBackUnique (parseNumber _x);
+} forEach _copSN;
+
+{
+    allServiceNumbers pushBackUnique (parseNumber _x);
+} forEach _medSN;
+
+// allServiceNumbers = _copSN + _medSN;
  publicVariable "allServiceNumbers";
