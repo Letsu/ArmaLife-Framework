@@ -19,7 +19,10 @@ private _medSN = call compile ("extDB3" callExtension "0:Med:GetMedServiceNumber
 //_query = parseSimpleArray _query;
 
 _copSN = _copSN select 1;
+diag_log _copSN;
 _medSN = _medSN select 1;
+diag_log _medSN;
+
 
 {
     allServiceNumbers pushBackUnique (parseNumber (_x select 0));
