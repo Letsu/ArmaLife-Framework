@@ -22,9 +22,7 @@ private _medSN = call compile ("extDB3" callExtension "0:Med:GetMedServiceNumber
 //_query = parseSimpleArray _query;
 
 _copSN = _copSN select 1;
-diag_log _copSN;
 _medSN = _medSN select 1;
-diag_log _medSN;
 
 
 {
@@ -49,6 +47,15 @@ Vehicle Plates
 -------------*/
 allVehiclePlates = [];
 
+private _plates = call compile ("extDB3" callExtension "0:Vehicle:GetVehiclePlate");
+_plates = _plates select 1;
+
+_numPlates = [];
+{
+_numPlates pushBackUnique (parseNumber (_x select 0));
+} forEach _plates;
+
+allVehiclePlates = _numPlates;
 publicVariable "allVehiclePlates";
 /*------------
 End of Vehicle Plates
