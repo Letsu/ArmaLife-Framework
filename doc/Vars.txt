@@ -4,4 +4,13 @@ Docs file for all Public Vars
 
 
 Global Global
-allServiceNumbers:
+
+//--------------------------------------
+Name: allServiceNumbers
+Description: Contains all Service Numbers from Cops and Medics that are known in the database(also offline Players).
+Usage: Used to create Unique Service Numbers for all Sides that are need Service Numbers (e.g. Cop & Medic)
+//--------------------------------------
+Name: allVehiclePlates
+Description Contains all in Database known Vehicle Plates (also Vehicle parked and from offline Players)
+Usage: Need to create an Unique Number Platefor new vehicles and to query for teh Cops
+//-------------------------------------

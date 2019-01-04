@@ -47,9 +47,9 @@ End of Cop and Medic Service Numbers!
 /*-----------
 Vehicle Plates
 -------------*/
+allVehiclePlates = [];
 
-
-
+publicVariable "allVehiclePlates";
 /*------------
 End of Vehicle Plates
 ---------------*/
