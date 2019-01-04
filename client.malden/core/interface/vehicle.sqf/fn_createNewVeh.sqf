@@ -26,7 +26,6 @@ private _inv      = getItemCargo _vehicle;
 if (_ownPID isEqualTo "NONE") exitWith { ["Server try to Save Vehicle whitout Owner. Maybe this Vehicle is Cheated!"] call lts_fnc_log };
 if (_ownName isEqualTo "NONE") exitWith { ["Server try to Save Vehicle whitout Owner. Maybe this Vehicle is Cheated!"] call lts_fnc_log };
 
-
 //Send Request to Server!
 [_type, _ownPID, _keyOwn, _keyNames, _fuel, _inv] remoteExec ["lts_db_fnc_createNewVehicle", 2];
 

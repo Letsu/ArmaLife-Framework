@@ -33,11 +33,17 @@ _vehicle = _vehicleClass createVehicle _pos;
 //Add for for form Param given Owners!
 [_vehicle] call lts_fnc_addKeyToVeh;
 
-
 _ownerUID  = getPlayerUID _owner;
 _ownerName = name _owner;
 
+//Set Vehicle Plate
+_plate = random [100000, 500000, 999999];
+while {_plate in allVehiclePlates} do {
+    _plate = random [100000, 500000, 999999];
+};
+
 //Set some Variables on Veh
+_vehicle setVariable ["veh_plate", _plate];
 _vehicle setVariable [ "owner_uid" , _ownerUID  ]; //Steam64 ID of Owner of Vehicle
 _vehicle setVariable [ "owner_obj" , _owner  ]; //Obj of Owner
 _vehicle setVariable [ "owner_name", _ownerName ]; //Display Name of Owener of Vehicle
