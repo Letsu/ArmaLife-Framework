@@ -13,6 +13,9 @@
  *
  * Public: [Yes/No]
  */
+ /*--------------
+ Get Cop and Medic Service Numbers!
+ ----------------*/
 allServiceNumbers = [];
 private _copSN = call compile ("extDB3" callExtension "0:Cop:GetCopServiceNumbers");
 private _medSN = call compile ("extDB3" callExtension "0:Med:GetMedServiceNumbers");
@@ -34,5 +37,19 @@ diag_log _medSN;
     diag_log _x;
 } forEach _medSN;
 
-// allServiceNumbers = _copSN + _medSN;
- publicVariable "allServiceNumbers";
+//Make Value Public
+publicVariable "allServiceNumbers";
+
+/*------------
+End of Cop and Medic Service Numbers!
+-------------*/
+
+/*-----------
+Vehicle Plates
+-------------*/
+
+
+
+/*------------
+End of Vehicle Plates
+---------------*/

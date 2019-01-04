@@ -20,9 +20,9 @@ class lts_db {
 
   class db_core {
       file = "\server\core\db";
-      class createDB {};
-      class initDB   {};
-      class getServiceNumbers {};
+      class createDB   {};
+      class initDB     {};
+      class staticVars {};
   };
 
   class db_player {

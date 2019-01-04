@@ -35,7 +35,7 @@ _respawnPos = getMarkerPos "respawn";
 ["Finish Check if Database is Complet"] call lts_server_fnc_log;
 
 ["Get Static Global Variables"] call lts_server_fnc_log;
-[] call lts_db_fnc_getServiceNumbers;
+[] call lts_db_fnc_staticVars;
 ["Finish Getting Static Global Variables"] call lts_server_fnc_log;
 
 ["--------------------------------------------"] call lts_server_fnc_log;
