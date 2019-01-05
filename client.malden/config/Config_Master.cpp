@@ -9,6 +9,7 @@ class Config_Master {
     LogMoney = true; //Enable Money Logging. Needs A3Log!
     LogBuy   = true;
     LogItem  = true;
+    LogCheat = true; 
 
 
     /*

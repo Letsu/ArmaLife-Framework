@@ -23,8 +23,15 @@ private _fuel     = fuel _vehicle;
 private _inv      = getItemCargo _vehicle;
 
 //Some Checks
-if (_ownPID isEqualTo "NONE") exitWith { ["Server try to Save Vehicle whitout Owner. Maybe this Vehicle is Cheated!"] call lts_fnc_log };
-if (_ownName isEqualTo "NONE") exitWith { ["Server try to Save Vehicle whitout Owner. Maybe this Vehicle is Cheated!"] call lts_fnc_log };
+_exit = false;
+if (_ownPID isEqualTo "NONE") then { ["Server try to Save Vehicle whitout Owner. Maybe this Vehicle is Cheated!"] call lts_fnc_log;  _exit = true };
+if (_ownName isEqualTo "NONE") then { ["Server try to Save Vehicle whitout Owner. Maybe this Vehicle is Cheated!"] call lts_fnc_log; _exit = true };
+
+if (_exit) exitWith {
+    if (getNumber (missionConfigFile >> "Config_Master" >> "LogCheat")) then {
+        [ format ["Server Detected an Vehicle whitout Owner. The Vehicle is maybe Cheated! PlayerUID: %1 Vehicle Type: %2", getPlayerUID player, _type] ] call lts_log_fnc_logCheat;
+    };
+};
 
 //Send Request to Server!
 [_type, _ownPID, _keyOwn, _keyNames, _fuel, _inv] remoteExec ["lts_db_fnc_createNewVehicle", 2];

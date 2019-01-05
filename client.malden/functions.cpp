@@ -157,3 +157,15 @@ class lts_dialog {
         class pMenuSelect {};
     };
 };
+
+class log {
+    tag = "lts_log";
+
+    class log {
+        file = "core\functions\logging";
+        class logBuy   {};
+        class logCheat {};
+        class logItem  {};
+        class logMoney {};
+    };
+};
