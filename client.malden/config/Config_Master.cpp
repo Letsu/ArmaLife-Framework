@@ -1,4 +1,19 @@
+#define true 0
+#define false 1
+
 class Config_Master {
+    /*
+    Logging
+    Logging needs the Servermod A3Log!
+    */
+    LogMoney = true; //Enable Money Logging. Needs A3Log!
+    LogBuy   = true;
+    LogItem  = true;
+
+
+    /*
+    Global
+    */
     StartMoney = 0; //Amount of Money the Player has at first Join
     StartBank  = 100000; //Amount of Bank the Player has at first Join
 
