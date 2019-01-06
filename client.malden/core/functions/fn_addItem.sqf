@@ -1,5 +1,4 @@
-private [ "_fnc_addItems", "_item", "_amount", "_addToBackpack", "_typ", "_itemTyp", "_exit", "_aceItems"];
-/*
+ /*
  * Author: Johannes "Letus" Bindriem
  * To Add Items to PLayer Inventory when boaght an Item or Some other handels who an Weapon must add to the Player Inventory
  *
@@ -21,20 +20,19 @@ private [ "_fnc_addItems", "_item", "_amount", "_addToBackpack", "_typ", "_itemT
 //And befor the Weapon Acc.
 //IMPORTEN!!!!!!!
 
-_item          = param[0];
-_amount        = param[1, 1];
-_addToBackpack = param [2, false];
+private _item          = param[0];
+private _amount        = param[1, 1];
+private _addToBackpack = param [2, false];
 
 
-_typ = [_item] call BIS_fnc_itemType;
-_itemTyp = _typ select 0;
-_exit = false;
+private _typ = [_item] call BIS_fnc_itemType;
+private _itemTyp = _typ select 0;
+private _exit = false;
 
 //Init some Functions
-_fnc_addItems = {
-    private ["_item", "_amount"];
-    _item param [0, ""];
-    _amount = param [1, 1];
+private _fnc_addItems = {
+    private _item   =  param [0, ""];
+    private _amount = param [1, 1];
 
     for "_i" from 1 to _amount do {
         player additem _item; //Check if player can add more than fits?
@@ -54,7 +52,7 @@ if (_itemTyp isEqualTo "Weapon") then {
 
 
     //Get the Weapon Typ and send it to lts_fnc_addWeapon;
-    _weaponTyp = _typ select 1;
+    private _weaponTyp = _typ select 1;
     [_item, _weaponTyp] call lts_fnc_addWeapon;
 
 
@@ -72,7 +70,7 @@ if (_itemTyp isEqualTo "Equipment") then {
 
     if (_addToBackpack) exitWith { [_item, _amount] call lts_fnc_addToBackpack; _exit = true; };
 
-    _clotTyp = _typ select 1;
+    private _clotTyp = _typ select 1;
 
     if (_clotTyp isEqualTo "Uniform") exitWith {
         player addUniform _item;
@@ -105,7 +103,7 @@ if (_exit) exitWith {};
 if (_itemTyp isEqualTo "Item") then {
     if (_addToBackpack) exitWith { [_item, _amount] call lts_fnc_addToBackpack; _exit = true; };
 
-    _itemOtherTyp = _typ select 1;
+    private _itemOtherTyp = _typ select 1;
 
 
     if (_itemOtherTyp isEqualTo "GPS") exitWith {
@@ -141,7 +139,7 @@ if (_exit) exitWith {};
 
 
 //Check if Item is Ace Item and give the Item to the Player Inv.
-_biPod = ["bipod_03_F_blk", "bipod_02_F_blk", "bipod_01_F_blk", "bipod_02_F_hex", "bipod_01_F_khk", "bipod_01_F_mtp", "bipod_03_F_oli", "bipod_01_F_snd", "bipod_02_F_tan"];
+private _biPod = ["bipod_03_F_blk", "bipod_02_F_blk", "bipod_01_F_blk", "bipod_02_F_hex", "bipod_01_F_khk", "bipod_01_F_mtp", "bipod_03_F_oli", "bipod_01_F_snd", "bipod_02_F_tan"];
 if (_itemTyp in _biPod) then {
     if (_addToBackpack) exitWith { [_item, _amount] call lts_fnc_addToBackpack; _exit = true };
     [_item, _amount] call _fnc_addItems;

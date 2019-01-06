@@ -14,10 +14,10 @@
  *
  */
 
-_arr = param [0];
-_value = param [1, ""];
+private _arr = param [0];
+private _value = param [1, ""];
 
-_newArr = [];
+private _newArr = [];
 {
     if !(_x isEqualTo _value) then {_x pushBack _newArr};
 } forEach _arr;

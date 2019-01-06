@@ -1,4 +1,3 @@
-private [ "_weapon", "_type", "_weapon", "_item" ];
 /*
  * Author: Johannes "Letus" Bindriem
  * Adds an Weapon to the PLayer Inv or Backpack
@@ -15,9 +14,9 @@ private [ "_weapon", "_type", "_weapon", "_item" ];
  *
  */
 
-_item = param [0, ""];
-_type = param[1, "AssaultRifle"];
-_weapon = "";
+private _item = param [0, ""];
+private _type = param[1, "AssaultRifle"];
+private _weapon = "";
 
 //Check wich type of Weapon the Player has and if the Weapon slot is full
 if (_type == "AssaultRifle") then { _weapon = primaryWeapon player } else { if (_type == "Handgun") then { _weapon = handgunWeapon player } else { _weapon = secondaryWeapon player }/*End IF*/; }/*End Else*/;

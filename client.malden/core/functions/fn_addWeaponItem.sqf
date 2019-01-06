@@ -1,19 +1,19 @@
 /*
  * Author: Johannes "Letus" Bindriem
- * [Description]
+ * Adds an Weapon Accessory to an Weapon or when already one exist to the Inventory
  *
  * Arguments:
- * 0: Argument Name <TYPE>
+ * 0: Item [String]
+ * 1: Weapon Type [String]
  *
  * Return Value:
- * Return Name <TYPE>
+ * NONE
  *
  * Example:
- * ["example"] call ace_[module]_fnc_[functionName]
+ * ["item", "typ"] call lts_fnc_addWeaponItem
  *
- * Public: [Yes/No]
  */
 
 
-_item = param [0, ""];
-_typ  = param [1, "AssaultRifle"];
+private _item = param [0, ""];
+private _typ  = param [1, "AssaultRifle"];

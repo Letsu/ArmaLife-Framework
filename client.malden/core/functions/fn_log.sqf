@@ -14,6 +14,6 @@ private ["_msg"];
  * ["MSG"] call lts_fnc_log
  *
  */
-_msg = _this select 0;
+private _msg = _this select 0;
 
 diag_log _msg;
