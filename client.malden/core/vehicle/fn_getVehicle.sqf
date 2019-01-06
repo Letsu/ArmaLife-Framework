@@ -1,4 +1,3 @@
-private ["_vehicle", "_arr", "_pos"];
 /*
  * Author: Johannes "Letus" Bindriem
  * Give back the Pos of the vehicle in the Vehicle Array.
@@ -14,11 +13,11 @@ private ["_vehicle", "_arr", "_pos"];
  *
  */
 
-_vehicle = param [0, objNull];
+private _vehicle = param [0, objNull];
 
 
-_arr = 0;
-_pos = 0;
+private _arr = 0;
+private _pos = 0;
 {
     if (_x isEqualTo _vehicle) exitWith {_pos = _arr};
 

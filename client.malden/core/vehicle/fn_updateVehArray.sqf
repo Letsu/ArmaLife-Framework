@@ -1,4 +1,3 @@
-private ["_newArray"];
 /*
  * Author: Johannes "Letus" Bindriem
  * Sort the Vehicle Array and check for Null Obj.
@@ -14,7 +13,7 @@ private ["_newArray"];
  *
  */
 
-_newArray = [];
+private _newArray = [];
 
 {
     if !(_x isEqualTo objNull) then { _newArray pushBackUnique _x };

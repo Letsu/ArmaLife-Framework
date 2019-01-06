@@ -1,4 +1,3 @@
-private ["_vehicleClass", "_pos", "_vehicle"];
 /*
  * Author: Johannes "Letus" Bindriem
  * Create an Vehicle on given Pos and add the vehicle to the Player
@@ -20,24 +19,24 @@ private ["_vehicleClass", "_pos", "_vehicle"];
  *
  */
 
-_vehicleClass = param [0, ""];
-_pos          = param [1, [0, 0, 0]];
-_owner        = param [2, player]; //Optional
+private _vehicleClass = param [0, ""];
+private _pos          = param [1, [0, 0, 0]];
+private _owner        = param [2, player]; //Optional
 //Add for at Add to Key to add Mutiplay owners on init!
-_keyUIDs      = param [4, [(getPlayerUID player)]]; //Optional
-_keyNames     = param [5, [(name player)]]; //Optional
+private _keyUIDs      = param [4, [(getPlayerUID player)]]; //Optional
+private _keyNames     = param [5, [(name player)]]; //Optional
 
 //Create the Vehicle at given Pos
-_vehicle = _vehicleClass createVehicle _pos;
+private _vehicle = _vehicleClass createVehicle _pos;
 //Add Vehicle in Vehicle Array
 //Add for for form Param given Owners!
 [_vehicle] call lts_fnc_addKeyToVeh;
 
-_ownerUID  = getPlayerUID _owner;
-_ownerName = name _owner;
+private _ownerUID  = getPlayerUID _owner;
+private _ownerName = name _owner;
 
 //Set Vehicle Plate
-_plate = random [100000, 500000, 999999];
+private _plate = random [100000, 500000, 999999];
 while {_plate in allVehiclePlates} do {
     _plate = random [100000, 500000, 999999];
 };

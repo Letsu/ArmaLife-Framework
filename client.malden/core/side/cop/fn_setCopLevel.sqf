@@ -13,8 +13,8 @@
  *
  */
 
-_newLevel = param [0, 1];
-_oldLevel = lts_cop_level;
+private _newLevel = param [0, 1];
+private _oldLevel = lts_cop_level;
 
 if (_oldLevel isEqualTo 0) then { /*Send Request to Interface*/ };
 
