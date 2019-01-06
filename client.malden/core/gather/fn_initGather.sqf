@@ -10,7 +10,7 @@
  * NONE
  *
  * Example:
- * [] call lts_server_fnc_initGather;
+ * [] call lts_fnc_initGather;
  *
  */
 {
