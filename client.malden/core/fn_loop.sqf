@@ -21,7 +21,7 @@ private _fnc_food = {
         case (0): {[""] call lts_fnc_hint};// Add Death whit ACE
     };
 
-    lts_core_food = lts_core_food - 5;
+    [5, 1] call lts_fnc_eat;
 };
 
 private _fnc_thirst = {
@@ -32,7 +32,7 @@ private _fnc_thirst = {
         case (0): {[""] call lts_fnc_hint};// Add Death whit ACE
     };
 
-    lts_core_thirst = lts_core_thirst - 5;
+    [5, 1] call lts_fnc_drink;
 };
 
 

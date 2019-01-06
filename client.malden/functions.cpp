@@ -77,6 +77,8 @@ class lts_framework {
         class addToBackpack  {};
         class getDisplayName {};
         class deleteFormArr  {};
+        class drink          {};
+        class eat            {};
     };
 
     class respawn {
