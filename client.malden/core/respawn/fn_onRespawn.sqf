@@ -1,4 +1,3 @@
-private ["_newUnit", "_oldUnit", "_respawn", "_respawnDelay"];
 /*
  * Author: Johannes "Letus" Bindriem
  * [Description]
@@ -29,8 +28,8 @@ Acts_SittingWounded_loop
 
 
 
-_newUnit = _this select 0;
-_oldUnit = _this select 1;
+private _newUnit = _this select 0;
+private _oldUnit = _this select 1;
 
 [] call lts_dialog_fnc_callSpawn;
 
