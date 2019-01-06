@@ -13,14 +13,14 @@
  *
  */
 
-_sn = param [0];
-_pid = param [1];
-_copLevel = param [2];
+private _sn = param [0];
+private _pid = param [1];
+private _copLevel = param [2];
 
-_data = format ["0:Cop:CreateCop:%1:%2:%3",
+private _data = format ["0:Cop:CreateCop:%1:%2:%3",
     _sn,
     _pid,
     _copLevel
     ];
 
-_query = call compile ("extDB3" callExtension _data);
+private _query = call compile ("extDB3" callExtension _data);

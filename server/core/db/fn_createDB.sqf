@@ -13,6 +13,7 @@
  * [] call lts_db_fnc_createDB;
  *
  */
+private _query = [];
 
 //create Player DB table
 _query = call compile ("extDB3" callExtension "0:CreateDB:CreatePlayerDB");

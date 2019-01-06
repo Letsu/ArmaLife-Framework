@@ -8,11 +8,6 @@ class lts_server {
         file = "\server\core\functions";
         class log {};
     };
-
-    class gather {
-        file = "\server\core\gather";
-        class initGather {};
-    };
 };
 
 class lts_db {
