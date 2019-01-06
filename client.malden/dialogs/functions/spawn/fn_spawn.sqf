@@ -1,4 +1,3 @@
-private["_dispaly", "_spawnList", "_spawnButton", "_curSel", "_spawnMarker", "_spawnPos", "_spawnName", "_oldPlayerPos", "_heightPlayerPos"];
 /*
  * Author: Johannes "Letus" Bindriem
  * Executed when player press the Spawn button on the Spawn Menu
@@ -16,14 +15,14 @@ private["_dispaly", "_spawnList", "_spawnButton", "_curSel", "_spawnMarker", "_s
  */
 
 //Get the Dialog Controls and the Data
-_display     = findDisplay 60001;
-_spawnList   = _display displayCtrl 1500;
-_spawnButton = _display displayCtrl 1600;
+private _display     = findDisplay 60001;
+private _spawnList   = _display displayCtrl 1500;
+private _spawnButton = _display displayCtrl 1600;
 
-_curSel      = lbCurSel _spawnList;
-_spawnMarker =  _spawnList lbData _curSel;
-_spawnPos    = getMarkerPos _spawnMarker;
-_spawnName   = _spawnList lbText _curSel;
+private _curSel      = lbCurSel _spawnList;
+private _spawnMarker =  _spawnList lbData _curSel;
+private _spawnPos    = getMarkerPos _spawnMarker;
+private _spawnName   = _spawnList lbText _curSel;
 
 //Delete Cam and Light
 spawn_cam cameraEffect ["TERMINATE","BACK"];
