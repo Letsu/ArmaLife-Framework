@@ -13,7 +13,6 @@
  * Example:
  * [target, player, Params] call lts_cop_fnc_requestLicense
  *
- * Public: [Yes/No]
  */
 
  private _target       = param [0];
