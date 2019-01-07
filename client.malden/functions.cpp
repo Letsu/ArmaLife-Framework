@@ -105,6 +105,7 @@ class lts_framework {
         class hasLicense    {};
         class removeLicense {};
         class setPlayerCore {};
+        class getLicenses   {};
     };
 
     class vehicle {
