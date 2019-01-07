@@ -1,17 +1,19 @@
 /*
  * Author: Johannes "Letus" Bindriem
- * [Description]
+ * Revice data from lts_fnc_getLicense(lts_cop_fnc_requestLicense) for return license from player to Cop
  *
  * Arguments:
- * 0: Argument Name <TYPE>
+ * 0: Target from Ace Interaction [Object]
+ * 1: Player from Ace Interaction [Object]
+ * 2: action Parms from Ace Interaction [Array]
+ * 3: Licenses form Target [Array]
  *
  * Return Value:
- * Return Name <TYPE>
+ * NONE
  *
  * Example:
- * ["example"] call ace_[module]_fnc_[functionName]
+ * [player, cop, param, licenses] remoteExec ["lts_cop_fnc_getLicense", cop];
  *
- * Public: [Yes/No]
  */
 
 private _target       = param [0];
@@ -27,4 +29,4 @@ _licenseArr = [];
     };
 } forEach _licenses;
 
-//Out Put _licenseArr
+//Output _licenseArr

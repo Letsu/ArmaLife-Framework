@@ -1,17 +1,18 @@
 /*
  * Author: Johannes "Letus" Bindriem
- * [Description]
+ * Send Player Licenses to Cop
  *
  * Arguments:
- * 0: Argument Name <TYPE>
+ * 0: Target from Ace Interaction [Object]
+ * 1: Player from Ace Interaction [Object]
+ * 2: action Parms from Ace Interaction [Array]
  *
  * Return Value:
- * Return Name <TYPE>
+ * NONE
  *
  * Example:
- * ["example"] call ace_[module]_fnc_[functionName]
+ * [target, player, params] remoteExec ["lts_fnc_getLicense", target];
  *
- * Public: [Yes/No]
  */
 
  private _player       = param [0];

@@ -1,15 +1,17 @@
 /*
  * Author: Johannes "Letus" Bindriem
- * [Description]
+ * Send request to Player to get his Licenses (return to lts_cop_fnc_getLicense)
  *
  * Arguments:
- * 0: Argument Name <TYPE>
+ * 0: Target from Ace Interaction [Object]
+ * 1: Player from Ace Interaction [Object]
+ * 2: action Parms from Ace Interaction [Array]
  *
  * Return Value:
- * Return Name <TYPE>
+ * NONE
  *
  * Example:
- * ["example"] call ace_[module]_fnc_[functionName]
+ * [target, player, Params] call lts_cop_fnc_requestLicense
  *
  * Public: [Yes/No]
  */
