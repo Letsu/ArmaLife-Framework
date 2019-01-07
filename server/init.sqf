@@ -19,10 +19,10 @@ publicVariable "lts_server_setupFinish";
 ["------ Start of Server Initalisation  ------"] call lts_server_fnc_log;
 ["--------------------------------------------"] call lts_server_fnc_log;
 
-_successfully = false;
+private _successfully = false;
 
 ["Handeling Objects on Map"] call lts_server_fnc_log;
-_respawnPos = getMarkerPos "respawn";
+private _respawnPos = getMarkerPos "respawn";
 "respawn" setMarkerPos [_respawnPos select 0, _respawnPos select 1, 90];
 ["Finish Handeling Objects on Map"] call lts_server_fnc_log;
 
