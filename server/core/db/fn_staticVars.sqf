@@ -46,13 +46,11 @@ Vehicle Plates
 allVehiclePlates = [];
 
 private _plates = call compile ("extDB3" callExtension "0:Vehicle:GetVehiclePlate");
-diag_log str(_plates);
 _plates = _plates select 1;
-diag_log str(_plates);
+
 
 _numPlates = [];
 {
-    diag_log str(_x);
     _numPlates pushBackUnique (parseNumber (_x select 0));
 } forEach _plates;
 

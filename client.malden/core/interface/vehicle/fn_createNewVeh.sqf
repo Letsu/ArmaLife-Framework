@@ -33,6 +33,7 @@ if (_exit) exitWith {
     };
 };
 
+hint "Vehicle Created!";
 //Send Request to Server!
 [_type, _ownPID, _keyOwn, _keyNames, _fuel, _inv] remoteExec ["lts_db_fnc_createNewVehicle", 2];
 
