@@ -24,10 +24,11 @@ private _inv      = param [3, getUnitLoadout player];
 
 lts_money_cash    = _money;
 //logging Action whit Money
+/*
 if ( (getNumber (getMissionConfig >> "Config_Master" >> "LogMoney")) isEqualTo 0 ) then {
-    
-};
 
+};
+*/
 lts_money_bank    = _bank;
 lts_core_licenses = _licenses;
 
