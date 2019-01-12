@@ -12,7 +12,7 @@
  * [vehicle] call lts_interface_fnc_createNewVeh
  *
  */
- 
+
 private _vehicle  = param [0];
 private _type     = typeOf _vehicle;
 private _plate   = _vehicle getVariable ["veh_plate", 000000];
@@ -34,7 +34,6 @@ if (_exit) exitWith {
     };
 };
 
-hint "Vehicle Created!";
 //Send Request to Server!
 [_plate, _type, _ownPID, _ownName, _keyOwn, _keyNames, _fuel, _inv] remoteExec ["lts_db_fnc_createNewVehicle", 2];
 
