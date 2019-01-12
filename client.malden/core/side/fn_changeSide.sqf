@@ -24,7 +24,7 @@ private _isSide = false;
 } forEach ("true" configClasses (missionConfigFile >> "Config_Side"));
 
 private _curSide = lts_core_curSide;
-if (_newSide isEqualTo _curSide) exitWith { ["Du bist schon auf dieser Seite!"]] call lts_fnc_hint }; //Add Stringtable
+if (_newSide isEqualTo _curSide) exitWith { ["Du bist schon auf dieser Seite!"] call lts_fnc_hint }; //Add Stringtable
 
 //Get Vars from Config
 private _sideVar = getText (missionConfigFile >> "Config_Side" >> _newSide >> "Var"); //Hopefully Same as _newSide maybe delete this
