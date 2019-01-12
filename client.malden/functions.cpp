@@ -64,7 +64,7 @@ class lts_interface {
 
     class vehicle_interface {
         file = "core\interface\vehicle";
-        class createNewVehicle {};
+        class createNewVeh {};
         class destroyVehicle   {};
         class disableVehicle   {};
         class enableVehicle    {};
