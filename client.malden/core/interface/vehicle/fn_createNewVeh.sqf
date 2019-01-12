@@ -11,10 +11,11 @@
  * Example:
  * [vehicle] call lts_interface_fnc_createNewVeh
  *
- */
+ */veh_plate
 
 private _vehicle  = param [0];
 private _type     = typeOf _vehicle;
+private _plate   = _vehicle getVariable ["veh_plate", 000000];
 private _ownPID   = _vehicle getVariable ["owner_uid", "NONE"];
 private _ownName  = _vehicle getVariable ["owner_name", "NONE"];
 private _keyOwn   = _vehicle getVariable ["key_uids", []];
@@ -35,6 +36,6 @@ if (_exit) exitWith {
 
 hint "Vehicle Created!";
 //Send Request to Server!
-[_type, _ownPID, _keyOwn, _keyNames, _fuel, _inv] remoteExec ["lts_db_fnc_createNewVehicle", 2];
+[_plate, _type, _ownPID, _ownName, _keyOwn, _keyNames, _fuel, _inv] remoteExec ["lts_db_fnc_createNewVehicle", 2];
 
 [0, nil];
