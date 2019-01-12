@@ -62,14 +62,14 @@ class lts_interface {
         class updateMedLevel {};
     };
 
-    class vehicle {
+    class vehicle_interface {
         file = "core\interface\vehicle";
         class createNewVehicle {};
         class destroyVehicle   {};
         class disableVehicle   {};
         class enableVehicle    {};
         class updateVehFuel    {};
-        class updateVehKeys    {};   
+        class updateVehKeys    {};
     };
 };
 
