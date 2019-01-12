@@ -61,6 +61,16 @@ class lts_interface {
         class requestMedData {};
         class updateMedLevel {};
     };
+
+    class vehicle {
+        file = "core\interface\vehicle";
+        class createNewVehicle {};
+        class destroyVehicle   {};
+        class disableVehicle   {};
+        class enableVehicle    {};
+        class updateVehFuel    {};
+        class updateVehKeys    {};   
+    };
 };
 
 //Framework Files
