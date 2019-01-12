@@ -14,17 +14,17 @@
  * Public: [Yes/No]
  */
 
- _dispaly = findDisplay 90001;
- _lb      = _dispaly displayCtrl 1500;
- _header  = _dispaly displayCtrl 1001;
+ private _dispaly = findDisplay 90001;
+ private _lb      = _dispaly displayCtrl 1500;
+ private _header  = _dispaly displayCtrl 1001;
 
- _curSel = lbCurSel _lb;
+ private _curSel = lbCurSel _lb;
 
-_data      = _lb lbData _curSel;
-_dataSplit = _data splitString ",";
+private _data      = _lb lbData _curSel;
+private _dataSplit = _data splitString ",";
 
 
-_func  = _dataSplit select 0;
-_class = _dataSplit select 1;
+private _func  = _dataSplit select 0;
+private _class = _dataSplit select 1;
 
 [] call (call (compile _func));

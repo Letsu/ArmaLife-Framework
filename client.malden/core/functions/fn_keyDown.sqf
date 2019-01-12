@@ -1,4 +1,3 @@
-private ["_display", "_key", "_shift", "_ctrl", "_alt", "_disableKey"];
 /*
  * Author: Johannes "Letus" Bindriem
  * Function called by Eventhandler for Action by KeyDown.
@@ -19,18 +18,19 @@ private ["_display", "_key", "_shift", "_ctrl", "_alt", "_disableKey"];
  * [Display, Key, Shift, Ctrl, Alt] call lts_fnc_keyDown
  *
  */
-_display = param [0];
-_key     = param [1];
-_shift   = param [2];
-_ctrl    = param [3];
-_alt     = param [4];
 
-_disableKey = false;
+private _display = param [0];
+private _key     = param [1];
+private _shift   = param [2];
+private _ctrl    = param [3];
+private _alt     = param [4];
+
+private _disableKey = false;
 
 switch (_key) do {
     case (24): {
         //Get Vehicle if Player in Vehicle Player Vehicle if not the CursourTarget
-        _veh = "";
+        private _veh = "";
         if (isNull objectParent player) then {
             _veh = cursorObject;
         } else {
@@ -39,8 +39,9 @@ switch (_key) do {
 
         //Some CHecks
         if (!(_veh isKindOf "AllVehicles")) exitWith {};
-        //Need to ENABLE when Server is Live!!!!!!! if (_veh in lts_core_curVehicles) exitWith {};
-        _locked = locked _veh;
+        if (_veh in lts_core_curVehicles) exitWith {};
+
+        private _locked = locked _veh;
 
         if (_locked == 1) then { //Vehicle is Unlocked so Lock Vehicle
             _veh lock true; //Check if is Global or only Local

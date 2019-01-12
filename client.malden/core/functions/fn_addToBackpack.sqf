@@ -1,4 +1,3 @@
-private ["_item", "_ammount", "_fits"];
 /*
  * Author: Johannes "Letus" Bindriem
  * Function to add Item to Players Backpack
@@ -14,11 +13,11 @@ private ["_item", "_ammount", "_fits"];
  * [] call lts_fnc_addToBackpack
  *
  */
-_item    = param[0];
-_ammount = param[1, 1];
+private _item    = param[0];
+private _ammount = param[1, 1];
 
 //Check if Item can Put to Backpack or its to Large.
-_fits = player canAddItemToBackpack _item;
+private _fits = player canAddItemToBackpack _item;
 if (!_fits) exitWith { ["Du hast kein Platz um das Item zu Kaufen!"] call lts_fnc_hint };
 
  //Add Item to Backpack from Player!

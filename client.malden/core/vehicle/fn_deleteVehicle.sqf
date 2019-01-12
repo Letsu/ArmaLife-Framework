@@ -1,4 +1,3 @@
-private ["_veh"];
 /*
  * Author: Johannes "Letus" Bindriem
  * Löscht das Fahrzeug
@@ -14,7 +13,7 @@ private ["_veh"];
  *
  */
 
-_veh = param [0, objNull];
+private _veh = param [0, objNull];
 
 //REmove Vehicle form Array
 [_veh] call lts_fnc_removeVehicleFromPlayer;

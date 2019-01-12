@@ -9,12 +9,12 @@
  * Displayname of Item [String]
  *
  * Example:
- * ["ClassName"] call lts_fnc_getDisplayName
+ * ["Class"] call lts_fnc_getDisplayName
  *
  */
 
-_item = param [0, ""];
-_config = "";
+private _item = param [0, ""];
+private _config = "";
 
  switch (true) do {
      case(isClass(configFile >> "CfgMagazines" >> _item)): {_config = "CfgMagazines"};
@@ -23,6 +23,6 @@ _config = "";
      case(isClass(configFile >> "CfgGlasses" >> _item))  : {_config = "CfgGlasses"};
  };
 
-_name = getText (configFile >> _config >> _item >> "displayName");
+private _name = getText (configFile >> _config >> _item >> "displayName");
 
  _name;

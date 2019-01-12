@@ -13,10 +13,14 @@
  *
  */
 
-_newLevel = param [0, 1];
-_oldLevel = lts_cop_level;
+private _newLevel = param [0, 1];
+private _oldLevel = lts_cop_level;
 
-if (_oldLevel isEqualTo 0) then { /*Send Request to Interface*/ };
+if (_oldLevel isEqualTo 0) exitWith { ["Send Request to Set Cop Level from 0! Abort! When you will create an new cop call lts_cop_fnc_createCop!"] call lts_fnc_log };
 
-[format ["Du wurdest gerade von Level %1 auf %2 Befördert!"]] call lts_fnc_hint;
+[ format ["Du wurdest gerade von Level %1 auf %2 Befördert!", _oldLevel, _newLevel] ] call lts_fnc_hint;
 lts_cop_level = _newLevel;
+
+
+//Update Cop Level
+[] call lts_interface_fnc_updateCopLevel;

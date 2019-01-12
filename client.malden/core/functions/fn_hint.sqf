@@ -1,4 +1,3 @@
-private ["_msg"];
 /*
  * Author: Johannes "Letus" Bindriem
  * Function to show an Hint on Player Screen
@@ -16,6 +15,6 @@ private ["_msg"];
  *
  */
 
-_msg = _this select 0;
+private _msg = _this select 0;
 
 hint _msg;

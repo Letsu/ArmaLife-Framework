@@ -1,4 +1,3 @@
-private ["_vehicle", "_pos"];
 /*
  * Author: Johannes "letus" Bindriem
  * [Description]
@@ -14,9 +13,9 @@ private ["_vehicle", "_pos"];
  *
  */
 
-_vehicle = param [0, objNull];
+private _vehicle = param [0, objNull];
 
-_pos = [_vehicle] call lts_fnc_getVehicle;
+private _pos = [_vehicle] call lts_fnc_getVehicle;
 
 //Set Vehicle as objNil because of
 lts_core_curVehicles set [_pos, objNull];

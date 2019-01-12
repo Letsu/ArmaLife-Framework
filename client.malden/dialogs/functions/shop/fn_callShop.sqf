@@ -16,7 +16,7 @@
  //Check if Display is opend and crate an Eventhandler to Disable the ESC Key that the Player can´t exit in Spawn screen
 waitUntil {!(isNull (findDisplay 46))};
 
-_shop = param [0, ""];
+private _shop = param [0, ""];
 if (_shop isEqualTo "") exitWith { ["None Class given on Shop Dialog Call!"] call lts_fnc_log };
 
 //Create the Dialog

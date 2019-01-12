@@ -1,4 +1,3 @@
-private ["side", "_oldSide"];
 /*
  * Author: Johannes "Letus" Bindriem
  * Exec on Site switch to init the Side spezific Scripts
@@ -15,8 +14,8 @@ private ["side", "_oldSide"];
  *
  */
 
-_side = param [0, "cop"];
-_oldSide = param [1, "civ"];
+private _side = param [0, "cop"];
+private _oldSide = param [1, "civ"];
 
 //Load Cop Loadout
 

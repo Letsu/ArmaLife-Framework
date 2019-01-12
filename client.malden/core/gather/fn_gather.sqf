@@ -1,4 +1,3 @@
-private ["_target", "_player", "_actionParams", "_item"];
 /*
  * Author: Johannes "Letus" Bindriem
  * Function for Gather Resources for Farming
@@ -20,13 +19,13 @@ private ["_target", "_player", "_actionParams", "_item"];
 This File MAYBE musst in the Server
 -----------------------------------*/
 
-_target = param [0];
-_player = param [1];
-_actionParams = param [2]; //Action Param dont working is giving evere Time Any from initGather!
-_item = _actionParams select 0;
+private _target = param [0];
+private _player = param [1];
+private _actionParams = param [2]; //Action Param dont working is giving evere Time Any from initGather!
+private _item = _actionParams select 0;
 
 //Get an Random Amount of Item
-_amount = random[1, 2, 4];
+private _amount = random[1, 2, 4];
 
 //Add Items
 [_item, _amount] call lts_fnc_addItem;

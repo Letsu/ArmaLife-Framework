@@ -1,9 +1,9 @@
 /*
- * Author: Johanens "Letus" Bindriem
- * Adds an Player to the Wanted List
+ * Author: Johannes 'Letus' Bindriem
+ * [Description]
  *
  * Arguments:
- * 0:
+ * 0: Argument Name <TYPE>
  *
  * Return Value:
  * Return Name <TYPE>
@@ -13,5 +13,3 @@
  *
  * Public: [Yes/No]
  */
-_type  = param [0, ""];
-_money = param [1, 0];

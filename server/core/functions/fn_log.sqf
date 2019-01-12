@@ -14,6 +14,6 @@
  * Public: [Yes/No]
  */
 
- _msg = param [0, ""];
+private _msg = param [0, ""];
 
- diag_log _msg;
+diag_log _msg;

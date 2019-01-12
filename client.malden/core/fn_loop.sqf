@@ -1,4 +1,3 @@
-private ["_fnc_food", "_fnc_thirst", "_food", "_thirst"];
 /*
  * Author: Johannes "Letus" Bindriem
  * The While excutet the whole Time and execute Commands thats need to Run in an FOrever Loop!
@@ -14,7 +13,7 @@ private ["_fnc_food", "_fnc_thirst", "_food", "_thirst"];
  *
  */
 
-_fnc_food = {
+private _fnc_food = {
     switch (lts_core_food) do {
         case (20): {["Du hast Hunger und Solltest was Essen!"] call lts_fnc_hint};
         case (10): {["Du hast Hunger und Solltest was Essen!"] call lts_fnc_hint};
@@ -22,10 +21,10 @@ _fnc_food = {
         case (0): {[""] call lts_fnc_hint};// Add Death whit ACE
     };
 
-    lts_core_food = lts_core_food - 5;
+    [5, 1] call lts_fnc_eat;
 };
 
-_fnc_thirst = {
+private _fnc_thirst = {
     switch (lts_core_food) do {
         case (20): {["Du hast Durst und Solltest was Trinken!"] call lts_fnc_hint};
         case (10): {["Du hast Durst und Solltest was Trinken!"] call lts_fnc_hint};
@@ -33,16 +32,16 @@ _fnc_thirst = {
         case (0): {[""] call lts_fnc_hint};// Add Death whit ACE
     };
 
-    lts_core_thirst = lts_core_thirst - 5;
+    [5, 1] call lts_fnc_drink;
 };
 
 
-_food = time;
-_thirst = time;
+private _foodTime = time;
+private _thirstTime = time;
 for "_i" from 0 to 1 step 0 do {
 
-    if ((time - _food) > 400 ) then { call _fnc_food; _food = time };
-    if ((time - _thirst) > 350 ) then { call _fnc_thirst; _thirst = time };
+    if ((time - _foodTime) > 400 ) then { call _fnc_food; _foodTime = time };
+    if ((time - _thirstTime) > 350 ) then { call _fnc_thirst; _thirstTime = time };
 
     uiSleep 10;
 };

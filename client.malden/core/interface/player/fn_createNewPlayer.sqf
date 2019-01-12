@@ -1,4 +1,3 @@
-private ["_pid", "_cash", "_bank", "_licenses", "_inv"];
 /*
  * Author: Johannes "Letus" Bindriem
  * Send request to Server[lts_db_fnc_createNewPlayer] to create an new Player in Database
@@ -14,12 +13,12 @@ private ["_pid", "_cash", "_bank", "_licenses", "_inv"];
  *
  */
 
-_pid = getPlayerUID player;
-_licenses = lts_core_licenses;
-_inv = getUnitLoadout player;
+private _pid = getPlayerUID player;
+private _licenses = lts_core_licenses;
+private _inv = getUnitLoadout player;
 
-_startMoney = getNumber (missionConfigFile >> "Config_Master" >> "StartMoney");
-_startBank  = getNumber (missionConfigFile >> "Config_Master" >> "StartBank");
+private _startMoney = getNumber (missionConfigFile >> "Config_Master" >> "StartMoney");
+private _startBank  = getNumber (missionConfigFile >> "Config_Master" >> "StartBank");
 
 //Set Start Money
 lts_money_cash = _startMoney;

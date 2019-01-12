@@ -77,6 +77,8 @@ class lts_framework {
         class addToBackpack  {};
         class getDisplayName {};
         class deleteFormArr  {};
+        class drink          {};
+        class eat            {};
     };
 
     class respawn {
@@ -103,6 +105,7 @@ class lts_framework {
         class hasLicense    {};
         class removeLicense {};
         class setPlayerCore {};
+        class getLicenses   {};
     };
 
     class vehicle {
@@ -155,5 +158,17 @@ class lts_dialog {
         class callPMenu   {};
         class fillPMenu   {};
         class pMenuSelect {};
+    };
+};
+
+class log {
+    tag = "lts_log";
+
+    class log {
+        file = "core\functions\logging";
+        class logBuy   {};
+        class logCheat {};
+        class logItem  {};
+        class logMoney {};
     };
 };

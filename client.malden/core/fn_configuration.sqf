@@ -28,17 +28,13 @@ lts_core_licenses = []; //All Licenses an Player has
 lts_money_cash = 0; //Cash of Player
 lts_money_bank = 0; //Bank Cash of Player
 
-//civ
-lts_civ_inv = []; //Needs to fill whit an Defualt Value
 
 //Cop
 lts_cop_level = 0; //Cop Level
-//lts_cop_inv = []; //Need to define in Site Init
 
 
 //Medic
 lts_med_level = 0;
-//lts_med_inv = []; //Need to define in Site Init
 
 //Init of Variables on the Player whit setVariable
 player setVariable ["serviceNumber", -1, true]; //Filled whit value when Player join as Cop or Medic
