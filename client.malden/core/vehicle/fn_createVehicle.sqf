@@ -46,3 +46,5 @@ _vehicle setVariable ["veh_plate", _plate];
 _vehicle setVariable [ "owner_uid" , _ownerUID  ]; //Steam64 ID of Owner of Vehicle
 _vehicle setVariable [ "owner_obj" , _owner  ]; //Obj of Owner
 _vehicle setVariable [ "owner_name", _ownerName ]; //Display Name of Owener of Vehicle
+
+[_vehicle] call lts_interface_fnc_createNewVeh;
