@@ -11,8 +11,8 @@
  * Example:
  * [vehicle] call lts_interface_fnc_createNewVeh
  *
- */veh_plate
-
+ */
+ 
 private _vehicle  = param [0];
 private _type     = typeOf _vehicle;
 private _plate   = _vehicle getVariable ["veh_plate", 000000];
