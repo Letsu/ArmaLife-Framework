@@ -1,14 +1,16 @@
+/*
 #define true 0
 #define false 1
+*/
 
 class Config_Master {
     /*
     Logging
     Logging needs the Servermod A3Log!
     */
-    LogMoney = true; //Enable Money Logging. Needs A3Log!
-    LogBuy   = true;
-    LogItem  = true;
+    LogMoney = 0; //Enable Money Logging. Needs A3Log!
+    LogBuy   = 0;
+    LogItem  = 0;
 
 
     /*
