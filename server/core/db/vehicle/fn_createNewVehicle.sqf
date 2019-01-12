@@ -39,4 +39,5 @@ _data = formatText ["0:Vehicle:CreateVehicle:%1:%2:%3:%4:%5:%6:%7:%8",
     _inv
     ];
 
+diag_log str(_data);
 _query = call compile ("extDB3" callExtension _data);
