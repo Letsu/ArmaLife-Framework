@@ -28,7 +28,7 @@ private _keyNames = param [5];
 private _fuel     = param [6];
 private _inv      = param [7]; //Own Table
 
-_data = formatText ["0:Vehicle:CreateVehicle:%1:%2:%3:%4:%5:%6:%7:%8",
+_data = format ["0:Vehicle:CreateVehicle:%1:%2:%3:%4:%5:%6:%7:%8",
     _plate,
     _type,
     _ownPID,
@@ -39,5 +39,4 @@ _data = formatText ["0:Vehicle:CreateVehicle:%1:%2:%3:%4:%5:%6:%7:%8",
     _inv
     ];
 
-diag_log str(_data);
 _query = call compile ("extDB3" callExtension _data);
