@@ -12,7 +12,7 @@
  * NONE
  *
  * Example:
- * [0] call lts_db_fnc_handlevehicle
+ * [0] call lts_db_fnc_handleVehicle
  *
  */
 
