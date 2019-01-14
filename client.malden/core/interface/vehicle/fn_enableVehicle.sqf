@@ -12,8 +12,10 @@
  * [veh] call lts_interface_fnc_enableVehicle
  *
  */
-private _vehicle = param [0];
+ private _vehicle = param [0];
+ private _plate = _vehicle getVariable ["veh_plate"];
 
-//send Request to Server
+ //send Request to Server
+ [2, _plate] remoteExec ["lts_db_fnc_handleVehicle", 2];
 
 [0, nil];
