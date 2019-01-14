@@ -13,7 +13,9 @@
  *
  */
 private _vehicle = param [0];
+private _plate = _vehicle getVariable ["veh_plate"];
 
 //send Request to Server
+[1, _plate] remoteExec ["lts_db_fnc_handleVehicle", 2];
 
 [0, nil];
