@@ -40,6 +40,7 @@ private _plate = random [100000, 500000, 999999];
 while {_plate in allVehiclePlates} do {
     _plate = random [100000, 500000, 999999];
 };
+allVehiclePlates pushBackUnique _plate;
 
 //Set some Variables on Veh
 _vehicle setVariable ["veh_plate", _plate];
