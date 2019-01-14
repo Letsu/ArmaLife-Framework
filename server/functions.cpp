@@ -26,6 +26,11 @@ class lts_db {
       class getPlayerData   {};
   };
 
+  class db_vehicle {
+      file = "\server\core\db\vehicle";
+      class createNewVehicle {};
+  };
+
   class db_cop {
       file = "\server\core\db\player\cop";
       class createNewCop   {};

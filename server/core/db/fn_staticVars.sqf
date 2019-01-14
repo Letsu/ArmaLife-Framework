@@ -27,12 +27,10 @@ _medSN = _medSN select 1;
 
 {
     allServiceNumbers pushBackUnique (parseNumber (_x select 0));
-    diag_log _x;
 } forEach _copSN;
 
 {
     allServiceNumbers pushBackUnique (parseNumber (_x select 0));
-    diag_log _x;
 } forEach _medSN;
 
 //Make Value Public
@@ -50,9 +48,10 @@ allVehiclePlates = [];
 private _plates = call compile ("extDB3" callExtension "0:Vehicle:GetVehiclePlate");
 _plates = _plates select 1;
 
+
 _numPlates = [];
 {
-_numPlates pushBackUnique (parseNumber (_x select 0));
+    _numPlates pushBackUnique (parseNumber (_x select 0));
 } forEach _plates;
 
 allVehiclePlates = _numPlates;

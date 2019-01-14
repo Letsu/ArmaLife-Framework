@@ -1,4 +1,4 @@
-available/*
+/*
  * Author: Johannes "Letus" Bindriem
  * Send an Request to the DB to set the available value to 0
  *
