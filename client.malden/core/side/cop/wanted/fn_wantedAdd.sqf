@@ -14,4 +14,6 @@
  * Public: [Yes/No]
  */
 _type  = param [0, ""];
-_money = param [1, 0];
+_cop   = param [1, objNull];
+_note  = param [2, ""];
+_fine  = param [3, 0];

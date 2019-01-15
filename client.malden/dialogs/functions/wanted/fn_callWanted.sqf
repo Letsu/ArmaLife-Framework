@@ -11,7 +11,11 @@
  * Example:
  * ["example"] call ace_[module]_fnc_[functionName]
  *
+ * Public: [Yes/No]
  */
 
-_note = param [0, ""];
-_from = param [1, objNull];
+waitUntil {!(isNull (findDisplay 46))};
+
+//Create the Dialog
+createDialog "WantedDialog";
+waitUntil {!(isNull (findDisplay 60001))};

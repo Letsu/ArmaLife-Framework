@@ -1,5 +1,5 @@
 /*
- * Author: Johannes "Letus" Bindriem
+ * Author: Johannes "letus" Bindriem
  * [Description]
  *
  * Arguments:
@@ -11,7 +11,5 @@
  * Example:
  * ["example"] call ace_[module]_fnc_[functionName]
  *
+ * Public: [Yes/No]
  */
-
-_note = param [0, ""];
-_from = param [1, objNull];

@@ -1,5 +1,5 @@
 /*
- * Author: Johannes "Letus" Bindriem
+ * Author: Johanens "Letus" Bindriem
  * [Description]
  *
  * Arguments:
@@ -13,5 +13,8 @@
  *
  */
 
-_note = param [0, ""];
-_from = param [1, objNull];
+//Get Note and Wanted List
+
+//set Wanted List
+
+//Set Note List
