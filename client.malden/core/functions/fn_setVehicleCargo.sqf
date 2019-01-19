@@ -32,6 +32,7 @@ _itemAmount = _item select 1;
 
 _index = 0;
 {
+    diag_log format ["Item: %1, %2", _x, _itemAmount select _index];
     _vehicle addItemCargo [_x, (_itemAmount select _index)];
     _index = _index + 1;
 } forEach _itemItem;
@@ -43,6 +44,7 @@ _magAmount = _mag select 1;
 
 _index = 0;
 {
+    diag_log format ["Mag: %1, %2", _x, _magAmount select _index];
     _vehicle addMagazineGlobal [_x, (_magAmount select _index)];
     _index = _index + 1;
 } forEach _magItem;
@@ -55,6 +57,7 @@ _weaponAmount = _weapon select 1;
 
 _index = 0;
 {
+    diag_log format ["Weapon: %1, %2", _x, _weaponAmount select _index];
     _vehicle addWeaponGlobal [_x, (_weaponAmount select _index)];
     _index = _index + 1;
 } forEach _weaponItem;
@@ -65,6 +68,7 @@ _backpackItem   = _backpack select 0;
 _backpackAmount = _backpack select 1;
 _index = 0;
 {
+    diag_log format ["Backpack: %1, %2", _x, _backpackAmount select _index];
     _vehicle addWeaponGlobal [_x, (_backpackAmount select _index)];
     _index = _index + 1;
 } forEach _backpackItem;
