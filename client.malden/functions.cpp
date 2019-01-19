@@ -79,16 +79,18 @@ class lts_framework {
 
     class functions {
         file = "core\functions";
-        class hint           {};
-        class log            {};
-        class keyDown        {};
-        class addItem        {};
-        class addWeapon      {};
-        class addToBackpack  {};
-        class getDisplayName {};
-        class deleteFormArr  {};
-        class drink          {};
-        class eat            {};
+        class hint            {};
+        class log             {};
+        class keyDown         {};
+        class addItem         {};
+        class addWeapon       {};
+        class addToBackpack   {};
+        class getDisplayName  {};
+        class deleteFormArr   {};
+        class drink           {};
+        class eat             {};
+        class setVehicleCargo {};
+        class getVehicleCargo {};
     };
 
     class respawn {
