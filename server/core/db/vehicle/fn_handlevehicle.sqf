@@ -17,7 +17,7 @@
  */
 
 _mode    = param [0, 0];
-_vehicle = param [1]
+_vehicle = param [1];
 
 diag_log format ["%1, %2", _mode, _vehicle];
 
