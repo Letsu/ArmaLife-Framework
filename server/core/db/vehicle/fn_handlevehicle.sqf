@@ -19,6 +19,8 @@
 _mode    = param [0, 0];
 _vehicle = param [1]
 
+diag_log format ["%1, %2", _mode, _vehicle];
+
 switch (_mode) do {
     case (0): /*Destroy Vehicle*/{
         diag_log "Mode 0";
