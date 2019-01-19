@@ -14,7 +14,7 @@
  * Public: [Yes/No]
  */
 
-_vehicle = param [0, objNull]
+_vehicle = param [0, objNull];
 _inv = param [1, []];
 
 if (_inv isEqualTo []) exitWith {};
