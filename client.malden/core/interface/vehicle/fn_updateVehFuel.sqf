@@ -13,6 +13,7 @@
  *
  */
 private _vehicle = param [0];
+private _plate = _vehicle getVariable ["veh_plate", 000000];
 private _fuel = fuel vehicle;
 
 //send Request to Server
