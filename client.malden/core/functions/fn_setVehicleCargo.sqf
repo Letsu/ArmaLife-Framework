@@ -69,6 +69,6 @@ _backpackAmount = _backpack select 1;
 _index = 0;
 {
     diag_log format ["Backpack: %1, %2", _x, _backpackAmount select _index];
-    _vehicle addWeaponCargoGlobal [_x, (_backpackAmount select _index)];
+    _vehicle addBackpackCargoGlobal [_x, (_backpackAmount select _index)];
     _index = _index + 1;
 } forEach _backpackItem;
