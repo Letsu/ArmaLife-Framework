@@ -21,7 +21,7 @@ private _ownName  = _vehicle getVariable ["owner_name", "NONE"];
 private _keyOwn   = _vehicle getVariable ["key_uids", []];
 private _keyNames = _vehicle getVariable ["key_names", []];
 private _fuel     = fuel _vehicle;
-private _inv      = getItemCargo _vehicle;
+private _inv      = [_vehicle] call lts_fnc_getVehicleCargo;
 
 //Some Checks
 _exit = false;
