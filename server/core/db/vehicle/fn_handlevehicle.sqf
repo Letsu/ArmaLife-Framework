@@ -38,6 +38,7 @@ switch (_mode) do {
     case (3): /*Set Fuel*/{
         _fuel = param [2, 1];
         _data = format ["0:Vehicle:UpdateFuel:%1:%2", _fuel, _vehicle];
+        diag_log format ["%1, %2", _fuel, _data];
         _query = call compile ("extDB3" callExtension _data);
     };
 

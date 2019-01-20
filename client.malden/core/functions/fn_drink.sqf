@@ -19,11 +19,11 @@ private _type   = param [1, 2];
 
 switch (_type) do {
     case (0): {
-        if (lts_core_thirst + _amount > 100) then { lts_core_thirst = 100 } else { lts_fnc_drink = lts_fnc_drink + _amount };
+        if (lts_core_thirst + _amount > 100) then { lts_core_thirst = 100 } else { lts_core_thirst = lts_core_thirst + _amount };
     };
 
     case (1): {
-        if (lts_core_thirst - _amount < 0) then { lts_core_thirst = 0 } else { lts_fnc_drink = lts_fnc_drink - _amount };
+        if (lts_core_thirst - _amount < 0) then { lts_core_thirst = 0 } else { lts_core_thirst = lts_core_thirst - _amount };
     };
 
     case (2): {
