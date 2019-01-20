@@ -14,8 +14,11 @@
  */
 private _vehicle = param [0];
 private _plate = _vehicle getVariable ["veh_plate", 000000];
-private _fuel = fuel vehicle;
+private _fuel = fuel _vehicle;
 
 //send Request to Server
+ [3, _plate, _fuel] remoteExec ["lts_db_fnc_handleVehicle", 2];
+
+
 
 [0, nil];

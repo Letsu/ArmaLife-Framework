@@ -13,9 +13,11 @@
  *
  */
 private _vehicle = param [0];
+private _plate = _vehicle getVariable ["veh_plate", 000000];
 private _keyOwn   = _vehicle getVariable ["key_uids", []];
 private _keyNames = _vehicle getVariable ["key_names", []];
 
 //send Request to Server
+ [4, _plate, _keyOwn, _keyNames] remoteExec ["lts_db_fnc_handleVehicle", 2];
 
 [0, nil];
