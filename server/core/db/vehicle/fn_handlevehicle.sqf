@@ -45,10 +45,10 @@ switch (_mode) do {
         _keyUids  = param [2];
         _keyNames = param [3];
 
-        _data = formatText ["0:Vehicle:UpdateKeys:%1:%2", _keyUids, _vehicle];
+        _data = format ["0:Vehicle:UpdateKeys:%1:%2", _keyUids, _vehicle];
         _query = call compile ("extDB3" callExtension _data);
 
-        _data = formatText ["0:Vehicle:UpdateKeysNames:%1:%2", _keyNames, _vehicle];
+        _data = format ["0:Vehicle:UpdateKeysNames:%1:%2", _keyNames, _vehicle];
         _query = call compile ("extDB3" callExtension _data);
     };
 };
