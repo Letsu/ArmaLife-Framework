@@ -3,7 +3,7 @@ class Config_Process {
         Var = "Wood";
         DisplayName = "Holz wird Verarbeitet";
         From = "L_Item_Wood"; //Check Item Name
-        To = "ItemWatch"; //Need to add Item
+        To = "L_Item_WaterBottleFull"; //Need to add Item
         Time = 2;
     }
 };

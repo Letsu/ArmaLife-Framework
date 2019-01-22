@@ -27,6 +27,7 @@ private _addToBackpack = param [2, false];
 
 private _typ = [_item] call BIS_fnc_itemType;
 private _itemTyp = _typ select 0;
+hint str(_itemTyp);
 private _exit = false;
 
 //Init some Functions
@@ -130,8 +131,6 @@ if (_itemTyp isEqualTo "Item") then {
             player linkItem _item;
             _exit = true;
     };
-
-    _exit = true;
 };
 if (_exit) exitWith {};
 

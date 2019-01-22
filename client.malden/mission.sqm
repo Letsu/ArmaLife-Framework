@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=163;
+		nextID=169;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={7281.4082,232.69992,8012.7266};
-		dir[]={0.19556212,-0.88205802,-0.4288587};
-		up[]={0.36595005,0.47118729,-0.8025102};
-		aside[]={-0.90995252,-1.1958182e-006,-0.4149456};
+		pos[]={7276.6831,246.39655,7926.3892};
+		dir[]={-0.0659758,-0.99394321,-0.088308387};
+		up[]={-0.59487993,0.11006007,-0.79624587};
+		aside[]={-0.80114114,-1.2379533e-006,0.59853619};
 	};
 };
 binarizationWanted=0;
@@ -33,13 +33,16 @@ addons[]=
 	"A3_Soft_F_Offroad_01",
 	"A3_Soft_F_Beta_Truck_02",
 	"ace_realisticnames",
-	"A3_Air_F_Heli_Light_01"
+	"A3_Air_F_Heli_Light_01",
+	"A3_Soft_F_Exp_LSV_01",
+	"A3_Soft_F_Gamma_SUV_01",
+	"A3_Soft_F_Gamma_Van_01"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=8;
+		items=10;
 		class Item0
 		{
 			className="A3_Structures_F";
@@ -91,6 +94,20 @@ class AddonsMetaData
 		{
 			className="A3_Air_F";
 			name="Arma 3 Alpha - Aircraft";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item8
+		{
+			className="A3_Soft_F_Exp";
+			name="Arma 3 Apex - Unarmored Land Vehicles";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item9
+		{
+			className="A3_Soft_F_Gamma";
+			name="Arma 3 - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -178,7 +195,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=15;
+		items=18;
 		class Item0
 		{
 			dataType="Object";
@@ -780,6 +797,54 @@ class Mission
 			};
 			id=158;
 			type="B_Heli_Light_01_F";
+		};
+		class Item15
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7238.0361,169.73615,7923.4336};
+				angles[]={-0,1.345933,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=166;
+			type="B_LSV_01_unarmed_F";
+		};
+		class Item16
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7256.1792,169.15646,7924.8604};
+				angles[]={-0,4.9756937,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=167;
+			type="C_SUV_01_F";
+		};
+		class Item17
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7256.6797,169.38768,7934.1406};
+				angles[]={6.2824135,4.2263126,0.0087958695};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=168;
+			type="C_Van_01_transport_F";
 		};
 	};
 };
