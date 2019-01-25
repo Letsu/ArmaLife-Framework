@@ -33,7 +33,7 @@ switch (_mode) do {
 
     case (1): /*Update Bank*/{
         private _bank = param [3, 0];
-        _data = format ["0:Player:UpdateCash:%1:%2", _bank, _uid];
+        _data = format ["0:Player:UpdateBank:%1:%2", _bank, _uid];
         _query = call compile ("extDB3" callExtension _data);
     };
 

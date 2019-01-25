@@ -24,6 +24,7 @@ class lts_db {
       file = "\server\core\db\player";
       class createNewPlayer {};
       class getPlayerData   {};
+      class handlePlayer    {};
   };
 
   class db_vehicle {

@@ -17,4 +17,4 @@
 private _cash = lts_money_cash;
 private _pid  = getPlayerUID player;
 
-[1, _pid, _cash] remoteExec ["lts_db_fnc_handlePlayer", 2];
+[0, _pid, _cash] remoteExec ["lts_db_fnc_handlePlayer", 2];

@@ -18,4 +18,4 @@
  private _pid = getPlayerUID player;
 
 
-[2, _pid, _inv] remoteExec ["lts_db_fnc_handlePlayer", 2];
+[3, _pid, _inv] remoteExec ["lts_db_fnc_handlePlayer", 2];
