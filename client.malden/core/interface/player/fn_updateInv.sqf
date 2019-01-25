@@ -13,3 +13,9 @@
  *
  * Public: [Yes/No]
  */
+
+ private _inv = getUnitLoadout player;
+ private _pid = getPlayerUID player;
+
+
+[2, _pid, _inv] remoteExec ["lts_db_fnc_handlePlayer", 2];
