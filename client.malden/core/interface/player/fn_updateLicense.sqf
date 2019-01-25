@@ -17,4 +17,4 @@
 private _licenses = lts_core_licenses;
 private _pid      = getPlayerUID player;
 
-[3, _pid, _licenses] remoteExec ["lts_db_fnc_getPlayerData", 2];
+[3, _pid, _licenses] remoteExec ["lts_db_fnc_handlePlayer", 2];
