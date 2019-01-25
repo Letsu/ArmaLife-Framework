@@ -44,6 +44,10 @@ class lts_interface {
         class createNewPlayer   {};
         class getPlayerData     {};
         class requestPlayerData {};
+        class updateBank        {};
+        class updateCash        {};
+        class updateInv         {};
+        class updateLicense     {};
     };
 
     class cop_interface {
