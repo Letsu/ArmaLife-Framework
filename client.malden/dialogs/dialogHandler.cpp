@@ -5,5 +5,5 @@
 #include "p_Menu.hpp" //IDD 90001
 
 class RscTitles {
-
+    #include "player_HUD.hpp" //IDD: 100001
 };
