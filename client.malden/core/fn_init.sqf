@@ -56,6 +56,10 @@ waitUntil {!(isNull (findDisplay 46))};
 [] call lts_fnc_initGather;
 ["Finish Initalisation of Farming Scripts and setup Actions for Farming"] call lts_fnc_log;
 
+["Initalisation of Player Hud"] call lts_fnc_log;
+[] call lts_dialog_fnc_callPlayerHud;
+["Finish Initalisation of Player Hud"] call lts_fnc_log;
+
 0 cutText ["","BLACK IN"];
 
 ["--------------------------------------------"] call lts_fnc_log;

@@ -175,6 +175,12 @@ class lts_dialog {
         class fillPMenu   {};
         class pMenuSelect {};
     };
+
+    class playerHud {
+        file = "dialogs\functions\playerHud";
+        class classPlayerHud {};
+        class updatePHud     {};
+    };
 };
 
 class log {
