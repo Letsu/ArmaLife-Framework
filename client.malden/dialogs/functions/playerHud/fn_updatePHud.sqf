@@ -13,7 +13,6 @@
  *
  * Public: [Yes/No]
  */
-systemChat "UpdatePHud!0";
 private _imagePath = "pictures";
 disableSerialization;
 
