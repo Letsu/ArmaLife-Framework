@@ -36,7 +36,7 @@ private _fnc_thirst = {
 };
 
 private _fnc_updateHud = {
-
+    [] call lts_dialog_fnc_updatePHud;
 };
 
 

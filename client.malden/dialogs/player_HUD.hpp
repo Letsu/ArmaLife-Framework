@@ -4,6 +4,7 @@ class player_HUD {
    duration = 999999999999;
    movingenable = false;
    enablesimulation = true;
+   onLoad = "uiNamespace setVariable ['player_HUD',_this select 0]";
    class controlsBackground
    {
 	   class picFood : RscPicture

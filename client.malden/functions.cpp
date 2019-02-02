@@ -178,7 +178,7 @@ class lts_dialog {
 
     class playerHud {
         file = "dialogs\functions\playerHud";
-        class classPlayerHud {};
+        class callPlayerHud {};
         class updatePHud     {};
     };
 };
