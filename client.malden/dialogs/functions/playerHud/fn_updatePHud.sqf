@@ -47,7 +47,7 @@ if (lts_core_thirst > 60) then {
 };
 
 
-/*Pill For Future Use!!!!!
+/*Pill For Future Use!!!!! WIP
 if (lts_core_thirst > 75) then {
     _picWater ctrlSetText format ["%1\waterWhite.paa", _imagePath];
 } else {
