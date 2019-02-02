@@ -27,7 +27,7 @@ private _addToBackpack = param [2, false];
 
 private _typ = [_item] call BIS_fnc_itemType;
 private _itemTyp = _typ select 0;
-hint str(_itemTyp);
+systemChat str(_typ);
 private _exit = false;
 
 //Init some Functions
@@ -103,7 +103,6 @@ if (_exit) exitWith {};
 //Is Item Something else???
 if (_itemTyp isEqualTo "Item") then {
     if (_addToBackpack) exitWith { [_item, _amount] call lts_fnc_addToBackpack; _exit = true; };
-
     private _itemOtherTyp = _typ select 1;
 
 
@@ -128,6 +127,10 @@ if (_itemTyp isEqualTo "Item") then {
             _exit = true;
     };
     if (_itemOtherTyp isEqualTo "Compass") exitWith {
+            player linkItem _item;
+            _exit = true;
+    };
+    if (_itemOtherTyp isEqualTo "Watch") exitWith {
             player linkItem _item;
             _exit = true;
     };
