@@ -27,7 +27,6 @@ private _addToBackpack = param [2, false];
 
 private _typ = [_item] call BIS_fnc_itemType;
 private _itemTyp = _typ select 0;
-systemChat str(_typ);
 private _exit = false;
 
 //Init some Functions
