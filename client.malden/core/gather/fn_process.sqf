@@ -70,5 +70,5 @@ private _finish = false;
     private _to          = _args select 2;
 
     player removeItems _from;
-    [_itemAmount, _to] call lts_fnc_addItem;
+    [_to, _itemAmount] call lts_fnc_addItem;
 }, {[_this] call _fnc_abort}, _text] call ace_common_fnc_progressBar;
