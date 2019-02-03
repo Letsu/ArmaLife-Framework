@@ -128,7 +128,7 @@ class ACE_P_Interaction {
       code = "[_target] call life_fnc_fake1;";
       conditons = "side _player isEqualTo civilian && life_inv_fakeid1 >= 1;";
     };
-/*
+*/
 
 	class civ_Menu {
         variable = "civ_Menu";
