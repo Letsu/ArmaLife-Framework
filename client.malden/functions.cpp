@@ -194,3 +194,12 @@ class log {
         class logMoney {};
     };
 };
+
+class rls {
+    tag = "rls";
+
+    class rls {
+        file = "core\RLS";
+        class setupAceInteractions {};
+    };
+};

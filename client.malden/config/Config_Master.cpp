@@ -11,7 +11,7 @@ class Config_Master {
     LogMoney = 0; //Enable Money Logging. Needs A3Log!
     LogBuy   = 0;
     LogItem  = 0;
-    LogCheat = 0; 
+    LogCheat = 0;
 
 
     /*
@@ -33,3 +33,4 @@ class Config_Master {
 #include "Config_Vehicle.cpp"
 #include "Config_VehicleDefines.cpp"
 #include "Config_PMenu.cpp"
+#include "Config_AceInteraction.cpp"
