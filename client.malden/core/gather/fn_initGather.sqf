@@ -21,6 +21,7 @@
     private _item = getText (missionConfigFile >> "Config_Gather" >> _config >> "Item");
     private _fields = getArray (missionConfigFile >> "Config_Gather" >> _config >> "Fields");
 
+
     {
         private _pos = getMarkerPos _x;
         private _trees = nearestTerrainObjects [_pos, ["Tree"], _fieldRange];
@@ -28,7 +29,7 @@
             private _logic = "Land_HelipadEmpty_F" createVehicle (getPos _x);
             _logic setPos [(getPos _x) select 0, (getPos _x) select 1, 1.6];
 
-             private _actions = [ "action_1", "Pfluecken", "", {  [_target, _player, _actionParams] call lts_fnc_gather }, {true}, {}, "Test", {}, 10 ] call ace_interact_menu_fnc_createAction;
+            private _actions = [ "action_1", "Pfluecken", "", {[_target, _player, _config] call lts_fnc_gather}, {true}, {[_target, _player, _item] call lts_fnc_gather}, {}, {}, 10 ] call ace_interact_menu_fnc_createAction;
             [ _logic, 0, ["ACE_MainActions"], _actions ] call ace_interact_menu_fnc_addActionToObject;
 
         } forEach _trees;

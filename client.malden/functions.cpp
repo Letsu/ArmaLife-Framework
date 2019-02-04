@@ -174,6 +174,7 @@ class lts_dialog {
         class callPMenu   {};
         class fillPMenu   {};
         class pMenuSelect {};
+        class loadTime    {};
     };
 
     class playerHud {
