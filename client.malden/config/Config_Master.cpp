@@ -33,4 +33,3 @@ class Config_Master {
 #include "Config_Vehicle.cpp"
 #include "Config_VehicleDefines.cpp"
 #include "Config_PMenu.cpp"
-#include "Config_AceInteraction.cpp"
