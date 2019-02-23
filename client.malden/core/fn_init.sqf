@@ -45,10 +45,6 @@ waitUntil {!(isNull (findDisplay 46))};
 [] call lts_core_fnc_playerInteraction;
 ["Finish Initalizise of Player Interactions"] call lts_fnc_log;
 
-/////RLS//////
-//AceInteractions
-[] spawn rls_fnc_setupAceInteractions;
-
 //Send Request to Server to Load player Data from DB and set these Values on Player.
 ["Load Player Prestige Data"] call lts_fnc_log;
 [] call lts_interface_fnc_requestPlayerData;
