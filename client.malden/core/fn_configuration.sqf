@@ -21,6 +21,7 @@ lts_core_curSide = "civ"; //Posible Value can set in Config_Side
 lts_core_firstSpawn = false; //True when Client is First Time on Server
 
 lts_core_curVehicles = []; // All Parked out Vehicles
+lts_core_allVehicles = []; //All Vehicle an Player owned at the Moment
 lts_core_licenses = []; //All Licenses an Player has
 
 

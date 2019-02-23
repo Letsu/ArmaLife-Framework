@@ -33,8 +33,7 @@ private _newKeyNames pushBackUnique player;
 
 
 //Set new Variables and add Vehicle to Players Vehicle Array
-_veh setVariable ["key_uids" , _newKeyUIDS];
-_veh setVariable ["key_obj"  , _owner];
+_veh setVariable ["key_uids" , _newKeyUIDS];;
 _veh setVariable ["key_names", _newKeyNames];
 
 lts_core_curVehicles pushBack _veh;

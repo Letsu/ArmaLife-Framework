@@ -19,25 +19,33 @@
  *
  */
 
-private _plate        = param [0, -1 ];
-private _vehicleClass = param [1, ""];
-private _pos          = param [2, [0, 0, 0]];
-private _ownerPID     = param [4, getPlayerUID player];
-private _ownerName    = param [5, name player];
-private _keyUIDs      = param [6, [] ];
-private _keyNames     = param [7, [] ];
-private _fuel         = param [8, 1  ];
-private _inv          = param [9, [] ];
+private _vehicleClass = param [0, ""];
+private _pos          = param [1, [0, 0, 0]];
+private _owner        = param [2, player]; //Optional
+//Add for at Add to Key to add Mutiplay owners on init!
+private _keyUIDs      = param [4, [(getPlayerUID player)]]; //Optional
+private _keyNames     = param [5, [(name player)]]; //Optional
 
 //Create the Vehicle at given Pos
 private _vehicle = _vehicleClass createVehicle _pos;
-_vehicle setFuel _fuel;
-[_vehicle, _inv] call lts_fnc_setVehicleCargo;
 //Add Vehicle in Vehicle Array
 //Add for for form Param given Owners!
 [_vehicle] call lts_fnc_addKeyToVeh;
 
+private _ownerUID  = getPlayerUID _owner;
+private _ownerName = name _owner;
+
+//Set Vehicle Plate
+private _plate = random [100000, 500000, 999999];
+while {_plate in allVehiclePlates} do {
+    _plate = random [100000, 500000, 999999];
+};
+allVehiclePlates pushBackUnique _plate;
+
 //Set some Variables on Veh
 _vehicle setVariable ["veh_plate", _plate];
 _vehicle setVariable [ "owner_uid" , _ownerUID  ]; //Steam64 ID of Owner of Vehicle
+_vehicle setVariable [ "owner_obj" , _owner  ]; //Obj of Owner
 _vehicle setVariable [ "owner_name", _ownerName ]; //Display Name of Owener of Vehicle
+
+[_vehicle] call lts_interface_fnc_createNewVeh;

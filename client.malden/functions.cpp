@@ -130,6 +130,7 @@ class lts_framework {
         file = "core\vehicle";
         class addKeyToVeh             {};
         class createVehicle           {};
+        class createNewVehicle        {};
         class deleteVehicle           {};
         class getVehicle              {};
         class removeVehicleFromPlayer {};
