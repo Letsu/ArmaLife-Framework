@@ -1,5 +1,5 @@
 /*
- * Author: Johannes "Letus" Bindriem
+ * Author: Johanens "Letus" Bindriem
  * [Description]
  *
  * Arguments:
@@ -15,3 +15,7 @@
  */
 
 private _pid = getPlayerUID player;
+private _player = player;
+
+
+[_pid, _player] remoteExec ["lts_db_fnc_getVehicles", 2];

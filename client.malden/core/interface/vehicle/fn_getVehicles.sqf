@@ -1,5 +1,5 @@
 /*
- * Author: Johanens "Letus" Bindriem
+ * Author: Johannes "Letus" Bindriem
  * [Description]
  *
  * Arguments:
@@ -14,4 +14,6 @@
  * Public: [Yes/No]
  */
 
-private _pid = getPlayerUID player;
+_data = param [0];
+
+dbug_data = _data;

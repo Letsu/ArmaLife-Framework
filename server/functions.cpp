@@ -31,6 +31,7 @@ class lts_db {
       file = "\server\core\db\vehicle";
       class createNewVehicle {};
       class handleVehicle    {};
+      class getVehicles      {};
   };
 
   class db_cop {

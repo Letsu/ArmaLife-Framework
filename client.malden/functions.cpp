@@ -74,6 +74,8 @@ class lts_interface {
         class enableVehicle    {};
         class updateVehFuel    {};
         class updateVehKeys    {};
+        class getVehicles      {};
+        class requestVehicles  {};
     };
 };
 
