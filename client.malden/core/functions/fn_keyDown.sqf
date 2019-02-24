@@ -28,7 +28,7 @@ private _alt     = param [4];
 private _disableKey = false;
 
 switch (_key) do {
-    case (24): {
+    case (24): { //O
         //Get Vehicle if Player in Vehicle Player Vehicle if not the CursourTarget
         private _veh = "";
         if (isNull objectParent player) then {
@@ -53,6 +53,14 @@ switch (_key) do {
             ["Du hast dein Fahrzeug aufgeschlossen"] call lts_fnc_hint;
         };
     _disableKey = true; // DEBUG
+    };
+
+    case (34): { //G
+        if (_shift) then {
+            private _target = cursorTarget;
+            if (player distance _target > 3) exitWith {};
+            [_player, _target] call lts_fnc_knockOutPlayer;
+        };
     };
 
 };
