@@ -18,5 +18,5 @@
 waitUntil {!(isNull (findDisplay 46))};
 
 //Create the Dialog
-createDialog "pMenuSettings";
+createDialog "pMenuBanking";
 waitUntil {!(isNull (findDisplay 91001))};
