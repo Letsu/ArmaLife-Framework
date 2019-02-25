@@ -26,5 +26,7 @@ class pMenuBanking {
  	   };
 	};
 
-	class controls { };
+	class controls {
+
+	};
 };

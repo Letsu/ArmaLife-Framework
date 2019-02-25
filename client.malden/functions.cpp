@@ -180,10 +180,17 @@ class lts_dialog {
         class loadTime    {};
     };
 
-    class pManuSettings {
-        file = "dialogs\functions\pMenu\settings";
-        class callSettings {};
-    }
+    // class pManuSettings {
+    //     file = "dialogs\functions\pMenu\settings";
+    //     class callSettings {};
+    // };
+
+    class pMenuSettings {
+        file = "dialogs\function\pMenu\banking";
+        class callBanking {};
+        class bankingGive {};
+        class fillBanking {};
+    };
 
     class playerHud {
         file = "dialogs\functions\playerHud";

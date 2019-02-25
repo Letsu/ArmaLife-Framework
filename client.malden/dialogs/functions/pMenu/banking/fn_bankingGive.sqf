@@ -14,11 +14,5 @@
  * Public: [Yes/No]
  */
 
- //Check if Main Screen is Open!
-waitUntil {!(isNull (findDisplay 46))};
-
-//Create the Dialog
-createDialog "pMenuBanking";
-waitUntil {!(isNull (findDisplay 91001))};
-
-[] call lts_dialog_fnc_fillBanking;
+private _DISPLAY  = findDisplay 91001;
+private _GIVE     = _DISPLAY displayCtrl 91020;

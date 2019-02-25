@@ -1,0 +1,9 @@
+Dialog CRTL unnd Display Gross geschrieben
+
+Zweite Zahl in IDC ist das Element:
+0 = Display & Image
+1 = Text
+2 = Button
+3
+4
+5 = Listbox
