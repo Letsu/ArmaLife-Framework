@@ -175,10 +175,15 @@ class lts_dialog {
     class pMenu {
         file = "dialogs\functions\pMenu";
         class callPMenu   {};
-        class fillPMenu   {};
-        class pMenuSelect {};
+//        class fillPMenu   {};
+//        class pMenuSelect {};
         class loadTime    {};
     };
+
+    class pManuSettings {
+        file = "dialogs\functions\pMenu\settings";
+        class callSettings {};
+    }
 
     class playerHud {
         file = "dialogs\functions\playerHud";
