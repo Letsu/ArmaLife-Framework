@@ -10,7 +10,7 @@ class pMenuBanking {
             x = 0.65625 * safezoneW + safezoneX;
             y = 0.314650934119961 * safezoneH + safezoneY;
             w = 0.165104166666667 * safezoneW;
- 		   h = 0.534906588003933 * safezoneH;
+ 		         h = 0.534906588003933 * safezoneH;
         };
 
         class MainFrame : RscPicture
