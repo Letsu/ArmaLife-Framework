@@ -185,8 +185,8 @@ class lts_dialog {
     //     class callSettings {};
     // };
 
-    class pMenuSettings {
-        file = "dialogs\function\pMenu\banking";
+    class pMenuBanking {
+        file = "dialogs\functions\pMenu\banking";
         class callBanking {};
         class bankingGive {};
         class fillBanking {};

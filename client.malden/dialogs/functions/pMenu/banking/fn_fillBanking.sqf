@@ -23,15 +23,16 @@ private _LBGIVE   = _DISPLAY displayCtrl 91050;
 private _bank = str(lts_money_bank);
 private _cash = str(lts_money_cash);
 
-_bank ctrlText _BANKCTRL;
-_cash ctrlText _CASHCTRL;
+_bank ctrlSetText _BANKCTRL;
+_cash ctrlSetText _CASHCTRL;
 
 {
     _name = name _X;
     _LBGIVE lbAdd _name;
 
     _size = lbSize _LBGIVE;
-    str(_x) = _LBGIVE lbData (_size - 1);
+    lbSetData [(size - 1), str(_X)];
+    
 } forEach (playableUnits - [player]);
 
 lbSetCurSel 0;
