@@ -1,17 +1,16 @@
 /*
  * Author: Johannes "Letus" Bindriem
- * [Description]
+ * Add Text and fills the Dialog Listbox whith all Players
  *
  * Arguments:
- * 0: Argument Name <TYPE>
+ * NONE
  *
  * Return Value:
- * Return Name <TYPE>
+ * NONE
  *
  * Example:
- * ["example"] call ace_[module]_fnc_[functionName]
+ * [] call lts_dialog_fnc_fillBanking
  *
- * Public: [Yes/No]
  */
 
 private _DISPLAY  = findDisplay 91001;
@@ -32,7 +31,7 @@ _cash ctrlSetText _CASHCTRL;
 
     _size = lbSize _LBGIVE;
     lbSetData [(size - 1), str(_X)];
-    
+
 } forEach (playableUnits - [player]);
 
 lbSetCurSel 0;

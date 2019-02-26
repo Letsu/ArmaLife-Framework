@@ -9,20 +9,20 @@
  * NONE
  *
  * Example:
- * ["example"] call ace_[module]_fnc_[functionName]
+ * ["ShopClass"] call lts_dialog_fnc_getShopConfig
  *
  */
 
 private _shopClass = param [0, ""];
 
 //Display Controlls
-private _display = findDisplay 70001;
+private _DISPLAY = findDisplay 70001;
 
-private _shopName = _display displayCtrl 1001;
-private _textPrice = _display displayCtrl 1003;
-private _lbShop = _display displayCtrl 1500;
-private _buttonBuy = _display displayCtrl 1600;
-private _buttonAbort = _display displayCtrl 1601;
+private _SHOPNAME    = _DISPLAY displayCtrl 1001;
+private _TEXTPRICE   = _DISPLAY displayCtrl 1003;
+private _LBSHOP      = _DISPLAY displayCtrl 1500;
+private _BUTTONBUY   = _DISPLAY displayCtrl 1600;
+private _BUTTONABORT = _DISPLAY displayCtrl 1601;
 
 //Get Shop Config
 private _displayName = getText (missionConfigFile >> "Config_Shops" >> _shopClass >> "DisplayName");
@@ -34,7 +34,7 @@ private _hasCondition = false;
 if !(_condition isEqualTo "") then { _hasCondition = true };
 if (_hasCondition && call compile (_condition)) exitWith { ["Du darfst dieses Geschäft nicht benutzen"] call lts_fnc_hint; closeDialog 0 };
 //Set Text
-_shopName ctrlSetText _displayName;
+_SHOPNAME ctrlSetText _displayName;
 
 private _index = 0;
 {
@@ -53,12 +53,12 @@ private _index = 0;
     if (_itemName isEqualTo "") then { _itemName = [_item] call lts_fnc_getDisplayName };
 
     //add Item to ListBox and set Data of Listbox entry whit the ShopClass and the Index of Item in Config
-    _lbShop lbAdd _itemName;
+    _LBSHOP lbAdd _itemName;
 
-    private _curSize = lbSize _lbShop - 1;
+    private _curSize = lbSize _LBSHOP - 1;
     private _data = format["%1,%2",_shopClass, _index];
-    _lbShop lbSetData [ _curSize, _data];
+    _LBSHOP lbSetData [ _curSize, _data];
     _index = _index + 1;
 } forEach _itemList;
 
-_lbShop lbSetCurSel 0;
+_LBSHOP lbSetCurSel 0;

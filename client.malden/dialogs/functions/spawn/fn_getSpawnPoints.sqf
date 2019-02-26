@@ -16,8 +16,8 @@ private _config = "";
 private _allSpawnPoints = [];
 
 //Save the Dispaly in Variable and fill the Listbox
-private _display = findDisplay 60001;
-private _spawnList = _display displayCtrl 1500;
+private _DISPLAY = findDisplay 60001;
+private _SPAWNLIST = _DISPLAY displayCtrl 1500;
 
 {
     private _pfad = str(_x) splitString "/, \";
@@ -27,9 +27,9 @@ private _spawnList = _display displayCtrl 1500;
     private _spawnName = getText (missionConfigFile >> "Config_Spawn" >> _config >> "DisplayName");
     private _spawnMarker = getText (missionConfigFile >> "Config_Spawn" >> _config >> "Marker");
 
-    _spawnList lbAdd (_spawnName);
-    _spawnList lbSetData [(lbSize _spawnList)-1, _spawnMarker];
+    _SPAWNLIST lbAdd (_spawnName);
+    _SPAWNLIST lbSetData [(lbSize _spawnList)-1, _spawnMarker];
 
 } forEach ("true" configClasses (missionConfigFile >> "Config_Spawn"));
 
-_spawnList lbSetCurSel 0;
+_SPAWNLIST lbSetCurSel 0;

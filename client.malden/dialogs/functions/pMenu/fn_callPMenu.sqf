@@ -22,13 +22,3 @@ waitUntil {!(isNull (findDisplay 90001))};
 
 //Load Time and Date
 [] call lts_dialog_fnc_loadTime;
-
-
-
-//Read Config File and Fill List Box
-
-//Only while none pMenu exist
-
-
-
-//[] call lts_dialog_fnc_fillPMenu;

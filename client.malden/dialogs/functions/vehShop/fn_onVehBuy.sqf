@@ -15,15 +15,14 @@
  */
 
  //Display Controlls
-private _display = findDisplay 80001;
+private _DISPLAY = findDisplay 80001;
 
 //Get Controlls
-private _shopName    = _display displayCtrl 1001;
-private _lbShop      = _display displayCtrl 1500;
+private _LBSHOP      = _DISPLAY displayCtrl 1500;
 
 //Get LB Data
-_curSelect = (lbCurSel _lbShop);
-_data      = _lbShop lbData _curSelect;
+_curSelect = (lbCurSel _LBSHOP);
+_data      = _LBSHOP lbData _curSelect;
 _dataSplit = _data splitString ",";
 
 private _shopName = _dataSplit select 0;

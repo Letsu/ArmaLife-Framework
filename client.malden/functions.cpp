@@ -155,6 +155,7 @@ class lts_dialog {
         class spawnLbChange  {};
         class callSpawn      {};
         class createCam      {};
+        class intro          {};
     };
 
     class shop {

@@ -15,13 +15,13 @@
  */
 
 //Get Dispalys
-private _display = findDisplay 70001;
+private _DISPLAY = findDisplay 70001;
 
-private _lbShop = _display displayCtrl 1500;
+private _LBSHOP = _DISPLAY displayCtrl 1500;
 
 //Get the Data out of Curent selectet Listbox entry
-private _curSel = lbCurSel _lbShop;
-private _data = _lbShop lbData _curSel;
+private _curSel = lbCurSel _LBSHOP;
+private _data = _LBSHOP lbData _curSel;
 private _dataArr = _data splitString ",";
 private _shopClass = _dataArr select 0;
 private _index = call compile (_dataArr select 1);

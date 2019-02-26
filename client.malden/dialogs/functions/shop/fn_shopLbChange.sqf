@@ -15,14 +15,14 @@
  */
 
 //Get Display Controls
-private _display = findDisplay 70001;
+private _DISPLAY = findDisplay 70001;
 
-private _textPrice   = _display displayCtrl 1003;
-private _lbShop      = _display displayCtrl 1500;
+private _TEXTPRICE   = _DISPLAY displayCtrl 1003;
+private _LBSHOP      = _DISPLAY displayCtrl 1500;
 
 //Get Data from Current selected Listbox entry
-private _curSel    = lbCurSel _lbShop;
-private _data      = _lbShop lbData _curSel;
+private _curSel    = lbCurSel _LBSHOP;
+private _data      = _LBSHOP lbData _curSel;
 private _dataArr    = _data splitString ",";
 private _shopClass = _dataArr select 0;
 private _index     = call compile (_dataArr select 1); //Change to parseSimpleArray
@@ -40,4 +40,4 @@ private _conditon    = _itemArr select 4;
 
 //Set Text of the Price Label to Price of cur. selected Item.
 private _text = format ["%1; %2", _buyPrice, _sellPrice];
-_textPrice ctrlSetText str(_price);
+_TEXTPRICE ctrlSetText str(_price);

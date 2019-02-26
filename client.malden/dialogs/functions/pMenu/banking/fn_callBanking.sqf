@@ -1,17 +1,16 @@
 /*
  * Author: Johannes "Letus" Bindriem
- * [Description]
+ * Open Banking dialog and call all needet Functions
  *
  * Arguments:
- * 0: Argument Name <TYPE>
+ * NONE
  *
  * Return Value:
- * Return Name <TYPE>
+ * NONE
  *
  * Example:
- * ["example"] call ace_[module]_fnc_[functionName]
+ * [] call lts_dialog_fnc_callBanking
  *
- * Public: [Yes/No]
  */
 
  //Check if Main Screen is Open!
@@ -21,4 +20,5 @@ waitUntil {!(isNull (findDisplay 46))};
 createDialog "pMenuBanking";
 waitUntil {!(isNull (findDisplay 91001))};
 
+/* Call Function to add dynamic Text and fill the Player List Box  */
 [] call lts_dialog_fnc_fillBanking;

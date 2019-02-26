@@ -14,16 +14,16 @@
  */
 
  //Get Display and Data
-private _display = findDisplay 60001;
-private _spawnList = _display displayCtrl 1500;
-private _spawnButton = _display displayCtrl 1600;
-private _spawnMap = _display displayCtrl 1001;
+private _DISPLAY     = findDisplay 60001;
+private _SPAWNLIST   = _DISPLAY displayCtrl 1500;
+private _SPAWNBUTTON = _DISPLAY displayCtrl 1600;
+private _SPAWNMAP    = _DISPLAY displayCtrl 1001;
 
-private _curSel = lbCurSel _spawnList;
-private _spawnMarker =  _spawnList lbData _curSel;
+private _curSel = lbCurSel _SPAWNLIST;
+private _spawnMarker =  _SPAWNLIST lbData _curSel;
 private _spawnPos = getMarkerPos _spawnMarker;
-private _spawnName = _spawnList lbText _curSel;
+private _spawnName = _SPAWNLIST lbText _curSel;
 
 //Animate Map
-_spawnMap ctrlMapAnimAdd [2, 0.2, _spawnPos];
-ctrlMapAnimCommit _spawnMap;
+_SPAWNMAP ctrlMapAnimAdd [2, 0.2, _spawnPos];
+ctrlMapAnimCommit _SPAWNMAP;

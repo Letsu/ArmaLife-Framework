@@ -1,17 +1,16 @@
 /*
  * Author: Johannes "Letus" Bindriem
- * [Description]
+ * Calls Functions when Player press Give Button.
  *
  * Arguments:
- * 0: Argument Name <TYPE>
+ * NONE
  *
  * Return Value:
- * Return Name <TYPE>
+ * NONE
  *
  * Example:
- * ["example"] call ace_[module]_fnc_[functionName]
+ * [] call lts_dialog_fnc_bankingGive
  *
- * Public: [Yes/No]
  */
 
 private _DISPLAY  = findDisplay 91001;
