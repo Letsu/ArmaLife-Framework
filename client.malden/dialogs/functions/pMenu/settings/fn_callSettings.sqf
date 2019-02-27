@@ -20,3 +20,10 @@ waitUntil {!(isNull (findDisplay 46))};
 //Create the Dialog
 createDialog "pMenuSettings";
 waitUntil {!(isNull (findDisplay 92001))};
+
+
+/* Aktionen:
+    Handy Hintergrund ändern
+    Handy Klingelton ändern
+    Stumm Schalten
+*/
