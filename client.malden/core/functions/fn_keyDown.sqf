@@ -59,7 +59,7 @@ switch (_key) do {
         if (_shift) then {
             private _target = cursorTarget;
             if (player distance _target > 3) exitWith {};
-            [_player, _target] call lts_fnc_knockOutPlayer;
+            [player, _target] call lts_fnc_knockOutPlayer;
         };
     };
 
