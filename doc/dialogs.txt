@@ -4,6 +4,6 @@ Zweite Zahl in IDC ist das Element:
 0 = Display & Image
 1 = Text
 2 = Button
-3
+3 = Edit
 4
 5 = Listbox
