@@ -193,6 +193,11 @@ class lts_dialog {
         class fillBanking {};
     };
 
+    class pMenuLicense {
+        file = "dialogs\functions\pMenu\license";
+        class callLicense {};
+    }
+
     class playerHud {
         file = "dialogs\functions\playerHud";
         class callPlayerHud {};
