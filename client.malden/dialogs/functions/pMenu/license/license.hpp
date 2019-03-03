@@ -47,9 +47,9 @@ class pMenuLicense {
 			colorSelectBackground[] = { 0, 0, 0, 0 };
 			colorSelectBackground2[] = { 0, 0, 0, 0 };
 			colorBackground[] = { 0, 0, 0, 0 };
-			colorText[] = { 0, 0, 0, 0 };
-			colorSelect[] = { 0, 0, 0, 0.4 };
-			colorSelect2[] = { 0, 0, 0, 0.4 };
+			colorText[] = { 1, 1, 1, 1 };
+			colorSelect[] = { 1, 1, 1, 1 };
+			colorSelect2[] = { 1, 1, 1, 1 };
 			colorScrollbar[] = { 0, 0, 0, 1 };
 			class ListScrollBar {
 				color[] = { 0, 0, 0, 1 };

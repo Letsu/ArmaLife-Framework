@@ -26,14 +26,16 @@ private _cash = str(lts_money_cash);
 _BANKCTRL ctrlSetText _bank;
 _CASHCTRL ctrlSetText _cash;
 
-
+lts_banking_lb_players = []; //Add Global Variable to give the players as object to script
 {
     private _name = name _X;
     _LBGIVE lbAdd _name;
     /*Add RFEquest for Side and write it behind the Nam!*/
     private _size = lbSize _LBGIVE;
     _LBGIVE lbSetData [(_size - 1), str(_X)];
+    lts_banking_lb_players pushBack _x;
 
 
-/* } forEach (allPlayers - [player]); */
-} forEach (allPlayers);
+} forEach ((allPlayers - [player])); //Add Distance to PLayers!
+
+if ((count lts_banking_lb_players) isEqualTo 0) then {_LBGIVE lbAdd "Keine Spieler in der nähe!"};

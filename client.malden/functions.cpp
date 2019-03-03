@@ -97,6 +97,12 @@ class lts_framework {
         class eat             {};
         class setVehicleCargo {};
         class getVehicleCargo {};
+        class addMoney        {};
+    };
+
+    class netWork {
+        file = "core\functions\network";
+        class giveMoney {};
     };
 
     class respawn {

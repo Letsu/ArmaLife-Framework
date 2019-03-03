@@ -29,7 +29,7 @@ class pMenuBanking {
 	class controls {
 		class TextBank : RscText
         {
-            idc = 91010;
+            idc = 91010; //Change Text Color to Gray // Marvin!!
             x = 0.694791666666667 * safezoneW + safezoneX;
             y = 0.462325958702065 * safezoneH + safezoneY;
             h = 0.037 * safezoneH;
@@ -37,7 +37,7 @@ class pMenuBanking {
         };
         class TextCash : RscText
         {
-            idc = 91011;
+            idc = 91011; //Change Text Color to Gray //Marvin !!
             x = 0.722916666666667 * safezoneW + safezoneX;
             y = 0.508540314650934 * safezoneH + safezoneY;
             h = 0.037 * safezoneH;
@@ -62,8 +62,8 @@ class pMenuBanking {
 			colorSelectBackground2[] = { 0, 0, 0, 0 };
 			colorBackground[] = { 0, 0, 0, 0 };
 			colorText[] = { 0, 0, 0, 1 };
-			colorSelect[] = { 0, 0, 0, 0.4 };
-			colorSelect2[] = { 0, 0, 0, 0.4 };
+			colorSelect[] = { 0, 0, 0, 0.6 };
+			colorSelect2[] = { 0, 0, 0, 0.2 };
 			colorScrollbar[] = { 0, 0, 0, 1 };
 			class ListScrollBar {
 				color[] = { 0, 0, 0, 1 };

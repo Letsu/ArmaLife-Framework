@@ -16,6 +16,8 @@
 
 _DISPLAY = findDisplay 95001;
 _LBLICNSE = _DISPLAY displayCtrl 95050;
+if ((count lts_core_licenses) isEqualTo 0) exitWith { _LBLICNSE lbAdd "Du hast noch keine Lizenzen!" };
+
 
 {
     _name = [_x select 0] call lts_fnc_getDisplayName;

@@ -19,9 +19,14 @@ private _EDITGIVE = _DISPLAY displayCtrl 91030;
 private _LBGIVE   = _DISPLAY displayCtrl 91050;
 _num = parseNumber(ctrlText _EDITGIVE);
 if (_num <= 0) exitWith { ["Du hast keine Zahl oder 0 eingegeben. Bitte gib eine Gültige zahl ein!"] call lts_fnc_hint };
+if (lts_money_cash < _num) exitWith { ["Du hast nicht genug Geld!"] call lts_fnc_hint };
+
+
 
 _curSel = lbCurSel _LBGIVE;
 _data = _LBGIVE lbData _curSel;
-_player = missionNamespace getVariable [_data, objNull];
+_to = lts_banking_lb_players select _curSel;
 
-hint (name _player);
+lts_money_cash = lts_money_cash - _num;
+
+[player, _to, _num] remoteExec ["lts_fnc_giveMoney", _to];
