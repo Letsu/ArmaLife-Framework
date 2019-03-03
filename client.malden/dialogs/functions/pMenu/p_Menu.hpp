@@ -54,7 +54,7 @@ class pMenu {
         class ico1_3 : RscPicture
         {
             idc = 1003;
-            text = "";
+            text = "pictures\settings.paa";
             x = 0.73625 * safezoneW + safezoneX;
             y = 0.511769911504425 * safezoneH + safezoneY;
             w = 0.04 * safezoneW;
@@ -249,5 +249,22 @@ class pMenu {
 			colorBorder[] = {-1,-1,-1,-1};
 			colorShadow[] = {-1,-1,-1,-1};
 		};
+
+		class but1_3 : RscButton
+		{
+			idc = 10012;
+			text = "";
+			x = 0.73625 * safezoneW + safezoneX;
+			y = 0.511769911504425 * safezoneH + safezoneY;
+			w = 0.04 * safezoneW;
+			h = 0.06 * safezoneH
+			action = "call lts_dialog_fnc_callSettings";
+			colorbackground[] = {-1,-1,-1,-1};
+			colorBackgroundActive[] = {-1,-1,-1,-1};
+			colorBackgroundDisabled[] = {-1,-1,-1,-1};
+			colorFocused[] = {-1,-1,-1,-1};
+			colorBorder[] = {-1,-1,-1,-1};
+			colorShadow[] = {-1,-1,-1,-1};
+		};
 	};
-};
+};;

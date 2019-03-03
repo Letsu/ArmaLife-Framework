@@ -187,10 +187,11 @@ class lts_dialog {
         class loadTime    {};
     };
 
-    // class pManuSettings {
-    //     file = "dialogs\functions\pMenu\settings";
-    //     class callSettings {};
-    // };
+    class pManuSettings {
+        file = "dialogs\functions\pMenu\settings";
+        class callSettings {};
+        class fillSettings {};
+    };
 
     class pMenuBanking {
         file = "dialogs\functions\pMenu\banking";
