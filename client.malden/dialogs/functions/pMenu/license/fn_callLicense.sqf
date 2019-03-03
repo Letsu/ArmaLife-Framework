@@ -19,3 +19,6 @@ waitUntil {!(isNull (findDisplay 46))};
 //Create the Dialog
 createDialog "pMenuLicense";
 waitUntil {!(isNull (findDisplay 95001))};
+
+//Fill License
+[] call lts_dialog_fnc_fillLicense;

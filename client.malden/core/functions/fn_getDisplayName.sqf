@@ -14,15 +14,14 @@
  */
 
 private _item = param [0, ""];
-private _config = "";
+private _name = "";
 
  switch (true) do {
-     case(isClass(configFile >> "CfgMagazines" >> _item)): {_config = "CfgMagazines"};
-     case(isClass(configFile >> "CfgWeapons" >> _item))  : {_config = "CfgWeapons"};
-     case(isClass(configFile >> "CfgVehicles" >> _item)) : {_config = "CfgVehicles"};
-     case(isClass(configFile >> "CfgGlasses" >> _item))  : {_config = "CfgGlasses"};
+     case(isClass(configFile >> "CfgMagazines" >> _item))           : { _name = getText (configFile >> "CfgMagazines" >> _item >> "displayName") };
+     case(isClass(configFile >> "CfgWeapons" >> _item))             : { _name = getText (configFile >> "CfgWeapons" >> _item >> "displayName") };
+     case(isClass(configFile >> "CfgVehicles" >> _item))            : { _name = getText (configFile >> "CfgVehicles" >> _item >> "displayName") };
+     case(isClass(configFile >> "CfgGlasses" >> _item))             : { _name = getText (configFile >> "CfgGlasses" >> _item >> "displayName") };
+     case(isClass(missionConfigFile >> "Config_License" >> _item))  : { _name = getText (missionConfigFile >> "Config_License" >> _item >> "DisplayName") };
  };
-
-private _name = getText (configFile >> _config >> _item >> "displayName");
 
  _name;

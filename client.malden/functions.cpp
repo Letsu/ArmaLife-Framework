@@ -196,7 +196,8 @@ class lts_dialog {
     class pMenuLicense {
         file = "dialogs\functions\pMenu\license";
         class callLicense {};
-    }
+        class fillLicense {};
+    };
 
     class playerHud {
         file = "dialogs\functions\playerHud";
