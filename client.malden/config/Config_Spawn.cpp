@@ -6,13 +6,13 @@
  *
  */
 class Config_Spawn {
-    class LaTrintie {
-        DisplayName = "La Trinite";
+    class LePort {
+        DisplayName = "Le Port";
         Marker = "spawn_1";
     };
 
-    class test {
-        DisplayName = "Dbug Farm";
-        Marker = "spawn_test";
+    class LaTrinding{
+        DisplayName = "La Trinding";
+        Marker = "spawn_2";
     };
 };
