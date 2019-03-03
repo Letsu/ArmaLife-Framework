@@ -16,6 +16,7 @@ private _successfully = false;
 
 
 "extDB3" callExtension "9:RESET";
+"extDB3" callExtension "9:UNLOCK"
 
 private _connection = call compile ("extDB3" callExtension "9:ADD_DATABASE:arma");
 
