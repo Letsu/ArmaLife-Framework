@@ -111,7 +111,7 @@ class lts_framework {
     class network {
         file = "core\functions\network";
         class giveMoney  {};
-        class getLicense {};
+        class getLicenses {};
         class getTicket  {};
     };
 
