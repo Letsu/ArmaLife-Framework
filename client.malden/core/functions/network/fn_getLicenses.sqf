@@ -12,7 +12,7 @@
  * NONE
  *
  * Example:
- * [player, cop, param, licenses] remoteExec ["lts_cop_fnc_getLicense", cop];
+ * [player, cop, param, licenses] remoteExec ["lts_fnc_getLicense", cop];
  *
  */
 
@@ -21,7 +21,7 @@ private _player       = param [1];
 private _actionParams = param [2];
 private _licenses     = param [3];
 
-_licenseArr = [];
+private _licenseArr = [];
 
 {
     if (_x select 1) then {
@@ -29,4 +29,4 @@ _licenseArr = [];
     };
 } forEach _licenses;
 
-//Output _licenseArr
+[_target, _licenses] remoteExec ["lts_cop_fnc_getLicenseCop", _player]

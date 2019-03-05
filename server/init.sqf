@@ -22,8 +22,7 @@ publicVariable "lts_server_setupFinish";
 private _successfully = false;
 
 ["Handeling Objects on Map"] call lts_server_fnc_log;
-private _respawnPos = getMarkerPos "respawn";
-"respawn" setMarkerPos [_respawnPos select 0, _respawnPos select 1, 90];
+[] spawn lts_server_fnc_mission
 ["Finish Handeling Objects on Map"] call lts_server_fnc_log;
 
 ["Establishing connection with DB"] call lts_server_fnc_log;

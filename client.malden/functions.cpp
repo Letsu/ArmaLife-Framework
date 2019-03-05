@@ -7,6 +7,14 @@ class cop_side {
         class setCopLevel    {};
         class setCopCoreData {};
     };
+
+    class interaction {
+        file = "core\side\cop\interaction";
+        class getLicenseCop  {};
+        class getTicketCop   {};
+        class giveTicket     {};
+        class requestLicense {};
+    };
 };
 
 class med_side {
@@ -100,9 +108,11 @@ class lts_framework {
         class addMoney        {};
     };
 
-    class netWork {
+    class network {
         file = "core\functions\network";
-        class giveMoney {};
+        class giveMoney  {};
+        class getLicense {};
+        class getTicket  {};
     };
 
     class respawn {
@@ -208,9 +218,15 @@ class lts_dialog {
 
     class playerHud {
         file = "dialogs\functions\playerHud";
-        class callPlayerHud {};
+        class callPlayerHud  {};
         class updatePHud     {};
     };
+
+    class ticket {
+        file = "dialogs\functions\ticket";
+        class callTicket {};
+        class sendTicket {};
+    }
 };
 
 class log {

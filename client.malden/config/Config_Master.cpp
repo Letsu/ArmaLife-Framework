@@ -4,6 +4,8 @@
 */
 
 class Config_Master {
+    EnableDBUG = 0;
+
     /*
     Logging
     Logging needs the Servermod A3Log!

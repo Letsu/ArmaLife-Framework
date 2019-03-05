@@ -7,6 +7,7 @@ class lts_server {
     class function {
         file = "\server\core\functions";
         class log {};
+        class mission {};
     };
 };
 

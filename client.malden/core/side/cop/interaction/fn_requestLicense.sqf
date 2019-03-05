@@ -19,4 +19,4 @@
  private _player       = param [1];
  private _actionParams = param [2];
 
-[_target, _player, _actionParams] remoteExec ["lts_fnc_getLicense", _target];
+[_target, _player, _actionParams] remoteExec ["lts_fnc_getLicenses", _target];

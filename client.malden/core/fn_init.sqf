@@ -19,6 +19,13 @@
 0 cutText["Initalisation of Player","BLACK FADED"]; //Add Stringtable
 0 cutFadeOut 9999999;
 
+["Checking if Server is white finished setup! Disabled when DBUG enabled"] call lts_fnc_log;
+if (getNumber(missionConfigFile "Config_Master" >> "EnableDBUG") != 0) then {
+    waitUntil { lts_server_setupFinish };
+};
+["Finish Checking if Server is finish white Setup"] call lts_fnc_log;
+
+
 //Create all default local global Vars
 ["Initalizise the default Variables"] call lts_fnc_log;
 [] call lts_core_fnc_configuration;
