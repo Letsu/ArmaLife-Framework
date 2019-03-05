@@ -14,12 +14,13 @@
  * Public: [Yes/No]
  */
 
-_target      = param [0];
-_player      = param [1];
-_actionParam = param [2];
+private _target      = param [0];
+private _player      = param [1];
+private _actionParam = param [2];
 
-_DISPALY = findDisplay 60001
-_TICKETBUTTON = _display displayCtrl 60020;
+//Create Global Variable save target and find an better way to do it :)
+lts_dialog_ticket_target = _target;
+
 
 waitUntil {!(isNull (findDisplay 46))};
 
@@ -27,4 +28,8 @@ waitUntil {!(isNull (findDisplay 46))};
 createDialog "ticket";
 waitUntil {!(isNull (findDisplay 60001))};
 
-_TICKETBUTTON buttonSetAction "[_target, _player] call lts_dialog_fnc_sendTicket";
+//Set ACtion to Button
+private _DISPALY = findDisplay 60001;
+private _TICKETBUTTON = _display displayCtrl 60020;
+
+((findDisplay 60001) displayCtrl 60020) buttonSetAction "call lts_dialog_fnc_sendTicket"
