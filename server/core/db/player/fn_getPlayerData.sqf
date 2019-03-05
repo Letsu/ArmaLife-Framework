@@ -23,4 +23,7 @@ if (_query select 0 != 1) exitWith { [ format["Error in getPlayerData: %1", _que
 
 _query = _query select 1;
 
+if (count _query isEqualTo 0) exitWith { [] remoteExec ["lts_interface_fnc_createNewPlayer", _player] };
+
+
 [_query] remoteExec ["lts_interface_fnc_getPlayerData", _player];
