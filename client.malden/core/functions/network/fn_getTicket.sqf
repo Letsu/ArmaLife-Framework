@@ -20,7 +20,7 @@ _amount = param [2];
 
 private _exit = false;
 
-if (_amount > lts_money_bank) exitWith { [ format["Dir wurde ein Ticket von %1 ausgestellt aber du hast nicht genug Geld auf deiner Bank um das Ticket in der höhe von: %2€ zu bezahlen!", name _cop, _amount] ] call lts_fnc_hint; _exit = true };
+if (_amount > lts_money_bank) exitWith { [ format["Dir wurde ein Ticket von %1 ausgestellt aber du hast nicht genug Geld auf deiner Bank um das Ticket in der höhe von: %2€ zu bezahlen!", name _cop, _amount] ] call lts_fnc_hint; [_player, _cop, _amount, false] remoteExec ["lts_cop_fnc_getTicketCop", _cop] };
 
 _exit = [ //Check if Exit work corektly when Player chose Value
     format["Dir wurde ein Ticket in höhe von: %1€ von: %2 ausgestellt.", _amount, name _cop],
