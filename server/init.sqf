@@ -22,7 +22,7 @@ publicVariable "lts_server_setupFinish";
 private _successfully = false;
 
 ["Handeling Objects on Map"] call lts_server_fnc_log;
-[] spawn lts_server_fnc_mission
+[] spawn lts_server_fnc_mission;
 ["Finish Handeling Objects on Map"] call lts_server_fnc_log;
 
 ["Establishing connection with DB"] call lts_server_fnc_log;
