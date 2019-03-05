@@ -14,7 +14,11 @@
  */
 
 private _data = param [0, []];
+lts_dbug_data2 = _data;
+
 _data = _data select 0;
+
+lts_dbug_data = _data;
 
 private _pid      = parseNumber(_data select 0);
 private _money    = parseNumber(_data select 1);
