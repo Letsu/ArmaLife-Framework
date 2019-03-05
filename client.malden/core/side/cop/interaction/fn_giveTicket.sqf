@@ -16,7 +16,7 @@
 
 
 private _target = param [0];
-private _amount = param [2];
+private _amount = param [1];
 
 if (_amount > 1000000) exitWith { ["Du kannst Tickets nur bis zu einem Betrag von maximal 1.000.000€ ausstellen!"] call lts_fnc_hint }; //Set Right max value!
 
