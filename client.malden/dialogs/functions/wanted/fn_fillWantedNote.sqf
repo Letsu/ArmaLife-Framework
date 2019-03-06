@@ -13,11 +13,7 @@
  *
  * Public: [Yes/No]
  */
-systemChat "WAnted Change";
-
 _notes = param [0]; //[ID, WantedID TIME, COPUID, COPNAME, NOTE]
-systemChat str(_notes);
-testNote = _notes;
 
 
 _DISPLAY          = findDisplay 40001;
@@ -34,7 +30,6 @@ _textArr = [];
 _text = ctrlText _TEXTWANTED;
 _textArr pushBack parsetext(_text);
 
-systemChat _text;
 
 {
     _time    = _x select 2;
@@ -46,7 +41,5 @@ systemChat _text;
     _textInfo = format["<br/><br/>---%1@%2---<br/>%3", _copName, _time, _note];
     _textArr pushBack (parseText _textInfo);
 } forEach _notes;
-
-testArr = _textArr;
 
 _TEXTWANTED ctrlSetStructuredText (composeText _textArr);
