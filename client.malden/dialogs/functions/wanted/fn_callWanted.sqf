@@ -17,5 +17,5 @@
 waitUntil {!(isNull (findDisplay 46))};
 
 //Create the Dialog
-createDialog "WantedDialog";
-waitUntil {!(isNull (findDisplay 60001))};
+createDialog "wanted";
+waitUntil {!(isNull (findDisplay 40001))};
