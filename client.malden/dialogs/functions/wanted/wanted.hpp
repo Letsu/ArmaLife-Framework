@@ -2,6 +2,7 @@ class wanted {
    idd = 40001;
    movingenable = 0;
    enablesimulation = 1;
+
    class controlsBackground {
        class RscText0 : RscText {
            idc = 1000;
@@ -44,11 +45,11 @@ class wanted {
    class controls {
        class RscListBox0 : RscListBox
        {
+           idc = 1001;
            x = 0.1890625 * safezoneW + safezoneX;
            y = 0.202999016715831 * safezoneH + safezoneY;
            w = 0.110416666666667 * safezoneW;
            h = 0.30732546705998 * safezoneH;
-           idc = 1001;
        };
        class RscListBox1 : RscListBox
        {
@@ -58,13 +59,13 @@ class wanted {
            h = 0.295526057030482 * safezoneH;
            idc = 1003;
        };
-       class RscEdit0 : RscEdit
+       class RscListBox2 : RscListBox
        {
-           x = 0.1890625 * safezoneW + safezoneX;
-           y = 0.887571288102262 * safezoneH + safezoneY;
-           h = 0.039216 * safezoneH;
-           w = 0.0911458333333333 * safezoneW;
-           idc = 1004;
+           x = 0.4109375 * safezoneW + safezoneX;
+           y = 0.166357423795477 * safezoneH + safezoneY;
+           w = 0.0994791666666667 * safezoneW;
+           h = 0.344950344149459 * safezoneH;
+           idc = 1009;
        };
        class RscButton0 : RscButton
        {
@@ -74,22 +75,6 @@ class wanted {
            w = 0.0197916666666667 * safezoneW;
            h = 0.039216 * safezoneH;
            idc = 1007;
-       };
-       class RscStructuredText0 : RscStructuredText
-       {
-           idc = 1008;
-           x = 0.521875 * safezoneW + safezoneX;
-           y = 0.166357423795477 * safezoneH + safezoneY;
-           h = 0.343967059980334 * safezoneH;
-           w = 0.296354166666667 * safezoneW;
-       };
-       class RscListBox2 : RscListBox
-       {
-           x = 0.4109375 * safezoneW + safezoneX;
-           y = 0.166357423795477 * safezoneH + safezoneY;
-           w = 0.0994791666666667 * safezoneW;
-           h = 0.344950344149459 * safezoneH;
-           idc = 1009;
        };
        class RscButton1 : RscButton
        {
@@ -118,22 +103,6 @@ class wanted {
            h = 0.039216 * safezoneH;
            idc = 1012;
        };
-       class RscListBox3 : RscListBox
-       {
-           x = 0.4109375 * safezoneW + safezoneX;
-           y = 0.53338249754179 * safezoneH + safezoneY;
-           w = 0.0994791666666667 * safezoneW;
-           h = 0.385004916420846 * safezoneH;
-           idc = 1013;
-       };
-       class RscStructuredText1 : RscStructuredText
-       {
-           idc = 1014;
-           x = 0.521875 * safezoneW + safezoneX;
-           y = 0.53338249754179 * safezoneH + safezoneY;
-           h = 0.385004916420846 * safezoneH;
-           w = 0.296354166666667 * safezoneW;
-       };
        class RscButton4 : RscButton
        {
            text = "Info Hinzufügen";
@@ -161,6 +130,22 @@ class wanted {
            h = 0.039216 * safezoneH;
            idc = 1017;
        };
+       class RscListBox3 : RscListBox
+       {
+           x = 0.4109375 * safezoneW + safezoneX;
+           y = 0.53338249754179 * safezoneH + safezoneY;
+           w = 0.0994791666666667 * safezoneW;
+           h = 0.385004916420846 * safezoneH;
+           idc = 1013;
+       };
+       class RscStructuredText1 : RscStructuredText
+       {
+           idc = 1014;
+           x = 0.521875 * safezoneW + safezoneX;
+           y = 0.53338249754179 * safezoneH + safezoneY;
+           h = 0.385004916420846 * safezoneH;
+           w = 0.296354166666667 * safezoneW;
+       };
        class RscStructuredText2 : RscStructuredText
        {
            idc = 1018;
@@ -168,6 +153,23 @@ class wanted {
            y = 0.309734513274336 * safezoneH + safezoneY;
            h = 0.200589970501475 * safezoneH;
            w = 0.095589 * safezoneW;
+       };
+       class RscStructuredText0 : RscStructuredText
+       {
+           idc = 1008;
+           x = 0.521875 * safezoneW + safezoneX;
+           y = 0.166357423795477 * safezoneH + safezoneY;
+           h = 0.343967059980334 * safezoneH;
+           w = 0.296354166666667 * safezoneW;
+       };
+       class RscEdit0 : RscEdit
+       {
+           x = 0.1890625 * safezoneW + safezoneX;
+           y = 0.887571288102262 * safezoneH + safezoneY;
+           h = 0.039216 * safezoneH;
+           w = 0.0911458333333333 * safezoneW;
+           idc = 1004;
+           text = "Funktion Deaktieviert";
        };
    };
 };

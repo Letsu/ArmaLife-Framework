@@ -33,6 +33,11 @@ lts_money_bank = 0; //Bank Cash of Player
 //Cop
 lts_cop_level = 0; //Cop Level
 
+//Wanted List
+
+
+
+
 
 //Medic
 lts_med_level = 0;

@@ -226,7 +226,13 @@ class lts_dialog {
         file = "dialogs\functions\ticket";
         class callTicket {};
         class sendTicket {};
-    }
+    };
+
+    class wanetd {
+        file = "dialogs\functions\wanted";
+        class callWanted    {};
+        class fillWanted {};
+    };
 };
 
 class log {
