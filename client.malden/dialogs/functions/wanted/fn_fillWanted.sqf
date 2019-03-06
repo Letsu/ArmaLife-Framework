@@ -16,22 +16,14 @@
 
 _DISPLAY         = findDisplay 40001;
 /* List Boxen */
-_LBWANTEDPLAYERS = _DISPLAY displayCtrl 1001;
 _LBPLAYERS       = _DISPLAY displayCtrl 1003;
 _LBWANTED        = _DISPLAY displayCtrl 1009;
 _LBINFO          = _DISPLAY displayCtrl 1013;
 /* text */
 _OVERVIEW        = _DISPLAY displayCtrl 1018;
 _TEXTINFO        = _DISPLAY displayCtrl 1014;
-_TEXTWANTED      = _DISPLAY displayCtrl 1008
+_TEXTWANTED      = _DISPLAY displayCtrl 1008;
 
-
-
-//Add WAnted players to LB
-{
-    _LBWANTEDPLAYERS lbAdd (name _x);
-    lts_dialog_wanted_lbPlayerWantedList pushBackUnique _x;
-} forEach [player];
 
 //ADD Players to Player List
 {
@@ -39,20 +31,19 @@ _TEXTWANTED      = _DISPLAY displayCtrl 1008
     lts_dialog_wanted_lbPlayerList pushBackUnique _x;
 } forEach allPlayers; //remove PLayers that are Wanted
 
+_LBPLAYERS lbSetCurSel 0;
 
 
 //Add Text
-_overviewText = "
-Name: <br/>
-Gesucht: <br/>
-Begangene Straftaten: <br/>
-Gesammt Strafgeld: <br/>
+/* _ovText = "
+Name:<br/> <br/>
+Status:<br/> <br/>
+Begangene Straftaten:<br/> <br/>
+Gesammt Strafgeld:<br/> <br/>
+";
+_ovText = parseText _ovText;
+_OVERVIEW ctrlSetStructuredText _ovText; */
 
-
-
-
-
-"
 
 
 

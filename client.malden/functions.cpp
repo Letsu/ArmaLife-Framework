@@ -230,8 +230,12 @@ class lts_dialog {
 
     class wanetd {
         file = "dialogs\functions\wanted";
-        class callWanted    {};
-        class fillWanted {};
+        class callWanted           {};
+        class fillWanted           {};
+        class onPlayerWantedChange {};
+        class setWantedValues      {};
+        class onWantedWantedChange {};
+        class fillWantedNote       {};
     };
 };
 
