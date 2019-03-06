@@ -1,5 +1,5 @@
 /*
- * Author: Johanens "Letus" Bindriem
+ * Author: Johannes "Letus" Bindriem
  * [Description]
  *
  * Arguments:
@@ -11,10 +11,5 @@
  * Example:
  * ["example"] call ace_[module]_fnc_[functionName]
  *
+ * Public: [Yes/No]
  */
-
-//Get Note and Wanted List
-
-//set Wanted List
-
-//Set Note List

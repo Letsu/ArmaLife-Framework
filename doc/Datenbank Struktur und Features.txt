@@ -67,7 +67,7 @@ Auslesen von eintr�gen bei Spielern soll auch m�glich sein wenn dieser nicht
 Struktur DB:
 
 Wanted DB
-ID(Prm. Key)| Timestamp | Cop UID | Name Cop(from) |Player UID | Display Name | Strafftat | Strafe | Notiz
+ID(Prm. Key)| Timestamp | Cop UID | Name Cop(from) | Player UID | Display Name | Strafftat | Strafe | Notiz
 
 Notiz DB
 ID (Prm. Key) | Timestamp | Cop UID | Name Cop(from) | Player UID | Dispaly Name | Notiz |

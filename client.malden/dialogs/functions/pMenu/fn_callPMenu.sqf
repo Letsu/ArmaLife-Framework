@@ -16,6 +16,8 @@
 
 waitUntil {!(isNull (findDisplay 46))};
 
+if (!isNull (findDisplay 90001)) exitWith { }; //Dispay already opend
+
 //Create the Dialog
 createDialog "pMenu";
 waitUntil {!(isNull (findDisplay 90001))};

@@ -1,6 +1,7 @@
 class pMenu {
 	idd = 90001;
-	movingenable = 1;
+	movingEnable = 1;
+	enableSimulation = 1;
 
 	class ControlsBackground {
 		class handyBack : RscPicture
@@ -18,6 +19,7 @@ class pMenu {
             idc = 10000;
             colorbackground[] = {0,0,0,0};
             colortext[] = {1,1,1,1};
+			moving = 1;
             text = "pictures\handyFrame.paa";
             x = 0.65 * safezoneW + safezoneX;
             y = 0.28979842674533 * safezoneH + safezoneY;
