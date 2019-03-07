@@ -13,6 +13,3 @@
  *
  * Public: [Yes/No]
  */
-
-
-lts_dialog_wanted_lbPlayerList = [];

@@ -1,5 +1,5 @@
 /*
- * Author: Johannes "Letus" Bindriem
+ * Author: Johannes "Letus" bindriem
  * [Description]
  *
  * Arguments:
@@ -13,6 +13,8 @@
  *
  * Public: [Yes/No]
  */
+private _data = param [0];
 
+//Handle Data
 
-lts_dialog_wanted_lbPlayerList = [];
+[_data] call lts_dialog_fnc_fillWantedNote; //Format Data: [[Note], [Note], [Note]]

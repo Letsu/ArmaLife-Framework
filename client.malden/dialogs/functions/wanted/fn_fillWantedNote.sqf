@@ -13,32 +13,30 @@
  *
  * Public: [Yes/No]
  */
-_notes = param [0]; //[ID, WantedID TIME, COPUID, COPNAME, NOTE]
+private _notes = param [0]; //[ID, WantedID TIME, COPUID, COPNAME, NOTE]
 
 
-_DISPLAY          = findDisplay 40001;
+private _DISPLAY          = findDisplay 40001;
 /* List Boxen */
-_LBPLAYERS       = _DISPLAY displayCtrl 1003;
-_LBWANTED        = _DISPLAY displayCtrl 1009;
-_LBINFO          = _DISPLAY displayCtrl 1013;
+private _LBPLAYERS       = _DISPLAY displayCtrl 1003;
+private _LBWANTED        = _DISPLAY displayCtrl 1009;
+private _LBINFO          = _DISPLAY displayCtrl 1013;
 /* text */
-_OVERVIEW        = _DISPLAY displayCtrl 1018;
-_TEXTINFO        = _DISPLAY displayCtrl 1014;
-_TEXTWANTED      = _DISPLAY displayCtrl 1008;
+private _OVERVIEW        = _DISPLAY displayCtrl 1018;
+private _TEXTINFO        = _DISPLAY displayCtrl 1014;
+private _TEXTWANTED      = _DISPLAY displayCtrl 1008;
 
-_textArr = [];
-_text = ctrlText _TEXTWANTED;
+private _textArr = [];
+private _text = ctrlText _TEXTWANTED;
 _textArr pushBack parsetext(_text);
 
 
 {
-    _time    = _x select 2;
-    _copName = _x select 4;
-    _note    = _x select 5;
+    private _time    = _x select 2;
+    private _copName = _x select 4;
+    private _note    = _x select 5;
 
-    systemChat str(_x);
-
-    _textInfo = format["<br/><br/>---%1@%2---<br/>%3", _copName, _time, _note];
+    private _textInfo = format["<br/><br/>---%1@%2---<br/>%3", _copName, _time, _note];
     _textArr pushBack (parseText _textInfo);
 } forEach _notes;
 

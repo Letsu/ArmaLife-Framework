@@ -14,5 +14,9 @@
  * Public: [Yes/No]
  */
 
+private _data = param [0];
 
-lts_dialog_wanted_lbPlayerList = [];
+//handle Data
+
+
+[_data] call lts_dialog_fnc_setWantedValues; //Format Data [[Wanted], [Wanted], [Wanted]]

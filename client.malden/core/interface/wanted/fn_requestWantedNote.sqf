@@ -13,6 +13,8 @@
  *
  * Public: [Yes/No]
  */
+private _target    = param [0];
+private _targetUID = getPlayerUID _target;
+private _player    = player;
 
-
-lts_dialog_wanted_lbPlayerList = [];
+[_player, _targetUID] remoteExec ["lts_db_fnc_getWantedInfo", 2];
