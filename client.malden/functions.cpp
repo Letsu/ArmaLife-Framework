@@ -85,6 +85,18 @@ class lts_interface {
         class getVehicles      {};
         class requestVehicles  {};
     };
+
+    class wanted_interface {
+        file = "core\interface\wanted";
+        class getWanted {};
+        class getWantedNote {};
+        class noteAdd {};
+        class requestNotes {};
+        class requestWanted {};
+        class requestWantedNote {};
+        class wantedAdd {};
+        class wantedNoteAdd {};
+    };
 };
 
 //Framework Files
