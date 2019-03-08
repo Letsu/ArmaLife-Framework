@@ -50,7 +50,8 @@ class lts_db {
 
   class db_wanted {
       file = "\server\core\db\wanted";
-      class getWanted {};
+      class getWanted     {};
       class getWantedInfo {};
+      class addWanted     {};
   };
 };
