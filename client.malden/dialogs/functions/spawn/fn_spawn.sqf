@@ -29,6 +29,7 @@ spawn_cam cameraEffect ["TERMINATE","BACK"];
 camDestroy spawn_cam;
 deleteVehicle spawn_light;
 spawn_finish = true;
+[player,true] remoteExec ["hideObject",-2,true];
 closeDialog 0;
 
 

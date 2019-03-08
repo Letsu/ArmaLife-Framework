@@ -39,6 +39,8 @@ waitUntil {!(isNull (findDisplay 60001))};
 player setPos (getMarkerPos "spawn_marker"); // add an Config option and More Positions!
 player setDir (random 356);
 player action ["WeaponOnBack", player];
+[player,true] remoteExec ["hideObject",-2,true];
+player hideObject false;
 
 //Fill list Box
 [] call lts_dialog_fnc_getSpawnPoints;
