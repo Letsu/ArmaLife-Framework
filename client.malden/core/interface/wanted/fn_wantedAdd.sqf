@@ -21,4 +21,6 @@ private _title  	= param [4];
 private _note       = param [5];
 private _price      = param [6]; */
 
+
+hint "Interface wird gesendet";
 _this remoteExec ["lts_db_fnc_createWanted", 2];

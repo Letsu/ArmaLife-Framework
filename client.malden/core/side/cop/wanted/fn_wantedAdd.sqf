@@ -22,4 +22,8 @@ private _price  = param [4];
 private _copUID    = getPlayerUID _cop;
 private _targetUID = getPlayerUID _target;
 
+
+
+
+hint "Durch das im Cop Ordner gehts durch!";
 [_copUID, (name _cop), _targetUID, (name _target), _title, _note, _price] call lts_interface_fnc_wantedAdd;
