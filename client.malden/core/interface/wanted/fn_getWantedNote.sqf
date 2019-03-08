@@ -15,6 +15,7 @@
  */
 private _data = param [0];
 
+dbug_data2 = _data;
 //Handle Data
 _data = _data select 1;
 dbug_data = _data;

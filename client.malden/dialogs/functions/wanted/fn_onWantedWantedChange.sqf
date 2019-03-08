@@ -22,6 +22,8 @@ private _OVERVIEW        = _DISPLAY displayCtrl 1018;
 private _TEXTINFO        = _DISPLAY displayCtrl 1014;
 private _TEXTWANTED      = _DISPLAY displayCtrl 1008;
 
+_TEXTWANTED ctrlSetFade 1;
+_TEXTWANTED ctrlCommit 0;
 
 
 private _curSel = lbCurSel _LBWANTED;

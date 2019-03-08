@@ -29,7 +29,7 @@ private _TEXTWANTED      = _DISPLAY displayCtrl 1008;
 private _textArr = [];
 private _text = ctrlText _TEXTWANTED;
 
-if (count _notes isEqualTo 0) exitWith { _TEXTWANTED ctrlSetStructuredText (parseText _text) };
+if (count _notes isEqualTo 0) exitWith { _TEXTWANTED ctrlSetStructuredText (parseText _text); _TEXTWANTED ctrlSetFade 1; _TEXTWANTED ctrlCommit 0 };
 
 
 
@@ -47,5 +47,8 @@ _textArr pushBack parsetext(_text);
 } forEach _notes;
 
 _TEXTWANTED ctrlSetStructuredText (composeText _textArr);
+_TEXTWANTED ctrlSetFade 1;
+_TEXTWANTED ctrlCommit 0;
+
 
 [] call lts_interface_fnc_requestNotes;
