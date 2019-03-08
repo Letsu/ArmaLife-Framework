@@ -16,5 +16,8 @@
 private _data = param [0];
 
 //Handle Data
+_data = _data select 0;
+
+
 
 [_data] call lts_dialog_fnc_fillWantedNote; //Format Data: [[Note], [Note], [Note]]

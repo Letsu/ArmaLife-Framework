@@ -32,6 +32,7 @@ private _med = call compile ("extDB3" callExtension "9:ADD_DATABASE_PROTOCOL:arm
 //Wanted DB
 private _wantedDB = call compile ("extDB3" callExtension "9:ADD_DATABASE:police");
 private _wanted = call compile ("extDB3" callExtension "9:ADD_DATABASE_PROTOCOL:police:SQL_CUSTOM:Wanted:wanted.ini");
+private _wantedNote = call compile ("extDB3" callExtension "9:ADD_DATABASE_PROTOCOL:police:SQL_CUSTOM:WantedNotes:wantednotes.ini");
 
 
 
@@ -46,7 +47,9 @@ if (_createDB select 0 isEqualTo 0) exitWith { [format["Error whit Database Prot
 if (_player select 0 isEqualTo 0) exitWith { [format["Error whit Database Protocol Connection player: %1", _player select 1] ] call lts_server_fnc_log; _successfully };
 if (_passport select 0 isEqualTo 0) exitWith { [format["Error whit Database Protocol Connection passport: %1", _passport select 1] ] call lts_server_fnc_log; _successfully };
 if (_vehicle select 0 isEqualTo 0) exitWith { [format["Error whit Database Protocol Connection vehicle: %1", _vehicle select 1] ] call lts_server_fnc_log; _successfully };
+
 if (_wanted select 0 isEqualTo 0) exitWith { [format["Error whit Database Protocol Connection wanted: %1", _wanted select 1] ] call lts_server_fnc_log; _successfully };
+if (_wantedNote select 0 isEqualTo 0) exitWith { [format["Error whit Database Protocol Connection wantedNote: %1", _wantedNote select 1] ] call lts_server_fnc_log; _successfully };
 
 //Side
 if (_cop select 0 isEqualTo 0) exitWith { [format["Error whit Database Protocol Connection cop: %1", _cop select 1] ] call lts_server_fnc_log; _successfully };

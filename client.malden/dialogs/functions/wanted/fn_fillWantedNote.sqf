@@ -46,3 +46,5 @@ _textArr pushBack parsetext(_text);
 } forEach _notes;
 
 _TEXTWANTED ctrlSetStructuredText (composeText _textArr);
+
+[] call lts_interface_fnc_requestNotes;
