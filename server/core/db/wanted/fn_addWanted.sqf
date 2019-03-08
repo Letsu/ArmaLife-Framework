@@ -21,6 +21,18 @@
  private _note       = param [5];
  private _price      = param [6];
 
- private _query = call compile ( "extDB3" callExtension (format ["0:Wanted:CreateEntry:%1:%2:%3:%4:%5:%6:%7", _copUID, _copName, _targetUID, _targetName, _title, _note, _price]) );
 
- if (_query select 0 != 1) exitWith { [ format["Error in addtWanted: %1", _query select 1] ] call lts_server_fnc_log };
+private  _data = format ["0:Wanted:CreateEntry:%1:%2:%3:%4:%5:%6:%7",
+     _copUID,
+     _copName,
+     _targetUID,
+     _targetName,
+     _title,
+     _note,
+     _price
+     ];
+
+["Im Server ist auch Was!" + str(_data)] call lts_server_fnc_log;
+
+
+ private _query = call compile ("extDB3" callExtension _data);
