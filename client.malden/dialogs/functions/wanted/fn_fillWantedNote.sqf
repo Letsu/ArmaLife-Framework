@@ -37,7 +37,7 @@ _textArr pushBack parsetext(_text);
 
 
 {
-    private _time       = _x select 1;
+    private _time       = _x select 2;
             _time = format["%1.%2. %3:%4", _time select 2, _time select 1, _time select 3, _time select 4];
     private _copName = _x select 4;
     private _note    = _x select 5;
