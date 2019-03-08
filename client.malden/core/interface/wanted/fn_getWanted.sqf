@@ -21,4 +21,4 @@ _data = _data select 1;
 systemChat str(_data);
 
 
-//[_data] call lts_dialog_fnc_setWantedValues; //Format Data [[Wanted], [Wanted], [Wanted]]
+[_data] call lts_dialog_fnc_setWantedValues; //Format Data [[Wanted], [Wanted], [Wanted]]
