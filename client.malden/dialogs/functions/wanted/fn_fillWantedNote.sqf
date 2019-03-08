@@ -29,7 +29,7 @@ private _TEXTWANTED      = _DISPLAY displayCtrl 1008;
 private _textArr = [];
 private _text = ctrlText _TEXTWANTED;
 
-if (count _notes isEqualTo 0) exitWith { _textArr pushBack (parseText _text) };
+if (count _notes isEqualTo 0) exitWith { _TEXTWANTED ctrlSetStructuredText (parseText _text };
 
 
 
