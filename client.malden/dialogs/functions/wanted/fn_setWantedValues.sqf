@@ -83,4 +83,4 @@ _ovText = parseText _ovText;
 _OVERVIEW ctrlSetStructuredText _ovText;
 
 //request Notes
-[] call lts_interface_fnc_requestNotes;
+[] call lts_interface_fnc_requestWantedNotes;
