@@ -66,7 +66,7 @@ class wanted {
            w = 0.095589 * safezoneW;
            h = 0.039216 * safezoneH;
            text = "Straftat Hinzufügen";
-           action = "call lts_dialog_fnc_wantedAdd";
+           action = "call lts_dialog_fnc_callWantedAdd";
        };
 
        class RscButton2 : RscButton {
