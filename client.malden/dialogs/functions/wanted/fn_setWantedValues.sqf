@@ -50,15 +50,17 @@ private _priceAll = 0;
 {
     //Handle Wanted Entry
     private _arr        = [];
-    private _id         = _x select 0;
+    private _id         = parseNumber (_x select 0);
+    //Time
     private _time       = _x select 1;
+            _time = format["%1.%2. %3:%4", _time select 2, _time select 1, _time select 3, _time select 4];
     private _copUID     = _x select 2;
     private _copName    = _x select 3;
     private _playerUID  = _x select 4;
     private _playerName = _x select 5;
     private _title = _x select 6;
     private _text = _x select 7;
-    private _price = _x select 8;
+    private _price = parseNumber(_x select 8);
     _LBWANTED lbAdd format["%1[%2]", _title, _id];
 
     //Set Data
