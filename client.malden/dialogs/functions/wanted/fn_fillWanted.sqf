@@ -27,6 +27,9 @@ private _TEXTWANTED      = _DISPLAY displayCtrl 1008;
 {
     _LBPLAYERS lbAdd (name _x);
     lts_dialog_wanted_lbPlayerList pushBackUnique _x;
+    systemChat str(_x);
 } forEach allPlayers; //remove PLayers that are Wanted
 
 _LBPLAYERS lbSetCurSel 0;
+
+systemChat "fillwanted";

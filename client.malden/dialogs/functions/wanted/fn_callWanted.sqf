@@ -23,5 +23,5 @@ waitUntil {!(isNull (findDisplay 40001))};
 //diefine Local Global variables to get Values from other FIles
 lts_dialog_wanted_lbPlayerList = []; //List of all Players in PLayer LB
 
-
+systemChat "callWanted";
 [] call lts_dialog_fnc_fillWanted;
