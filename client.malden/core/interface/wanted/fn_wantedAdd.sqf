@@ -23,4 +23,4 @@ private _price      = param [6]; */
 
 
 hint "Interface wird gesendet";
-_this remoteExec ["lts_db_fnc_createWanted", 2];
+_this remoteExec ["lts_db_fnc_addWanted", 2];
