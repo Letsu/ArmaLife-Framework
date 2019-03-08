@@ -17,7 +17,7 @@
  private _copName    = param [1];
  private _targetUID  = param [2];
  private _targetName = param [3];
- private _title  	= param [4];
+ private _title    	 = param [4];
  private _note       = param [5];
  private _price      = param [6];
 
