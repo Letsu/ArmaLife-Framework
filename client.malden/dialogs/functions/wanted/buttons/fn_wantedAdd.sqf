@@ -31,3 +31,5 @@ if (_price <= 0) exitWith { ["Du hast keinen Preis oder 0 eingegeben bitte gebe 
 _target = lts_dialog_wanted_curSelect;
 
 [_target, player, _title, _note, _price] call lts_cop_fnc_wantedAdd;
+
+closeDialog 0;
