@@ -28,6 +28,11 @@ private _TEXTWANTED      = _DISPLAY displayCtrl 1008;
 
 private _textArr = [];
 private _text = ctrlText _TEXTWANTED;
+
+if (count _notes isEqualTo 0) exitWith { _textArr pushBack (parseText _text) };
+
+
+
 _textArr pushBack parsetext(_text);
 
 

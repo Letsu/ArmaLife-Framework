@@ -24,14 +24,19 @@ private _createDB   = call compile ("extDB3" callExtension "9:ADD_DATABASE_PROTO
 private _player     = call compile ("extDB3" callExtension "9:ADD_DATABASE_PROTOCOL:arma:SQL_CUSTOM:Player:player.ini"); //own Inv database
 private _passport   = call compile ("extDB3" callExtension "9:ADD_DATABASE_PROTOCOL:arma:SQL_CUSTOM:Passport:passport.ini");
 private _vehicle    = call compile ("extDB3" callExtension "9:ADD_DATABASE_PROTOCOL:arma:SQL_CUSTOM:Vehicle:vehicle.ini");
-private _wanted     = call compile ("extDB3" callExtension "9:ADD_DATABASE_PROTOCOL:arma:SQL_CUSTOM:Wanted:wanted.ini");
 
 //Side DBS
 private _cop = call compile ("extDB3" callExtension "9:ADD_DATABASE_PROTOCOL:arma:SQL_CUSTOM:Cop:cop.ini");
 private _med = call compile ("extDB3" callExtension "9:ADD_DATABASE_PROTOCOL:arma:SQL_CUSTOM:Med:med.ini");
 
+//Wanted DB
+private _wantedDB = call compile ("extDB3" callExtension "9:ADD_DATABASE:police");
+private _wanted = call compile ("extDB3" callExtension "9:ADD_DATABASE_PROTOCOL:arma:SQL_CUSTOM:Wanted:wanted.ini");
 
-"extDB3" callExtension "9:LOCK:unlock_me";
+
+
+
+"extDB3" callExtension "9:LOCK:cUPatPlZYmqiggdxhiFC";
 
 
 //Check if all connections successfully
@@ -46,6 +51,9 @@ if (_wanted select 0 isEqualTo 0) exitWith { [format["Error whit Database Protoc
 //Side
 if (_cop select 0 isEqualTo 0) exitWith { [format["Error whit Database Protocol Connection cop: %1", _cop select 1] ] call lts_server_fnc_log; _successfully };
 if (_med select 0 isEqualTo 0) exitWith { [format["Error whit Database Protocol Connection med: %1", _med select 1] ] call lts_server_fnc_log; _successfully };
+
+
+
 
 _successfully = true;
 _successfully;

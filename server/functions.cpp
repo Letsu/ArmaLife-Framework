@@ -47,4 +47,10 @@ class lts_db {
       class createNewMed   {};
       class updateMedLevel {};
   };
+
+  class db_wanted {
+      file = "\server\core\db\wanted";
+      class getWanted {};
+      class getWantedInfo {};
+  };
 };
