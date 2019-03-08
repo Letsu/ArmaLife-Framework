@@ -36,7 +36,7 @@ if (_crimeNum isEqualTo 0) exitWith {
 Name:<br/>%1<br/>
 Status:<br/><t color=""#00ff00"">%2</t> <br/>
 Begangene Straftaten:<br/>%3<br/>
-Gesammt Strafgeld:<br/>%4<br/>
+Gesamt Strafgeld:<br/>%4<br/>
     ", _name, "Nicht Gesucht", "0", "0"]; //Add Name for Players that are Offline from Passport database
     _ovText = parseText _ovText;
     _OVERVIEW ctrlSetStructuredText _ovText;
@@ -75,7 +75,7 @@ private _ovText = format["
 Name:<br/>%1<br/>
 Status:<br/><t color=""#ff0000"">%2</t> <br/>
 Begangene Straftaten:<br/>%3<br/>
-Gesammt Strafgeld:<br/>%4$<br/>
+Gesamt Strafgeld:<br/>%4$<br/>
 ", _name, "Gesucht", str(_crimeNum), str(_priceAll)]; //Add Name for Players that are Offline from Passport database
 _ovText = parseText _ovText;
 _OVERVIEW ctrlSetStructuredText _ovText;
