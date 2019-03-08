@@ -31,7 +31,7 @@ private _med = call compile ("extDB3" callExtension "9:ADD_DATABASE_PROTOCOL:arm
 
 //Wanted DB
 private _wantedDB = call compile ("extDB3" callExtension "9:ADD_DATABASE:police");
-private _wanted = call compile ("extDB3" callExtension "9:ADD_DATABASE_PROTOCOL:arma:SQL_CUSTOM:Wanted:wanted.ini");
+private _wanted = call compile ("extDB3" callExtension "9:ADD_DATABASE_PROTOCOL:police:SQL_CUSTOM:Wanted:wanted.ini");
 
 
 
