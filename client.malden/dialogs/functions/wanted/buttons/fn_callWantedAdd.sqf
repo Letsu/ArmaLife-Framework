@@ -13,3 +13,9 @@
  *
  * Public: [Yes/No]
  */
+
+waitUntil {!(isNull (findDisplay 46))};
+
+//Create the Dialog
+createDialog "wantedAdd";
+waitUntil {!(isNull (findDisplay 41001))};

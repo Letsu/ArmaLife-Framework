@@ -15,6 +15,11 @@ class cop_side {
         class giveTicket     {};
         class requestLicense {};
     };
+
+    class wanted {
+        file = "core\side\cop\wanted";
+        class wantedAdd {};
+    };
 };
 
 class med_side {
@@ -240,7 +245,7 @@ class lts_dialog {
         class sendTicket {};
     };
 
-    class wanetd {
+    class wanted {
         file = "dialogs\functions\wanted";
         class callWanted           {};
         class fillWanted           {};
@@ -249,6 +254,12 @@ class lts_dialog {
         class onWantedWantedChange {};
         class fillWantedNote       {};
     };
+
+    class wantedButtons {
+        file = "dialogs\functions\wanted\buttons";
+        class callWantedAdd {};
+        class wantedAdd     {};
+    }
 };
 
 class log {
