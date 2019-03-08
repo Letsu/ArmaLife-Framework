@@ -22,7 +22,7 @@ private _title = ctrlText _EDITTITLE;
 if (count _title < 4 || count _title > 18) exitWith { ["Der Title muss mindestens 3 Zeichen und maximnal 18 Zeichen Lang sein"] call lts_fnc_hint };
 
 private _note  = ctrlText _EDITNOTE;
-if (count _EDITNOTE < 0) exitWith { ["Die Beschreibung darf nich Leer sein"] call lts_fnc_hint };
+if (count _EDITNOTE < 0) exitWith { ["Die Beschreibung darf nicht Leer sein"] call lts_fnc_hint };
 
 private _price = ctrlText _EDITPRICE;
 _price = parseNumber _price;
