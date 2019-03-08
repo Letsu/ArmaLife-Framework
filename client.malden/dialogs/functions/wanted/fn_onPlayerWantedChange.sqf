@@ -18,7 +18,7 @@ private _LBPLAYERS        = _DISPLAY displayCtrl 1003;
 private _LBWANTED         = _DISPLAY displayCtrl 1009;
 private _LBINFO           = _DISPLAY displayCtrl 1013;
 
-lbClear _LBPLAYERS;
+lbClear _LBINFO;
 lbClear _LBWANTED;
 
 private _curSel = lbCurSel _LBPLAYERS;
