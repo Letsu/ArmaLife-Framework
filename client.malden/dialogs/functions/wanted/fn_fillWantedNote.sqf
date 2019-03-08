@@ -47,7 +47,7 @@ _textArr pushBack parsetext(_text);
 } forEach _notes;
 
 _TEXTWANTED ctrlSetStructuredText (composeText _textArr);
-_TEXTWANTED ctrlSetFade 1;
+_TEXTWANTED ctrlSetFade 0;
 _TEXTWANTED ctrlCommit 0;
 
 
