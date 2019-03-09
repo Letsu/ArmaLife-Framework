@@ -33,4 +33,4 @@ if (_exit) exitWith { [_player, _cop, _amount, false] remoteExec ["lts_cop_fnc_g
 
 lts_money_bank = lts_money_bank - _amount;
 
-[_player, _cop, _amount, true] call lts_cop_fnc_getTicketCop;
+[_player, _cop, _amount, true] remoteExec ["lts_cop_fnc_getTicketCop", _cop]
