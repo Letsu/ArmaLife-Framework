@@ -16,4 +16,5 @@
 
 private _id = param [0];
 
+dbug13 = _id;
 [_id, player] remoteExec ["lts_db_fnc_disableWanted", 2];

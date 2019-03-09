@@ -16,4 +16,5 @@
 
 private _id = param [0];
 
+dbug12 = _id;
 [_id] call lts_interface_fnc_disableWanted;
