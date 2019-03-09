@@ -16,4 +16,4 @@
 
 private _id = param [0];
 
-[_id] call lts_interface_fnc_disableWanted;
+[_id, player] remoteExec ["lts_db_fnc_disableWanted", 2];
