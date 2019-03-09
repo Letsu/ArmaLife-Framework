@@ -18,3 +18,7 @@
 //Set Spawn Marker
 private _respawnPos = getMarkerPos "respawn";
 "respawn" setMarkerPos [_respawnPos select 0, _respawnPos select 1, 90];
+
+//Set Cop Vehicel Spawn Marker
+private _vehShop = getMarkerPos "pl_csp1";
+"pl_csp1" setMarkerPos [_vehShop select 0, _vehShop select 1, 0.5];
