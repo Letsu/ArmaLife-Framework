@@ -33,3 +33,4 @@ _target = lts_dialog_wanted_curSelect;
 [_target, player, _title, _note, _price] call lts_cop_fnc_wantedAdd;
 
 closeDialog 0;
+[] call lts_dialog_fnc_callWanted;
