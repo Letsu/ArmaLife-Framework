@@ -41,3 +41,6 @@ _vehicle setFuel _fuel;
 _vehicle setVariable ["veh_plate", _plate];
 _vehicle setVariable [ "owner_uid" , _ownerPID  ]; //Steam64 ID of Owner of Vehicle
 _vehicle setVariable [ "owner_name", _ownerName ]; //Display Name of Owener of Vehicle
+
+
+_vehicle setVehicleLock 2;
