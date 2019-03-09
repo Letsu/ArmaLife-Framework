@@ -17,7 +17,7 @@ class Config_Vehicle {
 
     class policeCar {
         DisplayName = "Polizei Fahrzeuge"; //Name of Shop
-        Condtion = "!(lts_core_curSide isEqualTo ""cop"") "; // Condition to open
+        Condtion = " !(lts_core_curSide isEqualTo ""cop"") "; // Condition to open
         Vehicles[] = {
             {"Fox_2003Impala_PoliceHWP", 10, ""},
             {"fox_Tahoe_PoliceINT", 10, ""},

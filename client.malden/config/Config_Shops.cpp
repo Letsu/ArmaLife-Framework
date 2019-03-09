@@ -20,10 +20,13 @@ class Config_Shops {
 
     class policeShop {
         DisplayName = "Polizei Dienst Ausrüstung";
-        Condition = "";
+        Condition = " !(lts_core_curSide isEqualTo ""cop"") ";
         Items[] = {
             {"U_B_GEN_Commander_F", "", 1000, 100, ""},
             {"U_B_GEN_Soldier_F", "", 1000, 100, ""},
+            {"V_TacVest_blk_POLICE", "", 1000, 100, ""},
+            {"V_PlateCarrier1_blk", "", 1000, 100, ""},
+            {"B_AssaultPack_blk", "", 1000, 100, ""},
             {"H_Beret_02", "", 1000, 100, ""},
             {"H_Cap_police", "", 1000, 100, ""},
             {"SMG_03C_TR_black", "", 1000, 100, ""},
