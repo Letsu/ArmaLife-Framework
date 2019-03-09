@@ -28,4 +28,3 @@ if (_id isEqualTo -1) exitWith { ["Du hast keinen Eintrag in der Wanted List aus
  [_id, player, _note] call lts_cop_fnc_wantedNoteAdd;
 
  closeDialog 0;
- [] call lts_dialog_fnc_callWanted;
