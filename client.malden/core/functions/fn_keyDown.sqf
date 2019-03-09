@@ -28,7 +28,7 @@ private _alt     = param [4];
 private _disableKey = false;
 
 switch (_key) do {
-    case (24): { //O
+    case (22): { //U
         //Get Vehicle if Player in Vehicle Player Vehicle if not the CursourTarget
         private _veh = "";
         if (isNull objectParent player) then {
@@ -38,8 +38,9 @@ switch (_key) do {
         };
 
         //Some CHecks
-        if (!(_veh isKindOf "AllVehicles")) exitWith {};
-        if (_veh in lts_core_curVehicles) exitWith {};
+        if !(_veh isKindOf "AllVehicles")  exitWith {};
+        if !(_veh in lts_core_curVehicles) exitWith {};
+        if (player distance _veh > 3)      exitWith {};
 
         private _locked = locked _veh;
 
@@ -52,7 +53,7 @@ switch (_key) do {
             _veh say3D ["carUnlock", 35];
             ["Du hast dein Fahrzeug aufgeschlossen"] call lts_fnc_hint;
         };
-    _disableKey = true; // DEBUG
+    _disableKey = true;
     };
 
     case (34): { //G
@@ -60,6 +61,21 @@ switch (_key) do {
             private _target = cursorTarget;
             if (player distance _target > 3) exitWith {};
             [player, _target] call lts_fnc_knockOutPlayer;
+        };
+    };
+
+
+    case (21): { //Z
+        if(!_shift && !_ctrl) then {
+            [] call lts_dialog_fnc_callPMenu;
+            _disableKey = true;
+        };
+    };
+
+    case (24): { //O
+        if (lts_core_curSide isEqualTo "cop" && (vehicle player) getVariable ["copCar", false] ) then {
+            [] call lts_dialog_fnc_callWanted;
+            _disableKey = true;
         };
     };
 
