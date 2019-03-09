@@ -35,7 +35,7 @@ private _initScript = getText(missionConfigFile >> "Config_Side" >> _newSide >> 
 //Check Condition
 private _exit = false;
 if !(_sideStrCondition isEqualTo "") then {
-    if (call compile(_sideStrCondition)) exitWith { _exit = true };
+    if !(call compile(_sideStrCondition)) exitWith { _exit = true };
 };
 if (_exit) exitWith { ["Du kannst auf diese Seite nicht wechseln!"] call lts_fnc_hint };
 
