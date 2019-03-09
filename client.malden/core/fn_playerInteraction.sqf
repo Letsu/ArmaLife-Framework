@@ -20,11 +20,3 @@ private _checkLicense = [ "_checkLicense", "Lizenzen Überprüfen", "", { [_targ
 
 private _giveTicket = [ "giveTicket", "Strafzettel Ausstellen", "", {  [_target, _player, _actionParams] call lts_dialog_fnc_callTicket }, {true}, {}, "", {}, 10 ] call ace_interact_menu_fnc_createAction;
 [ typeOf player, 0, ["ACE_MainActions"], _giveTicket ] call ace_interact_menu_fnc_addActionToClass;
-
-
-
-
-
-
-private _changeSide = [ "changeSide", "Dienst Beginnen", "", {  ["cop"] call lts_fnc_changeSide }, {true}, {}, "", {}, 5 ] call ace_interact_menu_fnc_createAction;
-[ this, 0, ["ACE_MainActions"], _changeSide ] call ace_interact_menu_fnc_addActionToObject;

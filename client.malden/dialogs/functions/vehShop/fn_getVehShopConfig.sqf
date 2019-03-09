@@ -50,8 +50,7 @@ private _vehPos = 0;
 */
         private _types          = getArray (missionConfigFile >> "Config_VehicleDefines" >> _vehicleClass >> "Types");
         private _vehDisplayName = getText (missionConfigFile >> "Config_VehicleDefines" >> _vehicleClass >> "DisplayName");
-
-        if (_vehDisplayName isEqualTo "") then {_vehDisplayName = [_vehDisplayName] call lts_fnc_getDisplayName};
+        if (_vehDisplayName isEqualTo "") then {_vehDisplayName = [_vehicleClass] call lts_fnc_getDisplayName; hint "dat geht"};
 
         _LBSHOP lbAdd _vehDisplayName;
         private _size = lbSize _LBSHOP;

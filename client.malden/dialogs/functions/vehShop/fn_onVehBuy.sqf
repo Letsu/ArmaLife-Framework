@@ -38,4 +38,4 @@ private _price   = (_shopVeh select _indexPos) select 1;
 Add Config for Texttures and read Vehicle Defines
 */
 
-[_vehClass, _spawnPos] call lts_fnc_createVehicle;
+[_vehClass, _spawnPos] call lts_fnc_createNewVehicle;
