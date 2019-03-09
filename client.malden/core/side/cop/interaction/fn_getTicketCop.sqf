@@ -13,20 +13,15 @@
  *
  * Public: [Yes/No]
  */
-_target = param [0];
-_cop = param [1];
-_amount = param [2];
-_payed  = param [3];
+private _target = param [0];
+private _cop    = param [1];
+private _amount = param [2];
+private _payed  = param [3];
 
 if !(_payed) exitWith { [format["%1 konnte dein Ticket in der höhe von %2€ nicht zahlen oder hat es verweigert!", name _target, _amount] ] call lts_fnc_hint };
 
-[ format ["%1 hat dein Ticket in höhe von %2€ bezahlt!", name _target, _amount] ] call lts_fnc_hint;
+private _amountFinal = _amount * 0.25;
 
-/* Give Money to Cop! */
-/*  */
-/*  */
+[ format ["%1 hat dein Ticket in höhe von %2€ bezahlt! Nach dem Abzug der Gebüren bekommst du: %3€ extra Gehalt!", name _target, _amount, _amountFinal] ] call lts_fnc_hint;
 
-
-/* Maybe Remove from Wanted List */
-/*  */
-/*  */
+lts_money_bank = lts_money_bank + _amountFinal;
