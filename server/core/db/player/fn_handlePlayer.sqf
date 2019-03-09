@@ -23,29 +23,30 @@
  */
 private _mode = param [0, 0];
 private _uid = param [1];
+/* private _var = param [2]; */
 
 switch (_mode) do {
     case (0): /*Update Cash*/{
-        private _cash = param [3, 0];
+        private _cash = param [2, 0];
         _data = format ["0:Player:UpdateMoney:%1:%2", _cash, _uid];
         _query = call compile ("extDB3" callExtension _data);
     };
 
     case (1): /*Update Bank*/{
-        private _bank = param [3, 0];
+        private _bank = param [2, 0];
         _data = format ["0:Player:UpdateBank:%1:%2", _bank, _uid];
         _query = call compile ("extDB3" callExtension _data);
     };
 
     case (2): /*Update License*/{
-        private _license = param [3, []];
-        _data = format ["0:Player:UpdateLicense:%1:%2", _bank, _uid];
+        private _license = param [2, []];
+        _data = format ["0:Player:UpdateLicense:%1:%2", _license, _uid];
         _query = call compile ("extDB3" callExtension _data);
     };
 
     case (3): /*Update Inventory*/{
-        private _inv = param [3, []];
-        _data = format ["0:Player:UpdateInventory:%1:%2", _bank, _uid];
+        private _inv = param [2, []];
+        _data = format ["0:Player:UpdateInventory:%1:%2", _inv, _uid];
         _query = call compile ("extDB3" callExtension _data);
     };
 };
