@@ -76,7 +76,7 @@ class wanted {
            w = 0.095589 * safezoneW;
            h = 0.039216 * safezoneH;
            text = "Entlasten";
-           action = "call lts_dialog_fnc_wantedRemove; closeDialog 0";
+           action = "call lts_dialog_fnc_wantedRemove";
        };
 
        class RscButton3 : RscButton {
