@@ -19,6 +19,7 @@ class cop_side {
     class wanted {
         file = "core\side\cop\wanted";
         class wantedAdd {};
+        class wantedRemove {};
     };
 };
 
@@ -101,6 +102,7 @@ class lts_interface {
         class requestWantedNote {};
         class wantedAdd {};
         class wantedNoteAdd {};
+        class disableWanted {};
     };
 };
 
@@ -259,6 +261,7 @@ class lts_dialog {
         file = "dialogs\functions\wanted\buttons";
         class callWantedAdd {};
         class wantedAdd     {};
+        class wantedRemove  {};
     }
 };
 
