@@ -41,6 +41,8 @@ private _title      = _data select 6;
 private _text       = _data select 7;
 private _price      = _data select 8;
 
+lts_dialog_wanted_curWanted = _id;
+
 //Set Text
 private _strukText = format["
 <t size='2.0'>%1</t><br/>
