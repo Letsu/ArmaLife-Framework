@@ -11,13 +11,5 @@
  * Example:
  * ["example"] call ace_[module]_fnc_[functionName]
  *
+ * Public: [Yes/No]
  */
-
-private _sn    = param [0, -1];
-private _level = param [1, 1];
-
-player setVariable ["serviceNumber", _sn, true];
-lts_cop_level = _level;
-
-//Can Access Police HQ
-player setVariable ["copLevel",1,true];
