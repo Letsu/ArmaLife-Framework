@@ -40,12 +40,14 @@ private _fnc_updateHud = {
 };
 
 
-private _foodTime = time;
+private _foodTime   = time;
 private _thirstTime = time;
+private _saveTime   = time;
 for "_i" from 0 to 1 step 0 do {
 
-    if ((time - _foodTime) > 400 ) then { call _fnc_food; _foodTime = time };
+    if ((time - _foodTime) > 400 )   then { call _fnc_food; _foodTime = time };
     if ((time - _thirstTime) > 350 ) then { call _fnc_thirst; _thirstTime = time };
+    if ((time - _saveTime) > 360 )   then { call lts_fnc_savePlayerInfo; _saveTime = time };
 
     //call Functions
     call _fnc_updateHud;
