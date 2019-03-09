@@ -18,10 +18,11 @@
  private _DISPLAY = findDisplay 42001;
  private _EDITNOTE  = _DISPLAY displayCtrl 1004;
 
+_id     = lts_dialog_wanted_curWanted;
+if (_id isEqualTo -1) exitWith { ["Du hast keinen Eintrag in der Wanted List ausgewählt!"] call lts_fnc_hint };
+
  private _note  = ctrlText _EDITNOTE;
  if (count _note isEqualTo 0) exitWith { ["Die Beschreibung darf nicht Leer sein"] call lts_fnc_hint };
-
-_id     = lts_dialog_wanted_curWanted;
 
 
  [_id, player, _note] call lts_cop_fnc_wantedNoteAdd;
