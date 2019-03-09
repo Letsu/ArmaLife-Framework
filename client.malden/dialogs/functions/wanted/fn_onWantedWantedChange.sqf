@@ -28,7 +28,6 @@ _TEXTWANTED ctrlCommit 0;
 
 private _curSel = lbCurSel _LBWANTED;
 private _target = lts_dialog_wanted_lbPlayerList select (lbCurSel _LBPLAYERS);
-lts_dialog_wanted_curSelect = _target;
 
 //Handle Data
 private _data       = parseSimpleArray(_LBWANTED lbData _curSel);
