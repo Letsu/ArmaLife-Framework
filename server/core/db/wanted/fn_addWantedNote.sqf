@@ -19,7 +19,7 @@
  private _note = param [3];
 
 
-private  _data = format ["0:Wanted:CreateWantedNoteEntry:%1:%2:%3:%4",
+private  _data = format ["0:WantedNotes:CreateWantedNoteEntry:%1:%2:%3:%4",
      _id,
      _copUID,
      _copName,
