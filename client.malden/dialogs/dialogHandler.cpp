@@ -6,6 +6,7 @@
 
 #include "functions\wanted\wanted.hpp" //IDD 40001
 #include "functions\wanted\buttons\wantedAdd.hpp" //IDD 41001
+#include "functions\wanted\buttons\wantedNoteAdd.hpp" //IDD 42001
 
 #include "functions\pMenu\p_Menu.hpp" //IDD 90001
 #include "functions\pMenu\banking\banking.hpp" //IDD91001
