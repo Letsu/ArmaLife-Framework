@@ -13,14 +13,11 @@
  *
  * Public: [Yes/No]
  */
-
- private _target = param [0];
+ private _id = param [0];
  private _cop    = param [1];
- private _title  = param [2];
- private _note   = param [3];
- private _price  = param [4];
+ private _note  = param [2];
 
  private _copUID    = getPlayerUID _cop;
- private _targetUID = getPlayerUID _target;
 
- [_copUID, (name _cop), _targetUID, (name _target), _title, _note, _price] call lts_interface_fnc_wantedAdd;
+
+ [_id, _copUID, (name _cop), _note] call lts_interface_fnc_wantedNoteAdd;

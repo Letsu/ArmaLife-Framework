@@ -24,5 +24,4 @@ private _price      = param [6]; */
 
 hint "Interface wird gesendet";
 
-dbug2 = _this;
 _this remoteExec ["lts_db_fnc_addWanted", 2];

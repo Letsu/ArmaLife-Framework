@@ -13,3 +13,6 @@
  *
  * Public: [Yes/No]
  */
+
+ dbug2 = _this;
+ _this remoteExec ["lts_db_fnc_addWantedNote", 2];
