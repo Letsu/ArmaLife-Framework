@@ -25,6 +25,7 @@ private _owner        = param [2, player]; //Optional
 //Add for at Add to Key to add Mutiplay owners on init!
 private _keyUIDs      = param [4, [(getPlayerUID player)]]; //Optional
 private _keyNames     = param [5, [(name player)]]; //Optional
+private _isCopCar     = param [6, false];
 
 //Create the Vehicle at given Pos
 private _vehicle = _vehicleClass createVehicle _pos;
@@ -48,4 +49,8 @@ _vehicle setVariable [ "owner_uid" , _ownerUID  ]; //Steam64 ID of Owner of Vehi
 _vehicle setVariable [ "owner_obj" , _owner  ]; //Obj of Owner
 _vehicle setVariable [ "owner_name", _ownerName ]; //Display Name of Owener of Vehicle
 
-[_vehicle] call lts_interface_fnc_createNewVeh;
+if (_isCopCar) then {
+    _vehicle setVariable ["copCar", true];
+} else {
+    [_vehicle] call lts_interface_fnc_createNewVeh;
+}

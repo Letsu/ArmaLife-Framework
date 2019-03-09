@@ -30,7 +30,6 @@ private _vehClass = _dataSplit select 1;
 private _indexPos = call (compile (_dataSplit select 2));
 private _spawnPos = getMarkerPos (_dataSplit select 3);
 
-
 //Get Config Entrys
 private _shopVeh = getArray (missionConfigFile >> "Config_Vehicle" >> _shopName >> "Vehicles");
 private _price   = (_shopVeh select _indexPos) select 1;
@@ -38,4 +37,5 @@ private _price   = (_shopVeh select _indexPos) select 1;
 Add Config for Texttures and read Vehicle Defines
 */
 
-[_vehClass, _spawnPos] call lts_fnc_createNewVehicle;
+if (_shopName isEqualTo "policeCar") then { [_vehClass, _spawnPos] call lts_fnc_createNewVehicle };
+[_vehClass, _spawnPos, player, [(getPlayerUID player)], [(name player)], true] call lts_fnc_createNewVehicle;
