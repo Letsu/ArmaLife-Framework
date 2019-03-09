@@ -23,11 +23,11 @@ private _licenseNames = [];
     _licenseNames pushBack ([_x] call lts_fnc_getDisplayName);
 } forEach _licenses;
 
-private _text = format ["%1 hat folgene Lizenzen: "];
-
+private _textHeader = format ["%1 hat folgene Lizenzen: ", name _from];
+private _text = "";
 {
     _text pushBack (format ["<br/>%1", _x])
 } forEach _licenseNames;
 
-private _parseTexted = parseText _text;
+private _parseTexted = parseText composeText [_textHeader, _text];
 hint _parseTexted;

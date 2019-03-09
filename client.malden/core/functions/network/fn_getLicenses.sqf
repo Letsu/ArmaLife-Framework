@@ -17,9 +17,10 @@
  */
 
 private _target       = param [0];
-private _player       = param [1];
+private _cop       = param [1];
 private _actionParams = param [2];
-private _licenses     = param [3];
+
+private _licenses     = lts_core_licenses;
 
 private _licenseArr = [];
 
@@ -29,4 +30,4 @@ private _licenseArr = [];
     };
 } forEach _licenses;
 
-[_target, _licenses] remoteExec ["lts_cop_fnc_getLicenseCop", _player]
+[_target, _licenseArr] remoteExec ["lts_cop_fnc_getLicenseCop", _cop]
