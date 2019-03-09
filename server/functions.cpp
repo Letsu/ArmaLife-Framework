@@ -53,5 +53,6 @@ class lts_db {
       class getWanted     {};
       class getWantedInfo {};
       class addWanted     {};
+      class disableWanted {};
   };
 };
