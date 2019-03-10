@@ -20,16 +20,28 @@ private _DISPLAY = findDisplay 70001;
 
 private _SHOPNAME    = _DISPLAY displayCtrl 1001;
 private _TEXTPRICE   = _DISPLAY displayCtrl 1003;
-private _LBSHOP      = _DISPLAY displayCtrl 1500;
+private _TVSHOP      = _DISPLAY displayCtrl 1500;
+private _TVCART      = _DISPLAY displayCtrl 1501;
 private _BUTTONBUY   = _DISPLAY displayCtrl 1600;
 private _BUTTONABORT = _DISPLAY displayCtrl 1601;
 
-//Get Shop Config
-private _displayName = getText (missionConfigFile >> "Config_Shops" >> _shopClass >> "DisplayName");
-private _condition = getText (missionConfigFile >> "Config_Shops" >> _shopClass >> "Condition");
-private _itemList = getArray (missionConfigFile >> "Config_Shops" >> _shopClass >> "Items");
+private _configs = configProperties[missionConfigFile >> "Config_Shops" >> "Shop_Test_01"];
 
-//First some Checks!
+//Get Shop Config
+private _displayName = getText (_configs select 0);
+_configs deleteAt 0;
+private _condition   = getText (_configs select 0);
+_configs deleteAt 0;
+
+{
+    _y = getArray _x;
+    _menuName = _y select 0;
+    _TVSHOP tvAdd [[], _menuName];
+} forEach _configs;
+
+
+
+/* //First some Checks!
 private _hasCondition = false;
 if !(_condition isEqualTo "") then { _hasCondition = true };
 if (_hasCondition && call compile (_condition)) exitWith { ["Du darfst dieses Geschäft nicht benutzen"] call lts_fnc_hint; closeDialog 0 };
@@ -61,4 +73,4 @@ private _index = 0;
     _index = _index + 1;
 } forEach _itemList;
 
-_LBSHOP lbSetCurSel 0;
+_LBSHOP lbSetCurSel 0; */

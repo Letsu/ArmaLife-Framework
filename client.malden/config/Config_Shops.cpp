@@ -12,9 +12,41 @@ class Config_Shops {
     class Shop_Test_01 {
         DisplayName = "Shop01";
         Condition = "";
+        Uniforms[] = {
+            "Kleidung",
+            {"U_B_GEN_Soldier_F", "", 1000, 100, ""},
+            {"H_Cap_police", "", 1000, 100, ""},
+            {"SMG_03C_TR_black", "", 1000, 100, ""},
+            {"50Rnd_570x28_SMG_03", "", 1000, 100, ""},
+            {"arifle_MXC_Black_F", "", 1000, 100, ""},
+            {"30Rnd_65x39_caseless_mag", "", 1000, 100, ""},
+            {"SMG_05_F", "", 1000, 100, ""},
+            {"30Rnd_9x21_Mag_SMG_02", "", 1000, 100, ""},
+            {"optic_Arco_blk_F", "", 1000, 100, ""}
+        };
+        Vests[] = {
+            "Westen",
+            {"SMG_05_F", "", 1000, 100, ""},
+            {"30Rnd_9x21_Mag_SMG_02", "", 1000, 100, ""},
+            {"optic_Arco_blk_F", "", 1000, 100, ""}
+        };
+        backpack[] = {
+            "Rücksäcke",
+            {"SMG_05_F", "", 1000, 100, ""},
+            {"30Rnd_9x21_Mag_SMG_02", "", 1000, 100, ""},
+            {"optic_Arco_blk_F", "", 1000, 100, ""}
+        };
+        weapons[] = {
+            "Waffen",
+            {"SMG_05_F", "", 1000, 100, ""},
+            {"30Rnd_9x21_Mag_SMG_02", "", 1000, 100, ""},
+            {"optic_Arco_blk_F", "", 1000, 100, ""}
+        };
         Items[] = {
-            {"arifle_MX_F", "", 1000, 100, ""},
-            {"NVGoggles", "", 100, 10, ""}
+            "Items",
+            {"SMG_05_F", "", 1000, 100, ""},
+            {"30Rnd_9x21_Mag_SMG_02", "", 1000, 100, ""},
+            {"optic_Arco_blk_F", "", 1000, 100, ""}
         };
     };
 

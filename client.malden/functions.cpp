@@ -22,6 +22,7 @@ class cop_side {
         class wantedRemove {};
         class wantedNoteAdd {};
     };
+
 };
 
 class med_side {
@@ -266,7 +267,12 @@ class lts_dialog {
         class wantedAdd     {};
         class wantedRemove  {};
         class wantedNoteAdd {};
-    }
+    };
+
+    class test {
+        file = "dialogs\functions\test";
+        class callTree {};
+    };
 };
 
 class log {

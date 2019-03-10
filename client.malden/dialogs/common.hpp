@@ -93,6 +93,23 @@
 #define MB_BUTTON_USER    4
 
 
+
+// Grids
+#define GUI_GRID_CENTER_WAbs		((safezoneW / safezoneH) min 1.2)
+#define GUI_GRID_CENTER_HAbs		(GUI_GRID_CENTER_WAbs / 1.2)
+#define GUI_GRID_CENTER_W		(GUI_GRID_CENTER_WAbs / 40)
+#define GUI_GRID_CENTER_H		(GUI_GRID_CENTER_HAbs / 25)
+#define GUI_GRID_CENTER_X		(safezoneX + (safezoneW - GUI_GRID_CENTER_WAbs)/2)
+#define GUI_GRID_CENTER_Y		(safezoneY + (safezoneH - GUI_GRID_CENTER_HAbs)/2)
+
+// Fonts
+#define GUI_FONT_NORMAL			PuristaMedium
+#define GUI_FONT_BOLD			PuristaSemibold
+#define GUI_FONT_THIN			PuristaLight
+#define GUI_FONT_MONO			EtelkaMonospacePro
+#define GUI_FONT_NARROW			EtelkaNarrowMediumPro
+#define GUI_FONT_CODE			LucidaConsoleB
+#define GUI_FONT_SYSTEM			TahomaB
 ///////////////////////////////////////////////////////////////////////////
 /// Base Classes
 ///////////////////////////////////////////////////////////////////////////
@@ -1030,4 +1047,86 @@ class RscMapControl {
         lineWidthThin = 0.008;
         textureComboBoxColor = "#(argb,8,8,3)color(1,1,1,1)";
     };
+};
+
+class RscTree {
+	access = 0; // Control access (0 - ReadAndWrite, 1 - ReadAndCreate, 2 - ReadOnly, 3 - ReadOnlyVerified)
+	idc = 1500; // Control identification (without it, the control won't be displayed)
+	type = 12; // Type
+	style = 0x00; // Style
+	default = 0; // Control selected by default (only one within a display can be used)
+	blinkingPeriod = 0; // Time in which control will fade out and back in. Use 0 to disable the effect.
+
+	x = 0 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X; // Horizontal coordinates
+	y = 0 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y; // Vertical coordinates
+	w = 40 * GUI_GRID_CENTER_W; // Width
+	h = 30 * GUI_GRID_CENTER_H; // Height
+
+	colorBorder[] = {0,0,0,1}; // Frame color
+
+	colorBackground[] = {0.2,0.2,0.2,1}; // Fill color
+	colorSelect[] = {1,0.5,0,1}; // Selected item fill color (when multiselectEnabled is 0)
+	colorMarked[] = {1,0.5,0,0.5}; // Marked item fill color (when multiselectEnabled is 1)
+	colorMarkedSelected[] = {1,0.5,0,1}; // Selected item fill color (when multiselectEnabled is 1)
+
+	sizeEx = GUI_GRID_CENTER_H; // Text size
+	font = GUI_FONT_NORMAL; // Font from CfgFontFamilies
+	shadow = 1; // Shadow (0 - none, 1 - N/A, 2 - black outline)
+	colorText[] = {1,1,1,1}; // Text color
+	colorSelectText[] = {1,1,1,1}; // Selected text color (when multiselectEnabled is 0)
+	colorMarkedText[] = {1,1,1,1}; // Selected text color (when multiselectEnabled is 1)
+
+	tooltip = "CT_TREE"; // Tooltip text
+	tooltipColorShade[] = {0,0,0,1}; // Tooltip background color
+	tooltipColorText[] = {1,1,1,1}; // Tooltip text color
+	tooltipColorBox[] = {1,1,1,1}; // Tooltip frame color
+
+	multiselectEnabled = 1; // Allow selecting multiple items while holding Ctrl or Shift
+	expandOnDoubleclick = 1; // Expand/collapse item upon double-click
+	hiddenTexture = "A3\ui_f\data\gui\rsccommon\rsctree\hiddenTexture_ca.paa"; // Expand icon
+	expandedTexture = "A3\ui_f\data\gui\rsccommon\rsctree\expandedTexture_ca.paa"; // Collapse icon
+	maxHistoryDelay = 1; // Time since last keyboard type search to reset it
+
+	// Scrollbar configuration
+	class ScrollBar
+	{
+		width = 0; // Unknown?
+		height = 0; // Unknown?
+		scrollSpeed = 0.01; // Unknown?
+
+		arrowEmpty = "\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa"; // Arrow
+		arrowFull = "\A3\ui_f\data\gui\cfg\scrollbar\arrowFull_ca.paa"; // Arrow when clicked on
+		border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa"; // Slider background (stretched vertically)
+		thumb = "\A3\ui_f\data\gui\cfg\scrollbar\thumb_ca.paa"; // Dragging element (stretched vertically)
+
+		color[] = {1,1,1,1}; // Scrollbar color
+	};
+
+	colorDisabled[] = {0,0,0,0}; // Does nothing, but must be present, otherwise an error is shown
+	colorArrow[] = {0,0,0,0}; // Does nothing, but must be present, otherwise an error is shown
+
+	// onCanDestroy = "systemChat str ['onCanDestroy',_this]; true";
+	// onDestroy = "systemChat str ['onDestroy',_this]; false";
+	// onMouseEnter = "systemChat str ['onMouseEnter',_this]; false";
+	// onMouseExit = "systemChat str ['onMouseExit',_this]; false";
+	// onSetFocus = "systemChat str ['onSetFocus',_this]; false";
+	// onKillFocus = "systemChat str ['onKillFocus',_this]; false";
+	// onKeyDown = "systemChat str ['onKeyDown',_this]; false";
+	// onKeyUp = "systemChat str ['onKeyUp',_this]; false";
+	// onMouseButtonDown = "systemChat str ['onMouseButtonDown',_this]; false";
+	// onMouseButtonUp = "systemChat str ['onMouseButtonUp',_this]; false";
+	// onMouseButtonClick = "systemChat str ['onMouseButtonClick',_this]; false";
+	// onMouseButtonDblClick = "systemChat str ['onMouseButtonDblClick',_this]; false";
+	// onMouseZChanged = "systemChat str ['onMouseZChanged',_this]; false";
+	// onMouseMoving = "";
+	// onMouseHolding = "";
+	//
+	// onTreeSelChanged = "systemChat str ['onTreeSelChanged',_this]; false";
+	// onTreeLButtonDown = "systemChat str ['onTreeLButtonDown',_this]; false";
+	// onTreeDblClick = "systemChat str ['onTreeDblClick',_this]; false";
+	// onTreeExpanded = "";
+	// onTreeCollapsed = "";
+	// //onTreeMouseMove = "systemChat str ['onTreeMouseMove',_this]; false"; // Causing CTD
+	// //onTreeMouseHold = "systemChat str ['onTreeMouseHold',_this]; false"; // Causing CTD
+	// onTreeMouseExit = "";
 };
