@@ -268,11 +268,6 @@ class lts_dialog {
         class wantedRemove  {};
         class wantedNoteAdd {};
     };
-
-    class test {
-        file = "dialogs\functions\test";
-        class callTree {};
-    };
 };
 
 class log {
