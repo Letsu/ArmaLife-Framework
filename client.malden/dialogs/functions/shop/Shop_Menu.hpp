@@ -37,7 +37,7 @@ class ShopMenu {
        class Text_Shop_Price : RscText
        {
            idc = 1003;
-           text = "10";
+           text = "0";
            x = 0.486979166666667 * safezoneW + safezoneX;
            y = 0.561637659783678 * safezoneH + safezoneY;
            w = 0.143229166666667 * safezoneW;
@@ -50,7 +50,34 @@ class ShopMenu {
 		   y = 0.561637659783678 * safezoneH + safezoneY;
 		   h = 0.037 * safezoneH;
 		   w = 0.0802083333333333 * safezoneW;
-		   text = "10";
+		   text = "0";
+	   };
+	   class RscButton0 : RscButton
+	   {
+		   text = "Kaufen";
+		   x = 0.73125 * safezoneW + safezoneX;
+		   y = 0.598632251720747 * safezoneH + safezoneY;
+		   w = 0.0608153333333333 * safezoneW;
+		   h = 0.039216 * safezoneH;
+		   idc = 1007;
+	   };
+	   class RscButton1 : RscButton
+	   {
+		   text = "Entfernen";
+		   x = 0.649601333333333 * safezoneW + safezoneX;
+		   y = 0.598632251720747 * safezoneH + safezoneY;
+		   w = 0.0592528333333334 * safezoneW;
+		   h = 0.039216 * safezoneH;
+		   idc = 1008;
+	   };
+	   class RscText2 : RscText
+	   {
+		   idc = 1009;
+		   text = "Verkaufspreis";
+		   x = 0.649601333333333 * safezoneW + safezoneX;
+		   y = 0.561637659783678 * safezoneH + safezoneY;
+		   h = 0.037 * safezoneH;
+		   w = 0.0796875 * safezoneW;
 	   };
    };
 
@@ -75,7 +102,7 @@ class ShopMenu {
        class Button_Buy : RscButton
        {
            idc = 1600;
-           text = "In den Warenkorb";
+           text = "Kaufen";
            x = 0.454114333333333 * safezoneW + safezoneX;
            y = 0.598632251720747 * safezoneH + safezoneY;
            w = 0.0839065 * safezoneW;
@@ -109,33 +136,6 @@ class ShopMenu {
            y = 0.18503982300885 * safezoneH + safezoneY;
            h = 0.037 * safezoneH;
            w = 0.0697916666666667 * safezoneW;
-       };
-       class RscButton0 : RscButton
-       {
-           text = "Kaufen";
-           x = 0.73125 * safezoneW + safezoneX;
-           y = 0.598632251720747 * safezoneH + safezoneY;
-           w = 0.0608153333333333 * safezoneW;
-           h = 0.039216 * safezoneH;
-           idc = 1007;
-       };
-       class RscButton1 : RscButton
-       {
-           text = "Entfernen";
-           x = 0.649601333333333 * safezoneW + safezoneX;
-           y = 0.598632251720747 * safezoneH + safezoneY;
-           w = 0.0592528333333334 * safezoneW;
-           h = 0.039216 * safezoneH;
-           idc = 1008;
-       };
-       class RscText2 : RscText
-       {
-           idc = 1009;
-           text = "Preis Gesammt:";
-           x = 0.649601333333333 * safezoneW + safezoneX;
-           y = 0.561637659783678 * safezoneH + safezoneY;
-           h = 0.037 * safezoneH;
-           w = 0.0796875 * safezoneW;
        };
    };
 };

@@ -33,10 +33,38 @@ _configs deleteAt 0;
 private _condition   = getText (_configs select 0);
 _configs deleteAt 0;
 
+ //First some Checks!
+private _hasCondition = false;
+if !(_condition isEqualTo "") then { _hasCondition = true };
+if (_hasCondition && call compile (_condition)) exitWith { ["Du darfst dieses Geschäft nicht benutzen"] call lts_fnc_hint; closeDialog 0 };
+//Set Text
+_SHOPNAME ctrlSetText _displayName;
+
+
 {
+    //Set Title
     _y = getArray _x;
     _menuName = _y select 0;
-    _TVSHOP tvAdd [[], _menuName];
+    _tvPos = _TVSHOP tvAdd [[], _menuName];
+    _y deleteAt 0;
+
+    {
+        _class     = _x select 0;
+        _itemName  = _x select 1;
+        _buyPrice  = _x select 2;
+        _sellPrice = _x select 3;
+        _condition = _x select 4;
+        if (_itemName isEqualTo "") then { _itemName = [_class] call lts_fnc_getDisplayName; };
+
+        if !(_itemCondition isEqualTo "") then { _hasItemCondition = true };
+        if (_hasItemCondition && compile (_itemCondition)) exitWith { };
+
+        _itemPos = _TVSHOP tvAdd [[_tvPos], _itemName];
+        _data = [_class, _itemName, _buyPrice, _sellPrice];
+        _TVSHOP tvSetData [[_tvPos, _itemPos], str(_data)];
+
+
+    } forEach _y;
 } forEach _configs;
 
 
