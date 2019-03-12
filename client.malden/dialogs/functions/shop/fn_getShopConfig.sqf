@@ -25,7 +25,7 @@ private _TVCART      = _DISPLAY displayCtrl 1501;
 private _BUTTONBUY   = _DISPLAY displayCtrl 1600;
 private _BUTTONABORT = _DISPLAY displayCtrl 1601;
 
-private _configs = configProperties[missionConfigFile >> "Config_Shops" >> "Shop_Test_01"];
+private _configs = configProperties[missionConfigFile >> "Config_Shops" >> _shopClass];
 
 //Get Shop Config
 private _displayName = getText (_configs select 0);
@@ -57,7 +57,12 @@ _SHOPNAME ctrlSetText _displayName;
         if (_itemName isEqualTo "") then { _itemName = [_class] call lts_fnc_getDisplayName; };
 
         if !(_itemCondition isEqualTo "") then { _hasItemCondition = true };
-        if (_hasItemCondition && compile (_itemCondition)) exitWith { };
+        //Need to FIX Condition!!
+        /* if !(_hasItemCondition && compile (_itemCondition)) then {
+            _itemPos = _TVSHOP tvAdd [[_tvPos], _itemName];
+            _data = [_class, _itemName, _buyPrice, _sellPrice];
+            _TVSHOP tvSetData [[_tvPos, _itemPos], str(_data)];
+        }; */
 
         _itemPos = _TVSHOP tvAdd [[_tvPos], _itemName];
         _data = [_class, _itemName, _buyPrice, _sellPrice];

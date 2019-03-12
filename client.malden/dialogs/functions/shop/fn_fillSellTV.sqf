@@ -35,23 +35,46 @@ private _configs = configProperties[missionConfigFile >> "Config_Shops" >> _shop
 _configs deleteAt 0; //Delete DispalyName
 _configs deleteAt 0; //Delete Condition
 
-_sellArray = [];
+
+private _sellArrayClass = [];
+private _sellArrayPrice = [];
 //Create Array whit all Sellable Items
 {
-    _x deleteAt 0;
-    if (_x select 3 isEqualTo -1) exitWith {};
-    _sellArray pushBack [_x select 0, _x select 3];
+    _y = getArray _x;
+    _y deleteAt 0;
+    {
+        if !((_x select 3) isEqualTo -1) then {
+            _sellArrayClass pushBack (_x select 0);
+            _sellArrayPrice pushBack (_x select 3);
+        };
+    } forEach (_y);
 } forEach _configs;
-testSell = _sellArray;
 
 
-_TVSELL tvAdd [[], "Uniform"];
-
+_uniformPos = _TVSELL tvAdd [[], "Uniform"];
 {
     _class = _x;
-    _name  = [_class] call lts_fnc_getDisplayName;
+    if (_class in _sellArrayClass) then {
+        _name  = [_class] call lts_fnc_getDisplayName;
+        _TVSELL tvAdd [[_uniformPos], _name];
+    };
 } forEach _uniformItems;
 
 
-_TVSELL tvAdd [[], "Weste"];
-_TVSELL tvAdd [[], "Rucksack"];
+_vestPos = _TVSELL tvAdd [[], "Weste"];
+{
+    _class = _x;
+    if (_class in _sellArrayClass) then {
+        _name  = [_class] call lts_fnc_getDisplayName;
+        _TVSELL tvAdd [[_vestPos], _name];
+    };
+} forEach _vestItems;
+
+_backpackPos = _TVSELL tvAdd [[], "Rucksack"];
+{
+    _class = _x;
+    if (_class in _sellArrayClass) then {
+        _name  = [_class] call lts_fnc_getDisplayName;
+        _TVSELL tvAdd [[_backpackPos], _name];
+    };
+} forEach _backpack;
