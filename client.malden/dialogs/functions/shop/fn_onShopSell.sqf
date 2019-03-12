@@ -24,7 +24,7 @@
 if (lts_dialog_shop_disableSell) exitWith {};
 lts_dialog_shop_disableSell = true;
 private _curSel = tvCurSel _TVCART;
-if (count _curSel <= 1) exitWith { };
+if (count _curSel <= 1) exitWith { lts_dialog_shop_disableSell = false };
 private _data = _TVCART tvData _curSel;
 _data = parseSimpleArray _data;
 
@@ -34,8 +34,6 @@ private _name = _data select 1;
 private _sellPrice = _data select 2;
 private _shopClass = _data select 3;
 private _pos = _data select 4;
-
-dbug_shopClass = _shopClass;
 
 
 [ format ["Du hats %1 verkauft!", _name] ] call lts_fnc_hint;

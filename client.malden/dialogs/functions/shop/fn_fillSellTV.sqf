@@ -93,4 +93,4 @@ _backpackPos = _TVSELL tvAdd [[], "Rucksack"];
     };
 } forEach _backpack;
 
-tvCollapseAll _TVSELL;
+tvExpandAll _TVSELL;
