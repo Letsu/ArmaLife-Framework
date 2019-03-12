@@ -202,7 +202,8 @@ class lts_dialog {
         class getShopConfig {};
         class onShopBuy     {};
         class onShopSell    {};
-        class shopLbChange  {};
+        class shopBuyTVChange  {};
+        class shopSellTVChange  {};
         class fillSellTV    {};
     };
 
