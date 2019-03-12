@@ -40,3 +40,6 @@ closeDialog 0;
 /* [] spawn lts_dialog_fnc_intro */
 
 player setPos _spawnPos;
+
+//Leave Group
+[player] join grpNull;
