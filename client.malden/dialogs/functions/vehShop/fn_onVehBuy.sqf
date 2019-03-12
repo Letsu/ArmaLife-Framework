@@ -37,5 +37,5 @@ private _price   = (_shopVeh select _indexPos) select 1;
 Add Config for Texttures and read Vehicle Defines
 */
 dbug_shopname = _shopName;
-if (_shopName isEqualTo "policeCar") exitWith { [_vehClass, _spawnPos, player, [(getPlayerUID player)], [(name player)], true] call lts_fnc_createNewVehicle };
+if (_shopName isEqualTo "policeCar") exitWith { [_vehClass, _spawnPos, player, (getPlayerUID player), [(getPlayerUID player)], [(name player)], true] call lts_fnc_createNewVehicle };
 [_vehClass, _spawnPos, player, [(getPlayerUID player)], [(name player)], false] call lts_fnc_createNewVehicle;

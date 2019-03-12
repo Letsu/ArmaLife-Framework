@@ -65,12 +65,13 @@ _SHOPNAME ctrlSetText _displayName;
         }; */
 
         _itemPos = _TVSHOP tvAdd [[_tvPos], _itemName];
-        _data = [_class, _itemName, _buyPrice, _sellPrice];
+        _data = [_class, _itemName, _buyPrice, _sellPrice, _shopClass];
         _TVSHOP tvSetData [[_tvPos, _itemPos], str(_data)];
 
 
     } forEach _y;
 } forEach _configs;
+
 
 
 

@@ -126,6 +126,7 @@ class ShopMenu {
            w = 0.0608153333333333 * safezoneW;
            h = 0.039216 * safezoneH;
            idc = 1007;
+           action = "call lts_dialog_fnc_onShopSell";
        };
    };
 };

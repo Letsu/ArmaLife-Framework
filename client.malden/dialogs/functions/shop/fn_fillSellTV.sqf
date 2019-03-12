@@ -27,6 +27,8 @@ _shopClass = param [0];
  private _BUTTONABORT = _DISPLAY displayCtrl 1601;
  private _BUTTONSELL  = _DISPLAY displayCtrl 1007;
 
+tvClear _TVSELL;
+
 private _uniformItems = uniformItems player;
 private _vestItems    = vestItems player;
 private _backpack     = backpackItems player;
@@ -55,8 +57,12 @@ _uniformPos = _TVSELL tvAdd [[], "Uniform"];
 {
     _class = _x;
     if (_class in _sellArrayClass) then {
+        _arrPos = _sellArrayClass find _class;
+        _price = _sellArrayPrice select _arrPos;
         _name  = [_class] call lts_fnc_getDisplayName;
-        _TVSELL tvAdd [[_uniformPos], _name];
+        _pos = _TVSELL tvAdd [[_uniformPos], _name];
+        _data = [_class, _name, _price, _shopClass, 0];
+        _TVSELL tvSetData [[_uniformPos, _pos], str(_data)];
     };
 } forEach _uniformItems;
 
@@ -65,8 +71,12 @@ _vestPos = _TVSELL tvAdd [[], "Weste"];
 {
     _class = _x;
     if (_class in _sellArrayClass) then {
+        _arrPos = _sellArrayClass find _class;
+        _price = _sellArrayPrice select _arrPos;
         _name  = [_class] call lts_fnc_getDisplayName;
-        _TVSELL tvAdd [[_vestPos], _name];
+        _pos = _TVSELL tvAdd [[_vestPos], _name];
+        _data = [_class, _name, _price, _shopClass, 1];
+        _TVSELL tvSetData [[_vestPos, _pos], str(_data)];
     };
 } forEach _vestItems;
 
@@ -74,7 +84,13 @@ _backpackPos = _TVSELL tvAdd [[], "Rucksack"];
 {
     _class = _x;
     if (_class in _sellArrayClass) then {
+        _arrPos = _sellArrayClass find _class;
+        _price = _sellArrayPrice select _arrPos;
         _name  = [_class] call lts_fnc_getDisplayName;
-        _TVSELL tvAdd [[_backpackPos], _name];
+        _pos = _TVSELL tvAdd [[_backpackPos], _name];
+        _data = [_class, _name, _price, _shopClass, 2];
+        _TVSELL tvSetData [[_backpackPos, _pos], str(_data)];
     };
 } forEach _backpack;
+
+tvCollapseAll _TVSELL;

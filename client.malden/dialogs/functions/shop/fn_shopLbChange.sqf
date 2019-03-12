@@ -18,7 +18,8 @@
 private _DISPLAY = findDisplay 70001;
 
 private _TEXTPRICE   = _DISPLAY displayCtrl 1003;
-private _LBSHOP      = _DISPLAY displayCtrl 1500;
+private _TVSHOP      = _DISPLAY displayCtrl 1500;
+private _TVSELL      = _DISPLAY displayCtrl 1501;
 
 //Get Data from Current selected Listbox entry
 private _curSel    = lbCurSel _LBSHOP;
