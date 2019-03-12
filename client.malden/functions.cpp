@@ -31,6 +31,7 @@ class med_side {
         file = "core\side\med";
         class init           {};
         class setMedCoreData {};
+        class requestMedic   {};
     };
 };
 
