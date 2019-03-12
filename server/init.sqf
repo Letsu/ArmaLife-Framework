@@ -37,6 +37,10 @@ private _successfully = false;
 [] call lts_db_fnc_staticVars;
 ["Finish Getting Static Global Variables"] call lts_server_fnc_log;
 
+//Create Group for Medics & cops
+allMedicGroup = createGroup [civilian, false];
+allCopGroup   = createGroup [civilian, false];
+
 ["--------------------------------------------"] call lts_server_fnc_log;
 ["----- Finish of Server Initalisation  ------"] call lts_server_fnc_log;
 ["--------------------------------------------"] call lts_server_fnc_log;

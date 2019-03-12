@@ -19,7 +19,6 @@ private _unit = param[0, player];
 private _state = param[1, true];
 
 if (_state) then {
-	private ["_text1", "_reqMedic", "_reqNoMedic"];
 	(findDisplay 49) closeDisplay 0;
 
 //Only for DEBUG Enable when Online!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -43,7 +42,8 @@ if (_state) then {
 	_reqMedic ctrlCommit 0;
 	_reqMedic ctrlSetBackgroundColor [0, 0, 0, 0.7];
 	_reqMedic ctrlSetText "Medic Rufen";
-	_reqMedic ctrlAddEventHandler ["ButtonClick", "ctrlEnable [1931, false]; ctrlEnable [1932, false]"]; //<--- Nedd Function to create an Emergeny by the 911
+	_reqMedic ctrlAddEventHandler ["ButtonClick", "ctrlEnable [1931, false]; ctrlEnable [1932, false]; call lts_med_fnc_requestMedic"]; //<--- Nedd Function to create an Emergeny by the 911
 } else {
+	[(name player)] call BIS_fnc_deleteTask;
 	closeDialog 0;
 };

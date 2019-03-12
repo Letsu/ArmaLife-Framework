@@ -17,11 +17,4 @@
 private _side = param [0, "cop"];
 private _oldSide = param [1, "civ"];
 
-//Load Cop Loadout
-
-/*
-[] call lts_cop_fnc_loadout;
-*/
-
-
-//Add Acces to Wanted List
+[player] joinSilent allCopGroup;
