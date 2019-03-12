@@ -49,7 +49,7 @@ _vehicle setVariable [ "owner_uid" , _ownerUID  ]; //Steam64 ID of Owner of Vehi
 _vehicle setVariable [ "owner_obj" , _owner  ]; //Obj of Owner
 _vehicle setVariable [ "owner_name", _ownerName ]; //Display Name of Owener of Vehicle
 
-_vehicle setVehicleLock 2;
+_vehicle lock 2;
 
 if (_isCopCar) then {
     _vehicle setVariable ["copCar", true];
