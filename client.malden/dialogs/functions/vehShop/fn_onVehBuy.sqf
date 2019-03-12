@@ -30,12 +30,15 @@ private _vehClass = _dataSplit select 1;
 private _indexPos = call (compile (_dataSplit select 2));
 private _spawnPos = getMarkerPos (_dataSplit select 3);
 
+private _objects = nearestObjects [_spawnPos, ["Car", "Truck","Tank"], 10];
+if (count _objects > 0) exitWith { {"Es steht schon ein Fahrzeug am Spawn!"} call lts_fnc_hint };
+
 //Get Config Entrys
 private _shopVeh = getArray (missionConfigFile >> "Config_Vehicle" >> _shopName >> "Vehicles");
 private _price   = (_shopVeh select _indexPos) select 1;
 /*
 Add Config for Texttures and read Vehicle Defines
 */
-dbug_shopname = _shopName;
+
 if (_shopName isEqualTo "policeCar") exitWith { [_vehClass, _spawnPos, player, (getPlayerUID player), [(getPlayerUID player)], [(name player)], true] call lts_fnc_createNewVehicle };
 [_vehClass, _spawnPos, player, [(getPlayerUID player)], [(name player)], false] call lts_fnc_createNewVehicle;
