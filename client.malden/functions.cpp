@@ -129,7 +129,7 @@ class lts_framework {
         class getVehicleCargo {};
         class addMoney        {};
         class savePlayerInfo  {};
-        class nventoryOpen    {};
+        class inventoryOpen    {};
     };
 
     class network {
