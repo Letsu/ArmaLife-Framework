@@ -30,7 +30,7 @@ private _vehClass = _dataSplit select 1;
 private _indexPos = call (compile (_dataSplit select 2));
 private _spawnPos = getMarkerPos (_dataSplit select 3);
 
-private _objects = nearestObjects [_spawnPos, ["Car", "Truck","Tank"], 10];
+private _objects = nearestObjects [_spawnPos, ["LandVehicle", "Ship", "Air"], 10];
 if (count _objects > 0) exitWith { ["Es steht schon ein Fahrzeug am Spawn!"] call lts_fnc_hint };
 
 //Get Config Entrys
