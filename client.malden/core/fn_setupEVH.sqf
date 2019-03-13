@@ -21,7 +21,7 @@ waitUntil {!(isNull (findDisplay 46))};
 
 //Eventhandlers local on the Player
 player addEventHandler ["Respawn", { _this call lts_fnc_onRespawn }];
-player addEventHandler ["ContainerOpened", { _this call lts_fnc_containerOpen }];
+player addEventHandler ["InventoryOpened", { _this call lts_fnc_inventoryOpen }];
 
 
 //Ace Eventhanders called whit CBA.
