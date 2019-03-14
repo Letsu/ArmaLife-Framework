@@ -40,7 +40,8 @@ lts_money_cash = 0; //Cash of Player
 
 [] call lts_dialog_fnc_callSpawn;
 
-[] spawn {
+[_oldUnit] spawn {
+    _oldUnit = param [0];
     sleep 120;
     deleteVehicle _oldUnit;
 };
