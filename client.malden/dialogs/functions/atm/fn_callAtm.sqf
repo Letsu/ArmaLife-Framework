@@ -20,3 +20,4 @@ waitUntil {!(isNull (findDisplay 46))};
 //Create the Dialog
 createDialog "atmMenu";
 waitUntil {!(isNull (findDisplay 50001))};
+    
