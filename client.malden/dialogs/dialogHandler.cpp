@@ -4,6 +4,7 @@
 #include "functions\shop\Shop_Menu.hpp" //IDD: 70001
 #include "functions\vehShop\VehShop_Menu.hpp" //IDD: 80001
 
+#include "functions\atm\atm.hpp" //IDD 40001
 #include "functions\wanted\wanted.hpp" //IDD 40001
 #include "functions\wanted\buttons\wantedAdd.hpp" //IDD 41001
 #include "functions\wanted\buttons\wantedNoteAdd.hpp" //IDD 42001

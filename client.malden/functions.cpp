@@ -273,6 +273,13 @@ class lts_dialog {
         class wantedRemove  {};
         class wantedNoteAdd {};
     };
+
+    class atm {
+        file = "dialogs\functions\atm";
+        class atmDeposit {};
+        class atmRaise   {};
+        class callAtm    {};
+    };
 };
 
 class log {
