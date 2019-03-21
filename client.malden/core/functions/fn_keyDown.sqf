@@ -79,6 +79,10 @@ switch (_key) do {
         };
     };
 
+    case (86): {
+        [] spawn lts_fnc_gather;
+    };
+
 };
 
 
