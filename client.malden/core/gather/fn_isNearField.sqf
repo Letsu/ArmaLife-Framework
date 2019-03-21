@@ -13,7 +13,32 @@
  * [] call lts_fnc_initGather;
  *
  */
-{
+
+_return = [false];
+
+ {
+     private _pfad = str(_x) splitString "/, \";
+     private _config = _pfad select ((count _pfad) - 1);
+
+     private _fieldRange = getNumber (missionConfigFile >> "Config_Gather" >> _config >> "Range");
+     private _item = getText (missionConfigFile >> "Config_Gather" >> _config >> "Item");
+     private _fields = getArray (missionConfigFile >> "Config_Gather" >> _config >> "Fields");
+
+
+     {
+         if ( (player distance (getMarkerPos _x)) <= _fieldRange ) then {
+             _return = [true, _item];
+         };
+     } forEach _fields;
+ } forEach ("true" configClasses (missionConfigFile >> "Config_Gather"));
+
+
+_return;
+
+
+
+
+/* {
     private _pfad = str(_x) splitString "/, \";
     private _config = _pfad select ((count _pfad) - 1);
 
@@ -34,4 +59,4 @@
 
         } forEach _trees;
     } forEach _fields;
-} forEach ("true" configClasses (missionConfigFile >> "Config_Gather"));
+} forEach ("true" configClasses (missionConfigFile >> "Config_Gather")); */

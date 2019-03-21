@@ -154,7 +154,7 @@ class lts_framework {
         file = "core\gather";
         class gather     {};
         class process    {};
-        class initGather {};
+        class isNearField {};
     };
 
     class player {
