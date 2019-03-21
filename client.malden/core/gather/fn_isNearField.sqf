@@ -23,6 +23,11 @@ _return = [false];
      private _fieldRange = getNumber (missionConfigFile >> "Config_Gather" >> _config >> "Range");
      private _item = getText (missionConfigFile >> "Config_Gather" >> _config >> "Item");
      private _fields = getArray (missionConfigFile >> "Config_Gather" >> _config >> "Fields");
+     private _condition = getText (missionConfigFile >> "Config_Gather" >> _config >> "Condtion");
+
+     private _hasCondition = false;
+     if !(_condition isEqualTo "") then { _hasCondition = true };
+     if (_hasCondition && !(call compile (_condition))) exitWith { };
 
 
      {

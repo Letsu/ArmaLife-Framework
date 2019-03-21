@@ -43,8 +43,10 @@ lts_cop_level = 0; //Cop Level
 lts_med_level = 0;
 
 
+//System Variables
 lts_dialog_shop_disableSell = false;
 lts_dialog_atm_curUsing = false;
+lts_gather_isGather = false;
 
 //Init of Variables on the Player whit setVariable
 player setVariable ["serviceNumber", -1, true]; //Filled whit value when Player join as Cop or Medic

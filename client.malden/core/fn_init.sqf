@@ -59,10 +59,6 @@ waitUntil {!(isNull (findDisplay 46))};
 [] call lts_interface_fnc_requestMedData; //load Med Data at Join so the Player has an ServiceNumber also when he is an Civ
 ["Finish Loading Player Prestige Data"] call lts_fnc_log;
 
-["Initalisation of Farming Scripts and setup Actions for Farming"] call lts_fnc_log;
-[] call lts_fnc_initGather;
-["Finish Initalisation of Farming Scripts and setup Actions for Farming"] call lts_fnc_log;
-
 ["Initalisation of Player Hud"] call lts_fnc_log;
 [] call lts_dialog_fnc_callPlayerHud;
 ["Finish Initalisation of Player Hud"] call lts_fnc_log;
