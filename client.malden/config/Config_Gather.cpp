@@ -14,6 +14,6 @@ class Config_Gather {
         Range = 70;
         Item = "L_Item_Wood";
         Fields[] = {"spawn_test"};
-        Condtion = "false"; //Don´t working a.t.m. !For Futur Use!
+        Condtion = "";
     };
 };

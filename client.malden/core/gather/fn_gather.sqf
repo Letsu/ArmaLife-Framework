@@ -22,7 +22,6 @@ if (lts_core_curSide != "civ") exitWith {};
 
 _item = _return select 1;
 
-_item = param[0, ""];
 for "_i" from 0 to 8 do {
     player playMoveNow "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
     waitUntil{animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";};
@@ -30,7 +29,7 @@ for "_i" from 0 to 8 do {
 };
 
 _amount = random [0, 3 ,4];
-round _amount;
+_amount = round _amount;
 [_item, _amount] call lts_fnc_addItem;
 
 
