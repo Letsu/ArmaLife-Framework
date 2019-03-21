@@ -1,5 +1,5 @@
 class atmMenu {
-   idd = 40001;
+   idd = 30001;
    movingenable = 0;
    class controlsBackground
    {
@@ -74,6 +74,7 @@ class atmMenu {
            h = 0.04 * safezoneH;
            w = 0.165625 * safezoneW;
            idc = 1006;
+           text = "0";
        };
        class RscButton0 : RscButton
        {
@@ -83,6 +84,7 @@ class atmMenu {
            w = 0.116023666666667 * safezoneW;
            h = 0.039216 * safezoneH;
            idc = 1008;
+           action = "call lts_dialog_fnc_atmRaise";
        };
        class RscButton1 : RscButton
        {
@@ -92,9 +94,7 @@ class atmMenu {
            w = 0.116023666666667 * safezoneW;
            h = 0.039216 * safezoneH;
            idc = 1009;
+           action = "call lts_dialog_fnc_atmDeposit";
        };
    };
 };
-/////////////////////////////////////////////////////////////////
-////////////////////////// FILE END /////////////////////////////
-/////////////////////////////////////////////////////////////////

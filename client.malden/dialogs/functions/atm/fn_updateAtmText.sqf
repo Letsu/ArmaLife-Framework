@@ -13,10 +13,9 @@
  *
  * Public: [Yes/No]
  */
-waitUntil {!(isNull (findDisplay 46))};
+_DISPLAY = findDisplay 30001;
+_BANKTEXT = _DISPLAY displayCtrl 1005;
+_CASHTEXT = _DISPLAY displayCtrl 1003;
 
-//Create the Dialog
-createDialog "atmMenu";
-waitUntil {!(isNull (findDisplay 30001))};
-
-[] call lts_dialog_fnc_updateAtmText;
+_BANKTEXT ctrlSetText str(lts_money_bank);
+_CASHTEXT ctrlSetText str(lts_money_cash);

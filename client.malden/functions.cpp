@@ -279,6 +279,7 @@ class lts_dialog {
         class atmDeposit {};
         class atmRaise   {};
         class callAtm    {};
+        class updateAtmText {};
     };
 };
 
