@@ -13,3 +13,10 @@
  *
  * Public: [Yes/No]
  */
+waitUntil {!(isNull (findDisplay 46))};
+
+//Create the Dialog
+createDialog "carGarage";
+waitUntil {!(isNull (findDisplay 20001))};
+
+[] call lts_fnc_fillGarage;

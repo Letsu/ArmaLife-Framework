@@ -4,6 +4,7 @@
 #include "functions\shop\Shop_Menu.hpp" //IDD: 70001
 #include "functions\vehShop\VehShop_Menu.hpp" //IDD: 80001
 
+#include "functions\garage\garage.hpp" //IDD 20001
 #include "functions\atm\atm.hpp" //IDD 30001
 #include "functions\wanted\wanted.hpp" //IDD 40001
 #include "functions\wanted\buttons\wantedAdd.hpp" //IDD 41001

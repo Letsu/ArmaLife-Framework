@@ -18,7 +18,7 @@ private _data = param [0];
 _data = _data select 1;
 
 if (count _data isEqualTo 0) exitWith {};
-
+lts_core_allVehicles = [];
 
 {
     private _plate = _x select 1;
@@ -30,7 +30,7 @@ if (count _data isEqualTo 0) exitWith {};
     private _fuel = _x select 7;
     private _inv  = _x select 8;
 
-    private _vehArr = [_plate, _class, _ownerPID, _ownerName, _keyOwner, _keyNames, _fuel, _inv];
+    private _vehArr = [_plate, _class, _ownerPID, _ownerName, _keyOwner, _keyNames, _fuel, _inv, false];
 
     lts_core_allVehicles pushBackUnique _vehArr;
 } forEach _data;

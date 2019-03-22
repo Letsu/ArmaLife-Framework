@@ -43,6 +43,9 @@ while {_plate in allVehiclePlates} do {
 };
 allVehiclePlates pushBackUnique _plate;
 
+//Add to all Vehicles array
+lts_core_allVehicles pushBackUnique [_plate, _vehicleClass, _ownerUID, _ownerName, _keyUIDs, _keyNames, 1, [], true];
+
 //Set some Variables on Veh
 _vehicle setVariable ["veh_plate", _plate];
 _vehicle setVariable [ "owner_uid" , _ownerUID  ]; //Steam64 ID of Owner of Vehicle
