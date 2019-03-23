@@ -17,7 +17,8 @@ private _player = param [0];
 private _target = param [1];
 
 if (isNull _target) exitWith {};
-/* if (!isPlayer _target) exitWith {}; */
+if (!isPlayer _target) exitWith {};
+if (currentWeapon player isEqualTo "") exitWith {};
 
 [player,"AwopPercMstpSgthWrflDnon_End2"] remoteExecCall ["lts_fnc_animSync",0];
 
