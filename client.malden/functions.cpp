@@ -129,7 +129,8 @@ class lts_framework {
         class getVehicleCargo {};
         class addMoney        {};
         class savePlayerInfo  {};
-        class inventoryOpen    {};
+        class inventoryOpen   {};
+        class animSync        {};
     };
 
     class interaction {
