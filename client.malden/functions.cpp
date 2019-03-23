@@ -183,7 +183,6 @@ class lts_framework {
         class createContact {};
         class getContacts {};
         class initContact {};
-        class updateContacts {};
     };
 };
 
