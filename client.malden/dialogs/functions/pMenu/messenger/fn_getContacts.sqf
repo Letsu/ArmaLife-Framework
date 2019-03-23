@@ -28,7 +28,6 @@ private _contacts = [] call lts_fnc_getContacts;
         private _text = format["%1 [%2]", _name, _number];
         _CONTACTLB lbAdd _text;
         private _index = (lbSize _CONTACTLB)-1;
-        private _data = [_name, _number];
-        _CONTACTLB lbSetData [_index, str(_data)];
+        _CONTACTLB lbSetData [_index, str(_x)];
     };
 } forEach _contacts;
