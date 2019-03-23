@@ -176,6 +176,15 @@ class lts_framework {
         class removeVehicleFromPlayer {};
         class updateVehArray          {};
     };
+
+    class phone {
+        file = "core\phone";
+        class addContact {};
+        class createContact {};
+        class getContacts {};
+        class initContact {};
+        class updateContacts {};
+    };
 };
 
 
@@ -246,6 +255,7 @@ class lts_dialog {
     class pMenuMessenger {
         file = "dialogs\functions\pMenu\messenger";
         class callMessenger {};
+        class getContacts {};
     };
 
     class playerHud {

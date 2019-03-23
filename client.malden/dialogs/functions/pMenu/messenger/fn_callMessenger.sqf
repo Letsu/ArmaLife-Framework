@@ -19,3 +19,5 @@ waitUntil {!(isNull (findDisplay 46))};
 //Create the Dialog
 createDialog "pMenuMessenger";
 waitUntil {!(isNull (findDisplay 93001))};
+
+[] call lts_dialog_fnc_getContacts;
