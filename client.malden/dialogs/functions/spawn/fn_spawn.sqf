@@ -41,5 +41,8 @@ closeDialog 0;
 
 player setPos _spawnPos;
 
+//display Welcommessage
+"Wilkommen auf German Life Gaming" hintC ["Herzlich Wilkommen auf dem Malden Life Server von German Life Gaming.", "Dieser Server ist in einer Frühen Beta Version weshalb noch Lange nicht alle Features fertig oder aktiv sind.", " Wir bitten dich Fehler die während dem Spielen auftretten zu entschuldigen und diese in unserem Forum oder auf unserem Teamspeak beim Support zu melden."];
+
 //Leave Group
 [player] join grpNull;
