@@ -132,6 +132,12 @@ class lts_framework {
         class inventoryOpen    {};
     };
 
+    class interaction {
+        file = "core\interaction";
+        class knockOutTarget {};
+        class knockOutPlayer {};
+    };
+
     class network {
         file = "core\functions\network";
         class giveMoney  {};
