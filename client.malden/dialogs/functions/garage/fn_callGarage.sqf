@@ -19,4 +19,4 @@ waitUntil {!(isNull (findDisplay 46))};
 createDialog "carGarage";
 waitUntil {!(isNull (findDisplay 20001))};
 
-[] call lts_fnc_fillGarage;
+[] call lts_dialog_fnc_fillGarage;

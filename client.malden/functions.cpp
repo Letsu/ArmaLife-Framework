@@ -302,6 +302,13 @@ class lts_dialog {
         class callAtm    {};
         class updateAtmText {};
     };
+
+    class garage {
+        file = "dialogs\functions\garage";
+        class fillGarage {};
+        class callGarage {};
+        class selectGarageVehicle {};
+    };
 };
 
 class log {

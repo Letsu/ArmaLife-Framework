@@ -13,19 +13,25 @@
  *
  * Public: [Yes/No]
  */
-/* _DISPLAY = findDisplay 20001; */
+private _DISPLAY = findDisplay 20001;
+private _LBCARS = _DISPLAY displayCtrl 1000;
 
 //For all Player Vehicles
+private _num = 0;
 {
     //Vehicle is Pared out already so dont list it in the Garage
     if !(_x select 8) then {
-        _plate = _x select 0;
-        _class = _x select 1;
-        _ownerUID = _x select 2;
-        _ownerName = _x select 3;
-        _keyUIDs = _x select 4;
-        _keyNames = _x select 5;
-        _fuel = _x select 6;
-        _inv = _x select 7
+        private _plate = _x select 0;
+        private _class = _x select 1;
+        private _ownerUID = _x select 2;
+        private _ownerName = _x select 3;
+        private _keyUIDs = _x select 4;
+        private _keyNames = _x select 5;
+        private _fuel = _x select 6;
+        private _inv = _x select 7;
+
+        _LBCARS lbAdd ([_class] call lts_fnc_getDisplayName);
+        _LBCARS lbSetData [(lbSize _LBCARS) - 1 , str(_num)];
     };
+    _num = _num + 1;
 } forEach lts_core_allVehicles;
