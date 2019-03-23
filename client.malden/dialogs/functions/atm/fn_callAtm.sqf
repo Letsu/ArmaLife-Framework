@@ -9,7 +9,7 @@
  * Return Name <TYPE>
  *
  * Example:
- * ["example"] call ace_[module]_fnc_[functionName]
+ * private _atm = [ "openATM", "Geldautomat", "", {  [] call lts_dialog_fnc_callAtm }, {true}, {}, "", {}, 10 ] call ace_interact_menu_fnc_createAction; [ this, 0, ["ACE_MainActions"], _atm ] call ace_interact_menu_fnc_addActionToObject;
  *
  * Public: [Yes/No]
  */
@@ -20,3 +20,6 @@ createDialog "atmMenu";
 waitUntil {!(isNull (findDisplay 30001))};
 
 [] call lts_dialog_fnc_updateAtmText;
+
+/* private _atm = [ "openATM", "Geldautomat", "", {  [] call lts_dialog_fnc_callAtm }, {true}, {}, "", {}, 10 ] call ace_interact_menu_fnc_createAction;
+[ this, 0, ["ACE_MainActions"], _atm ] call ace_interact_menu_fnc_addActionToObject; */
