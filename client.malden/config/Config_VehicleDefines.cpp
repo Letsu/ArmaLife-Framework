@@ -7,15 +7,11 @@ class Config_VehicleDefines {
         };
     };
 
-    class Fox_2003Impala_PoliceHWP /*Class Name of Vehicle*/ {
-        DisplayName = "Fox_2003Impala_PoliceHWP";
-        Types[] = {
-            {/*{Skin Feile 1, Skin2}, DisplayName, "Condition(true & false)", (Maybe: Function that call on buy of this Vehicle Type)*/ }
 
-        };
-    };
-
-    class fox_Tahoe_PoliceINT /*Class Name of Vehicle*/ {
+// ---------------------------------------------
+// ---------------Police------------------------
+// ---------------------------------------------
+    class Fox_2003Impala_PoliceHWP {
         DisplayName = "";
         Types[] = {
             {/*{Skin Feile 1, Skin2}, DisplayName, "Condition(true & false)", (Maybe: Function that call on buy of this Vehicle Type)*/ }
@@ -23,7 +19,7 @@ class Config_VehicleDefines {
         };
     };
 
-    class Fox_F550_ESU /*Class Name of Vehicle*/ {
+    class fox_Tahoe_PoliceINT {
         DisplayName = "";
         Types[] = {
             {/*{Skin Feile 1, Skin2}, DisplayName, "Condition(true & false)", (Maybe: Function that call on buy of this Vehicle Type)*/ }
@@ -31,7 +27,7 @@ class Config_VehicleDefines {
         };
     };
 
-    class Fox_CrownVictoria_NYPD /*Class Name of Vehicle*/ {
+    class Fox_F550_ESU {
         DisplayName = "";
         Types[] = {
             {/*{Skin Feile 1, Skin2}, DisplayName, "Condition(true & false)", (Maybe: Function that call on buy of this Vehicle Type)*/ }
@@ -39,7 +35,7 @@ class Config_VehicleDefines {
         };
     };
 
-    class Fox_CrownVictoria_PoliceUnMarked /*Class Name of Vehicle*/ {
+    class Fox_CrownVictoria_NYPD {
         DisplayName = "";
         Types[] = {
             {/*{Skin Feile 1, Skin2}, DisplayName, "Condition(true & false)", (Maybe: Function that call on buy of this Vehicle Type)*/ }
@@ -47,7 +43,7 @@ class Config_VehicleDefines {
         };
     };
 
-    class Fox_2015Tahoe_HWP /*Class Name of Vehicle*/ {
+    class Fox_CrownVictoria_PoliceUnMarked {
         DisplayName = "";
         Types[] = {
             {/*{Skin Feile 1, Skin2}, DisplayName, "Condition(true & false)", (Maybe: Function that call on buy of this Vehicle Type)*/ }
@@ -55,7 +51,7 @@ class Config_VehicleDefines {
         };
     };
 
-    class Fox_Impala16_NYPD /*Class Name of Vehicle*/ {
+    class Fox_2015Tahoe_HWP {
         DisplayName = "";
         Types[] = {
             {/*{Skin Feile 1, Skin2}, DisplayName, "Condition(true & false)", (Maybe: Function that call on buy of this Vehicle Type)*/ }
@@ -63,7 +59,7 @@ class Config_VehicleDefines {
         };
     };
 
-    class Fox_Charger16_HWP /*Class Name of Vehicle*/ {
+    class Fox_Impala16_NYPD {
         DisplayName = "";
         Types[] = {
             {/*{Skin Feile 1, Skin2}, DisplayName, "Condition(true & false)", (Maybe: Function that call on buy of this Vehicle Type)*/ }
@@ -71,7 +67,7 @@ class Config_VehicleDefines {
         };
     };
 
-    class Fox_Explorer16 /*Class Name of Vehicle*/ {
+    class Fox_Charger16_HWP {
         DisplayName = "";
         Types[] = {
             {/*{Skin Feile 1, Skin2}, DisplayName, "Condition(true & false)", (Maybe: Function that call on buy of this Vehicle Type)*/ }
@@ -79,7 +75,15 @@ class Config_VehicleDefines {
         };
     };
 
-    class Fox_Taurus16_HWP /*Class Name of Vehicle*/ {
+    class Fox_Explorer16 {
+        DisplayName = "";
+        Types[] = {
+            {/*{Skin Feile 1, Skin2}, DisplayName, "Condition(true & false)", (Maybe: Function that call on buy of this Vehicle Type)*/ }
+
+        };
+    };
+
+    class Fox_Taurus16_HWP {
         DisplayName = "";
         Types[] = {
             {/*{Skin Feile 1, Skin2}, DisplayName, "Condition(true & false)", (Maybe: Function that call on buy of this Vehicle Type)*/ }
