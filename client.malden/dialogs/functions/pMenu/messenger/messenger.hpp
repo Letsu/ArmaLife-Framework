@@ -3,15 +3,15 @@ class pMenuMessenger {
 	movingenable = 1;
 
 	class ControlsBackground {
-		// class handyBack : RscPicture
-        // {
-        //     idc = 10001;
-        //     text = "pictures\handy\banking.paa";
-        //     x = 0.65625 * safezoneW + safezoneX;
-        //     y = 0.314650934119961 * safezoneH + safezoneY;
-        //     w = 0.165104166666667 * safezoneW;
- 		//          h = 0.534906588003933 * safezoneH;
-        // };
+		class handyBack : RscPicture
+        {
+            idc = 10001;
+            text = "pictures\handy\contacts.paa";
+			x = 0.658333333333333 * safezoneW + safezoneX;
+            y = 0.326003638151426 * safezoneH + safezoneY;
+            w = 0.1625 * safezoneW;
+ 		    h = 0.50592133726647 * safezoneH;
+        };
 
         class MainFrame : RscPicture
         {

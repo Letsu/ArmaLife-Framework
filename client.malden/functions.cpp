@@ -243,6 +243,11 @@ class lts_dialog {
         class fillLicense {};
     };
 
+    class pMenuMessenger {
+        file = "dialogs\functions\pMenu\messenger";
+        class callMessenger {};
+    };
+
     class playerHud {
         file = "dialogs\functions\playerHud";
         class callPlayerHud  {};

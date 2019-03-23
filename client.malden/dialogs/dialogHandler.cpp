@@ -13,7 +13,7 @@
 #include "functions\pMenu\p_Menu.hpp" //IDD 90001
 #include "functions\pMenu\banking\banking.hpp" //IDD91001
 #include "functions\pMenu\settings\settings.hpp" //IDD 92001
-// #include "functions\pMenu\messenger\messenger.hpp" //IDD 93001
+#include "functions\pMenu\messenger\messenger.hpp" //IDD 93001
 // #include "functions\pMenu\phone\phone.hpp" //IDD 94001
 #include "functions\pMenu\License\license.hpp" //IDD 95001
 
