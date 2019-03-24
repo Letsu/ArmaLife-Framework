@@ -57,6 +57,7 @@ waitUntil {!(isNull (findDisplay 46))};
 [] call lts_interface_fnc_requestPlayerData;
 [] call lts_interface_fnc_requestCopData; //load Cop Data at Join so the Player has an ServiceNumber also when he is an Civ
 [] call lts_interface_fnc_requestMedData; //load Med Data at Join so the Player has an ServiceNumber also when he is an Civ
+[] call lts_interface_fnc_requestVehicles; //Get Vehicles
 ["Finish Loading Player Prestige Data"] call lts_fnc_log;
 
 ["Initalisation of Player Hud"] call lts_fnc_log;
