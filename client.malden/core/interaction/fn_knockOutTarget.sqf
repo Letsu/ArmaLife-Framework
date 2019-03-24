@@ -16,8 +16,8 @@
 _player = param [0, player];
 _robber = param [1, objNull];
 
- player playMoveNow "Incapacitated";
- disableUserInput true;
+[player,"Incapacitated"] remoteExecCall ["lts_fnc_animSync",0];
+disableUserInput true;
 
  _obj = "Land_ClutterCutter_small_F" createVehicle ASLTOATL(visiblePositionASL player);
  _obj setPosATL ASLTOATL(visiblePositionASL player);
