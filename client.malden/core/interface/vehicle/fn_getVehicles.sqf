@@ -18,6 +18,7 @@ private _data = param [0];
 _data = _data select 1;
 
 if (count _data isEqualTo 0) exitWith {};
+testARR = _data;
 lts_core_allVehicles = [];
 
 {
