@@ -86,6 +86,7 @@ class carGarage {
            w = 0.0895833333333333 * safezoneW;
            h = 0.039216 * safezoneH;
            idc = 1004;
+           action = "call lts_dialog_fnc_parkOut";
        };
        class RscButton1 : RscButton
        {

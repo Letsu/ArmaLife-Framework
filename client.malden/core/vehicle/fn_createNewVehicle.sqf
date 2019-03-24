@@ -42,6 +42,8 @@ while {_plate in allVehiclePlates} do {
     _plate = random [100000, 500000, 999999];
 };
 allVehiclePlates pushBackUnique _plate;
+//Disable the Vehicle in Database!
+[_vehicle] call lts_interface_fnc_disableVehicle;
 
 //Add to all Vehicles array
 lts_core_allVehicles pushBackUnique [_plate, _vehicleClass, _ownerUID, _ownerName, _keyUIDs, _keyNames, 1, [], true];

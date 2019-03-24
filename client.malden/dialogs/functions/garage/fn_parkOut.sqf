@@ -13,7 +13,6 @@
  *
  * Public: [Yes/No]
  */
-
  private _DISPLAY = findDisplay 20001;
  private _LBCARS = _DISPLAY displayCtrl 1000;
  private _TEXTINFO = _DISPLAY displayCtrl 1003;
@@ -38,26 +37,5 @@ private _keyUIDs = _vehData select 4;
 private _keyNames = _vehData select 5;
 private _fuel = _vehData select 6;
 private _inv = _vehData select 7;
-private _displayName = [_class] call lts_fnc_getDisplayName;
-systemChat _displayName;
 
-private _speed = getNumber (configFile >> "CfgVehicles" >> _class >> "maxSpeed");
-private _armor = getNumber (configFile >> "CfgVehicles" >> _class >> "armor");
-private _seats = (getNumber (configFile >> "CfgVehicles" >> _class >> "transportSoldier")) + 1;
-private _power = getNumber (configFile >> "CfgVehicles" >> _class >> "enginePower");
-private _maxFuel = getNumber (configFile >> "CfgVehicles" >> _class >> "fuelCapacity");
-private _fuel = _fuel * _maxFuel;
-
-//set Text
-//TITLE dont Working?
-private _text = format["<h1>%1</h1><br/>
-Nummernschild: %2<br/>
-Maximal Geschwindichkeit: %3km/h<br/>
-Pferde Stärke: %4PS<br/>
-Panzerung: %5<br/>
-Sitze: %6<br/>
-Maximale Tankgröße: %7L<br/>
-Aktuell Getankt: %8L<br/>
-",  _displayName, _plate, _speed, _power, _armor, _seats, _maxFuel, _fuel];
-
-_TEXTINFO ctrlSetStructuredText parseText(_text);
+[_plate, _class, (getMarkerPos _spawnPos), _ownerUID, _ownerName, _keyUIDs, _keyNames, _fuel, _inv, _index] call lts_fnc_createVehicle;

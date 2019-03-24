@@ -13,6 +13,7 @@
  *
  * Public: [Yes/No]
  */
+private _spawnPos = param [0, ""];
 private _DISPLAY = findDisplay 20001;
 private _LBCARS = _DISPLAY displayCtrl 1000;
 
@@ -31,7 +32,8 @@ private _num = 0;
         private _inv = _x select 7;
 
         _LBCARS lbAdd ([_class] call lts_fnc_getDisplayName);
-        _LBCARS lbSetData [(lbSize _LBCARS) - 1 , str(_num)];
+        private _data = [str(_num), _spawnPos];
+        _LBCARS lbSetData [(lbSize _LBCARS) - 1 , str(_data)];
     };
     _num = _num + 1;
 } forEach lts_core_allVehicles;

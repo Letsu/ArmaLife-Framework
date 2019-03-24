@@ -308,6 +308,7 @@ class lts_dialog {
         class fillGarage {};
         class callGarage {};
         class selectGarageVehicle {};
+        class parkOut {};
     };
 };
 

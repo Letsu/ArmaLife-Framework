@@ -22,12 +22,13 @@
 private _plate        = param [0, -1 ];
 private _vehicleClass = param [1, ""];
 private _pos          = param [2, [0, 0, 0]];
-private _ownerPID     = param [4, getPlayerUID player];
-private _ownerName    = param [5, name player];
-private _keyUIDs      = param [6, [] ];
-private _keyNames     = param [7, [] ];
-private _fuel         = param [8, 1  ];
-private _inv          = param [9, [] ];
+private _ownerPID     = param [3, getPlayerUID player];
+private _ownerName    = param [4, name player];
+private _keyUIDs      = param [5, [] ];
+private _keyNames     = param [6, [] ];
+private _fuel         = param [7, 1  ];
+private _inv          = param [8, [] ];
+private _allVehPos    = param [9, -1];
 
 //Create the Vehicle at given Pos
 private _vehicle = _vehicleClass createVehicle _pos;
@@ -35,12 +36,20 @@ _vehicle setFuel _fuel;
 [_vehicle, _inv] call lts_fnc_setVehicleCargo;
 //Add Vehicle in Vehicle Array
 //Add for for form Param given Owners!
-[_vehicle] call lts_fnc_addKeyToVeh;
+/* [_vehicle] call lts_fnc_addKeyToVeh; */
+_vehicle setVariable ["key_uids" , _keyUIDs];
+_vehicle setVariable ["key_names", _keyNames];
+
 
 //Set some Variables on Veh
 _vehicle setVariable ["veh_plate", _plate];
+//Disable the Vehicle in Database & Array!
+[_vehicle] call lts_interface_fnc_disableVehicle;
+if (_allVehPos != -1) then {
+    (lts_core_allVehicles select _allVehPos) set [8, true]; //set Vehicle as Parked Out!
+};
 _vehicle setVariable [ "owner_uid" , _ownerPID  ]; //Steam64 ID of Owner of Vehicle
 _vehicle setVariable [ "owner_name", _ownerName ]; //Display Name of Owener of Vehicle
 
 
-_vehicle setVehicleLock 2;
+_vehicle lock 2;

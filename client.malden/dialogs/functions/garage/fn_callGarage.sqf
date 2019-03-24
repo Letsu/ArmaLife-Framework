@@ -13,10 +13,12 @@
  *
  * Public: [Yes/No]
  */
+
+private _spawnPos = param [0, ""];
 waitUntil {!(isNull (findDisplay 46))};
 
 //Create the Dialog
 createDialog "carGarage";
 waitUntil {!(isNull (findDisplay 20001))};
 
-[] call lts_dialog_fnc_fillGarage;
+[_spawnPos] call lts_dialog_fnc_fillGarage;
