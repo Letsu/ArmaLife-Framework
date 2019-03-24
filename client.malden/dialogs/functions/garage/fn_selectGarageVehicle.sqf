@@ -46,7 +46,7 @@ private _armor = getNumber (configFile >> "CfgVehicles" >> _class >> "armor");
 private _seats = (getNumber (configFile >> "CfgVehicles" >> _class >> "transportSoldier")) + 1;
 private _power = getNumber (configFile >> "CfgVehicles" >> _class >> "enginePower");
 private _maxFuel = getNumber (configFile >> "CfgVehicles" >> _class >> "fuelCapacity");
-private _fuel = _fuel * _maxFuel;
+private _fuel = _fuel * 100;
 
 //set Text
 //TITLE dont Working?
@@ -57,7 +57,7 @@ Pferde Stärke: %4PS<br/>
 Panzerung: %5<br/>
 Sitze: %6<br/>
 Maximale Tankgröße: %7L<br/>
-Aktuell Getankt: %8L<br/>
+Aktuell Getankt: %8%<br/>
 ",  _displayName, _plate, _speed, _power, _armor, _seats, _maxFuel, _fuel];
 
 _TEXTINFO ctrlSetStructuredText parseText(_text);
