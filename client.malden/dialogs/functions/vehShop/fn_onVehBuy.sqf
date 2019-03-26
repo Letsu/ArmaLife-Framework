@@ -18,11 +18,11 @@
 private _DISPLAY = findDisplay 80001;
 
 //Get Controlls
-private _LBSHOP      = _DISPLAY displayCtrl 1500;
+private _TVSHOP      = _DISPLAY displayCtrl 1500;
 
 //Get LB Data
-_curSelect = (lbCurSel _LBSHOP);
-_data      = _LBSHOP lbData _curSelect;
+_curSelect = (tvCurSel _TVSHOP);
+_data      = _TVSHOP tvData _curSelect;
 _dataSplit = _data splitString ",";
 
 private _shopName = _dataSplit select 0;

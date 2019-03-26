@@ -74,5 +74,3 @@ private _vehPos = 0;
         _vehPos = _vehPos + 1;
     } forEach (_y);
 } forEach _vehicleList;
-
-_TVSHOP lbSetCurSel 0

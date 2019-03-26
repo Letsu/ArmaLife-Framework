@@ -39,7 +39,7 @@ class VehShopMenu {
         	h = 0.022 * safezoneH;
         };
 
-        class Lb_Shop: RscListbox {
+        class Lb_Shop: RscTree {
         	idc = 1500;
   	    //	onLBSelChanged = "_this call lts_dialog_fnc_shopLbChange";
         	x = 0.716563 * safezoneW + safezoneX;
