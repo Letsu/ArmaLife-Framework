@@ -23,19 +23,19 @@ private _TVSHOP      = _DISPLAY displayCtrl 1500;
 //Get LB Data
 _curSelect = (tvCurSel _TVSHOP);
 _data      = _TVSHOP tvData _curSelect;
-_dataSplit = _data splitString ",";
+_data      = parseSimpleArray _data;
 
-private _shopName = _dataSplit select 0;
-private _vehClass = _dataSplit select 1;
-private _indexPos = call (compile (_dataSplit select 2));
-private _spawnPos = getMarkerPos (_dataSplit select 3);
+private _shopName = _data select 0;
+private _vehClass = _data select 1;
+private _indexPos = _data select 2;
+private _spawnPos = getMarkerPos (_data select 3);
+_price = _data select 4;
 
 private _objects = nearestObjects [_spawnPos, ["LandVehicle", "Ship", "Air"], 10];
 if (count _objects > 0) exitWith { ["Es steht schon ein Fahrzeug am Spawn!"] call lts_fnc_hint };
 
-//Get Config Entrys
-private _shopVeh = getArray (missionConfigFile >> "Config_Vehicle" >> _shopName >> "Vehicles");
-private _price   = (_shopVeh select _indexPos) select 1;
+if (lts_money_cash < _price) exitWith { ["Du hast nicht genug Geld um dir das zu kaufen!"] call lts_fnc_hint };
+lts_money_cash = lts_money_cash - _price;
 /*
 Add Config for Texttures and read Vehicle Defines
 */

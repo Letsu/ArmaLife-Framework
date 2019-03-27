@@ -34,43 +34,42 @@ if !(_condition isEqualTo "") then { _hasCondition = true };
 if (_hasCondition && call compile (_condition)) exitWith { ["Du darfst dieses Geschäft nicht benutzen"] call lts_fnc_hint; closeDialog 0 };
 
 private _vehicleList = configProperties[missionConfigFile >> "Config_Vehicle" >> _shopClass];
+vehicleList = _vehicleList;
 _vehicleList deleteAt 0; //Delete DispalyName
 _vehicleList deleteAt 0; //Delete Condition
+vehicleList2 = _vehicleList;
+
 
 _SHOPNAME ctrlSetText _displayName;
 
 private _vehPos = 0;
 {
     _y = getArray _x;
-    _pos = _TVSELL tvAdd [[], _y select 0];
+    vehicleList3 = _y;
+    _tvPos = _TVSHOP tvAdd [[], (_y select 0)];
     _y deleteAt 0;
     {
         private _vehicleClass  = _x select 0;
         private _price         = _x select 1;
-        private _vehCondition = _x select 2;
+        private _vehCondition  = _x select 2;
 
-    /*
-        Dont Working!!!
-        _hasCondition = false;
+        /* _hasCondition = false;
         if !(_condition isEqualTo "") then { _hasCondition = true };
-        if (_hasCondition && call compile (_condition)) then {
-    */
-            private _types          = getArray (missionConfigFile >> "Config_VehicleDefines" >> _vehicleClass >> "Types");
-            private _vehDisplayName = getText (missionConfigFile >> "Config_VehicleDefines" >> _vehicleClass >> "DisplayName");
+        if (_hasCondition && (call compile (_condition))) then { */
+            _vehDisplayName = "";
+            if (isClass (missionConfigFile >> "Config_VehicleDefines" >> _vehicleClass)) then {
+                private _types          = getArray (missionConfigFile >> "Config_VehicleDefines" >> _vehicleClass >> "Types");
+                private _vehDisplayName = getText (missionConfigFile >> "Config_VehicleDefines" >> _vehicleClass >> "DisplayName");
+            } else {
+                _vehDisplayName = [_vehicleClass] call lts_fnc_getDisplayName;
+            };
 
-            _itemPos = _TVSHOP tvAdd [_pos], _vehDisplayName];
-            private _data = format ["%1,%2,%3,%4", _shopClass, _vehicleClass, _vehPos, _spawnPos];
-            _TVSHOP tvSetData [ [_pos, _itemPos], _data] [(_size - 1), _data]; //Data: ShopClassname | VehClassname | Pos in Veh Array | Spawn Marker
+            _itemPos = _TVSHOP tvAdd [[_tvPos], _vehDisplayName];
+            private _data = [_shopClass, _vehicleClass, _vehPos, _spawnPos, _price];
+            _TVSHOP tvSetData [[_tvPos, _itemPos], str(_data)];
 
-    /*
-            {
-                //Function to add Skin to Vehicle
-                _skin           = _x select 0;
-                _skinDisplayName = _x select 1;
-                _skinCondition      = _x select 2;
-            } forEach _types;
-    */
-    //    };
-        _vehPos = _vehPos + 1;
+
+            _vehPos = _vehPos + 1;
+        /* }; */
     } forEach (_y);
 } forEach _vehicleList;

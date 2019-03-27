@@ -56,18 +56,13 @@ _SHOPNAME ctrlSetText _displayName;
         _condition = _x select 4;
         if (_itemName isEqualTo "") then { _itemName = [_class] call lts_fnc_getDisplayName; };
 
-        if !(_itemCondition isEqualTo "") then { _hasItemCondition = true };
-        //Need to FIX Condition!!
-        /* if !(_hasItemCondition && compile (_itemCondition)) then {
+        /* _hasCondition = false;
+        if !(_condition isEqualTo "") then { _hasCondition = true };
+        if (_hasCondition && (call compile (_condition))) then { */
             _itemPos = _TVSHOP tvAdd [[_tvPos], _itemName];
-            _data = [_class, _itemName, _buyPrice, _sellPrice];
+            _data = [_class, _itemName, _buyPrice, _sellPrice, _shopClass];
             _TVSHOP tvSetData [[_tvPos, _itemPos], str(_data)];
-        }; */
-
-        _itemPos = _TVSHOP tvAdd [[_tvPos], _itemName];
-        _data = [_class, _itemName, _buyPrice, _sellPrice, _shopClass];
-        _TVSHOP tvSetData [[_tvPos, _itemPos], str(_data)];
-
+        /* }; */
 
     } forEach _y;
 } forEach _configs;
