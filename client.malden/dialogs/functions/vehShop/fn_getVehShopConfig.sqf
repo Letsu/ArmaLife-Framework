@@ -34,10 +34,8 @@ if !(_condition isEqualTo "") then { _hasCondition = true };
 if (_hasCondition && call compile (_condition)) exitWith { ["Du darfst dieses Geschäft nicht benutzen"] call lts_fnc_hint; closeDialog 0 };
 
 private _vehicleList = configProperties[missionConfigFile >> "Config_Vehicle" >> _shopClass];
-vehicleList = _vehicleList;
 _vehicleList deleteAt 0; //Delete DispalyName
 _vehicleList deleteAt 0; //Delete Condition
-vehicleList2 = _vehicleList;
 
 
 _SHOPNAME ctrlSetText _displayName;
@@ -45,7 +43,6 @@ _SHOPNAME ctrlSetText _displayName;
 private _vehPos = 0;
 {
     _y = getArray _x;
-    vehicleList3 = _y;
     _tvPos = _TVSHOP tvAdd [[], (_y select 0)];
     _y deleteAt 0;
     {
