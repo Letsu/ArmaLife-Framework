@@ -53,6 +53,7 @@ private _vehPos = 0;
         private _price         = _x select 1;
         private _vehCondition  = _x select 2;
 
+
         /* _hasCondition = false;
         if !(_condition isEqualTo "") then { _hasCondition = true };
         if (_hasCondition && (call compile (_condition))) then { */
