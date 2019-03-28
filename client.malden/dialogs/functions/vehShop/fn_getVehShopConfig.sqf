@@ -24,6 +24,7 @@ private _TEXTPRICE   = _DISPLAY displayCtrl 1003;
 private _TVSHOP      = _DISPLAY displayCtrl 1500;
 private _BUTTONBUY   = _DISPALY displayCtrl 1600;
 private _BUTTONABORT = _DISPLAY displayCtrl 1601;
+private _VEHCOMP     = _DISPLAY displayCtrl 1004;
 
 //Get Vheicle Shop Config
 private _displayName = getText  (missionConfigFile >> "Config_Vehicle" >> _shopClass >> "DisplayName" );
@@ -58,6 +59,20 @@ private _vehPos = 0;
             if (isClass (missionConfigFile >> "Config_VehicleDefines" >> _vehicleClass)) then {
                 private _types          = getArray (missionConfigFile >> "Config_VehicleDefines" >> _vehicleClass >> "Types");
                 private _vehDisplayName = getText (missionConfigFile >> "Config_VehicleDefines" >> _vehicleClass >> "DisplayName");
+                if (_vehDisplayName isEqualTo "") then {
+                    _vehDisplayName = [_vehicleClass] call lts_fnc_getDisplayName;
+                };
+                if (_types isEqualTo []) exitWith {};
+
+                {
+                    _skins = _x select 0;
+                    _skinName = _x select 1;
+                    _condition = _x select 2;
+
+                    _VEHCOMP lbAdd _skinName;
+                    _data = [_skins, _skinName];
+                    _VEHCOMP lbSetData [(lbSize _VEHCOMP) - 1, str(_data)];
+                } forEach _types;
             } else {
                 _vehDisplayName = [_vehicleClass] call lts_fnc_getDisplayName;
             };

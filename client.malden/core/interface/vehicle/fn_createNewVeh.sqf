@@ -22,6 +22,7 @@ private _keyOwn   = _vehicle getVariable ["key_uids", []];
 private _keyNames = _vehicle getVariable ["key_names", []];
 private _fuel     = fuel _vehicle;
 private _inv      = [_vehicle] call lts_fnc_getVehicleCargo;
+private _skin = param [0, []];
 
 //Some Checks
 _exit = false;
@@ -35,6 +36,10 @@ if (_exit) exitWith {
 };
 
 //Send Request to Server!
-[_plate, _type, _ownPID, _ownName, _keyOwn, _keyNames, _fuel, _inv] remoteExec ["lts_db_fnc_createNewVehicle", 2];
+if (_skin isEqualTo []) then {
+    [_plate, _type, _ownPID, _ownName, _keyOwn, _keyNames, _fuel, _inv] remoteExec ["lts_db_fnc_createNewVehicle", 2];
+} else {
+    [_plate, _type, _ownPID, _ownName, _keyOwn, _keyNames, _fuel, _inv, _skin] remoteExec ["lts_db_fnc_createNewVehicle", 2];
+};
 
 [0, nil];

@@ -26,6 +26,7 @@ private _owner        = param [2, player]; //Optional
 private _keyUIDs      = param [4, [(getPlayerUID player)]]; //Optional
 private _keyNames     = param [5, [(name player)]]; //Optional
 private _isCopCar     = param [6, false];
+private _skin         = param [7, []];
 
 //Create the Vehicle at given Pos
 private _vehicle = _vehicleClass createVehicle _pos;
@@ -54,10 +55,20 @@ _vehicle setVariable [ "owner_uid" , _ownerUID  ]; //Steam64 ID of Owner of Vehi
 _vehicle setVariable [ "owner_obj" , _owner  ]; //Obj of Owner
 _vehicle setVariable [ "owner_name", _ownerName ]; //Display Name of Owener of Vehicle
 
+if (_skin != []) then {
+    _vehicle setObjectTextureGlobal [0, _skin];
+};
+
+
 _vehicle lock 2;
 
 if (_isCopCar) then {
     _vehicle setVariable ["copCar", true];
 } else {
-    [_vehicle] call lts_interface_fnc_createNewVeh;
+    [_vehicle, _skin] call lts_interface_fnc_createNewVeh;
+    vehicle player addEventHandler ["HandleDamage", {
+        if ( damage _vehicle isEqualTo 1 ) then {
+            [_vehicle] call lts_interface_fnc_destroyVehicle;
+        };
+    }];
 }

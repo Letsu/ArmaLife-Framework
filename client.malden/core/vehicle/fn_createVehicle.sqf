@@ -29,6 +29,7 @@ private _keyNames     = param [6, [] ];
 private _fuel         = param [7, 1  ];
 private _inv          = param [8, [] ];
 private _allVehPos    = param [9, -1];
+private _skin         = param [10, []];
 
 //Create the Vehicle at given Pos
 private _vehicle = _vehicleClass createVehicle _pos;
@@ -50,6 +51,10 @@ if (_allVehPos != -1) then {
 };
 _vehicle setVariable [ "owner_uid" , _ownerPID  ]; //Steam64 ID of Owner of Vehicle
 _vehicle setVariable [ "owner_name", _ownerName ]; //Display Name of Owener of Vehicle
+
+if (_skin != []) then {
+    _vehicle setObjectTextureGlobal [0, _skin];
+};
 
 
 _vehicle lock 2;

@@ -19,6 +19,7 @@ private _DISPLAY = findDisplay 80001;
 
 //Get Controlls
 private _TVSHOP      = _DISPLAY displayCtrl 1500;
+private _VEHCOMP     = _DISPLAY displayCtrl 1004;
 
 //Get LB Data
 _curSelect = (tvCurSel _TVSHOP);
