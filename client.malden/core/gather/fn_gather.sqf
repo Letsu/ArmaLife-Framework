@@ -28,7 +28,7 @@ for "_i" from 0 to 8 do {
     sleep 0.5;
 };
 
-_amount = random [0, 3 ,4];
+_amount = random [10, 12 ,16];
 _amount = round _amount;
 [_item, _amount] call lts_fnc_addItem;
 

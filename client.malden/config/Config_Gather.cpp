@@ -10,10 +10,38 @@
  * For Futur: Condtion to Farm
  */
 class Config_Gather {
-    class apple {
+    class sand {
+        Range = 70;
+        Item = "L_Item_Sand";
+        Fields[] = {"Sandgrube1"};
+        Condtion = "";
+    };
+
+    class trees {
         Range = 70;
         Item = "L_Item_Wood";
-        Fields[] = {"spawn_test"};
+        Fields[] = {"Wald1", "Wald1_2", "Wald1_3"};
+        Condtion = "";
+    };
+
+    class copper {
+        Range = 70;
+        Item = "L_Item_Copper";
+        Fields[] = {"Kupfer1"};
+        Condtion = "";
+    };
+
+    class oliven {
+        Range = 70;
+        Item = "L_Item_Oliven";
+        Fields[] = {"Oliven1"};
+        Condtion = "";
+    };
+
+    class trauben {
+        Range = 70;
+        Item = "L_Item_Trauben";
+        Fields[] = {"Trauben1", "Trauben1_2", "Trauben1_3"};
         Condtion = "";
     };
 };
