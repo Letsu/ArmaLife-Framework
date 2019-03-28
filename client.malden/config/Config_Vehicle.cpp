@@ -7,9 +7,9 @@
  *
 */
 class Config_Vehicle {
-    class vehicle_shop_test_01 {
-        DisplayName = "Test Shop 1"; //Name of Shop
-        Condtion = ""; // Condition to open
+    class vehShop_01 {
+        DisplayName = "Fahrzeuge"; //Name of Shop
+        Condtion = "!(([""drive_B""] call lts_fnc_hasLicense) select 0)"; // Condition to open
         Bikes[] = {
             "Motorräder",
             {"d3s_Aprilia_Tuono_V4_1100_RR", 18000, ""},
@@ -137,7 +137,7 @@ class Config_Vehicle {
         };
 
         Ford[] = {
-            "Ferrari",
+            "Ford",
             {"d3s_crown_98", 7500, ""},
             {"d3s_explorer_13", 13500, ""},
             {"d3s_explorer_sport_13", 20000, ""},
@@ -400,6 +400,24 @@ class Config_Vehicle {
     class policeCar {
         DisplayName = "Polizei Fahrzeuge"; //Name of Shop
         Condtion = " !(lts_core_curSide isEqualTo ""cop"") "; // Condition to open
+        Vehicles[] = {
+            "Polizei Fahrzeuge",
+            {"Fox_2003Impala_PoliceHWP", 10, ""},
+            {"fox_Tahoe_PoliceINT", 10, ""},
+            {"Fox_F550_ESU", 10, ""},
+            {"Fox_CrownVictoria_NYPD", 10, ""},
+            {"Fox_CrownVictoria_PoliceUnMarked", 10, ""},
+            {"Fox_2015Tahoe_HWP", 10, ""},
+            {"Fox_Impala16_NYPD", 10, ""},
+            {"Fox_Charger16_HWP", 10, ""},
+            {"Fox_Explorer16", 10, ""},
+            {"Fox_Taurus16_HWP", 10, ""}
+        };
+    };
+
+    class medCar {
+        DisplayName = "Medic Fahrzeuge"; //Name of Shop
+        Condtion = " !(lts_core_curSide isEqualTo ""med"") "; // Condition to open
         Vehicles[] = {
             "Polizei Fahrzeuge",
             {"Fox_2003Impala_PoliceHWP", 10, ""},

@@ -44,4 +44,18 @@ class Config_Gather {
         Fields[] = {"Trauben1", "Trauben1_2", "Trauben1_3"};
         Condtion = "";
     };
+
+    class erdoel {
+        Range = 70;
+        Item = "L_Item_oel";
+        Fields[] = {"erdoel1"};
+        Condtion = "";
+    };
+
+    class treibgut {
+        Range = 70;
+        Item = "L_Item_treib";
+        Fields[] = {"treibgut1"};
+        Condtion = "";
+    };
 };

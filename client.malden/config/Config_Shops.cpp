@@ -247,4 +247,72 @@ class Config_Shops {
             {"ACE_tourniquet", "", 10, 1, ""}
         };
     };
+
+
+
+    class Glass {
+        DisplayName = "Glasshändler";
+        Condition = "";
+        Items[] = {
+            "Items",
+            {"L_Item_Glass", "", 1000, 60, ""}
+        };
+    };
+
+    class Wood {
+        DisplayName = "Holz Händler";
+        Condition = "";
+        Items[] = {
+            "Items",
+            {"L_Item_Board", "", 800, 80, ""}
+        };
+    };
+
+    class Copper {
+        DisplayName = "Kupfer Händler";
+        Condition = "";
+        Items[] = {
+            "Items",
+            {"L_Item_CopperBare", "", 1200, 70, ""}
+        };
+    };
+
+    class Trauben {
+        DisplayName = "Saft Laden";
+        Condition = "";
+        Items[] = {
+            "Items",
+            {"L_Item_TraubenSaft", "", 1200, 5, ""}
+        };
+    };
+
+
+    class Spiritossen {
+        DisplayName = "Spiritossen Händler";
+        Condition = "";
+        Items[] = {
+            "Items",
+            {"L_Item_Oliven", "", 5, 3, ""}
+        };
+    };
+
+    class oel {
+        DisplayName = "Spiritossen Händler";
+        Condition = "";
+        Items[] = {
+            "Items",
+            {"L_Item_Oliven", "", 5, 210, ""}
+        };
+    };
+
+    class treibgut {
+        DisplayName = "Treibgut Händler";
+        Condition = "";
+        Items[] = {
+            "Items",
+            {"L_Item_treib", "", 5, 70, ""}
+        };
+    };
+
+
 };

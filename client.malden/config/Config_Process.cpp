@@ -20,7 +20,7 @@ class Config_Process {
         DisplayName = "Kupfer wird Verarbeitet";
         From = "L_Item_Copper"; //Check Item Name
         To = "L_Item_CopperBare"; //Need to add Item
-        Time = 0.5;
+        Time = 0.4;
     };
 
     class Trauben {
@@ -28,22 +28,14 @@ class Config_Process {
         DisplayName = "Trauben werden Verarbeitet";
         From = "L_Item_Trauben"; //Check Item Name
         To = "L_Item_TraubenSaft"; //Need to add Item
-        Time = 0.5;
+        Time = 0.4;
     };
 
-    class Wood {
-        Var = "Wood";
-        DisplayName = "Holz wird Verarbeitet";
-        From = "L_Item_Trauben"; //Check Item Name
-        To = "L_Item_TraubenSaft"; //Need to add Item
-        Time = 0.5;
-    };
-
-    class Wood {
-        Var = "Wood";
-        DisplayName = "Holz wird Verarbeitet";
-        From = "L_Item_Wood"; //Check Item Name
-        To = "L_Item_Board"; //Need to add Item
-        Time = 0.5;
+    class oel {
+        Var = "oel";
+        DisplayName = "Öl wird Verarbeitet";
+        From = "L_Item_oel"; //Check Item Name
+        To = "L_Item_fuel"; //Need to add Item
+        Time = 0.4;
     };
 };

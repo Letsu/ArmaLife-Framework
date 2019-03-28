@@ -10,9 +10,4 @@ class Config_Spawn {
         DisplayName = "Le Port";
         Marker = "spawn_1";
     };
-
-    class LaTrinding{
-        DisplayName = "La Trinding";
-        Marker = "spawn_2";
-    };
 };

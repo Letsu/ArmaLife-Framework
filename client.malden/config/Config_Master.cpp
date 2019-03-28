@@ -20,7 +20,7 @@ class Config_Master {
     Global
     */
     StartMoney = 0; //Amount of Money the Player has at first Join
-    StartBank  = 100000; //Amount of Bank the Player has at first Join
+    StartBank  = 12500; //Amount of Bank the Player has at first Join
 
 
 
