@@ -5,7 +5,7 @@ class Config_VehicleDefines {
     class d3s_Aprilia_Tuono_V4_1100_RR {
         DisplayName = "Test01";
         Types[] = {
-            {["Test/skin/123.paa"], "Skin 1", ""}
+            {["Test/skin/123.paa"], "Standart", ""}
         };
     };
 };
