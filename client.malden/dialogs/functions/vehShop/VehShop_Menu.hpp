@@ -50,6 +50,7 @@ class VehShopMenu {
            y = 0.15168534906588 * safezoneH + safezoneY;
            w = 0.238073166666667 * safezoneW;
            h = 0.699838741396264 * safezoneH;
+           onTreeSelChanged = "call lts_dialog_fnc_onTvChange";
        };
    };
    class controls
