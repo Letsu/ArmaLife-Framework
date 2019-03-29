@@ -197,8 +197,6 @@ class Config_Shops {
             {"hlc_pistol_P226US", "", 10, 1, ""},
             {"hlc_15Rnd_9x19_B_P226", "", 10, 1, ""},
             {"hlc_smg_mp5k_PDW", "", 10, 1, ""},
-            {"hlc_smg_mp510", "", 10, 1, ""},
-            {"hlc_smg_mp5sd6", "", 10, 1, ""},
             {"hlc_30Rnd_9x19_B_MP5", "", 10, 1, ""},
             {"CSW_M870", "", 10, 1, ""},
             {"CSW_M870_8Rnd_buck", "", 10, 1, ""},
@@ -214,7 +212,7 @@ class Config_Shops {
             {"acc_pointer_IR", "", 10, 1, ""}
         };
         Items[] = {
-            "Rucksäcke",
+            "Items",
             {"ItemMap", "", 10, 1, ""},
             {"ItemCompass", "", 10, 1, ""},
             {"Itemwatch", "", 10, 1, ""},
@@ -228,6 +226,7 @@ class Config_Shops {
             {"ACE_CableTie", "", 10, 1, ""},
             {"ACE_EarPlugs", "", 10, 1, ""},
             {"ACE_M84", "", 10, 1, ""},
+            {"TFAR_anprc152", "", 10, 1, ""},
             {"ACE_NVG_Wide", "", 10, 1, ""}
         };
     };
