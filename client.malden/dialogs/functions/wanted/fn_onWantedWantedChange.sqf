@@ -53,7 +53,7 @@ Gesucht wird: %5 wegen:<br/>
 %7<br/>
 <br/>
 Mit folgender Strafe: %8€<br/>
-Hinzugefügt am: %9<br/>
+Hinzugefügt am: %9Uhr<br/>
 ", _title, _id, _copName, _copUID, _playerName, _playerUID, _text, _price, _time];
 _TEXTWANTED ctrlSetText _strukText; //Set normal String whitout Parse. Parse is set in lts_dialog_fnc_fillWantedNote
 
