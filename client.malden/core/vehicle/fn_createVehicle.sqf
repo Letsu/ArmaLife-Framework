@@ -33,7 +33,7 @@ private _skin         = param [10, []];
 
 //Create the Vehicle at given Pos
 private _vehicle = _vehicleClass createVehicle _pos;
-_vehicle setFuel _fuel;
+_vehicle setFuel parseNumber(_fuel);
 [_vehicle, _inv] call lts_fnc_setVehicleCargo;
 //Add Vehicle in Vehicle Array
 //Add for for form Param given Owners!
