@@ -248,7 +248,7 @@ class Config_Shops {
             {"TRYK_B_Kitbag_blk", "", 10, 1, ""}
         };
         Items[] = {
-            "Rucksäcke",
+            "Items",
             {"ItemMap", "", 10, 1, ""},
             {"ItemCompass", "", 10, 1, ""},
             {"Itemwatch", "", 10, 1, ""},
