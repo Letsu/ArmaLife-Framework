@@ -33,6 +33,14 @@ private _skin         = param [10, []];
 
 //Create the Vehicle at given Pos
 private _vehicle = _vehicleClass createVehicle _pos;
+
+lts_core_curVehicles pushBack _vehicle;
+
+if (_allVehPos != -1) then {
+    (lts_core_allVehicles select _allVehPos) set [8, true]; //set Vehicle as Parked Out!
+};
+[_vehicle] call lts_interface_fnc_disableVehicle;
+
 _vehicle setFuel parseNumber(_fuel);
 /* [_vehicle, _inv] call lts_fnc_setVehicleCargo; */
 //Add Vehicle in Vehicle Array
@@ -45,12 +53,8 @@ _vehicle setVariable ["key_names", _keyNames];
 //Set some Variables on Veh
 _vehicle setVariable ["veh_plate", _plate];
 //Disable the Vehicle in Database & Array!
-[_vehicle] call lts_interface_fnc_disableVehicle;
-lts_core_curVehicles pushBack _vehicle;
 
-if (_allVehPos != -1) then {
-    (lts_core_allVehicles select _allVehPos) set [8, true]; //set Vehicle as Parked Out!
-};
+
 _vehicle setVariable [ "owner_uid" , _ownerPID  ]; //Steam64 ID of Owner of Vehicle
 _vehicle setVariable [ "owner_name", _ownerName ]; //Display Name of Owener of Vehicle
 
