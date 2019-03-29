@@ -1,7 +1,6 @@
 //Debug Configurations
-enableDebugConsole = 1; // Need to set to 1!!!!! 2 Only for debug
 onCheat = "closeDialog 0";
-enableDebugConsole[] = { "76561198153107554", "76561198YYYYYYYYY", };
+enableDebugConsole[] = { "76561198153107554" };
 
 //Include Config Files
 #include "config\Config_Master.cpp"
@@ -22,21 +21,6 @@ disableChannels[] = {
 	{ 3, false, false }, // Group
 	{ 4, false, false }, // Vehicle
 	{ 5, false, false } // Direct
-};
-
-//Hud Configurations
-showNotePad = 0;
-showMap = 1;
-showHUD[] = {
-	true,	// Scripted HUD (same as showHUD command)
-	true,	// Vehicle + soldier info
-	false,	// Vehicle radar [HIDDEN]
-	true,	// Vehicle compass [HIDDEN]
-	true,	// Tank direction indicator
-	false,	// Commanding menu
-	false,	// Group Bar
-	true,	// HUD Weapon Cursors
-	true	// Vehicle display panels
 };
 
 

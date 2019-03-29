@@ -24,6 +24,7 @@ lts_core_curVehicles = []; // All Parked out Vehicles
 lts_core_allVehicles = []; //All Vehicle an Player owned at the Moment
 lts_core_licenses = []; //All Licenses an Player has
 lts_core_knocked = false;
+lts_core_taser_isTased = false;
 
 
 //Money
