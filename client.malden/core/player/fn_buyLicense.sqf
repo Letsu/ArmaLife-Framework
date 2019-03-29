@@ -24,8 +24,8 @@ private _licensePrice = getNumber (missionConfigFile >> "Config_License" >> _new
 //Some Checks
 private _hasLicense = [_var] call lts_fnc_hasLicense;
 if (_hasLicense select 0) exitWith { ["Du hast diese Lizenz schon!"] call lts_fnc_hint};
-if (lts_moeny_cash < _licensePrice) exitWith { [format ["Du hast nicht genug Geld um die Lizenz: %1 zu kaufen!", _licenseName] ] call lts_fnc_hint };
-lts_moeny_cash = lts_moeny_cash - _price;
+if (lts_money_cash < _licensePrice) exitWith { [format ["Du hast nicht genug Geld um die Lizenz: %1 zu kaufen!", _licenseName] ] call lts_fnc_hint };
+lts_money_cash = lts_money_cash - _price;
 
 //Add the License to the player and remove the Money that the License cost
 if (((_hasLicense select 1) isEqualTo -1)) then {
