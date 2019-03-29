@@ -81,7 +81,7 @@ if (_isCopCar) then {
         _vehicle setObjectTextureGlobal [0, "textures\Police03Imp3.paa"]
     };
 } else {
-    [_vehicle, _skin] call lts_interface_fnc_createNewVeh;
+    [_vehicle] call lts_interface_fnc_createNewVeh;
     vehicle player addEventHandler ["HandleDamage", {
         if ( damage _vehicle isEqualTo 1 ) then {
             [_vehicle] call lts_interface_fnc_destroyVehicle;

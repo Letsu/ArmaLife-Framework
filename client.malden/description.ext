@@ -1,7 +1,7 @@
 //Debug Configurations
-enableDebugConsole = 2; // Need to set to 1!!!!! Only for debug
+enableDebugConsole = 1; // Need to set to 1!!!!! 2 Only for debug
 onCheat = "closeDialog 0";
-//enableDebugConsole[] = { "76561198XXXXXXXXX", "76561198YYYYYYYYY", }; <---- Importent! Only for DBUG!!!
+enableDebugConsole[] = { "76561198153107554", "76561198YYYYYYYYY", };
 
 //Include Config Files
 #include "config\Config_Master.cpp"

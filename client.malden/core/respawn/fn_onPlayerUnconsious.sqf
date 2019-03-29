@@ -18,11 +18,13 @@ disableSerialization;
 private _unit = param[0, player];
 private _state = param[1, true];
 
+if (lts_core_knocked) exitWith {};
+
 if (_state) then {
 	(findDisplay 49) closeDisplay 0;
 
 //Only for DEBUG Enable when Online!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-//    (uiNamespace getVariable ["ace_common_dlgDisableMouse", displayNull]) displayAddEventHandler ["KeyDown","if (!((_this select 1) isEqualTo 28)) then { true } "]; //Disaple the ESC Key in the Dialog that the can´t close the Dialog!
+    (uiNamespace getVariable ["ace_common_dlgDisableMouse", displayNull]) displayAddEventHandler ["KeyDown","if (!((_this select 1) isEqualTo 28)) then { true } "]; //Disaple the ESC Key in the Dialog that the can´t close the Dialog!
 //-------------------------------------------------------------------------------------
     private _text1 = (uiNamespace getVariable ["ace_common_dlgDisableMouse", displayNull]) ctrlCreate ["RscStructuredText",1930];
 	_text1 ctrlSetPosition  [-0.000156274 * safezoneW + safezoneX,0.423 * safezoneH + safezoneY,1.02094 * safezoneW,0.099 * safezoneH];

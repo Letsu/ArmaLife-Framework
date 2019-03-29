@@ -16,6 +16,7 @@
 _player = param [0, player];
 _robber = param [1, objNull];
 
+lts_core_knocked = true;
 [player,"Incapacitated"] remoteExecCall ["lts_fnc_animSync",0];
 disableUserInput true;
 
@@ -28,3 +29,4 @@ disableUserInput true;
  disableUserInput false;
  detach player;
  deleteVehicle _obj;
+ lts_core_knocked = false;
