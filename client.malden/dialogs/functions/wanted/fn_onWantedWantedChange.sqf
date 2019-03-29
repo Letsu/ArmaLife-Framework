@@ -47,8 +47,8 @@ lts_dialog_wanted_curWanted = _id;
 private _strukText = format["
 <t size='2.0'>%1</t><br/>
 Wanted ID: %2<br/>
-Hinzugefügt von: %3[%4]<br/>
-Gesucht wird: %5[%6] wegen:<br/>
+Hinzugefügt von: %3<br/>
+Gesucht wird: %5 wegen:<br/>
 <t size='1.3'>%1</t><br/>
 %7<br/>
 <br/>
