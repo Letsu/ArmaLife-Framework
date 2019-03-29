@@ -21,6 +21,8 @@
 private _index = lbCurSel _LBCARS;
 private _data = parseSimpleArray (_LBCARS lbData _index);
 
+closeDialog 0;
+
 _index = parseNumber (_data select 0);
 private _spawnPos = _data select 1;
 systemChat str(_index);

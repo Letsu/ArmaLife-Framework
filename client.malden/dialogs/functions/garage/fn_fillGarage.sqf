@@ -30,6 +30,7 @@ private _num = 0;
         private _keyNames = _x select 5;
         private _fuel = _x select 6;
         private _inv = _x select 7;
+        private _avv = _x select 8;
 
         _LBCARS lbAdd ([_class] call lts_fnc_getDisplayName);
         private _data = [str(_num), _spawnPos];
