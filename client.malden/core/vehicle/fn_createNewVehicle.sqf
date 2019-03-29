@@ -55,9 +55,9 @@ _vehicle setVariable [ "owner_uid" , _ownerUID  ]; //Steam64 ID of Owner of Vehi
 _vehicle setVariable [ "owner_obj" , _owner  ]; //Obj of Owner
 _vehicle setVariable [ "owner_name", _ownerName ]; //Display Name of Owener of Vehicle
 
-if (_skin != []) then {
+/* if (_skin != []) then {
     _vehicle setObjectTextureGlobal [0, _skin];
-};
+}; */
 
 
 _vehicle lock 2;

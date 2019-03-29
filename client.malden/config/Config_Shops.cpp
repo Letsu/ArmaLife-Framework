@@ -258,6 +258,7 @@ class Config_Shops {
             {"ACE_NVG_Wide", "", 10, 1, ""}
         };
         Medic[] = {
+            "Medic",
             {"ACE_fieldDressing", "", 10, 1, ""},
             {"ACE_elasticBandage", "", 10, 1, ""},
             {"ACE_quikclot", "", 10, 1, ""},
