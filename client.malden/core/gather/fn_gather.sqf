@@ -24,8 +24,6 @@ _item = _return select 1;
 if !(player canAdd _item) exitWith { ["Dein Inventar ist Voll!"] call lts_fnc_hint; lts_gather_isGather = false};
 
 
-_item = _return select 1;
-
 for "_i" from 0 to 8 do {
     player playMoveNow "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
     waitUntil{animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";};
