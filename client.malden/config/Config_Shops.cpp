@@ -119,6 +119,7 @@ class Config_Shops {
             {"ItemGPS", "", 10, 1, ""},
             {"Binocular", "", 10, 1, ""},
             {"L_Item_Wein", "", 10, 2, ""},
+            {"L_Item_WaterBottleFull", "", 10, 2, ""}
         };
         Medic[] = {
             "Medizin",
