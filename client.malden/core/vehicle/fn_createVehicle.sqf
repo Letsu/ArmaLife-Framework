@@ -46,6 +46,8 @@ _vehicle setVariable ["key_names", _keyNames];
 _vehicle setVariable ["veh_plate", _plate];
 //Disable the Vehicle in Database & Array!
 [_vehicle] call lts_interface_fnc_disableVehicle;
+lts_core_curVehicles pushBack _veh;
+
 if (_allVehPos != -1) then {
     (lts_core_allVehicles select _allVehPos) set [8, true]; //set Vehicle as Parked Out!
 };

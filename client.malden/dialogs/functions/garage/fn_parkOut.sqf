@@ -38,4 +38,6 @@ private _keyNames = _vehData select 5;
 private _fuel = _vehData select 6;
 private _inv = _vehData select 7;
 
+
+(lts_core_allVehicles select _index) set[8, false];
 [_plate, _class, (getMarkerPos _spawnPos), _ownerUID, _ownerName, _keyUIDs, _keyNames, _fuel, _inv, _index] call lts_fnc_createVehicle;
