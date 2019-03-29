@@ -36,7 +36,7 @@ private _ownerUID = _vehData select 2;
 private _ownerName = _vehData select 3;
 private _keyUIDs = _vehData select 4;
 private _keyNames = _vehData select 5;
-private _fuel = _vehData select 6;
+private _fuel = parseNumber(_vehData select 6);
 private _inv = _vehData select 7;
 private _displayName = [_class] call lts_fnc_getDisplayName;
 systemChat _displayName;

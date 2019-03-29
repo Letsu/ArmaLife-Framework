@@ -69,7 +69,7 @@ if (_isCopCar) then {
         _vehicle setObjectTextureGlobal [0, "textures\PoliceVic5.paa"]
     };
 
-    if (_vehicleClass isEqualTo "fox_Tahoe_PoliceINT") then {
+    if (_vehicleClass isEqualTo "Fox_2015Tahoe_HWP") then {
         _vehicle setObjectTextureGlobal [0, "textures\PoliceTau2.paa"]
     };
 
@@ -77,7 +77,7 @@ if (_isCopCar) then {
         _vehicle setObjectTextureGlobal [0, "textures\PoliceCha4.paa"]
     };
 
-    if (_vehicleClass isEqualTo "Fox_Impala16_NYPD") then {
+    if (_vehicleClass isEqualTo "Fox_2003Impala_PoliceHWP") then {
         _vehicle setObjectTextureGlobal [0, "textures\Police03Imp3.paa"]
     };
 } else {
