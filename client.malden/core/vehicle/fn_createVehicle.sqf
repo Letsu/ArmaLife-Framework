@@ -24,17 +24,17 @@ private _vehicleClass = param [1, ""];
 private _pos          = param [2, [0, 0, 0]];
 private _ownerPID     = param [3, getPlayerUID player];
 private _ownerName    = param [4, name player];
-private _keyUIDs      = param [5, [] ];
-private _keyNames     = param [6, [] ];
-private _fuel         = param [7, 1  ];
-private _inv          = param [8, [] ];
+private _keyUIDs      = param [5, []];
+private _keyNames     = param [6, []];
+private _fuel         = param [7, 1];
+private _inv          = param [8, []];
 private _allVehPos    = param [9, -1];
 private _skin         = param [10, []];
 
 //Create the Vehicle at given Pos
 private _vehicle = _vehicleClass createVehicle _pos;
 _vehicle setFuel parseNumber(_fuel);
-[_vehicle, _inv] call lts_fnc_setVehicleCargo;
+/* [_vehicle, _inv] call lts_fnc_setVehicleCargo; */
 //Add Vehicle in Vehicle Array
 //Add for for form Param given Owners!
 /* [_vehicle] call lts_fnc_addKeyToVeh; */
