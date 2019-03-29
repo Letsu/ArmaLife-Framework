@@ -229,6 +229,7 @@ class lts_dialog {
         class callVehShop      {};
         class getVehShopConfig {};
         class onVehBuy         {};
+        class onTvChange       {};
     };
 
     class pMenu {
