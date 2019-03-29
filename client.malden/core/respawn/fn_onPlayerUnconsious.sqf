@@ -19,7 +19,7 @@ private _unit = param[0, player];
 private _state = param[1, true];
 
 if (lts_core_taser_isTased) exitWith {};
-
+lts_core_taser_isTased = false;
 if (_state) then {
 	(findDisplay 49) closeDisplay 0;
 
