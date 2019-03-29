@@ -64,6 +64,22 @@ _vehicle lock 2;
 
 if (_isCopCar) then {
     _vehicle setVariable ["copCar", true];
+
+    if (_vehicleClass isEqualTo "Fox_CrownVictoria_NYPD") then {
+        _vehicle setObjectTextureGlobal [0, "textures\PoliceVic5.paa"]
+    };
+
+    if (_vehicleClass isEqualTo "fox_Tahoe_PoliceINT") then {
+        _vehicle setObjectTextureGlobal [0, "textures\PoliceTau2.paa"]
+    };
+
+    if (_vehicleClass isEqualTo "Fox_Charger16_HWP") then {
+        _vehicle setObjectTextureGlobal [0, "textures\PoliceCha4.paa"]
+    };
+
+    if (_vehicleClass isEqualTo "Fox_Impala16_NYPD") then {
+        _vehicle setObjectTextureGlobal [0, "textures\Police03Imp3.paa"]
+    };
 } else {
     [_vehicle, _skin] call lts_interface_fnc_createNewVeh;
     vehicle player addEventHandler ["HandleDamage", {

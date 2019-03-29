@@ -45,6 +45,13 @@ class Config_Gather {
         Condtion = "";
     };
 
+    class wein {
+        Range = 70;
+        Item = "L_Item_Wein";
+        Fields[] = {"Weinreben1_3"};
+        Condtion = "";
+    };
+
     class erdoel {
         Range = 70;
         Item = "L_Item_oel";

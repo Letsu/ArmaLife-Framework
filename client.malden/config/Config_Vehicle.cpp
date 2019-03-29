@@ -419,17 +419,13 @@ class Config_Vehicle {
         DisplayName = "Medic Fahrzeuge"; //Name of Shop
         Condtion = " !(lts_core_curSide isEqualTo ""med"") "; // Condition to open
         Vehicles[] = {
-            "Polizei Fahrzeuge",
-            {"Fox_2003Impala_PoliceHWP", 10, ""},
-            {"fox_Tahoe_PoliceINT", 10, ""},
-            {"Fox_F550_ESU", 10, ""},
-            {"Fox_CrownVictoria_NYPD", 10, ""},
-            {"Fox_CrownVictoria_PoliceUnMarked", 10, ""},
-            {"Fox_2015Tahoe_HWP", 10, ""},
-            {"Fox_Impala16_NYPD", 10, ""},
-            {"Fox_Charger16_HWP", 10, ""},
-            {"Fox_Explorer16", 10, ""},
-            {"Fox_Taurus16_HWP", 10, ""}
+            "Feuerwehr Fahrzeuge",
+            {"Fox_HeavyRescue", 10, ""},
+            {"fox_Tahoe_FD", 10, ""},
+            {"Fox_Silverado", 10, ""},
+            {"Fox_ArrowXTLadder", 10, ""},
+            {"Fox_Firetruck", 10, ""},
+            {"Fox_Stretcher_Base", 10, ""}
         };
     };
 };

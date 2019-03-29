@@ -41,7 +41,6 @@ private _class = param [0, ""];
 private _var  = getText   (missionConfigFile >> "Config_Process" >> _class >> "Var");
 private _text = getText   (missionConfigFile >> "Config_Process" >> _class >> "DisplayName");
 private _from = getText   (missionConfigFile >> "Config_Process" >> _class >> "From");
-hint str(_from);
 private _to   = getText   (missionConfigFile >> "Config_Process" >> _class >> "To");
 private _time = getNumber (missionConfigFile >> "Config_Process" >> _class >> "Time");
 
@@ -64,7 +63,6 @@ private _finish = false;
 //Add Processbar from ACe "ace_common_fnc_progressBar"
 [_timeToProcess, [_itemAmount, _from, _to], {
     private _args        = param [0];
-    hint format["Finish: %1", _args];
     private _itemAmount  = _args select 0;
     private _from        = _args select 1;
     private _to          = _args select 2;

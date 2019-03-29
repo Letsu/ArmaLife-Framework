@@ -20,4 +20,10 @@ class Config_License {
           DisplayName = "Führerschein Klasse C";
           Price = 25000;
       };
+
+      class weapon {
+          Var = "weapon";
+          DisplayName = "Waffen Schein";
+          Price = 2500;
+      };
   };

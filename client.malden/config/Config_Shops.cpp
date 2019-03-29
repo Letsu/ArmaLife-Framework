@@ -117,30 +117,57 @@ class Config_Shops {
             {"ItemCompass", "", 10, 1, ""},
             {"Itemwatch", "", 10, 1, ""},
             {"ItemGPS", "", 10, 1, ""},
-            {"Binocular", "", 10, 1, ""}
+            {"Binocular", "", 10, 1, ""},
+            {"L_Item_Wein", "", 10, 2, ""},
         };
         Medic[] = {
             "Medizin",
             {"ACE_tourniquet", "", 50, 10, ""},
-            {"ACE_fieldDressing", "", 10, -1, ""},
-            {"ACE_elasticBandage", "", 10, -1, ""},
-            {"ACE_quikclot", "", 10, -1, ""},
-            {"ACE_packingBandage", "", 10, -1, ""}
+            {"ACE_fieldDressing", "", 10, 0, ""},
+            {"ACE_elasticBandage", "", 10, 0, ""},
+            {"ACE_quikclot", "", 10, 0, ""},
+            {"ACE_packingBandage", "", 10, 0, ""}
         };
     };
 
+
+    class CivWeapon {
+        DisplayName = "";
+        Condition = "";
+        Clothing[] = {
+            "Kleidung",
+            {"U_Marshal", "", 200, 10, ""},
+            {"U_Rangemaster", "", 200, 10, ""}
+        };
+        weapons[] = {
+            "Waffen",
+            {"hlc_Pistol_M11A1D", "", 21000, 15000, ""},
+            {"hlc_13Rnd_9x19_B_P228", "", 200, 0, ""},
+            {"hgun_Pistol_heavy_02_F", "", 10, -1, ""},
+            {"hlc_15Rnd_9x19_B_P226", "", 10, -1, ""},
+            {"hlc_pistol_Mk25", "", 10, -1, ""},
+            {"hlc_15Rnd_9x19_B_P226", "", 10, -1, ""}
+        };
+    };
 
     class policeShop {
         DisplayName = "Polizei Dienst Ausrüstung";
         Condition = " !(lts_core_curSide isEqualTo ""cop"") ";
         Clothing[] = {
             "Kleidung",
-            {"EF_HMP_1", "", 10, 1, ""},
-            {"EF_HMP_2", "", 10, 1, ""},
-            {"EF_HMMSL_1", "", 10, 1, ""},
-            {"EF_HMMSL_2", "", 10, 1, ""},
-            {"EF_HMSRF_1", "", 10, 1, ""},
-            {"EF_HMSRF_2", "", 10, 1, ""}
+            {"police_1", "", 10, 1, ""},
+            {"police_2", "", 10, 1, ""},
+            {"police_3", "", 10, 1, ""},
+            {"police_4", "", 10, 1, ""},
+            {"police_5", "", 10, 1, ""},
+            {"police_6", "", 10, 1, ""},
+            {"police_7", "", 10, 1, ""},
+            {"police_8", "", 10, 1, ""},
+            {"police_9", "", 10, 1, ""},
+            {"police_10", "", 10, 1, ""},
+            {"police_11", "", 10, 1, ""},
+            {"police_12", "", 10, 1, ""},
+            {"police_13", "", 10, 1, ""}
         };
         Vest[] = {
             "Westen",
@@ -301,7 +328,7 @@ class Config_Shops {
         Condition = "";
         Items[] = {
             "Items",
-            {"L_Item_Oliven", "", 5, 210, ""}
+            {"L_Item_fuel", "", 5, 210, ""}
         };
     };
 
