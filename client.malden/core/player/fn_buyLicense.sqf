@@ -34,4 +34,4 @@ if (((_hasLicense select 1) isEqualTo -1)) then {
     (lts_core_licenses select (_hasLicense select 1)) set[1, true];
 }
 
-["DU hast dir die Lizenz gekauft"] call lts_fnc_hint;
+["Du hast dir die Lizenz gekauft"] call lts_fnc_hint;
