@@ -73,7 +73,7 @@ switch (_key) do {
     };
 
     case (24): { //O
-        if (lts_core_curSide isEqualTo "cop" && (vehicle player) getVariable ["copCar", false] ) then {
+        if (lts_core_curSide isEqualTo "cop" ) then {
             [] call lts_dialog_fnc_callWanted;
             _disableKey = true;
         };
