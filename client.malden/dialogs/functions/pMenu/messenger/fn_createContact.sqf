@@ -13,3 +13,6 @@
  *
  * Public: [Yes/No]
  */
+
+closeDialog 0;
+[] call lts_dialog_fnc_callAddContact;

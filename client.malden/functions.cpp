@@ -263,6 +263,14 @@ class lts_dialog {
         file = "dialogs\functions\pMenu\messenger";
         class callMessenger {};
         class getContacts {};
+        class createContact {};
+        class removeContact {};
+    };
+
+    class MessengerAddContact {
+        file = "dialogs\functions\pMenu\messenger\addContact";
+        class callAddContact {};
+        class contactAdd {};
     };
 
     class playerHud {

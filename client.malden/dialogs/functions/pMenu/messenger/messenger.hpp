@@ -46,6 +46,7 @@ class pMenuMessenger {
            w = 0.0712320000000001 * safezoneW;
            h = 0.039216 * safezoneH;
            idc = 1001;
+           action = "call lts_dialog_fnc_createContact";
        };
        class RscButton1 : RscButton
        {
