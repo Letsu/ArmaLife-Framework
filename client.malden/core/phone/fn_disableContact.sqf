@@ -21,5 +21,5 @@ private _index = _contacts find _contact;
 
 (_contacts select _index) set [2, false];
 
-profileNamespace setVariable ["lts_contacts", _curContacts];
+profileNamespace setVariable ["lts_contacts", _contacts];
 saveProfileNamespace;
