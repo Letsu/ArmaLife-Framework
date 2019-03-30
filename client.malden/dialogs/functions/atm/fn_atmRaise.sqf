@@ -25,7 +25,6 @@ _amount = parseNumber(ctrlText _MONEYEDIT);
 _curCash = lts_money_cash;
 _curBank = lts_money_bank;
 
-systemChat str(_amount);
 //Some Checks!
 if (_amount > _curBank) exitWith { ["Du hast nicht so viel Geld um dir diesen Beitrag auszahlen zu lassen!"] call lts_fnc_hint; lts_dialog_atm_curUsing = false };
 if (_amount <= 0) exitWith { ["Du kannst nicht 0 Abheben"] call lts_fnc_hint; lts_dialog_atm_curUsing = false };
@@ -34,6 +33,7 @@ if (_amount > 999999) exitWith { ["Du kannst nur Maximal 1.000.000 auf einmal Ab
 lts_money_cash = lts_money_cash + _amount;
 lts_money_bank = lts_money_bank - _amount;
 [] call lts_dialog_fnc_updateAtmText;
+[] call lts_fnc_savePlayerInfo;
 [ format["Du hast %1€ abgehoben", _amount] ] call lts_fnc_hint;
 [] spawn {
     sleep 0.5;
