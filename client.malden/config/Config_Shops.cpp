@@ -118,7 +118,6 @@ class Config_Shops {
             {"Itemwatch", "", 10, 1, ""},
             {"ItemGPS", "", 10, 1, ""},
             {"Binocular", "", 10, 1, ""},
-            {"L_Item_Wein", "", 10, 2, ""},
             {"L_Item_WaterBottleFull", "", 10, 2, ""}
         };
         Medic[] = {
@@ -133,8 +132,8 @@ class Config_Shops {
 
 
     class CivWeapon {
-        DisplayName = "";
-        Condition = "";
+        DisplayName = "Waffen Laden";
+        Condition = "!(([""weapon""] call lts_fnc_hasLicense) select 0)";
         Clothing[] = {
             "Kleidung",
             {"U_Marshal", "", 200, 10, ""},
@@ -142,12 +141,12 @@ class Config_Shops {
         };
         weapons[] = {
             "Waffen",
-            {"hlc_Pistol_M11A1D", "", 21000, 15000, ""},
+            {"hlc_Pistol_M11A1D", "", 25000, 15000, ""},
             {"hlc_13Rnd_9x19_B_P228", "", 200, 0, ""},
-            {"hgun_Pistol_heavy_02_F", "", 10, -1, ""},
-            {"hlc_15Rnd_9x19_B_P226", "", 10, -1, ""},
-            {"hlc_pistol_Mk25", "", 10, -1, ""},
-            {"hlc_15Rnd_9x19_B_P226", "", 10, -1, ""}
+            {"hgun_Pistol_heavy_02_F", "", 21000, -1, ""},
+            {"hlc_15Rnd_9x19_B_P226", "", 13000, -1, ""},
+            {"hlc_pistol_Mk25", "", 24000, -1, ""},
+            {"hlc_15Rnd_9x19_B_P226", "", 13000, -1, ""}
         };
     };
 
@@ -317,7 +316,8 @@ class Config_Shops {
         Condition = "";
         Items[] = {
             "Items",
-            {"L_Item_Oliven", "", 5, 3, ""}
+            {"L_Item_Oliven", "", 5, 3, ""},
+            {"L_Item_Wein", "", 12, 9, ""}
         };
     };
 
@@ -335,6 +335,24 @@ class Config_Shops {
         Condition = "";
         Items[] = {
             "Items",
+            {"L_Item_treib", "", 5, 70, ""}
+        };
+    };
+
+    class fisch {
+        DisplayName = "Fisch Händler";
+        Condition = "";
+        Items[] = {
+            "Fisch",
+            {"L_Item_treib", "", 5, 70, ""}
+        };
+    };
+
+    class turtoise {
+        DisplayName = "Schildkröten Händler";
+        Condition = "";
+        Items[] = {
+            "Schildkröten",
             {"L_Item_treib", "", 5, 70, ""}
         };
     };

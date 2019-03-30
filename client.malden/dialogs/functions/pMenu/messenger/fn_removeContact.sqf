@@ -17,12 +17,13 @@
  private _DISPLAY = findDisplay 93001;
  private _CONTACTLB = _DISPLAY displayCtrl 1000;
 
-private _curSel = lbCurSel _CONTACTLB;
-private _CONTACTLB lbData _curSel;
+private _index = lbCurSel _CONTACTLB;
+private _data =  _CONTACTLB lbData _index;
 
 _data = parseSimpleArray _data;
 [_data] call lts_fnc_disableContact;
 
+closeDialog 0;
 [] spawn {
     sleep 0.3;
     [] call lts_dialog_fnc_callMessenger

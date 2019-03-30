@@ -383,6 +383,19 @@ class Config_Vehicle {
         };
     };
 
+    class lkw {
+        DisplayName = "LKW"; //Name of Shop
+        Condtion = " "; // Condition to open
+        Lkw[] = {
+            "Lkw",
+            {"B_Boat_Transport_01_F", 2500, ""},
+            {"C_Boat_Civil_01_F", 6800, ""},
+            {"I_C_Boat_Transport_02_F", 16000, ""},
+            {"C_Scooter_Transport_01_F", 5000, ""},
+            {"B_SDV_01_F", 230000, ""}
+        };
+    };
+
     class boots {
         DisplayName = "Helicopter"; //Name of Shop
         Condtion = " "; // Condition to open

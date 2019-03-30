@@ -38,4 +38,12 @@ class Config_Process {
         To = "L_Item_fuel"; //Need to add Item
         Time = 0.4;
     };
+
+    class kelterei {
+        Var = "kelterei";
+        DisplayName = "Wein wird Verarbeitet";
+        From = "L_Item_WeinTrauben"; //Check Item Name
+        To = "L_Item_Wein"; //Need to add Item
+        Time = 0.4;
+    };
 };

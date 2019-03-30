@@ -47,8 +47,8 @@ class Config_Gather {
 
     class wein {
         Range = 70;
-        Item = "L_Item_Wein";
-        Fields[] = {"Weinreben1_3"};
+        Item = "L_Item_WeinTrauben";
+        Fields[] = {"Weinreben1_3", "Weinreben_1", "Weinreben1_2"};
         Condtion = "";
     };
 
