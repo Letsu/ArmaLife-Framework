@@ -56,6 +56,7 @@ class pMenuMessenger {
            w = 0.0744791666666666 * safezoneW;
            h = 0.039216 * safezoneH;
            idc = 1002;
+           action = "call lts_dialog_fnc_removeContact";
        };
    };
 };
