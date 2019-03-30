@@ -17,7 +17,7 @@
 private _contact = param [0, ["ERROR", getPlayerUID player, true]];
 
 private _contacts = profileNamespace getVariable ["lts_contacts", []];
-private _index = _contact find _contact;
+private _index = _contacts find _contact;
 
 (_contacts select _index) set [2, false];
 
