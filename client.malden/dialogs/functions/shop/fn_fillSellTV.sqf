@@ -54,42 +54,98 @@ private _sellArrayPrice = [];
 
 
 _uniformPos = _TVSELL tvAdd [[], "Uniform"];
+_classArrays = [];
+_classArrayList = [];
 {
     _class = _x;
     if (_class in _sellArrayClass) then {
+
+        _name  = [_class] call lts_fnc_getDisplayName;
         _arrPos = _sellArrayClass find _class;
         _price = _sellArrayPrice select _arrPos;
-        _name  = [_class] call lts_fnc_getDisplayName;
-        _pos = _TVSELL tvAdd [[_uniformPos], _name];
-        _data = [_class, _name, _price, _shopClass, 0];
-        _TVSELL tvSetData [[_uniformPos, _pos], str(_data)];
+
+        if (_class in _classArrays) then {
+            _index = _classArrays find _class;
+            _id = _classArrayList select _index;
+
+            _pos = _TVSELL tvAdd [[_uniformPos, _id], _name];
+            _data = [_class, _name, _price, _shopClass, 0, false];
+            _TVSELL tvSetData [[_uniformPos, _id, _pos], str(_data)];
+        } else {
+
+            _pos = _TVSELL tvAdd [[_uniformPos], _name];
+            _data = [_class, _name, _price, _shopClass, 0, true];
+            _TVSELL tvSetData [[_uniformPos, _pos], str(_data)];
+
+            _pos2 = _TVSELL tvAdd [[_uniformPos, _pos], _name];
+            _data = [_class, _name, _price, _shopClass, 0, false];
+            _TVSELL tvSetData [[_uniformPos, _pos, _pos2], str(_data)];
+            _classArrays pushBackUnique _class;
+            _classArrayList pushBack _pos;
+        };
     };
 } forEach _uniformItems;
 
-
+_classArrays = [];
+_classArrayList = [];
 _vestPos = _TVSELL tvAdd [[], "Weste"];
 {
     _class = _x;
     if (_class in _sellArrayClass) then {
+        _name  = [_class] call lts_fnc_getDisplayName;
         _arrPos = _sellArrayClass find _class;
         _price = _sellArrayPrice select _arrPos;
-        _name  = [_class] call lts_fnc_getDisplayName;
-        _pos = _TVSELL tvAdd [[_vestPos], _name];
-        _data = [_class, _name, _price, _shopClass, 1];
-        _TVSELL tvSetData [[_vestPos, _pos], str(_data)];
+
+        if (_class in _classArrays) then {
+            _index = _classArrays find _class;
+            _id = _classArrayList select _index;
+
+            _pos = _TVSELL tvAdd [[_vestPos, _id], _name];
+            _data = [_class, _name, _price, _shopClass, 1, false];
+            _TVSELL tvSetData [[_vestPos, _id, _pos], str(_data)];
+        } else {
+            _pos = _TVSELL tvAdd [[_vestPos], _name];
+            _data = [_class, _name, _price, _shopClass, 1, true];
+            _TVSELL tvSetData [[_vestPos, _pos], str(_data)];
+
+            _pos2 = _TVSELL tvAdd [[_vestPos, _pos], _name];
+            _data = [_class, _name, _price, _shopClass, 1, false];
+            _TVSELL tvSetData [[_vestPos, _pos, _pos2], str(_data)];
+            _classArrays pushBackUnique _class;
+            _classArrayList pushBack _pos;
+        };
     };
 } forEach _vestItems;
 
+_classArrays = [];
+_classArrayList = [];
 _backpackPos = _TVSELL tvAdd [[], "Rucksack"];
 {
     _class = _x;
     if (_class in _sellArrayClass) then {
+        _name  = [_class] call lts_fnc_getDisplayName;
         _arrPos = _sellArrayClass find _class;
         _price = _sellArrayPrice select _arrPos;
-        _name  = [_class] call lts_fnc_getDisplayName;
-        _pos = _TVSELL tvAdd [[_backpackPos], _name];
-        _data = [_class, _name, _price, _shopClass, 2];
-        _TVSELL tvSetData [[_backpackPos, _pos], str(_data)];
+
+        if (_class in _classArrays) then {
+            _index = _classArrays find _class;
+            _id = _classArrayList select _index;
+
+            _pos = _TVSELL tvAdd [[_backpackPos, _id], _name];
+            _data = [_class, _name, _price, _shopClass, 2, false];
+            _TVSELL tvSetData [[_backpackPos, _id, _pos], str(_data)];
+        } else {
+
+            _pos = _TVSELL tvAdd [[_backpackPos], _name];
+            _data = [_class, _name, _price, _shopClass, 2, true];
+            _TVSELL tvSetData [[_backpackPos, _pos], str(_data)];
+
+            _pos2 = _TVSELL tvAdd [[_backpackPos, _pos], _name];
+            _data = [_class, _name, _price, _shopClass, 2, false];
+            _TVSELL tvSetData [[_backpackPos, _pos, _pos2], str(_data)];
+            _classArrays pushBackUnique _class;
+            _classArrayList pushBack _pos;
+        };
     };
 } forEach _backpack;
 
