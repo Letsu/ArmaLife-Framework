@@ -156,6 +156,7 @@ class Config_Shops {
         Condition = " !(lts_core_curSide isEqualTo ""cop"") ";
         Clothing[] = {
             "Kleidung",
+            {"police_0", "", 10, 1, ""},
             {"police_1", "", 10, 1, ""},
             {"police_2", "", 10, 1, ""},
             {"police_3", "", 10, 1, ""},
@@ -172,17 +173,13 @@ class Config_Shops {
         };
         Vest[] = {
             "Westen",
-            {"EF_MBA_POLICE", "", 10, 1, ""},
-            {"EF_MBA_SRF", "", 10, 1, ""},
-            {"EF_MBA_B_POLICE", "", 10, 1, ""},
-            {"EF_MBA_B_SRF", "", 10, 1, ""},
-            {"EF_PBDF_M1", "", 10, 1, ""},
-            {"EF_SHF_BK", "", 10, 1, ""},
-            {"EF_SHF_BW", "", 10, 1, ""},
-            {"EF_BLT_M1", "", 10, 1, ""},
-            {"EF_v1_K9P2", "", 10, 1, ""},
-            {"TAC_PBDFG2P_B", "", 10, 1, ""},
-            {"TAC_TAC_PBDFG2SACP_RG", "", 10, 1, ""}
+            {"Cadet", "", 10, 1, ""},
+            {"Fbi", "", 10, 1, ""},
+            {"Inspector", "", 10, 1, ""},
+            {"Instructor", "", 10, 1, ""},
+            {"police", "", 10, 1, ""},
+            {"sheriff", "", 10, 1, ""},
+            {"trainee", "", 10, 1, ""}
         };
         Backpack[] = {
             "Rucksäcke",
