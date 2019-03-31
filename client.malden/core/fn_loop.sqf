@@ -42,6 +42,9 @@ private _fnc_updateHud = {
 };
 
 private _fnc_tfarCheck = {
+
+    if (lts_core_dbug) exitWith {};
+
     private _isEnabeld = call TFAR_fnc_isTeamSpeakPluginEnabled;
     if !(_isEnabeld) exitWith {
         120 cutText ["== BITTE AKTIVIERE DEIN TASK FORCE RADIO PLUGIN ==","BLACK"];
