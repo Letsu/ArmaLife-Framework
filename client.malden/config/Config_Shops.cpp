@@ -350,7 +350,7 @@ class Config_Shops {
         Condition = "";
         Items[] = {
             "Items",
-            {"L_Item_CopperBare", "", 1200, 70, ""}
+            {"L_Item_CopperBare", "", 90, 70, ""}
         };
     };
 
@@ -359,7 +359,7 @@ class Config_Shops {
         Condition = "";
         Items[] = {
             "Items",
-            {"L_Item_TraubenSaft", "", 1200, 5, ""}
+            {"L_Item_TraubenSaft", "", 25, 5, ""}
         };
     };
 
@@ -375,11 +375,11 @@ class Config_Shops {
     };
 
     class oel {
-        DisplayName = "Spiritossen Händler";
+        DisplayName = "Benzin Händler";
         Condition = "";
         Items[] = {
             "Items",
-            {"L_Item_fuel", "", 5, 210, ""}
+            {"L_Item_fuel", "", 340, 210, ""}
         };
     };
 
@@ -388,7 +388,7 @@ class Config_Shops {
         Condition = "";
         Items[] = {
             "Items",
-            {"L_Item_treib", "", 5, 70, ""}
+            {"L_Item_treib", "", 90, 70, ""}
         };
     };
 
@@ -397,7 +397,7 @@ class Config_Shops {
         Condition = "";
         Items[] = {
             "Fisch",
-            {"L_Item_treib", "", 5, 70, ""}
+            {"L_Item_treib", "", 90, 70, ""}
         };
     };
 
@@ -406,7 +406,7 @@ class Config_Shops {
         Condition = "";
         Items[] = {
             "Schildkröten",
-            {"L_Item_treib", "", 5, 70, ""}
+            {"L_Item_treib", "", 90, 70, ""}
         };
     };
 
