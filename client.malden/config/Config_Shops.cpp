@@ -183,6 +183,7 @@ class Config_Shops {
             {"Instructor", "", 10, 1, ""},
             {"police", "", 10, 1, ""},
             {"sheriff", "", 10, 1, ""},
+            {"PoliceY", "", 10, 1, ""},
             {"trainee", "", 10, 1, ""}
         };
         Backpack[] = {
