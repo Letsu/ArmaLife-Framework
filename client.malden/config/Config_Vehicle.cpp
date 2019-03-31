@@ -10,107 +10,26 @@ class Config_Vehicle {
     class vehShop_01 {
         DisplayName = "Fahrzeuge"; //Name of Shop
         Condtion = "!(([""drive_B""] call lts_fnc_hasLicense) select 0)"; // Condition to open
-        Bikes[] = {
-            "Motorräder",
-            {"d3s_Aprilia_Tuono_V4_1100_RR", 18000, ""},
-            {"d3s_BMW_S_1000_RR", 8000, ""},
-            {"d3s_Ducati_Monster_1200_S", 10000, ""},
-            {"d3s_Ducati_XDiavel_S", 23000, ""},
-            {"d3s_Kawasaki_Ninja_H2R", 35000, ""},
-            {"d3s_Kawasaki_Z800", 9000, ""},
-            {"d3s_Kawasaki_ZX7RR", 4500, ""},
-            {"d3s_KTM_1290_Super_Duke", 12000, ""},
-            {"V12_KTM", 10000, ""},
-            {"d3s_Suzuki_GSX_R_1000", 18000, ""},
-            {"V12_CRF450SGEND", 9000, ""},
-            {"d3s_Suzuki_Hayabusa", 16000, ""},
-            {"V12_YFZ450_BLEU", 12500, ""}
-        };
+
         AlfaRomeo[] = {
             "Alfa Romeo",
-            {"d3s_giulia_quad_16", 33000, ""},
             {"d3s_giulietta_16", 20000, ""}
-        };
-        AstonMartin[] = {
-            "Aston Martin",
-            {"d3s_rapide_10", 100000, ""}
         };
         Audi[] = {
             "Audi",
-            {"V12_RS3_BLEU", 15000, ""},
-            {"V12_RS609_BLEU", 18000, ""},
-            {"V12_RS6AV_BLANC", 23000, ""}
-        };
-        Bentley[] = {
-            "Bentley",
-            {"d3s_bentayga_18", 85000, ""},
-            {"d3s_continentalGT_18", 90000, ""}
+            {"V12_RS3_BLEU", 15000, ""}
         };
         BMW[] = {
             "BMW",
-            {"d3s_f87_17", 40000, ""},
             {"d3s_e38_98", 5000, ""},
-            {"d3s_f87_17_ACH", 60000, ""},
-            {"d3s_amazing_ACS8_17_IND", 125000, ""},
             {"V12_E46_BLEU", 15500, ""},
-            {"V12_GTS3", 70000, ""},
             {"V12_135i_BLEU", 22000, ""},
-            {"d3s_f87_17_m", 55000, ""},
-            {"d3s_f87_17_EX", 69000, ""},
             {"d3s_f80_14", 16000, ""},
             {"d3s_f80_14_SE", 23000, ""},
-            {"d3s_f80_14_GTS", 50000, ""},
-            {"d3s_f82_14_LB", 80000, ""},
-            {"d3s_amazing_f82_16", 75000, ""},
             {"d3s_e60_09", 19500, ""},
             {"d3s_f10_12", 10000, ""},
-            {"d3s_f90_18", 16000, ""},
-            {"d3s_f90_18_FE", 130000, ""},
-            {"d3s_f90_18_m", 25000, ""},
-            {"d3s_f10_12_EX", 34000, ""},
-            {"d3s_f13_13", 39000, ""},
-            {"d3s_f85_15_m", 35000, ""},
-            {"d3s_f86_15_OFF", 55000, ""},
-            {"d3s_f86_15_m", 66000, ""},
-            {"d3s_e89_12", 80000, ""},
-            {"V12_Z4", 81000, ""},
-            {"d3s_f80_14_EX2", 65000, ""},
-            {"d3s_f80_14_EX3", 70000, ""},
-            {"d3s_e60_09_EX", 58000, ""}
+            {"d3s_f90_18", 16000, ""}
         };
-
-        Brabus[] = {
-            "Brabus",
-            {"d3s_g800_17", 65000, ""}
-        };
-
-        Buick[] = {
-            "Buick",
-            {"d3s_skylark_52", 150000, ""}
-        };
-
-        Cadillac[] = {
-            "Cadillac",
-            {"d3s_ctsv_16", 85000, ""},
-            {"V12_ESCALADE2", 70000, ""}
-        };
-
-        Camaro[] = {
-            "Camaro",
-            {"d3s_camaro_16", 36000, ""},
-            {"d3s_camaro_zl1_17", 68000, ""},
-            {"d3s_camaro_zl1_1le_18", 81000, ""},
-            {"d3s_malibu_18", 32000, ""},
-            {"d3s_malibu_18_red", 35000, ""},
-            {"d3s_tahoe_08", 25000, ""},
-            {"d3s_tahoe_EX", 32000, ""}
-        };
-
-        Chrysler[] = {
-            "Chrysler",
-            {"d3s_300C_12", 35000, ""}
-        };
-
         VW[] = {
             "VW",
             {"V12_CORRADO_BLEU", 4500, ""},
@@ -122,18 +41,7 @@ class Config_Vehicle {
 
         Dodge[] = {
             "Dodge",
-            {"d3s_charger_15", 45000, ""},
-            {"d3s_srthellcat_15", 58000, ""},
-            {"V12_RT", 50000, ""},
-            {"d3s_durango_18", 50000, ""},
-            {"d3s_durango_18_SRT", 61000, ""},
-            {"V12_RAM6X6_BLANC", 73000, ""},
-            {"V12_RAM_BLANC", 62000, ""}
-        };
-
-        Ferrari[] = {
-            "Ferrari",
-            {"d3s_LaFerrari_14", 1200000, ""}
+            {"d3s_charger_15", 45000, ""}
         };
 
         Ford[] = {
@@ -141,16 +49,12 @@ class Config_Vehicle {
             {"d3s_crown_98", 7500, ""},
             {"d3s_explorer_13", 13500, ""},
             {"d3s_explorer_sport_13", 20000, ""},
-            {"d3s_raptor_SCR_17", 35000, ""},
             {"d3s_raptor_17", 25000, ""},
-            {"d3s_fseries_17", 28000, ""},
             {"d3s_fiesta_16", 12500, ""},
             {"d3s_focus_17", 15000, ""},
             {"d3s_focus_17_LB", 25000, ""},
             {"d3s_focus_14", 18000, ""},
-            {"V12_VELOCIRAPTOR_BLANC", 31000, ""},
             {"d3s_model_a", 20000, ""},
-            {"d3s_boss_15", 75000, ""},
             {"d3s_taurus_eco_10", 16000, ""}
         };
 
@@ -167,6 +71,177 @@ class Config_Vehicle {
             {"V12_S2000_BLEU", 25000, ""}
         };
 
+        Infiniti[] = {
+            "Infiniti",
+            {"d3s_q50_14", 21000, ""},
+            {"d3s_q50_ER_14", 24000, ""},
+            {"d3s_qx56_13", 19000, ""},
+            {"d3s_qx56_13_SE", 23000, ""},
+            {"d3s_QX60_16", 24000, ""},
+        };
+
+        Lada[] = {
+            "Lada",
+            {"d3s_vesta_15", 9500, ""},
+            {"d3s_vesta_15_turbo", 12000, ""}
+        };
+
+        Mercedes[] = {
+            "Mercedes",
+            {"d3s_amazing_a45_16", 25000, ""}
+        };
+
+        Mini[] = {
+            "Mini",
+            {"d3s_clubman_11", 23600, ""}
+        };
+
+        Mitsubishi[] = {
+            "Mitsubishi",
+            {"d3s_coupeconcept_10", 26000, ""}
+        };
+
+        Nissan[] = {
+            "Nissan",
+            {"V12_S15_BLEU", 15000, ""},
+            {"d3s_silvia_s15_02", 12000, ""}
+        };
+
+        RangeRover[] = {
+            "Range Rover",
+            {"d3s_evoque_16", 25000, ""}
+        };
+
+        Renault[] = {
+            "Renault",
+            {"V12_V6_BLEU", 12000, ""}
+        };
+
+        Seat[] = {
+            "Seat",
+            {"V12_CUPRA2", 18000, ""}
+        };
+
+        Toyota[] = {
+            "Toyota",
+            {"V12_AE86_BLEU", 6000, ""}
+        };
+
+        Uaz[] = {
+            "Uaz",
+            {"d3s_uaz_469P", 30000, ""},
+            {"d3s_uaz_3162", 19000, ""}
+        };
+
+        Other[] = {
+            "Sonstige",
+            {"d3s_oka", 4000, ""},
+            {"d3s_willys", 15000, ""}
+        };
+    };
+
+    class neuwagen {
+        DisplayName = "Neuwagen"; //Name of Shop
+        Condtion = "!(([""drive_B""] call lts_fnc_hasLicense) select 0)";
+
+        AlfaRomeo[] = {
+            "Alfa Romeo",
+            {"d3s_giulia_quad_16", 33000, ""}
+        };
+
+        AstonMartin[] = {
+            "Aston Martin",
+            {"d3s_rapide_10", 100000, ""}
+        };
+
+        Camaro[] = {
+            "Camaro",
+            {"d3s_tahoe_08", 25000, ""},
+            {"d3s_malibu_18", 32000, ""},
+            {"d3s_tahoe_EX", 32000, ""},
+            {"d3s_malibu_18_red", 35000, ""},
+            {"d3s_camaro_16", 36000, ""},
+            {"d3s_camaro_zl1_17", 68000, ""},
+            {"d3s_camaro_zl1_1le_18", 81000, ""}
+        };
+
+        Cadillac[] = {
+            "Cadillac",
+            {"V12_ESCALADE2", 70000, ""},
+            {"d3s_ctsv_16", 85000, ""}
+        };
+
+        Chrysler[] = {
+            "Chrysler",
+            {"d3s_300C_12", 35000, ""}
+        };
+
+        Brabus[] = {
+            "Brabus",
+            {"d3s_g800_17", 65000, ""}
+        };
+
+        Buick[] = {
+            "Buick",
+            {"d3s_skylark_52", 150000, ""}
+        };
+
+        Bentley[] = {
+            "Bentley",
+            {"d3s_bentayga_18", 85000, ""},
+            {"d3s_continentalGT_18", 90000, ""}
+        };
+
+        Audi[] = {
+            "Audi",
+            {"V12_RS609_BLEU", 18000, ""},
+            {"V12_RS6AV_BLANC", 23000, ""}
+        };
+
+        Dodge[] = {
+            "Dodge",
+            {"d3s_charger_15", 45000, ""},
+            {"d3s_srthellcat_15", 58000, ""},
+            {"V12_RT", 50000, ""},
+            {"d3s_durango_18", 50000, ""},
+            {"d3s_durango_18_SRT", 61000, ""},
+            {"V12_RAM6X6_BLANC", 73000, ""},
+            {"V12_RAM_BLANC", 62000, ""}
+        };
+
+        BMW[] = {
+            "BMW",
+            {"d3s_f87_17", 40000, ""},
+            {"d3s_f87_17_ACH", 60000, ""},
+            {"d3s_amazing_ACS8_17_IND", 125000, ""},
+            {"V12_GTS3", 70000, ""},
+            {"d3s_f87_17_m", 55000, ""},
+            {"d3s_f87_17_EX", 69000, ""},
+            {"d3s_f80_14_GTS", 50000, ""},
+            {"d3s_f82_14_LB", 80000, ""},
+            {"d3s_amazing_f82_16", 75000, ""},
+            {"d3s_f90_18_FE", 130000, ""},
+            {"d3s_f90_18_m", 25000, ""},
+            {"d3s_f10_12_EX", 34000, ""},
+            {"d3s_f13_13", 39000, ""},
+            {"d3s_f85_15_m", 35000, ""},
+            {"d3s_f86_15_OFF", 55000, ""},
+            {"d3s_f86_15_m", 66000, ""},
+            {"d3s_e89_12", 80000, ""},
+            {"V12_Z4", 81000, ""},
+            {"d3s_f80_14_EX2", 65000, ""},
+            {"d3s_f80_14_EX3", 70000, ""},
+            {"d3s_e60_09_EX", 58000, ""}
+        };
+
+        Ford[] = {
+            "Ford",
+            {"d3s_raptor_SCR_17", 35000, ""},
+            {"d3s_fseries_17", 28000, ""},
+            {"V12_VELOCIRAPTOR_BLANC", 31000, ""},
+            {"d3s_boss_15", 75000, ""}
+        };
+
         Hudson[] = {
             "Hudson",
             {"d3s_hornet_52", 150000, ""}
@@ -174,12 +249,7 @@ class Config_Vehicle {
 
         Infiniti[] = {
             "Infiniti",
-            {"d3s_q50_14", 21000, ""},
-            {"d3s_q50_ER_14", 24000, ""},
-            {"d3s_qx56_13", 19000, ""},
-            {"d3s_qx56_13_SE", 23000, ""},
             {"d3s_qx56_13_EX", 30000, ""},
-            {"d3s_QX60_16", 24000, ""},
             {"d3s_QX60_16_S", 26000, ""}
         };
 
@@ -195,12 +265,6 @@ class Config_Vehicle {
         Jeep[] = {
             "Jeep",
             {"d3s_cherokee_18", 50000, ""}
-        };
-
-        Lada[] = {
-            "Lada",
-            {"d3s_vesta_15", 9500, ""},
-            {"d3s_vesta_15_turbo", 12000, ""}
         };
 
         Lamborghini[] = {
@@ -221,8 +285,6 @@ class Config_Vehicle {
         Mercedes[] = {
             "Mercedes",
             {"d3s_g65amg_Mansory", 320000, ""},
-            {"d3s_lx570_16", 120000, ""},
-            {"d3s_amazing_a45_16", 25000, ""},
             {"d3s_amazing_a45_16_EX", 29000, ""},
             {"d3s_C63_14", 61000, ""},
             {"d3s_C63S_14", 65000, ""},
@@ -262,22 +324,23 @@ class Config_Vehicle {
             {"d3s_gls63_17", 140000, ""}
         };
 
+        Ferrari[] = {
+            "Ferrari",
+            {"d3s_LaFerrari_14", 1200000, ""}
+        };
+
         Mini[] = {
             "Mini",
-            {"d3s_clubman_11", 23600, ""},
             {"d3s_coupeconcept_10", 26000, ""}
         };
 
         Mitsubishi[] = {
             "Mitsubishi",
-            {"d3s_pajero_07_38", 30000, ""},
-            {"d3s_coupeconcept_10", 26000, ""}
+            {"d3s_pajero_07_38", 30000, ""}
         };
 
         Nissan[] = {
             "Nissan",
-            {"V12_S15_BLEU", 15000, ""},
-            {"d3s_silvia_s15_02", 12000, ""},
             {"V12_R34M_BLEU", 280000, ""},
             {"d3s_titan_17", 35000, ""}
         };
@@ -292,7 +355,6 @@ class Config_Vehicle {
 
         RangeRover[] = {
             "Range Rover",
-            {"d3s_evoque_16", 25000, ""},
             {"d3s_svr_17_SD4", 66000, ""},
             {"d3s_svr_17_CHARGED", 70000, ""},
             {"V12_SVR_BLANC", 58000, ""}
@@ -300,7 +362,6 @@ class Config_Vehicle {
 
         Renault[] = {
             "Renault",
-            {"V12_V6_BLEU", 12000, ""},
             {"d3s_svr_17_SD4", 66000, ""},
             {"d3s_svr_17_CHARGED", 70000, ""},
             {"V12_SVR_BLANC", 58000, ""}
@@ -308,7 +369,6 @@ class Config_Vehicle {
 
         Seat[] = {
             "Seat",
-            {"V12_CUPRA2", 18000, ""},
             {"d3s_cullinan_19_II", 330000, ""},
             {"d3s_cullinan_19_FE", 380000, ""},
             {"d3s_ghost_18_EWB", 283000, ""},
@@ -329,8 +389,7 @@ class Config_Vehicle {
         Toyota[] = {
             "Toyota",
             {"d3s_200_16_EX", 28000, ""},
-            {"d3s_200_VX_16", 29000, ""},
-            {"V12_AE86_BLEU", 6000, ""}
+            {"d3s_200_VX_16", 29000, ""}
         };
 
         RollsRocyce[] = {
@@ -351,20 +410,61 @@ class Config_Vehicle {
             {"d3s_levante_17", 74000, ""},
             {"d3s_levante_s_17_mat", 82000, ""},
             {"d3s_levante_17", 74000, ""},
-            {"d3s_levante_17", 74000, ""},
-            {"d3s_lx570_16", 120000, ""}
+            {"d3s_levante_17", 74000, ""}
         };
+    };
 
-        Uaz[] = {
-            "Uaz",
-            {"d3s_uaz_469P", 30000, ""},
-            {"d3s_uaz_3162", 19000, ""}
+
+    class bike {
+        DisplayName = "Motorräder"; //Name of Shop
+        Condtion = "!(([""drive_A""] call lts_fnc_hasLicense) select 0)";
+        Bike[] = {
+            "Motorräder",
+            {"d3s_Aprilia_Tuono_V4_1100_RR", 18000, ""},
+            {"d3s_BMW_S_1000_RR", 8000, ""},
+            {"d3s_Ducati_Monster_1200_S", 10000, ""},
+            {"d3s_Ducati_XDiavel_S", 23000, ""},
+            {"d3s_Kawasaki_Ninja_H2R", 35000, ""},
+            {"d3s_Kawasaki_Z800", 9000, ""},
+            {"d3s_Kawasaki_ZX7RR", 4500, ""},
+            {"d3s_KTM_1290_Super_Duke", 12000, ""},
+            {"V12_KTM", 10000, ""},
+            {"d3s_Suzuki_GSX_R_1000", 18000, ""},
+            {"V12_CRF450SGEND", 9000, ""},
+            {"d3s_Suzuki_Hayabusa", 16000, ""},
+            {"V12_YFZ450_BLEU", 12500, ""}
         };
+    };
 
-        Other[] = {
-            "Sonstige",
-            {"d3s_oka", 4000, ""},
-            {"d3s_willys", 15000, ""}
+    class lkw {
+        DisplayName = "LKW"; //Name of Shop
+        Condtion = "!(([""drive_C""] call lts_fnc_hasLicense) select 0)"; // Condition to open
+        Lkw[] = {
+            "Lkw",
+            {"d3s_zil_130_02", 180000, ""},
+            {"d3s_zil_130", 150000, ""},
+            {"d3s_zil_130_03", 160000, ""},
+            {"d3s_zil_130_01", 158000, ""},
+            {"d3s_zil_130_06", 15500, ""},
+            {"d3s_zil_131", 163000, ""},
+            {"d3s_zil_131_2", 163000, ""},
+            {"d3s_kamaz_2", 195000, ""},
+            {"d3s_kamaz_tent_2", 210000, ""},
+            {"d3s_kamaz", 190000, ""},
+            {"d3s_actros_14", 560000, ""}
+        };
+    };
+
+    class boots {
+        DisplayName = "Boote"; //Name of Shop
+        Condtion = " "; // Condition to open
+        Boots[] = {
+            "Boote",
+            {"B_Boat_Transport_01_F", 2500, ""},
+            {"C_Boat_Civil_01_F", 6800, ""},
+            {"I_C_Boat_Transport_02_F", 16000, ""},
+            {"C_Scooter_Transport_01_F", 5000, ""},
+            {"B_SDV_01_F", 230000, ""}
         };
     };
 
@@ -382,33 +482,6 @@ class Config_Vehicle {
             {"C_Plane_Civil_01_F", 2500000, ""}
         };
     };
-
-    class lkw {
-        DisplayName = "LKW"; //Name of Shop
-        Condtion = " "; // Condition to open
-        Lkw[] = {
-            "Lkw",
-            {"B_Boat_Transport_01_F", 2500, ""},
-            {"C_Boat_Civil_01_F", 6800, ""},
-            {"I_C_Boat_Transport_02_F", 16000, ""},
-            {"C_Scooter_Transport_01_F", 5000, ""},
-            {"B_SDV_01_F", 230000, ""}
-        };
-    };
-
-    class boots {
-        DisplayName = "Helicopter"; //Name of Shop
-        Condtion = " "; // Condition to open
-        Boots[] = {
-            "Boote",
-            {"B_Boat_Transport_01_F", 2500, ""},
-            {"C_Boat_Civil_01_F", 6800, ""},
-            {"I_C_Boat_Transport_02_F", 16000, ""},
-            {"C_Scooter_Transport_01_F", 5000, ""},
-            {"B_SDV_01_F", 230000, ""}
-        };
-    };
-
 
     class policeCar {
         DisplayName = "Polizei Fahrzeuge"; //Name of Shop

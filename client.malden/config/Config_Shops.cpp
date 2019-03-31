@@ -191,7 +191,8 @@ class Config_Shops {
             {"B_TacticalPack_blk", "", 0, 0, ""},
             {"TRYK_B_Carryall_blk", "", 0, 0, ""},
             {"TRYK_B_Kitbag_blk", "", 0, 0, ""},
-            {"TRYK_B_BAF_BAG_BLK", "", 0, 0, ""}
+            {"TRYK_B_BAF_BAG_BLK", "", 0, 0, ""},
+            {"TFAR_rt1523g_big", "", 0, 0, ""}
         };
         head[] = {
             "Kopfbedeckung",
@@ -283,43 +284,44 @@ class Config_Shops {
         Condition = " !(lts_core_curSide isEqualTo ""med"") ";
         Clothing[] = {
             "Kleidung",
-            {"EF_MKJKT_EMS", "", 10, 1, ""},
-            {"EF_MKJKT_EMS2", "", 10, 1, ""},
-            {"EF_M_EMS_U", "", 10, 1, ""}
+            {"EF_MKJKT_EMS", "", 0, 0, ""},
+            {"EF_MKJKT_EMS2", "", 0, 0, ""},
+            {"EF_M_EMS_U", "", 0, 0, ""}
         };
         Backpack[] = {
             "Rucksäcke",
-            {"B_TacticalPack_blk", "", 10, 1, ""},
-            {"TRYK_B_Carryall_blk", "", 10, 1, ""},
-            {"TRYK_B_Kitbag_blk", "", 10, 1, ""}
+            {"B_TacticalPack_blk", "", 0, 0, ""},
+            {"TRYK_B_Carryall_blk", "", 0, 0, ""},
+            {"TRYK_B_Kitbag_blk", "", 0, 0, ""},
+            {"TFAR_rt1523g_big", "", 0, 0, ""}
         };
         Items[] = {
             "Items",
-            {"ItemMap", "", 10, 1, ""},
-            {"ItemCompass", "", 10, 1, ""},
-            {"Itemwatch", "", 10, 1, ""},
-            {"ItemGPS", "", 10, 1, ""},
-            {"Binocular", "", 10, 1, ""},
-            {"ToolKit", "", 10, 1, ""},
-            {"ACE_EarPlugs", "", 10, 1, ""},
-            {"ACE_NVG_Wide", "", 10, 1, ""}
+            {"ItemMap", "", 0, 0, ""},
+            {"ItemCompass", "", 0, 0, ""},
+            {"Itemwatch", "", 0, 0, ""},
+            {"ItemGPS", "", 0, 0, ""},
+            {"Binocular", "", 0, 0, ""},
+            {"ToolKit", "", 0, 0, ""},
+            {"ACE_EarPlugs", "", 0, 0, ""},
+            {"ACE_NVG_Wide", "", 0, 0, ""}
         };
         Medic[] = {
             "Medic",
-            {"ACE_fieldDressing", "", 10, 1, ""},
-            {"ACE_elasticBandage", "", 10, 1, ""},
-            {"ACE_quikclot", "", 10, 1, ""},
-            {"ACE_packingBandage", "", 10, 1, ""},
-            {"ACE_adenosine", "", 10, 1, ""},
-            {"ACE_atropine", "", 10, 1, ""},
-            {"ACE_bloodIV", "", 10, 1, ""},
-            {"ACE_bloodIV_250", "", 10, 1, ""},
-            {"ACE_bloodIV_500", "", 10, 1, ""},
-            {"ACE_bodyBag", "", 10, 1, ""},
-            {"ACE_epinephrine", "", 10, 1, ""},
-            {"ACE_morphine", "", 10, 1, ""},
-            {"ACE_surgicalKit", "", 10, 1, ""},
-            {"ACE_tourniquet", "", 10, 1, ""}
+            {"ACE_fieldDressing", "", 0, 0, ""},
+            {"ACE_elasticBandage", "", 0, 0, ""},
+            {"ACE_quikclot", "", 0, 0, ""},
+            {"ACE_packingBandage", "", 0, 0, ""},
+            {"ACE_adenosine", "", 0, 0, ""},
+            {"ACE_atropine", "", 0, 0, ""},
+            {"ACE_bloodIV", "", 0, 0, ""},
+            {"ACE_bloodIV_250", "", 0, 0, ""},
+            {"ACE_bloodIV_500", "", 0, 0, ""},
+            {"ACE_bodyBag", "", 0, 0, ""},
+            {"ACE_epinephrine", "", 0, 0, ""},
+            {"ACE_morphine", "", 0, 0, ""},
+            {"ACE_surgicalKit", "", 0, 0, ""},
+            {"ACE_tourniquet", "", 0, 0, ""}
         };
     };
 
