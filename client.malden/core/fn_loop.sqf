@@ -39,15 +39,32 @@ private _fnc_updateHud = {
     [] call lts_dialog_fnc_updatePHud;
 };
 
+private _fnc_tfarCheck = {
+    private _isEnabeld = call TFAR_fnc_isTeamSpeakPluginEnabled;
+    if !(_isEnabeld) then {
+        titleText ["== BITTE AKTIVIERE DEIN TASK FORCE RADIO PLUGIN ==","BLACK"];
+        uiSleep 20;
+        titleText [" ","BLACK IN"];
+    };
+    private _server    = call TFAR_fnc_getTeamSpeakServerName;
+    if (_server != "GermanLifeProject | Arma3 Life Projekt") then {
+        titleText ["== BITTE VERBINDE DICH MIT UNSEREM TEAMSPEAK SERVER UM AUF UNSERM SERVER SPIELEN ZU KÖNNEN ==","BLACK"];
+        uiSleep 20;
+        titleText [" ","BLACK IN"];
+    };
+};
+
 
 private _foodTime   = time;
 private _thirstTime = time;
 private _saveTime   = time;
+private _tfarTime   = time;
 for "_i" from 0 to 1 step 0 do {
 
     if ((time - _foodTime) > 400 )   then { call _fnc_food; _foodTime = time };
     if ((time - _thirstTime) > 350 ) then { call _fnc_thirst; _thirstTime = time };
     if ((time - _saveTime) > 360 )   then { call lts_fnc_savePlayerInfo; _saveTime = time };
+    if ((time - _saveTime) > 20 )   then { call _fnc_tfarCheck; _tfarTime = time };
 
     //call Functions
     call _fnc_updateHud;
