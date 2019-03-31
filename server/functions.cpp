@@ -11,7 +11,7 @@ class lts_server {
     };
 
     class phone {
-        file "\server\core\functions\phone";
+        file = "\server\core\functions\phone";
         class createMessage {};
         class getAllMessagesToPlayer {};
         class newMessage {};
