@@ -20,13 +20,6 @@ private _toNUm   = param [2, 000000];
 
 private _message = [_messagem, _fromNum, _toNum] call lts_server_fnc_createMessage;
 
-private _allMessages = profileNamespace getVariable ["phoneMessages", []];
-
-_allMessages pushBack _message;
-
-profileNamespace setVariable ["phoneMessages", _allMessages];
-saveProfileNamespace;
-
 {
     private _phone = _x getVariable "phone";
 
