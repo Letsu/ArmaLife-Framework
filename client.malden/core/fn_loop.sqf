@@ -13,6 +13,8 @@
  *
  */
 
+_curScreenDisabled = false;
+
 private _fnc_food = {
     switch (lts_core_food) do {
         case (20): {["Du hast Hunger und Solltest was Essen!"] call lts_fnc_hint};
@@ -43,14 +45,19 @@ private _fnc_tfarCheck = {
     private _isEnabeld = call TFAR_fnc_isTeamSpeakPluginEnabled;
     if !(_isEnabeld) exitWith {
         120 cutText ["== BITTE AKTIVIERE DEIN TASK FORCE RADIO PLUGIN ==","BLACK"];
+        _curScreenDisabled = true;
     };
 
     private _server    = call TFAR_fnc_getTeamSpeakServerName;
     if (_server != "GermanLifeProject | Arma3 Life Projekt") exitWith {
         120 cutText ["== BITTE VERBINDE DICH MIT UNSEREM TEAMSPEAK SERVER UM AUF UNSERM SERVER SPIELEN ZU KÖNNEN ==","BLACK"];
+        _curScreenDisabled = true;
     };
 
-    120 cutText ["Viel Spaß beim Spielen!","BLACK IN",4];
+    if (_curScreenDsiabled) then {
+        120 cutText ["Viel Spaß beim Spielen!","BLACK IN",4];
+        _curScreenDisabled = false;
+    };
 };
 
 
