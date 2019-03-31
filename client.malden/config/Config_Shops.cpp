@@ -160,90 +160,122 @@ class Config_Shops {
         Condition = " !(lts_core_curSide isEqualTo ""cop"") ";
         Clothing[] = {
             "Kleidung",
-            {"police_0", "", 10, 1, ""},
-            {"police_1", "", 10, 1, ""},
-            {"police_2", "", 10, 1, ""},
-            {"police_3", "", 10, 1, ""},
-            {"police_4", "", 10, 1, ""},
-            {"police_5", "", 10, 1, ""},
-            {"police_6", "", 10, 1, ""},
-            {"police_7", "", 10, 1, ""},
-            {"police_8", "", 10, 1, ""},
-            {"police_9", "", 10, 1, ""},
-            {"police_10", "", 10, 1, ""},
-            {"police_11", "", 10, 1, ""},
-            {"police_12", "", 10, 1, ""},
-            {"police_13", "", 10, 1, ""}
+            {"police_0", "", 0, 0, ""},
+            {"police_1", "", 0, 0, ""},
+            {"police_2", "", 0, 0, ""},
+            {"police_3", "", 0, 0, ""},
+            {"police_4", "", 0, 0, ""},
+            {"police_5", "", 0, 0, ""},
+            {"police_6", "", 0, 0, ""},
+            {"police_7", "", 0, 0, ""},
+            {"police_8", "", 0, 0, ""},
+            {"police_9", "", 0, 0, ""},
+            {"police_10", "", 0, 0, ""},
+            {"police_11", "", 0, 0, ""},
+            {"police_12", "", 0, 0, ""},
+            {"police_13", "", 0, 0, ""}
         };
         Vest[] = {
             "Westen",
-            {"Cadet", "", 10, 1, ""},
-            {"Fbi", "", 10, 1, ""},
-            {"Inspector", "", 10, 1, ""},
-            {"Instructor", "", 10, 1, ""},
-            {"police", "", 10, 1, ""},
-            {"sheriff", "", 10, 1, ""},
-            {"PoliceY", "", 10, 1, ""},
-            {"trainee", "", 10, 1, ""}
+            {"Cadet", "", 0, 0, ""},
+            {"Fbi", "", 0, 0, ""},
+            {"Inspector", "", 0, 0, ""},
+            {"Instructor", "", 0, 0, ""},
+            {"police", "", 0, 0, ""},
+            {"sheriff", "", 0, 0, ""},
+            {"PoliceY", "", 0, 0, ""},
+            {"trainee", "", 0, 0, ""}
         };
         Backpack[] = {
             "Rucksäcke",
-            {"B_TacticalPack_blk", "", 10, 1, ""},
-            {"TRYK_B_Carryall_blk", "", 10, 1, ""},
-            {"TRYK_B_Kitbag_blk", "", 10, 1, ""},
-            {"TRYK_B_BAF_BAG_BLK", "", 10, 1, ""}
+            {"B_TacticalPack_blk", "", 0, 0, ""},
+            {"TRYK_B_Carryall_blk", "", 0, 0, ""},
+            {"TRYK_B_Kitbag_blk", "", 0, 0, ""},
+            {"TRYK_B_BAF_BAG_BLK", "", 0, 0, ""}
         };
         head[] = {
             "Kopfbedeckung",
-            {"H_Beret_blk", "", 10, 1, ""},
-            {"H_Beret_02", "", 10, 1, ""},
-            {"H_Beret_Colonel", "", 10, 1, ""},
-            {"H_Beret_gen_F", "", 10, 1, ""},
-            {"H_Cap_police", "", 10, 1, ""},
-            {"H_Watchcap_blk", "", 10, 1, ""},
-            {"H_Cap_headphones", "", 10, 1, ""},
-            {"TAC_SF10H", "", 10, 1, ""},
-            {"H_CrewHelmetHeli_B", "", 10, 1, ""},
+            {"H_Beret_blk", "", 0, 0, ""},
+            {"H_Beret_02", "", 0, 0, ""},
+            {"H_Beret_Colonel", "", 0, 0, ""},
+            {"H_Beret_gen_F", "", 0, , ""},
+            {"H_Cap_police", "", 0, 0, ""},
+            {"H_Watchcap_blk", "", 0, 0, ""},
+            {"H_Cap_headphones", "", 0, 0, ""},
+            {"TAC_SF10H", "", 0, 0, ""},
+            {"H_CrewHelmetHeli_B", "", 0, 0, ""}
         };
-        Weapon[] = {
-            "Waffen",
-            {"CSW_M26C", "", 10, 1, ""},
-            {"CSW_Taser_Probe_Mag", "", 10, 1, ""},
-            {"hlc_pistol_P226US", "", 10, 1, ""},
-            {"hlc_15Rnd_9x19_B_P226", "", 10, 1, ""},
-            {"hlc_smg_mp5k_PDW", "", 10, 1, ""},
-            {"hlc_30Rnd_9x19_B_MP5", "", 10, 1, ""},
-            {"CSW_M870", "", 10, 1, ""},
-            {"CSW_M870_8Rnd_buck", "", 10, 1, ""},
-            {"CSW_M870_8Rnd_stun", "", 10, 1, ""},
-            {"hlc_rifle_m14sopmod", "", 10, 1, ""},
-            {"hlc_20Rnd_762x51_B_M14", "", 10, 1, ""},
-            {"CSW_FN57_Ballistic_Shield", "", 10, 1, ""},
-            {"CSW_FN57_Shield_P", "", 10, 1, ""},
-            {"optic_ACO_grn", "", 10, 1, ""},
-            {"ACE_optic_Hamr_PIP", "", 10, 1, ""},
-            {"optic_AMS", "", 10, 1, ""},
-            {"acc_flashlight", "", 10, 1, ""},
-            {"acc_pointer_IR", "", 10, 1, ""}
+        pistol[] = {
+            "Pistolen",
+            {"CSW_FN57", "", 0, 0, ""},
+            {"optic_Yorris", "", 0, 0, ""},
+            {"CSW_FN57_flashlight_normal_1", "", 0, 0, ""},
+            {"hlc_Pistol_M11", "", 0, 0, ""},
+            {"hlc_13Rnd_9x19_B_P228", "", 0, 0, ""},
+            {"HLC_optic228_ATT", "", 0, 0, ""},
+            {"hlc_pistol_Mk25", "", 0, 0, ""},
+            {"hlc_15Rnd_9x19_B_P226", "", 0, 0, ""},
+            {"HLC_optic228_ATT", "", 0, 0, ""},
+            {"hlc_pistol_P226R", "", 0, 0, ""},
+            {"hlc_15Rnd_9x19_B_P226", "", 0, 0, ""},
+            {"HLC_optic228_ATT", "", 0, 0, ""}
+        };
+        SMG[] = {
+            "SMG",
+            {"hlc_smg_mp510", "", 0, 0, ""},
+            {"hlc_30Rnd_10mm_B_MP5", "", 0, 0, ""},
+            {"optic_Aco", "", 0, 0, ""},
+            {"acc_flashlight", "", 0, 0, ""},
+            {"hlc_smg_mp5a4", "", 0, 0, ""},
+            {"hlc_pistol_P226R", "", 0, 0, ""},
+            {"optic_Aco", "", 0, 0, ""},
+            {"acc_flashlight", "", 0, 0, ""}
+        };
+        Rifle[] = {
+            "Strumgewehre",
+            {"hlc_smg_mp5sd5", "", 0, 0, ""},
+            {"hlc_30Rnd_9x19_B_MP5", "", 0, 0, ""},
+            {"optic_Aco", "", 0, 0, ""},
+            {"optic_Arco_blk_F", "", 0, 0, ""},
+            {"acc_flashlight", "", 0, 0, ""},
+            {"CSW_M870", "", 0, 0, ""},
+            {"CSW_M870_8Rnd_buck", "", 0, 0, ""},
+            {"CSW_M870_8Rnd_slug", "", 0, 0, ""},
+            {"CSW_M870_8Rnd_stun", "", 0, 0, ""}
         };
         Items[] = {
             "Items",
-            {"ItemMap", "", 10, 1, ""},
-            {"ItemCompass", "", 10, 1, ""},
-            {"Itemwatch", "", 10, 1, ""},
-            {"ItemGPS", "", 10, 1, ""},
-            {"Binocular", "", 10, 1, ""},
-            {"ACE_fieldDressing", "", 10, 1, ""},
-            {"ACE_elasticBandage", "", 10, 1, ""},
-            {"ACE_quikclot", "", 10, 1, ""},
-            {"ACE_packingBandage", "", 10, 1, ""},
-            {"ACE_tourniquet", "", 10, 1, ""},
-            {"ACE_CableTie", "", 10, 1, ""},
-            {"ACE_EarPlugs", "", 10, 1, ""},
-            {"ACE_M84", "", 10, 1, ""},
-            {"TFAR_anprc152", "", 10, 1, ""},
-            {"ACE_NVG_Wide", "", 10, 1, ""}
+            {"ItemMap", "", 0, 0, ""},
+            {"ItemCompass", "", 0, 0, ""},
+            {"Itemwatch", "", 0, 0, ""},
+            {"ItemGPS", "", 0, 0, ""},
+            {"Binocular", "", 0, 0, ""},
+            {"ACE_fieldDressing", "", 0, 0, ""},
+            {"ACE_CableTie", "", 0, 0, ""},
+            {"ACE_EarPlugs", "", 0, 0, ""},
+            {"ACE_M84", "", 0, 0, ""},
+            {"TFAR_anprc152", "", 0, 0, ""},
+            {"ACE_NVG_Wide", "", 0, 0, ""}
         };
+
+        Medic[] = {
+            "Medizinische Ausrüstung",
+            {"ACE_fieldDressing", "", 0, 0, ""},
+            {"ACE_elasticBandage", "", 0, , ""},
+            {"ACE_quikclot", "", 0, 0, ""},
+            {"ACE_packingBandage", "", 0, , ""},
+            {"ACE_tourniquet", "", 0, 0, ""}
+        };
+
+        SEK[] = {
+            "Sek",
+            {"CSW_FN57_Ballistic_Shield", "", 0, 0, ""},
+            {"CSW_FN57_flashlight_normal_1", "", 0, 0, ""},
+            {"CSW_FN57_Shield_P", "", 0, 0, ""},
+            {"CSW_CornerShot", "", 0, 0, ""},
+            {"CSW_CornerShot_33Rnd_9x19_Tracer_Red", "", 0, 0, ""},
+            {"ACE_M84", "", 0, 0, ""}
+        } ;
     };
 
     class medicShop {
@@ -268,6 +300,7 @@ class Config_Shops {
             {"Itemwatch", "", 10, 1, ""},
             {"ItemGPS", "", 10, 1, ""},
             {"Binocular", "", 10, 1, ""},
+            {"ToolKit", "", 10, 1, ""},
             {"ACE_EarPlugs", "", 10, 1, ""},
             {"ACE_NVG_Wide", "", 10, 1, ""}
         };
