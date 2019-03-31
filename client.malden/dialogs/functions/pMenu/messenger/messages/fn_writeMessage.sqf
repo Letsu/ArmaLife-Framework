@@ -13,12 +13,3 @@
  *
  * Public: [Yes/No]
  */
-_number  = param [0];
-_message = param [1];
-_from    = param [2];
-
-
-
-
-profileNamespace setVariable ["lts_messages", _curContacts];
-saveProfileNamespace;

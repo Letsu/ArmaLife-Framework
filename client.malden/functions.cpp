@@ -274,6 +274,12 @@ class lts_dialog {
         class contactAdd {};
     };
 
+    class MessengerMesseges {
+        file = "dialogs\functions\pMenu\messenger\messages";
+        class callMessages {};
+        class contactAdd {};
+    };
+
     class playerHud {
         file = "dialogs\functions\playerHud";
         class callPlayerHud  {};

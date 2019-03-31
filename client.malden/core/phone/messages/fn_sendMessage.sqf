@@ -17,7 +17,7 @@ _message  = param [0, ""];
 _toNumber = param [1, -1];
 _to       = param [2, player];
 
-if (_to isEqualTo -1) exitWith { ["Wrong Target passed to sendMessage"] call lts_fnc_log };
+if (_toNumber isEqualTo -1) exitWith { ["Wrong Target passed to sendMessage"] call lts_fnc_log };
 
 
-[_toNumber, _message] remoteExec ["lts_fnc_reciveMessage", _to];
+[_toNumber, _message, _fromNumber] remoteExec ["lts_fnc_reciveMessage", _to];

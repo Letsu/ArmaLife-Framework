@@ -15,6 +15,7 @@
 #include "functions\pMenu\settings\settings.hpp" //IDD 92001
 #include "functions\pMenu\messenger\messenger.hpp" //IDD 93001
 #include "functions\pMenu\messenger\addContact\addContact.hpp" //IDD 93002
+#include "functions\pMenu\messenger\messages\messages.hpp" //IDD 93002
 // #include "functions\pMenu\phone\phone.hpp" //IDD 94001
 #include "functions\pMenu\License\license.hpp" //IDD 95001
 

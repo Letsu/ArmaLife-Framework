@@ -17,13 +17,15 @@ private _money     = param [1, 0];
 private _bank      = param [2, 0];
 private _licenses  = param [3, "[]"];
 private _inventory = param [4, "[]"];
+private _phone     = param [5, 0];
 
-private _data = format ["0:Player:CreatePlayer:%1:%2:%3:%4:%5",
+private _data = format ["0:Player:CreatePlayer:%1:%2:%3:%4:%5:%6",
     _pid,
     _money,
     _bank,
     _licenses,
-    _inventory
+    _inventory,
+    _phone
     ];
-    
+
 private _query = call compile ("extDB3" callExtension _data);
