@@ -21,6 +21,7 @@ private _money    = param [0, 0];
 private _bank     = param [1, 0];
 private _licenses = param [2, lts_core_licenses];
 private _inv      = param [3, getUnitLoadout player];
+private _phone    = param [4, 0];
 
 lts_money_cash    = _money;
 //logging Action whit Money
@@ -31,5 +32,6 @@ if ( (getNumber (getMissionConfig >> "Config_Master" >> "LogMoney")) isEqualTo 0
 */
 lts_money_bank    = _bank;
 lts_core_licenses = _licenses;
+player setVariable ["phone", _phone];
 
 player setUnitLoadout _inv;

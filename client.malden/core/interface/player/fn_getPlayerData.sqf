@@ -26,6 +26,7 @@ private _bank     = parseNumber(_data select 2);
 private _licenses = parseSimpleArray(_data select 3);
 //Macke own Inv Table??
 private _inv      = parseSimpleArray(_data select 4);
+private _phone    = parseNumber(_data select 5);
 
 
 [_money, _bank, _licenses, _inv] call lts_fnc_setPlayerCore;
