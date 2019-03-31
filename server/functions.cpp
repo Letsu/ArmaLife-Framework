@@ -9,6 +9,13 @@ class lts_server {
         class log {};
         class mission {};
     };
+
+    class phone {
+        file "\server\core\functions\phone";
+        class createMessage {};
+        class getAllMessagesToPlayer {};
+        class newMessage {};
+    };
 };
 
 class lts_db {
