@@ -54,7 +54,7 @@ private _fnc_tfarCheck = {
         _curScreenDisabled = true;
     };
 
-    if (_curScreenDsiabled) then {
+    if (_curScreenDisabled) then {
         120 cutText ["Viel Spaß beim Spielen!","BLACK IN",4];
         _curScreenDisabled = false;
     };
