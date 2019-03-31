@@ -86,7 +86,7 @@ if (_isCopCar) then {
         if ( damage _vehicle isEqualTo 1 ) then {
             [_vehicle] call lts_interface_fnc_destroyVehicle;
         };
-        dbug_curDamage = damage vehicle;
+        dbug_curDamage = damage _vehicle;
     }];
 
 

@@ -60,3 +60,6 @@ _vehicle setVariable [ "owner_name", _ownerName ]; //Display Name of Owener of V
 
 
 _vehicle lock 2;
+
+private _giveTicket = [ "giveTicket", "Fahrzeug drehen", "", {  _vehicle setPos [getPos _vehicle select 0, getPos _vehicle select 1, (getPos _vehicle select 2)+0.5]; }, {}, {}, "", {}, 10 ] call ace_interact_menu_fnc_createAction;
+[ _vehicle, 0, ["ACE_MainActions"], _giveTicket ] call ace_interact_menu_fnc_addActionToObject;
