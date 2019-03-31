@@ -26,6 +26,6 @@ lts_money_bank = _startBank;
 lts_core_firstSpawn = true;
 
 //Create Phone NUmber
-_phone = random [100000,999999];
+_phone = random [100000, 500000,999999];
 
 [_pid, _startMoney, _startBank, _licenses, _inv, _phone] remoteExec ["lts_db_fnc_createNewPlayer", 2];
