@@ -278,7 +278,7 @@ class lts_dialog {
         file = "dialogs\functions\pMenu\messenger\messages";
         class callMessages {};
         class getMessages {};
-        class writeMessages {};
+        class writeMessage {};
     };
 
     class playerHud {
