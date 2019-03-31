@@ -16,7 +16,7 @@
 
 private _message    = param [0, ""];
 private _fromNum    = param [1, 000000];
-_toNum      = param [2, 000000];
+private _toNum      = param [2, 000000];
 
 if (_message isEqualTo "") exitWith { ["No Message passed to createMessage"] call lts_server_fnc_log };
 

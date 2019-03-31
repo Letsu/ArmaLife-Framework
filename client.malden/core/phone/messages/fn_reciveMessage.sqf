@@ -13,12 +13,11 @@
  *
  * Public: [Yes/No]
  */
-_number  = param [0];
-_message = param [1];
-_from    = param [2];
+_message = param [0];
+_from    = param [1];
+_to      = param [2];
 
 
 
-
-profileNamespace setVariable ["lts_messages", _curContacts];
-saveProfileNamespace;
+[ format["Du hast eine Nachricht von: %1", _from] ] call lts_fnc_hint;
+systemChat "Neue Nachricht";
