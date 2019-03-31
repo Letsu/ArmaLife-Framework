@@ -13,11 +13,3 @@
  *
  * Public: [Yes/No]
  */
- //Check if Main Screen is Open!
-waitUntil {!(isNull (findDisplay 46))};
-
-//Create the Dialog
-createDialog "pMenuMessages";
-waitUntil {!(isNull (findDisplay 93001))};
-
-[] call lts_dialog_fnc_getMessages;
