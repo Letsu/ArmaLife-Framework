@@ -41,17 +41,16 @@ private _fnc_updateHud = {
 
 private _fnc_tfarCheck = {
     private _isEnabeld = call TFAR_fnc_isTeamSpeakPluginEnabled;
-    if !(_isEnabeld) then {
-        titleText ["== BITTE AKTIVIERE DEIN TASK FORCE RADIO PLUGIN ==","BLACK"];
-        uiSleep 20;
-        titleText [" ","BLACK IN"];
+    if !(_isEnabeld) exitWith {
+        120 cutText ["== BITTE AKTIVIERE DEIN TASK FORCE RADIO PLUGIN ==","BLACK"];
     };
+
     private _server    = call TFAR_fnc_getTeamSpeakServerName;
-    if (_server != "GermanLifeProject | Arma3 Life Projekt") then {
-        titleText ["== BITTE VERBINDE DICH MIT UNSEREM TEAMSPEAK SERVER UM AUF UNSERM SERVER SPIELEN ZU KÖNNEN ==","BLACK"];
-        uiSleep 20;
-        titleText [" ","BLACK IN"];
+    if (_server != "GermanLifeProject | Arma3 Life Projekt") exitWith {
+        120 cutText ["== BITTE VERBINDE DICH MIT UNSEREM TEAMSPEAK SERVER UM AUF UNSERM SERVER SPIELEN ZU KÖNNEN ==","BLACK"];
     };
+
+    120 cutText ["Viel Spaß beim Spielen!","BLACK IN",4];
 };
 
 
