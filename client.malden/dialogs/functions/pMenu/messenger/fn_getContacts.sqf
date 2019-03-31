@@ -16,6 +16,12 @@
 
 private _DISPLAY = findDisplay 93001;
 private _CONTACTLB = _DISPLAY displayCtrl 1000;
+private _TEXTNUM   = _DISPLAY displayCtrl 1003;
+
+private _phone = player getVariable ["phone", 0];
+if (_phone isEqualTo 0) exitWith {};
+_TEXTNUM ctrlSetText str(_phone);
+
 
 private _contacts = [] call lts_fnc_getContacts;
 

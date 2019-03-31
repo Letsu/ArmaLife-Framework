@@ -27,6 +27,14 @@ class pMenuMessenger {
            w = 0.178125 * safezoneW;
            h = 0.582374631268437 * safezoneH;
        };
+       class RscText0 : RscText
+       {
+           idc = 1003;
+           x = 0.685416666666667 * safezoneW + safezoneX;
+           y = 0.451509832841691 * safezoneH + safezoneY;
+           h = 0.037 * safezoneH;
+           w = 0.127604166666667 * safezoneW;
+       };
    };
    class controls
    {
@@ -37,7 +45,7 @@ class pMenuMessenger {
            w = 0.153645833333333 * safezoneW;
            h = 0.227679449360865 * safezoneH;
            idc = 1000;
-           onLBDblClick = "_this call lts_dialog_fnc_callMessages";
+           onlbdblclick = "_this call lts_dialog_fnc_callMessages";
        };
        class RscButton0 : RscButton
        {
