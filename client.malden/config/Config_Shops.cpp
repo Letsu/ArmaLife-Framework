@@ -118,7 +118,8 @@ class Config_Shops {
             {"Itemwatch", "", 10, 1, ""},
             {"ItemGPS", "", 10, 1, ""},
             {"Binocular", "", 10, 1, ""},
-            {"L_Item_WaterBottleFull", "", 10, 2, ""}
+            {"L_Item_WaterBottleFull", "", 10, 2, ""},
+            {"L_Item_Rigel", "", 10, 2, ""}
         };
         Medic[] = {
             "Medizin",
@@ -127,6 +128,10 @@ class Config_Shops {
             {"ACE_elasticBandage", "", 10, 0, ""},
             {"ACE_quikclot", "", 10, 0, ""},
             {"ACE_packingBandage", "", 10, 0, ""}
+        };
+        Funk[] = {
+            "Funk Ausrüstung",
+            {"TFAR_anprc152", "", 560, 250}
         };
     };
 
@@ -186,6 +191,18 @@ class Config_Shops {
             {"TRYK_B_Carryall_blk", "", 10, 1, ""},
             {"TRYK_B_Kitbag_blk", "", 10, 1, ""},
             {"TRYK_B_BAF_BAG_BLK", "", 10, 1, ""}
+        };
+        head[] = {
+            "Kopfbedeckung",
+            {"H_Beret_blk", "", 10, 1, ""},
+            {"H_Beret_02", "", 10, 1, ""},
+            {"H_Beret_Colonel", "", 10, 1, ""},
+            {"H_Beret_gen_F", "", 10, 1, ""},
+            {"H_Cap_police", "", 10, 1, ""},
+            {"H_Watchcap_blk", "", 10, 1, ""},
+            {"H_Cap_headphones", "", 10, 1, ""},
+            {"TAC_SF10H", "", 10, 1, ""},
+            {"H_CrewHelmetHeli_B", "", 10, 1, ""},
         };
         Weapon[] = {
             "Waffen",
