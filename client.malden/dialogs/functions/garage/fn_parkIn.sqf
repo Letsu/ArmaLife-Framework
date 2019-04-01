@@ -17,7 +17,7 @@ _marker = param [0, ""];
 if (_marker isEqualTo "") exitWith {};
 
 private _vehicles = nearestObjects [(getmarkerPos _marker), ["LandVehicle", "Ship", "Air"], 10];
-if (count _vehicles > 0) exitWith { ["Es steht kein Fahrzeug am Spawn"] call lts_fnc_hint };
+if !(count _vehicles > 0) exitWith { ["Es steht kein Fahrzeug am Spawn"] call lts_fnc_hint };
 
 private _vehicle = _vehicles select 0;
 private _owner = _vehicle getVariable "owner_uid";
