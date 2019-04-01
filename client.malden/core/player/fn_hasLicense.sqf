@@ -24,4 +24,4 @@ _pos = lts_core_licenses find [_license, true];
 if (_pos isEqualTo -1) exitWith { [objNull, false, -1] };
 
 //Return
-[_license, true, -1];
+[_license, true, _pos];

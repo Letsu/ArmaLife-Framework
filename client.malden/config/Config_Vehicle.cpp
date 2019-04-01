@@ -417,7 +417,7 @@ class Config_Vehicle {
 
     class bike {
         DisplayName = "Motorräder"; //Name of Shop
-        Condtion = "!(([""drive_A""] call lts_fnc_hasLicense) select 0)";
+        Condtion = "!(([""drive_A""] call lts_fnc_hasLicense) select 1)";
         Bike[] = {
             "Motorräder",
             {"d3s_Aprilia_Tuono_V4_1100_RR", 18000, ""},

@@ -18,7 +18,7 @@ private _oldLevel = lts_cop_level;
 
 if (_oldLevel isEqualTo 0) then {
     ["Du wurdest in denn Polizei Dienst gestellt."] call lts_fnc_hint;
-    lts_cop_level = _newLevel
+    lts_cop_level = _newLevel;
     [] call lts_interface_fnc_createNewCop;
 } else {
     ["Du wurdest von Rang %1 auf Rang %2 Befördert."] call lts_fnc_hint;

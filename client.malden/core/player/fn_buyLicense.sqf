@@ -18,7 +18,7 @@ private _newLicense = param [0, ""];
 //Get Configs & Vars
 private _licenseName = getText (missionConfigFile >> "Config_License" >> _newLicense >> "DisplayName");
 private _licensePrice = getNumber (missionConfigFile >> "Config_License" >> _newLicense >> "Price");
-private _hasLicense = [_var] call lts_fnc_hasLicense;
+private _hasLicense = [_newLicense] call lts_fnc_hasLicense;
 
 //Some Checks
 if (_hasLicense select 1) exitWith { ["Du hast diese Lizenz schon!"] call lts_fnc_hint};
@@ -34,4 +34,4 @@ if (_hasLicense select 2 isEqualTo -1) then {
     };
 };
 
-[ format["Du hast dir die Lizenz: %1 gekauft"] ] call lts_fnc_hint;
+[ format["Du hast dir die Lizenz: %1 gekauft", _licenseName] ] call lts_fnc_hint;

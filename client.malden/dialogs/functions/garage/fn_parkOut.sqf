@@ -34,7 +34,7 @@ if (count _objects > 0) exitWith { ["Es steht schon ein Fahrzeug am Spawn!"] cal
 //Get All Vehicle Data
 _plate      = _vehData select 0;
 _vehClass   = _vehData select 1;
-_ownerUID   = _vehData select 2
+_ownerUID   = _vehData select 2;
 _ownerName  = _vehData select 3;
 _keyUIDs    = _vehData select 4;
 _keyNames   = _vehData select 5;
