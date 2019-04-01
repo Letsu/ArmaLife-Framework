@@ -19,12 +19,17 @@
  private _TEXTFOOTER = _DISPLAY displayCtrl 1008;
 
 
+
 private _index = lbCurSel _LBCARS;
 private _data = parseSimpleArray (_LBCARS lbData _index);
 
 //Get Data out of LB
 _spawnMarker = _data select 0;
 _vehData     = _data select 1;
+
+private _objects = nearestObjects [(getmarkerPos _spawnMarker), ["LandVehicle", "Ship", "Air"], 10];
+if (count _objects > 0) exitWith { ["Es steht schon ein Fahrzeug am Spawn!"] call lts_fnc_hint };
+
 
 //Get All Vehicle Data
 _plate      = _vehData select 0;
