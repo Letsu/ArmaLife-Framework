@@ -39,6 +39,11 @@ _vehicle setFuel parseNumber(_fuel);
 /* [_vehicle, _inv] call lts_fnc_setVehicleCargo; */
 
 
+[_vehicle, 20] call ace_cargo_fnc_setSpace;
+_wheel = "ACE_Wheel" createVehicle [0, 0, 0];
+[_wheel, _vehicle] call ace_cargo_fnc_loadItem;
+
+
 //Set some Variables on Veh
 _vehicle setVariable ["veh_plate", _plate];
 _vehicle setVariable ["key_uids" , _keyUIDs];
