@@ -27,7 +27,8 @@ private _data = parseSimpleArray (_LBCARS lbData _index);
 _spawnMarker = _data select 0;
 _vehData     = _data select 1;
 
-private _objects = nearestObjects [(getmarkerPos _spawnMarker), ["LandVehicle", "Ship", "Air"], 10];
+_markerPos = getmarkerPos _spawnMarker;
+private _objects = nearestObjects [_markerPos, ["LandVehicle", "Ship", "Air"], 10];
 if (count _objects > 0) exitWith { ["Es steht schon ein Fahrzeug am Spawn!"] call lts_fnc_hint };
 
 
@@ -41,4 +42,4 @@ _keyNames   = _vehData select 5;
 _fuel       = _vehData select 6;
 _inv        = _vehData select 7;
 
-[_plate, _vehClass, (getMarkerPos _spawnMarker), _ownerUID, _ownerName, _keyUIDs, _keyNames, _fuel, _inv] call lts_fnc_createVehicle;
+[_plate, _vehClass, _markerPos, _ownerUID, _ownerName, _keyUIDs, _keyNames, _fuel, _inv] call lts_fnc_createVehicle;
