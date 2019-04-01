@@ -15,23 +15,23 @@
 
 private _newLicense = param [0, ""];
 
-//Get Config Vars
-private _var = getText (missionConfigFile >> "Config_License" >> _newLicense >> "Var");
-if (!(_newLicense == _var)) exitWith { ["Something is badly Wrong in buyLicense!!!!!"] call lts_fnc_log };
+//Get Configs & Vars
 private _licenseName = getText (missionConfigFile >> "Config_License" >> _newLicense >> "DisplayName");
 private _licensePrice = getNumber (missionConfigFile >> "Config_License" >> _newLicense >> "Price");
+private _hasLicense = [_var] call lts_fnc_hasLicense;
 
 //Some Checks
-private _hasLicense = [_var] call lts_fnc_hasLicense;
-if (_hasLicense select 0) exitWith { ["Du hast diese Lizenz schon!"] call lts_fnc_hint};
+if (_hasLicense select 1) exitWith { ["Du hast diese Lizenz schon!"] call lts_fnc_hint};
 if (lts_money_cash < _licensePrice) exitWith { [format ["Du hast nicht genug Geld um die Lizenz: %1 zu kaufen!", _licenseName] ] call lts_fnc_hint };
 lts_money_cash = lts_money_cash - _licensePrice;
 
-//Add the License to the player and remove the Money that the License cost
-if (((_hasLicense select 1) isEqualTo -1)) then {
-    lts_core_licenses pushback [_var, true];
+//Add the License to the Player var lts_core_licenses or set it as enabled
+if (_hasLicense select 2 isEqualTo -1) then {
+    lts_core_licenses pushBack [_newLicense, true];
 } else {
-    (lts_core_licenses select (_hasLicense select 1)) set[1, true];
+    if ((_hasLicense select 2) != -1 || (_hasLicense select 2) != objNull) then {
+        lts_core_licenses select (_hasLicense select 3) set [1, true];
+    };
 };
 
-["Du hast dir eine Lizenz gekauft"] call lts_fnc_hint;
+[ format["Du hast dir die Lizenz: %1 gekauft"] ] call lts_fnc_hint;

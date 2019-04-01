@@ -17,8 +17,11 @@
 private _spawnPos = param [0, ""];
 waitUntil {!(isNull (findDisplay 46))};
 
+if (_spawnPos isEqualTo "") exitWith { };
+
 //Create the Dialog
 createDialog "carGarage";
 waitUntil {!(isNull (findDisplay 20001))};
+
 
 [_spawnPos] call lts_dialog_fnc_fillGarage;

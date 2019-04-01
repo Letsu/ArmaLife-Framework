@@ -22,3 +22,4 @@ waitUntil {!(isNull (findDisplay 91001))};
 
 /* Call Function to add dynamic Text and fill the Player List Box  */
 [] call lts_dialog_fnc_fillBanking;
+call lts_fnc_savePlayerInfo;
