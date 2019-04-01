@@ -31,7 +31,7 @@ _vehData     = _data select 0;
 _markerPos = getmarkerPos _spawnMarker;
 private _objects = nearestObjects [_markerPos, ["LandVehicle", "Ship", "Air"], 10];
 if (count _objects > 0) exitWith { ["Es steht schon ein Fahrzeug am Spawn!"] call lts_fnc_hint };
-
+closeDialog 0;
 
 //Get All Vehicle Data
 _plate      = _vehData select 0;
