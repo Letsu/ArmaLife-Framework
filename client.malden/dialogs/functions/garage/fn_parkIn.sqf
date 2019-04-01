@@ -24,5 +24,6 @@ private _owner = _vehicle getVariable "owner_uid";
 private _key   = _vehicle getVariable "key_uids";
 if !(_owner isEqualTo (getPlayerUID player)) exitWith { ["Es steht kein fahrzeug am Spawn"] call lts_fn_hint };
 
+hint "Du hast dein fahrzeug eingeparkt!";
 [_vehicle] call lts_interface_fnc_enableVehicle;
 deleteVehicle _vehicle;
