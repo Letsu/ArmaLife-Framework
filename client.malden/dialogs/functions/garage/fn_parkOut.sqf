@@ -24,9 +24,9 @@ private _index = lbCurSel _LBCARS;
 private _data = parseSimpleArray (_LBCARS lbData _index);
 
 //Get Data out of LB
-_spawnMarker = _data select 0;
+_spawnMarker = _data select 1;
 marker = _spawnMarker;
-_vehData     = _data select 1;
+_vehData     = _data select 0;
 
 _markerPos = getmarkerPos _spawnMarker;
 private _objects = nearestObjects [_markerPos, ["LandVehicle", "Ship", "Air"], 10];
