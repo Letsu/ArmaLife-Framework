@@ -37,6 +37,7 @@ if (count _objects > 0) exitWith { ["Es steht schon ein Fahrzeug am Spawn!"] cal
 
 if (lts_money_cash < _price) exitWith { ["Du hast nicht genug Geld um dir das zu kaufen!"] call lts_fnc_hint };
 lts_money_cash = lts_money_cash - _price;
+call lts_fnc_savePlayerInfo;
 /*
 Add Config for Texttures and read Vehicle Defines
 */

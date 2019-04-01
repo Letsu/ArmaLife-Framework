@@ -22,3 +22,4 @@ waitUntil {!(isNull (findDisplay 95001))};
 
 //Fill License
 [] call lts_dialog_fnc_fillLicense;
+call lts_fnc_savePlayerInfo;

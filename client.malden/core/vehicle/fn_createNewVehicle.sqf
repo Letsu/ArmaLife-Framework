@@ -57,6 +57,11 @@ _vehicle setVariable [ "owner_name", _ownerName ]; //Display Name of Owener of V
 }; */
 
 
+[_vehicle, 20] call ace_cargo_fnc_setSpace;
+_wheel = "ACE_Wheel" createVehicle [0, 0, 0];
+[_wheel, _vehicle] call ace_cargo_fnc_loadItem;
+
+
 _vehicle lock 2;
 
 private _giveTicket = [ "giveTicket", "Fahrzeug drehen", "", {  _vehicle setPos [getPos _vehicle select 0, getPos _vehicle select 1, (getPos _vehicle select 2)+0.5]; }, {}, {}, "", {}, 10 ] call ace_interact_menu_fnc_createAction;

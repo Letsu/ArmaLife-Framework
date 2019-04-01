@@ -26,3 +26,4 @@ waitUntil {!(isNull (findDisplay 70001))};
 //Read Config File and Fill List Box
 [_shop] call lts_dialog_fnc_getShopConfig;
 [_shop] call lts_dialog_fnc_fillSellTV;
+call lts_fnc_savePlayerInfo;

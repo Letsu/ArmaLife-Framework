@@ -455,6 +455,16 @@ class Config_Vehicle {
         };
     };
 
+    class ersatzteil {
+        DisplayName = "Ersatzteile"; //Name of Shop
+        Condtion = ""; // Condition to open
+        Lkw[] = {
+            "Ersatzteile",
+            {"ACE_Wheel", 100, ""}
+        };
+    };
+
+
     class boots {
         DisplayName = "Boote"; //Name of Shop
         Condtion = " "; // Condition to open

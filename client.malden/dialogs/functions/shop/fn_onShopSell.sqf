@@ -72,3 +72,5 @@ if (_above) then {
     lts_dialog_shop_disableSell = false;
     [ format ["Du hast %1 verkauft!", _name] ] call lts_fnc_hint;
 };
+
+call lts_fnc_savePlayerInfo;

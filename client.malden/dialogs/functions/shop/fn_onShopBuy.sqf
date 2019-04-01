@@ -42,4 +42,5 @@ lts_money_cash = lts_money_cash - _buyPrice;
 [ format ["Du hats dir %1 gekauft!", _name] ] call lts_fnc_hint;
 //Add Item to Player
 [_class, 1] call lts_fnc_addItem;
+call lts_fnc_savePlayerInfo;
 [_shopClass] call lts_dialog_fnc_fillSellTV; //Update Inventory List!
