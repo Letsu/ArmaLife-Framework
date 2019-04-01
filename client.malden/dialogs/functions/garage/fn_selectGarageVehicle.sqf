@@ -22,14 +22,10 @@
 private _index = lbCurSel _LBCARS;
 private _data = parseSimpleArray (_LBCARS lbData _index);
 
-_index = parseNumber (_data select 0);
+private _vehData = _data select 0;
 private _spawnPos = _data select 1;
-systemChat str(_index);
-systemChat str(_spawnPos);
 
 //Get Data of cur Select Vehicle
-private _vehData = lts_core_allVehicles select _index;
-systemChat str(_vehData);
 private _plate = _vehData select 0;
 private _class = _vehData select 1;
 private _ownerUID = _vehData select 2;
@@ -39,7 +35,6 @@ private _keyNames = _vehData select 5;
 private _fuel = parseNumber(_vehData select 6);
 private _inv = _vehData select 7;
 private _displayName = [_class] call lts_fnc_getDisplayName;
-systemChat _displayName;
 
 private _speed = getNumber (configFile >> "CfgVehicles" >> _class >> "maxSpeed");
 private _armor = getNumber (configFile >> "CfgVehicles" >> _class >> "armor");
