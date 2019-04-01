@@ -53,6 +53,7 @@ class lts_db {
       file = "\server\core\db\player\med";
       class createNewMed   {};
       class updateMedLevel {};
+      class getMedData     {};
   };
 
   class db_wanted {
