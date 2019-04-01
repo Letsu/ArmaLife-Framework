@@ -14,4 +14,6 @@
  */
 private _pid = getPlayerUID player;
 
+systemChat "Request Data";
+
 [_pid, player] remoteExec ["lts_db_fnc_getMedData", 2];
