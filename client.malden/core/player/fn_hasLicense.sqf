@@ -13,20 +13,15 @@
  * [""] call lts_fnc_hasLicense;
  *
  */
-private _var = param [0, ""];
-private _hasLicense = false;
+private _license = param [0, ""];
 
-private _num = 0;
-private _num2 = -1;
-{
-    if (_x select 0 == _var) then {
-        _hasLicense = _x select 1;
-        _num2 = _num;
-    } else {
-        _hasLicense = false;
-    };
-    _num = _num + 1;
-} forEach lts_core_licenses;
+//check Parameter
+if (_license isEqualTo "") exitWith {};
+if (lts_core_licenses isEqualTo []) exitWith { [objNull, false, -1] };
 
-private _return = [_hasLicense, _num2];
-_return;
+//Find Array of License
+_pos = lts_core_licenses find [_license, true];
+if (_pos isEqualTo -1) exitWith { [objNull, false, -1] };
+
+//Return
+[_license, true, -1];

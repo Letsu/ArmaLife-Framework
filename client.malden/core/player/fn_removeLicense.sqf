@@ -13,11 +13,13 @@
  *
  */
 
- private _var = param [0, ""];
+private _license = param [0, ""];
 
-private _license = [_var] call lts_fnc_hasLicense;
-private _hasLicense = _license select 0;
-if (!_hasLicense) exitWith { ["Error in removeLicense Player hasen´t the License!"] call lts_fnc_log };
-private _index = _license select 1;
+private _licenseArr = [_license] call lts_fnc_hasLicense;
+
+if !(_licenseArr select 1) exitWith {};
+if ((_licenseArr select 2) isEqualTo -1) exitWith {};
+
+_indexPos = _licenseArrselect select 2;
 
 (lts_core_licenses select _index) set[1, false];
