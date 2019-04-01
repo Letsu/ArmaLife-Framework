@@ -25,6 +25,9 @@ waitUntil{(count lts_core_allVehicles) > 0};
 
 //For all Player Vehicles
 {
+
+
+    _class = _x select 1; 
     _LBCARS lbAdd ([_class] call lts_fnc_getDisplayName);
     private _data = [_x, _spawnPos];
     _LBCARS lbSetData [(lbSize _LBCARS) - 1 , str(_data)];
