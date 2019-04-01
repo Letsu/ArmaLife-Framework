@@ -89,10 +89,9 @@ if (_isCopCar) then {
 } else {
     [_vehicle] call lts_interface_fnc_createNewVeh;
     [_vehicle] call lts_interface_fnc_disableVehicle;
-    vehicle player addEventHandler ["HandleDamage", {
+    _vehicle addEventHandler ["HandleDamage", {
         if ( damage _vehicle isEqualTo 1 ) then {
             [_vehicle] call lts_interface_fnc_destroyVehicle;
         };
-        dbug_curDamage = damage _vehicle;
-    }];
-}
+    };];
+};

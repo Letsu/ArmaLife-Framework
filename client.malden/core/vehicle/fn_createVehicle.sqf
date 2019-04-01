@@ -33,8 +33,6 @@ private _skin         = param [9, []];
 //Create the Vehicle at given Pos
 private _vehicle = _vehicleClass createVehicle _pos;
 
-[_vehicle] call lts_interface_fnc_disableVehicle;
-
 _vehicle setFuel parseNumber(_fuel);
 /* [_vehicle, _inv] call lts_fnc_setVehicleCargo; */
 
@@ -46,6 +44,7 @@ _wheel = "ACE_Wheel" createVehicle [0, 0, 0];
 
 //Set some Variables on Veh
 _vehicle setVariable ["veh_plate", _plate];
+[_vehicle] call lts_interface_fnc_disableVehicle;
 _vehicle setVariable ["key_uids" , _keyUIDs];
 _vehicle setVariable ["key_names", _keyNames];
 
@@ -59,7 +58,7 @@ _vehicle lock 2;
 private _giveTicket = [ "giveTicket", "Fahrzeug drehen", "", {  _vehicle setPos [getPos _vehicle select 0, getPos _vehicle select 1, (getPos _vehicle select 2)+0.5]; }, {}, {}, "", {}, 10 ] call ace_interact_menu_fnc_createAction;
 [ _vehicle, 0, ["ACE_MainActions"], _giveTicket ] call ace_interact_menu_fnc_addActionToObject;
 
-vehicle player addEventHandler ["HandleDamage", {
+_vehicle addEventHandler ["HandleDamage", {
     if ( damage _vehicle isEqualTo 1 ) then {
         [_vehicle] call lts_interface_fnc_destroyVehicle;
     };
