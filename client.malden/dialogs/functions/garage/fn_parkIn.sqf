@@ -22,7 +22,7 @@ if (count _vehicles > 0) exitWith { ["Es steht kein Fahrzeug am Spawn"] call lts
 private _vehicle = _vehicles select 0;
 private _owner = _vehicle getVariable "owner_uid";
 private _key   = _vehicle getVariable "key_uids";
-if !(_owner isEqualTo (getPlayerUID player) || _owner in _key) exitWith { ["Es steht kein farzeug am Spawn"] call lts_fn_hint };
+if !(_owner isEqualTo (getPlayerUID player)) exitWith { ["Es steht kein farzeug am Spawn"] call lts_fn_hint };
 
 [_vehicle] call lts_interface_fnc_enableVehicle;
 deleteVehicle _vehicle;
