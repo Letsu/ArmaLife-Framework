@@ -21,7 +21,7 @@ if (_spawnPos isEqualTo "") exitWith {};
 
 //request vehicle of player
 lts_core_allVehicles = [];
-[] spawn lts_interface_fnc_getVehicles;
+[] spawn lts_interface_fnc_requestVehicles;
 waitUntil{count lts_core_allVehicles > 0};
 
 //For all Player Vehicles
