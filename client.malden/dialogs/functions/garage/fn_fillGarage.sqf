@@ -20,9 +20,8 @@ private _LBCARS = _DISPLAY displayCtrl 1000;
 if (_spawnPos isEqualTo "") exitWith {};
 
 //request vehicle of player
-lts_core_allVehicles = [];
-[] spawn lts_interface_fnc_requestVehicles;
-waitUntil{count lts_core_allVehicles > 0};
+[] call lts_interface_fnc_requestVehicles;
+waitUntil{(count lts_core_allVehicles) > 0};
 
 //For all Player Vehicles
 {
