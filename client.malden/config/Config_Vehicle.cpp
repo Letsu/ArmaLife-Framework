@@ -9,7 +9,7 @@
 class Config_Vehicle {
     class vehShop_01 {
         DisplayName = "Fahrzeuge"; //Name of Shop
-        Condtion = "!(([""drive_B""] call lts_fnc_hasLicense) select 0)"; // Condition to open
+        Condtion = "!(([""drive_B""] call lts_fnc_hasLicense) select 1)"; // Condition to open
 
         AlfaRomeo[] = {
             "Alfa Romeo",
@@ -142,7 +142,7 @@ class Config_Vehicle {
 
     class neuwagen {
         DisplayName = "Neuwagen"; //Name of Shop
-        Condtion = "!(([""drive_B""] call lts_fnc_hasLicense) select 0)";
+        Condtion = "!(([""drive_B""] call lts_fnc_hasLicense) select 1)";
 
         AlfaRomeo[] = {
             "Alfa Romeo",
@@ -438,7 +438,7 @@ class Config_Vehicle {
 
     class lkw {
         DisplayName = "LKW"; //Name of Shop
-        Condtion = "!(([""drive_C""] call lts_fnc_hasLicense) select 0)"; // Condition to open
+        Condtion = "!(([""drive_C""] call lts_fnc_hasLicense) select 1)"; // Condition to open
         Lkw[] = {
             "Lkw",
             {"d3s_zil_130_02", 180000, ""},
