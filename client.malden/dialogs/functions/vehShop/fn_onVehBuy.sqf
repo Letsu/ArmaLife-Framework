@@ -41,5 +41,5 @@ lts_money_cash = lts_money_cash - _price;
 Add Config for Texttures and read Vehicle Defines
 */
 
-if (_shopName isEqualTo "policeCar") exitWith { [_vehClass, _spawnPos, player, (getPlayerUID player), [(getPlayerUID player)], [(name player)], true] call lts_fnc_createNewVehicle };
+if (_shopName isEqualTo "policeCar" || _shopName isEqualTo "medCar") exitWith { [_vehClass, _spawnPos, player, (getPlayerUID player), [(getPlayerUID player)], [(name player)], true] call lts_fnc_createNewVehicle };
 [_vehClass, _spawnPos, player, [(getPlayerUID player)], [(name player)], false] call lts_fnc_createNewVehicle;

@@ -16,11 +16,12 @@
 private _newLevel = param [0, 1];
 private _oldLevel = lts_cop_level;
 
-if (_oldLevel isEqualTo 0) exitWith { ["Send Request to Set Cop Level from 0! Abort! When you will create an new cop call lts_cop_fnc_createCop!"] call lts_fnc_log };
-
-[ format ["Du wurdest gerade von Level %1 auf %2 Befördert!", _oldLevel, _newLevel] ] call lts_fnc_hint;
-lts_cop_level = _newLevel;
-
-
-//Update Cop Level
-[] call lts_interface_fnc_updateCopLevel;
+if (_oldLevel isEqualTo 0) then {
+    ["Du wurdest in denn Polizei Dienst gestellt."] call lts_fnc_hint;
+    lts_cop_level = _newLevel
+    [] call lts_interface_fnc_createNewCop;
+} else {
+    ["Du wurdest von Rang %1 auf Rang %2 Befördert."] call lts_fnc_hint;
+    lts_cop_level = _newLevel;
+    [] call lts_interface_fnc_updateCopLevel;
+};

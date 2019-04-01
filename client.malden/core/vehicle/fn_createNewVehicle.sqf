@@ -45,10 +45,6 @@ while {_plate in allVehiclePlates} do {
 allVehiclePlates pushBackUnique _plate;
 //Disable the Vehicle in Database!
 [_vehicle] call lts_interface_fnc_disableVehicle;
-
-//Add to all Vehicles array
-lts_core_allVehicles pushBackUnique [_plate, _vehicleClass, _ownerUID, _ownerName, _keyUIDs, _keyNames, 1, [], true];
-
 //Set some Variables on Veh
 _vehicle setVariable ["veh_plate", _plate];
 _vehicle setVariable [ "owner_uid" , _ownerUID  ]; //Steam64 ID of Owner of Vehicle
@@ -61,6 +57,10 @@ _vehicle setVariable [ "owner_name", _ownerName ]; //Display Name of Owener of V
 
 
 _vehicle lock 2;
+
+private _giveTicket = [ "giveTicket", "Fahrzeug drehen", "", {  _vehicle setPos [getPos _vehicle select 0, getPos _vehicle select 1, (getPos _vehicle select 2)+0.5]; }, {}, {}, "", {}, 10 ] call ace_interact_menu_fnc_createAction;
+[ _vehicle, 0, ["ACE_MainActions"], _giveTicket ] call ace_interact_menu_fnc_addActionToObject;
+
 
 if (_isCopCar) then {
     _vehicle setVariable ["copCar", true];
@@ -82,16 +82,11 @@ if (_isCopCar) then {
     };
 } else {
     [_vehicle] call lts_interface_fnc_createNewVeh;
+    [_vehicle] call lts_interface_fnc_disableVehicle;
     vehicle player addEventHandler ["HandleDamage", {
         if ( damage _vehicle isEqualTo 1 ) then {
             [_vehicle] call lts_interface_fnc_destroyVehicle;
         };
         dbug_curDamage = damage _vehicle;
     }];
-
-
-private _giveTicket = [ "giveTicket", "Fahrzeug drehen", "", {  _vehicle setPos [getPos _vehicle select 0, getPos _vehicle select 1, (getPos _vehicle select 2)+0.5]; }, {}, {}, "", {}, 10 ] call ace_interact_menu_fnc_createAction;
-[ _vehicle, 0, ["ACE_MainActions"], _giveTicket ] call ace_interact_menu_fnc_addActionToObject;
-
-
 }

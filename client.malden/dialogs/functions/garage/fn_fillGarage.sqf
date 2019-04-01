@@ -17,24 +17,16 @@ private _spawnPos = param [0, ""];
 private _DISPLAY = findDisplay 20001;
 private _LBCARS = _DISPLAY displayCtrl 1000;
 
-//For all Player Vehicles
-private _num = 0;
-{
-    //Vehicle is Pared out already so dont list it in the Garage
-    if !(_x select 8) then {
-        private _plate = _x select 0;
-        private _class = _x select 1;
-        private _ownerUID = _x select 2;
-        private _ownerName = _x select 3;
-        private _keyUIDs = _x select 4;
-        private _keyNames = _x select 5;
-        private _fuel = _x select 6;
-        private _inv = _x select 7;
-        private _avv = _x select 8;
+if (_spawnPos isEqualTo "") exitWith {};
 
-        _LBCARS lbAdd ([_class] call lts_fnc_getDisplayName);
-        private _data = [str(_num), _spawnPos];
-        _LBCARS lbSetData [(lbSize _LBCARS) - 1 , str(_data)];
-    };
-    _num = _num + 1;
+//request vehicle of player
+lts_core_allVehicles = [];
+[] spawn lts_interface_fnc_getVehicles;
+waitUntil{count lts_core_allVehicles > 0};
+
+//For all Player Vehicles
+{
+    _LBCARS lbAdd ([_class] call lts_fnc_getDisplayName);
+    private _data = [_x, _spawnPos];
+    _LBCARS lbSetData [(lbSize _LBCARS) - 1 , str(_data)];
 } forEach lts_core_allVehicles;

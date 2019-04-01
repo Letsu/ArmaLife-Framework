@@ -18,26 +18,22 @@
  private _TEXTINFO = _DISPLAY displayCtrl 1003;
  private _TEXTFOOTER = _DISPLAY displayCtrl 1008;
 
+
 private _index = lbCurSel _LBCARS;
 private _data = parseSimpleArray (_LBCARS lbData _index);
 
-closeDialog 0;
+//Get Data out of LB
+_spawnMarker = _data select 0;
+_vehData     = _data select 1;
 
-_index = parseNumber (_data select 0);
-private _spawnPos = _data select 1;
-systemChat str(_index);
-systemChat str(_spawnPos);
+//Get All Vehicle Data
+_plate      = _vehData select 0;
+_vehClass   = _vehData select 1;
+_ownerUID   = _vehData select 2
+_ownerName  = _vehData select 3;
+_keyUIDs    = _vehData select 4;
+_keyNames   = _vehData select 5;
+_fuel       = _vehData select 6;
+_inv        = _vehData select 7;
 
-//Get Data of cur Select Vehicle
-private _vehData = lts_core_allVehicles select _index;
-systemChat str(_vehData);
-private _plate = _vehData select 0;
-private _class = _vehData select 1;
-private _ownerUID = _vehData select 2;
-private _ownerName = _vehData select 3;
-private _keyUIDs = _vehData select 4;
-private _keyNames = _vehData select 5;
-private _fuel = _vehData select 6;
-private _inv = _vehData select 7;
-
-[_plate, _class, (getMarkerPos _spawnPos), _ownerUID, _ownerName, _keyUIDs, _keyNames, _fuel, _inv, _index] call lts_fnc_createVehicle;
+[_plate, _vehClass, (getMarkerPos _spawnMarker), _ownerUID, _ownerName, _keyUIDs, _keyNames, _fuel, _inv] call lts_fnc_createVehicle;
