@@ -25,6 +25,7 @@ private _data = parseSimpleArray (_LBCARS lbData _index);
 
 //Get Data out of LB
 _spawnMarker = _data select 0;
+marker = _spawnMarker;
 _vehData     = _data select 1;
 
 _markerPos = getmarkerPos _spawnMarker;
