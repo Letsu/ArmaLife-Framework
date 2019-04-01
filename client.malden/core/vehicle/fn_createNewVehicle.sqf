@@ -30,6 +30,7 @@ private _skin         = param [7, []];
 
 //Create the Vehicle at given Pos
 private _vehicle = _vehicleClass createVehicle _pos;
+clearWeaponCargoGlobal _vehicle;
 //Add Vehicle in Vehicle Array
 //Add for for form Param given Owners!
 [_vehicle] call lts_fnc_addKeyToVeh;
