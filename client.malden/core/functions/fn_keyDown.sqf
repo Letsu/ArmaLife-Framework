@@ -39,9 +39,9 @@ switch (_key) do {
 
         //Some CHecks
         if !(_veh isKindOf "AllVehicles")  exitWith {};
-        _owner = _veh getVariable "owner_uid";
+        _owner = _veh getVariable ["owner_uid", (getPlayerUID player)];
         _keyOwners = _veh getVariable "key_uids";
-        if (_owner != getPlayerUID player || (getPlayerUID player) in _keyOwners) exitWith {};
+        if (_owner != getPlayerUID player) exitWith {};
         if (player distance _veh > 5)      exitWith {};
 
         private _locked = locked _veh;
