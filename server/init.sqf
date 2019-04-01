@@ -41,6 +41,8 @@ private _successfully = false;
 allMedicGroup = createGroup [civilian, false];
 allCopGroup   = createGroup [civilian, false];
 
+_query = call compile ("extDB3" callExtension "0:Vehicle:ResetVehicles");
+
 ["--------------------------------------------"] call lts_server_fnc_log;
 ["----- Finish of Server Initalisation  ------"] call lts_server_fnc_log;
 ["--------------------------------------------"] call lts_server_fnc_log;
