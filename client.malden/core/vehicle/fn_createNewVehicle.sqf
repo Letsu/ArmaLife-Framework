@@ -66,19 +66,19 @@ if (_isCopCar) then {
     _vehicle setVariable ["copCar", true];
 
     if (_vehicleClass isEqualTo "Fox_CrownVictoria_NYPD") then {
-        _vehicle setObjectTextureGlobal [0, "textures\PoliceVic5.paa"]
+        _vehicle setObjectTextureGlobal [0, "textures\PoliceVic5.paa"];
     };
 
     if (_vehicleClass isEqualTo "Fox_2015Tahoe_HWP") then {
-        _vehicle setObjectTextureGlobal [0, "textures\PoliceTau2.paa"]
+        _vehicle setObjectTextureGlobal [0, "textures\PoliceTau2.paa"];
     };
 
     if (_vehicleClass isEqualTo "Fox_Charger16_HWP") then {
-        _vehicle setObjectTextureGlobal [0, "textures\PoliceCha4.paa"]
+        _vehicle setObjectTextureGlobal [0, "textures\PoliceCha4.paa"];
     };
 
     if (_vehicleClass isEqualTo "Fox_2003Impala_PoliceHWP") then {
-        _vehicle setObjectTextureGlobal [0, "textures\Police03Imp3.paa"]
+        _vehicle setObjectTextureGlobal [0, "textures\Police03Imp3.paa"];
     };
 } else {
     [_vehicle] call lts_interface_fnc_createNewVeh;
