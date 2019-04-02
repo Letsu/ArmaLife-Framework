@@ -1,5 +1,5 @@
 class ticket {
-   idd = 60001
+   idd = 60001;
    movingenable = 0;
 
    class controlsBackground {

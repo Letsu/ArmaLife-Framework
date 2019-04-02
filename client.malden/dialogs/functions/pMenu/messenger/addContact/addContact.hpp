@@ -55,7 +55,7 @@ class pMenuAddContact {
            w = 0.095589 * safezoneW;
            h = 0.039216 * safezoneH;
            idc = 1001;
-           action = "call lts_dialog_fnc_contactAdd"
+           action = "call lts_dialog_fnc_contactAdd";
        };
        class RscEdit0 : RscEdit
        {

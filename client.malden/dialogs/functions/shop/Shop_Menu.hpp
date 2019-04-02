@@ -89,7 +89,7 @@ class ShopMenu {
            y = 0.211665683382498 * safezoneH + safezoneY;
            w = 0.181770833333333 * safezoneW;
            h = 0.341 * safezoneH;
-           onTreeSelChanged = "call lts_dialog_fnc_shopBuyTVChange"
+           onTreeSelChanged = "call lts_dialog_fnc_shopBuyTVChange";
        };
        class Lb_Shop0 : RscTree
        {
@@ -98,7 +98,7 @@ class ShopMenu {
            y = 0.220847099311701 * safezoneH + safezoneY;
            w = 0.14375 * safezoneW;
            h = 0.341 * safezoneH;
-           onTreeSelChanged = "call lts_dialog_fnc_shopSellTVChange"
+           onTreeSelChanged = "call lts_dialog_fnc_shopSellTVChange";
        };
        class Button_Buy : RscButton
        {

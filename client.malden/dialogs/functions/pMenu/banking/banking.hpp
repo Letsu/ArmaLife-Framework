@@ -77,7 +77,7 @@ class pMenuBanking {
             w = 0.159252833333333 * safezoneW;
             h = 0.039216 * safezoneH;
             idc = 91020;
-			action = "call lts_dialog_fnc_bankingGive; closeDialog 0"
+			action = "call lts_dialog_fnc_bankingGive; closeDialog 0";
 			colorbackground[] = {-1,-1,-1,-1};
 			colorBackgroundActive[] = {-1,-1,-1,-1};
 			colorBackgroundDisabled[] = {-1,-1,-1,-1};
