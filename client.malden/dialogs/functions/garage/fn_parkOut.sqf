@@ -43,6 +43,6 @@ _keyNames   = _vehData select 5;
 _fuel       = _vehData select 6;
 _inv        = _vehData select 7;
 
-[ format ["Du hast deinen: %1 ausgeparkt", [_vehClass] call lts_fnc_getDisplayName ] call lts_fnc_hint
+[ format ["Du hast deinen: %1 ausgeparkt", [_vehClass] call lts_fnc_getDisplayName] ] call lts_fnc_hint
 
 [_plate, _vehClass, _markerPos, _ownerUID, _ownerName, _keyUIDs, _keyNames, _fuel, _inv] call lts_fnc_createVehicle;
