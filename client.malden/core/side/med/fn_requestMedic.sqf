@@ -15,4 +15,9 @@
  */
 if (count(units allMedicGroup) isEqualTo 0) exitWith { hint "Du konntest keinen Medic erreichen!"};
 
-[allMedicGroup, (name player), [(format["%1 hat einen Medic Requestet!", name player]),"Medic Requestet", "Medic Requestet"], (getPos player), "CREATED", 0, true] call BIS_fnc_taskCreate
+{
+    _isMed = _x getVariable ["isMedic", false];
+    if (_isMed) then {
+        [_x, (name player), [(format["%1 hat einen Medic Requestet!", name player]),"Medic Requestet", "Medic Requestet"], (getPos player), "CREATED", 0, true] call BIS_fnc_taskCreate;
+    };
+} forEach allPlayers;

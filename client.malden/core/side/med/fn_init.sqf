@@ -17,4 +17,5 @@
 private _side = param [0, "med"];
 private _oldSide = param [1, "civ"];
 
+player setVariable ["isMedic", true];
 [player] joinSilent allMedicGroup;
