@@ -23,3 +23,5 @@ if ((_licenseArr select 2) isEqualTo -1) exitWith {};
 _indexPos = _licenseArrselect select 2;
 
 (lts_core_licenses select _index) set[1, false];
+
+[] call lts_fnc_savePlayerInfo;

@@ -34,4 +34,7 @@ if (_hasLicense select 2 isEqualTo -1) then {
     };
 };
 
+//Save Data
+[]  call lts_fnc_savePlayerInfo;
+
 [ format["Du hast dir die Lizenz: %1 gekauft", _licenseName] ] call lts_fnc_hint;
