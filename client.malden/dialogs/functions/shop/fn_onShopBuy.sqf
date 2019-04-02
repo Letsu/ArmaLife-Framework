@@ -38,8 +38,9 @@ private _shopClass = _data select 4;
 
 if (lts_money_cash < _buyPrice) exitWith { ["Du hast nicht genug Geld um dir das zu kaufen!"] call lts_fnc_hint };
 lts_money_cash = lts_money_cash - _buyPrice;
+if !(player canAdd _class) exitWith { ["Dein Inventar ist Voll!"] call lts_fnc_hint};
 
-[ format ["Du hats dir %1 gekauft!", _name] ] call lts_fnc_hint;
+[ format ["Du hast dir %1 gekauft!", _name] ] call lts_fnc_hint;
 //Add Item to Player
 [_class, 1] call lts_fnc_addItem;
 call lts_fnc_savePlayerInfo;
