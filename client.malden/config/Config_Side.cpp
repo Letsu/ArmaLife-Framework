@@ -15,6 +15,7 @@ class Config_Side {
         DisplayName = "Civilian"; //Add Stringtable
         Init = "";
         Condition = ""; //Need an global Variable player can join Side when the Value of the Variable isn´t 0 Empty when every playewr can join Side
+        //Add DeInit(dekonstruktor) to remove Variables and perform actions
     };
 
     class cop {
