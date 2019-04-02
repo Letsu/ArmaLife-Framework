@@ -259,7 +259,7 @@ class pMenu {
 			x = 0.73625 * safezoneW + safezoneX;
 			y = 0.511769911504425 * safezoneH + safezoneY;
 			w = 0.04 * safezoneW;
-			h = 0.06 * safezoneH
+			h = 0.06 * safezoneH;
 			action = "call lts_dialog_fnc_callSettings";
 			colorbackground[] = {-1,-1,-1,-1};
 			colorBackgroundActive[] = {-1,-1,-1,-1};
